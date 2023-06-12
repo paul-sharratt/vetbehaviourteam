@@ -3015,7 +3015,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (138:33) 
+// (154:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3052,7 +3052,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (136:8) {#if logo.title}
+// (152:8) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[3].title + "";
 	let t;
@@ -3076,7 +3076,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (143:8) {#each site_nav as { link }}
+// (159:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[13].label + "";
@@ -3097,7 +3097,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1bglzju");
+			attr(a, "class", "link svelte-16swm3q");
 			attr(a, "href", a_href_value = /*link*/ ctx[13].url);
 			toggle_class(a, "active", /*link*/ ctx[13].url === window.location.pathname);
 		},
@@ -3122,7 +3122,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (152:33) 
+// (168:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3159,7 +3159,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (150:8) {#if logo.title}
+// (166:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[3].title + "";
 	let t;
@@ -3183,7 +3183,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (162:6) {#if mobileNavOpen}
+// (178:6) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3240,9 +3240,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-1bglzju");
+			attr(button, "class", "svelte-16swm3q");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-1bglzju");
+			attr(nav, "class", "svelte-16swm3q");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3316,7 +3316,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (164:10) {#each site_nav as { link }}
+// (180:10) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[13].label + "";
@@ -3500,7 +3500,7 @@ function create_fragment$2(ctx) {
 			var h1_nodes = children(h1);
 			h1_nodes.forEach(detach);
 			t5 = claim_space(div3_nodes);
-			button1 = claim_element(div3_nodes, "BUTTON", {});
+			button1 = claim_element(div3_nodes, "BUTTON", { class: true });
 			var button1_nodes = children(button1);
 			t6 = claim_text(button1_nodes, /*buttontext*/ ctx[2]);
 			button1_nodes.forEach(detach);
@@ -3512,21 +3512,22 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-1bglzju");
-			attr(nav, "class", "svelte-1bglzju");
-			attr(div0, "class", "desktop-nav svelte-1bglzju");
+			attr(a0, "class", "logo svelte-16swm3q");
+			attr(nav, "class", "svelte-16swm3q");
+			attr(div0, "class", "desktop-nav svelte-16swm3q");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-1bglzju");
+			attr(a1, "class", "logo svelte-16swm3q");
 			attr(button0, "id", "open");
 			attr(button0, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-1bglzju");
-			attr(div2, "class", "section-container svelte-1bglzju");
-			attr(h1, "class", "headline svelte-1bglzju");
-			attr(div3, "class", "section-container svelte-1bglzju");
+			attr(div1, "class", "mobile-nav svelte-16swm3q");
+			attr(div2, "class", "section-container svelte-16swm3q");
+			attr(h1, "class", "headline svelte-16swm3q");
+			attr(button1, "class", "button");
+			attr(div3, "class", "section-container-2 svelte-16swm3q");
 			set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
 			attr(header, "role", "img");
 			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
-			attr(header, "class", "svelte-1bglzju");
+			attr(header, "class", "svelte-16swm3q");
 			attr(div4, "class", "component");
 			attr(div5, "class", "section");
 			attr(div5, "id", "section-2696e4cd-389a-426a-8dee-105a9bf74736");
