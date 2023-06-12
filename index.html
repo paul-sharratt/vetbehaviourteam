@@ -343,6 +343,62 @@
             line-height: 1.75
         }
 
+        .teasers.svelte-1nd59xk.svelte-1nd59xk {
+            display: grid;
+            gap: 6rem
+        }
+
+        .teaser.svelte-1nd59xk.svelte-1nd59xk {
+            display: grid;
+            gap: 3rem
+        }
+
+        .teaser.svelte-1nd59xk img.svelte-1nd59xk {
+            border-radius: var(--border-radius)
+        }
+
+        .teaser.svelte-1nd59xk .body.svelte-1nd59xk {
+            display: grid;
+            place-items: flex-start;
+            gap: 1.5rem;
+            padding: 0;
+            line-height: 1.5
+        }
+
+        .teaser.svelte-1nd59xk .body .title.svelte-1nd59xk {
+            font-size: 2.25rem;
+            font-weight: 500;
+            line-height: 1.25
+        }
+
+        @media(min-width: 800px) {
+            .teaser.svelte-1nd59xk.svelte-1nd59xk {
+                grid-template-columns: 1fr 1fr;
+                place-items: center
+                    /* switch direction for even items */
+            }
+
+            .teaser.svelte-1nd59xk:nth-child(even) .body.svelte-1nd59xk {
+                grid-row: 1;
+                grid-column: 2
+            }
+
+            .teaser.svelte-1nd59xk:nth-child(even) img.svelte-1nd59xk {
+                grid-row: 1;
+                grid-column: 1
+            }
+        }
+
+        @media(min-width: 1200px) {
+            section.svelte-1nd59xk.svelte-1nd59xk {
+                gap: 6rem
+            }
+
+            .teaser.svelte-1nd59xk.svelte-1nd59xk {
+                gap: 6rem
+            }
+        }
+
         section.svelte-1er6exq.svelte-1er6exq {
             background: #2b312b;
             color: white
@@ -595,6 +651,34 @@
                     <p>We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains&nbsp;AGAIN,&nbsp;it can be stressful, frustrating and difficult to live with. Worse still if your loved&nbsp;one starts to become aggressive towards you or other animals!</p>
                     <p>The Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by&nbsp;filling in the blanks of why your pet is behaving the way they are.</p>
                     <p>Our passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.</p><!-- HTML_TAG_END -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-a4022420-12be-44a7-ad90-288ccceaaecf">
+        <div class="component">
+            <section class="section-container svelte-1nd59xk">
+                <div class="teasers svelte-1nd59xk">
+                    <div class="teaser svelte-1nd59xk">
+                        <div class="body svelte-1nd59xk">
+                            <h2 class="title svelte-1nd59xk">What is a veterinary behaviourist?</h2>
+                            <div class="description"><!-- HTML_TAG_START -->
+                                <p>A veterinary behaviourist in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. There are different qualifications for veterinary behaviourists, reflecting different levels of education as accredited by the ANZCVS (Australian and New Zealand College of Veterinary Scientists)</p><!-- HTML_TAG_END -->
+                            </div>
+                        </div>
+                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686550078041anzcvs-logo.png" alt="" class="svelte-1nd59xk">
+                    </div>
+                    <div class="teaser svelte-1nd59xk">
+                        <div class="body svelte-1nd59xk">
+                            <h2 class="title svelte-1nd59xk">MANZCVS </h2>
+                            <div class="description"><!-- HTML_TAG_START -->
+                                <h1>MANZCVS qualification which means they are veterinarians with additional training and assessment by examination in veterinary behaviour.</h1><!-- HTML_TAG_END -->
+                            </div>
+                            <a class="link svelte-1nd59xk" href="/">velit
+                            </a>
+                        </div>
+                        <img src="https://picsum.photos/600/400?blur=10" alt="" class="svelte-1nd59xk">
+                    </div>
                 </div>
             </section>
         </div>

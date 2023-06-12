@@ -3681,8 +3681,8 @@ function create_fragment$3(ctx) {
 		h() {
 			if (!src_url_equal(img.src, img_src_value = /*image*/ ctx[0].url)) attr(img, "src", img_src_value);
 			attr(img, "alt", img_alt_value = /*image*/ ctx[0].alt);
-			attr(div0, "class", "content svelte-g4ok1j");
-			attr(section, "class", "section-container svelte-g4ok1j");
+			attr(div0, "class", "content svelte-v7o7c6");
+			attr(section, "class", "section-container svelte-v7o7c6");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-ffee567c-de53-4e48-8384-e8e813b0e2ef");

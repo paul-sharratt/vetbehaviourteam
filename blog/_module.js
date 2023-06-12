@@ -3646,7 +3646,7 @@ function get_each_context$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (84:10) {#if teaser.link.url}
+// (83:10) {#if teaser.link.url}
 function create_if_block_1$2(ctx) {
 	let a;
 	let t_value = /*teaser*/ ctx[4].link.label + "";
@@ -3667,7 +3667,7 @@ function create_if_block_1$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-zvxqyf");
+			attr(a, "class", "link svelte-1nd59xk");
 			attr(a, "href", a_href_value = /*teaser*/ ctx[4].link.url);
 		},
 		m(target, anchor) {
@@ -3687,7 +3687,7 @@ function create_if_block_1$2(ctx) {
 	};
 }
 
-// (90:8) {#if teaser.image.url}
+// (89:8) {#if teaser.image.url}
 function create_if_block$2(ctx) {
 	let img;
 	let img_src_value;
@@ -3705,7 +3705,7 @@ function create_if_block$2(ctx) {
 		h() {
 			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) attr(img, "src", img_src_value);
 			attr(img, "alt", img_alt_value = /*teaser*/ ctx[4].image.alt);
-			attr(img, "class", "svelte-zvxqyf");
+			attr(img, "class", "svelte-1nd59xk");
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
@@ -3725,7 +3725,7 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (79:4) {#each teasers as teaser}
+// (78:4) {#each teasers as teaser}
 function create_each_block$1(ctx) {
 	let div2;
 	let div1;
@@ -3779,10 +3779,10 @@ function create_each_block$1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "title svelte-zvxqyf");
+			attr(h2, "class", "title svelte-1nd59xk");
 			attr(div0, "class", "description");
-			attr(div1, "class", "body svelte-zvxqyf");
-			attr(div2, "class", "teaser svelte-zvxqyf");
+			attr(div1, "class", "body svelte-1nd59xk");
+			attr(div2, "class", "teaser svelte-1nd59xk");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div2, anchor);
@@ -3881,8 +3881,8 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "teasers svelte-zvxqyf");
-			attr(section, "class", "section-container svelte-zvxqyf");
+			attr(div0, "class", "teasers svelte-1nd59xk");
+			attr(section, "class", "section-container svelte-1nd59xk");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-f59c33b1-20b2-4b51-99f5-0b6ced385a21");
