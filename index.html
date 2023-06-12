@@ -200,14 +200,14 @@
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
         :root {
-            --no-of-slides: 4;
+            --no-of-slides: 9;
             --slides-in-view: 4;
-            --slide-width: 320px;
-            --slide-height: 260px;
-            --iteration-time: 20s
+            --slide-width: 300px;
+            --slide-height: 300px;
+            --iteration-time: 30s
         }
 
-        @-webkit-keyframes svelte-1f5nsxz-scroll {
+        @-webkit-keyframes svelte-7oljbk-scroll {
             0% {
                 transform: translateX(0)
             }
@@ -217,7 +217,7 @@
             }
         }
 
-        @keyframes svelte-1f5nsxz-scroll {
+        @keyframes svelte-7oljbk-scroll {
             0% {
                 transform: translateX(0)
             }
@@ -227,15 +227,16 @@
             }
         }
 
-        .carousel__wrapper.svelte-1f5nsxz.svelte-1f5nsxz {
+        .carousel__wrapper.svelte-7oljbk.svelte-7oljbk {
             display: flex;
             align-items: center;
+            gap: 10px;
             width: 100%;
             overflow: hidden;
             margin: 0 auto
         }
 
-        .carousel.svelte-1f5nsxz.svelte-1f5nsxz {
+        .carousel.svelte-7oljbk.svelte-7oljbk {
             overflow: hidden;
             width: 100%;
             height: 400px;
@@ -244,9 +245,9 @@
             align-items: center
         }
 
-        .carousel__slide.svelte-1f5nsxz.svelte-1f5nsxz {
-            -webkit-animation: svelte-1f5nsxz-scroll var(--iteration-time) linear infinite;
-            animation: svelte-1f5nsxz-scroll var(--iteration-time) linear infinite;
+        .carousel__slide.svelte-7oljbk.svelte-7oljbk {
+            -webkit-animation: svelte-7oljbk-scroll var(--iteration-time) linear infinite;
+            animation: svelte-7oljbk-scroll var(--iteration-time) linear infinite;
             display: flex;
             flex-direction: column;
             flex: 0 0 auto;
@@ -255,22 +256,32 @@
             box-sizing: border-box
         }
 
-        .carousel__image.svelte-1f5nsxz.svelte-1f5nsxz {
-            background-size: cover;
+        .carousel__image.svelte-7oljbk.svelte-7oljbk {
+            background-size: contain;
             background-repeat: no-repeat;
+            background-position: center center;
             height: 100%;
             margin: 15px 20px
         }
 
-        .carousel__slide.svelte-1f5nsxz.svelte-1f5nsxz {
+        .carousel__text.svelte-7oljbk.svelte-7oljbk {
+            background: #00000044;
+            text-align: center;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 20px;
+            align-self: center
+        }
+
+        .carousel__slide.svelte-7oljbk.svelte-7oljbk {
             position: relative
         }
 
-        .carousel.svelte-1f5nsxz.svelte-1f5nsxz {
+        .carousel.svelte-7oljbk.svelte-7oljbk {
             counter-reset: slideNo
         }
 
-        header.svelte-1f5nsxz.svelte-1f5nsxz {
+        header.svelte-7oljbk.svelte-7oljbk {
             color: white;
             background-size: cover;
             background-position: center center;
@@ -279,15 +290,15 @@
             height: 100vh;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
-            -webkit-animation: svelte-1f5nsxz-gradient 15s ease infinite;
-            animation: svelte-1f5nsxz-gradient 15s ease infinite
+            -webkit-animation: svelte-7oljbk-gradient 15s ease infinite;
+            animation: svelte-7oljbk-gradient 15s ease infinite
         }
 
-        .flex.svelte-1f5nsxz.svelte-1f5nsxz {
+        .flex.svelte-7oljbk.svelte-7oljbk {
             display: flex
         }
 
-        @-webkit-keyframes svelte-1f5nsxz-MoveUpDown {
+        @-webkit-keyframes svelte-7oljbk-MoveUpDown {
 
             0%,
             100% {
@@ -299,7 +310,7 @@
             }
         }
 
-        @keyframes svelte-1f5nsxz-MoveUpDown {
+        @keyframes svelte-7oljbk-MoveUpDown {
 
             0%,
             100% {
@@ -311,7 +322,7 @@
             }
         }
 
-        @-webkit-keyframes svelte-1f5nsxz-gradient {
+        @-webkit-keyframes svelte-7oljbk-gradient {
             0% {
                 background-position: 0% 50%
             }
@@ -325,7 +336,7 @@
             }
         }
 
-        @keyframes svelte-1f5nsxz-gradient {
+        @keyframes svelte-7oljbk-gradient {
             0% {
                 background-position: 0% 50%
             }
@@ -339,12 +350,12 @@
             }
         }
 
-        .section-container.svelte-1f5nsxz.svelte-1f5nsxz {
+        .section-container.svelte-7oljbk.svelte-7oljbk {
             width: 100%;
             padding: 15px
         }
 
-        .section-container-2.svelte-1f5nsxz.svelte-1f5nsxz {
+        .section-container-2.svelte-7oljbk.svelte-7oljbk {
             width: 100%;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -356,47 +367,47 @@
             background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .5) 20%, rgba(0, 0, 0, .65))
         }
 
-        .buttons.svelte-1f5nsxz.svelte-1f5nsxz {
+        .buttons.svelte-7oljbk.svelte-7oljbk {
             display: flex;
             gap: 20px
         }
 
-        .logo.svelte-1f5nsxz.svelte-1f5nsxz {
+        .logo.svelte-7oljbk.svelte-7oljbk {
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.2
         }
 
-        .desktop-nav.svelte-1f5nsxz.svelte-1f5nsxz {
+        .desktop-nav.svelte-7oljbk.svelte-7oljbk {
             display: none;
             align-items: center;
             justify-content: space-between;
             width: 100%
         }
 
-        .desktop-nav.svelte-1f5nsxz nav.svelte-1f5nsxz {
+        .desktop-nav.svelte-7oljbk nav.svelte-7oljbk {
             display: flex;
             gap: 2rem
         }
 
-        .desktop-nav.svelte-1f5nsxz nav a.link.svelte-1f5nsxz {
+        .desktop-nav.svelte-7oljbk nav a.link.svelte-7oljbk {
             border-color: transparent;
             transition: border-color 0.1s;
             font-size: 0.95rem
         }
 
-        .desktop-nav.svelte-1f5nsxz nav a.link.svelte-1f5nsxz:hover,
-        .desktop-nav.svelte-1f5nsxz nav a.link .active.svelte-1f5nsxz {
+        .desktop-nav.svelte-7oljbk nav a.link.svelte-7oljbk:hover,
+        .desktop-nav.svelte-7oljbk nav a.link .active.svelte-7oljbk {
             border-color: initial
         }
 
         @media(min-width: 800px) {
-            .desktop-nav.svelte-1f5nsxz.svelte-1f5nsxz {
+            .desktop-nav.svelte-7oljbk.svelte-7oljbk {
                 display: flex
             }
         }
 
-        .mobile-nav.svelte-1f5nsxz.svelte-1f5nsxz {
+        .mobile-nav.svelte-7oljbk.svelte-7oljbk {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -405,23 +416,23 @@
         }
 
         @media(min-width: 800px) {
-            .mobile-nav.svelte-1f5nsxz.svelte-1f5nsxz {
+            .mobile-nav.svelte-7oljbk.svelte-7oljbk {
                 display: none
             }
         }
 
-        .headline.svelte-1f5nsxz.svelte-1f5nsxz {
+        .headline.svelte-7oljbk.svelte-7oljbk {
             font-size: clamp(1rem, 10vw, 2rem);
             max-width: 800px;
             padding: 2rem;
             line-height: 1.1
         }
 
-        .headline.svelte-1f5nsxz p {
+        .headline.svelte-7oljbk p {
             margin-bottom: 20px
         }
 
-        #popup.svelte-1f5nsxz.svelte-1f5nsxz {
+        #popup.svelte-7oljbk.svelte-7oljbk {
             color: #222;
             font-size: 1.25rem;
             display: grid;
@@ -437,7 +448,7 @@
             z-index: 1
         }
 
-        #popup.svelte-1f5nsxz button#close.svelte-1f5nsxz {
+        #popup.svelte-7oljbk button#close.svelte-7oljbk {
             position: absolute;
             right: 1rem;
             top: 1rem
@@ -738,12 +749,12 @@
 
     <div class="section" id="section-2696e4cd-389a-426a-8dee-105a9bf74736">
         <div class="component">
-            <header aria-label="" class="svelte-1f5nsxz">
-                <div class="section-container svelte-1f5nsxz">
-                    <div class="desktop-nav svelte-1f5nsxz"><a href="/" class="logo svelte-1f5nsxz">Vet Behaviour Team</a>
-                        <nav class="svelte-1f5nsxz"><a class="link svelte-1f5nsxz" href="/about">About</a><a class="link svelte-1f5nsxz" href="/mission">Mission</a><a class="link svelte-1f5nsxz" href="/team">Team</a><a class="link svelte-1f5nsxz" href="/blog">Blog</a></nav>
+            <header aria-label="" class="svelte-7oljbk">
+                <div class="section-container svelte-7oljbk">
+                    <div class="desktop-nav svelte-7oljbk"><a href="/" class="logo svelte-7oljbk">Vet Behaviour Team</a>
+                        <nav class="svelte-7oljbk"><a class="link svelte-7oljbk" href="/about">About</a><a class="link svelte-7oljbk" href="/mission">Mission</a><a class="link svelte-7oljbk" href="/team">Team</a><a class="link svelte-7oljbk" href="/blog">Blog</a></nav>
                     </div>
-                    <div class="mobile-nav svelte-1f5nsxz"><a href="/" class="logo svelte-1f5nsxz">Vet Behaviour Team</a>
+                    <div class="mobile-nav svelte-7oljbk"><a href="/" class="logo svelte-7oljbk">Vet Behaviour Team</a>
                         <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
                                 <g id="iconifySvelte0">
                                     <g id="iconifySvelte1">
@@ -757,70 +768,95 @@
                             </svg></button>
                     </div>
                 </div>
-                <section class="carousel svelte-1f5nsxz">
+                <section class="carousel svelte-7oljbk">
                     <div class="container-fluid px-0">
                         <div class="row">
                             <div class="col-12">
-                                <div class="carousel__wrapper svelte-1f5nsxz">
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                <div class="carousel__wrapper svelte-7oljbk">
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Lip Licking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Paw Lift</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hypervigilant</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Bare Teeth</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Barking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Destructive</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hiding</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Jumping and Mouthing</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hyperactive</div>
                                     </div>
 
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Lip Licking</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Paw Lift</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hypervigilant</div>
                                     </div>
-
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Bare Teeth</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Barking</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Destructive</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hiding</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Jumping and Mouthing</div>
                                     </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
-                                    </div>
-
-                                    <div class="carousel__slide svelte-1f5nsxz">
-                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    <div class="carousel__slide svelte-7oljbk">
+                                        <div class="carousel__image svelte-7oljbk" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-7oljbk">Hyperactive</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="section-container-2 svelte-1f5nsxz">
-                    <h1 class="headline svelte-1f5nsxz"><!-- HTML_TAG_START -->
-                        <p>Nurture a balanced connection with your dog and overcome behavioral challenges.</p>
-                        <p>Book a consultation now for expert guidance and support.</p><!-- HTML_TAG_END -->
+                <div class="section-container-2 svelte-7oljbk">
+                    <h1 class="headline svelte-7oljbk"><!-- HTML_TAG_START -->
+                        <p>Is your dog experiencing behavioural difficulties? </p>
+                        <p>We can help.</p><!-- HTML_TAG_END -->
                     </h1>
-                    <div class="flex buttons svelte-1f5nsxz"><button class="button" onclick="GReminders.BookingWidget.open();">BOOK NOW</button>
+                    <div class="flex buttons svelte-7oljbk"><button class="button" onclick="GReminders.BookingWidget.open();">BOOK NOW</button>
                         <button class="button">CONTACT US</button>
                     </div>
                 </div>
