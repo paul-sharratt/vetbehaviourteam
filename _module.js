@@ -3688,7 +3688,7 @@ function create_fragment$2(ctx) {
 	};
 }
 
-function buttonClick() {
+function GRemindersClick() {
 	console.log("click!");
 	GReminders.BookingWidget.open();
 }
@@ -3708,7 +3708,7 @@ function instance$2($$self, $$props, $$invalidate) {
 	const click_handler_1 = () => $$invalidate(5, mobileNavOpen = false);
 
 	const click_handler_2 = () => {
-		buttonClick();
+		GRemindersClick();
 	};
 
 	$$self.$$set = $$props => {
