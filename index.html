@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-19ek09i_START -->
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-ucmgnd_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
@@ -12,7 +12,7 @@
     <script src="https://app.greminders.com/widgets/booking.js"></script>
     <script type="text/javascript">
         window.onload = function() {
-            const urlObj = new URL(url);
+            const urlObj = new URL(window.location.href);
             const searchParams = urlObj.searchParams;
 
             GReminders.BookingWidget.initialize(
@@ -197,7 +197,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-19ek09i_END -->
+    </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
         header.svelte-1bglzju.svelte-1bglzju {
             color: white;
@@ -554,9 +554,11 @@
                     </div>
                 </div>
                 <div class="section-container svelte-1bglzju">
-                    <h1 class="headline svelte-1bglzju">[object Object]</h1>
-                    <button>Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support.
-                        Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. BOOK NOW</button>
+                    <h1 class="headline svelte-1bglzju"><!-- HTML_TAG_START -->
+                        <p>Nurture a balanced connection with your dog and overcome behavioral challenges. </p>
+                        <p>Book a consultation now for expert guidance and support.</p><!-- HTML_TAG_END -->
+                    </h1>
+                    <button>Book Now</button>
                 </div>
             </header>
         </div>

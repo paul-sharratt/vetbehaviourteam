@@ -1031,13 +1031,13 @@ function create_fragment(ctx) {
 			meta2 = element("meta");
 			script0 = element("script");
 			script1 = element("script");
-			t0 = text("window.onload = function() {\n  const urlObj = new URL(url);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
+			t0 = text("window.onload = function() {\n  const urlObj = new URL(window.location.href);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
 			style = element("style");
 			t1 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-19ek09i', document.head);
+			const head_nodes = head_selector('svelte-ucmgnd', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 
@@ -1055,7 +1055,7 @@ function create_fragment(ctx) {
 			script0_nodes.forEach(detach);
 			script1 = claim_element(head_nodes, "SCRIPT", { type: true });
 			var script1_nodes = children(script1);
-			t0 = claim_text(script1_nodes, "window.onload = function() {\n  const urlObj = new URL(url);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
+			t0 = claim_text(script1_nodes, "window.onload = function() {\n  const urlObj = new URL(window.location.href);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
 			script1_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
@@ -3031,18 +3031,18 @@ function create_if_block_4(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*logo*/ ctx[2].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[3].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*logo*/ ctx[3].image.alt);
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 4 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) {
+			if (dirty & /*logo*/ 8 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[3].image.url)) {
 				attr(img, "src", img_src_value);
 			}
 
-			if (dirty & /*logo*/ 4 && img_alt_value !== (img_alt_value = /*logo*/ ctx[2].image.alt)) {
+			if (dirty & /*logo*/ 8 && img_alt_value !== (img_alt_value = /*logo*/ ctx[3].image.alt)) {
 				attr(img, "alt", img_alt_value);
 			}
 		},
@@ -3054,7 +3054,7 @@ function create_if_block_4(ctx) {
 
 // (135:8) {#if logo.title}
 function create_if_block_3(ctx) {
-	let t_value = /*logo*/ ctx[2].title + "";
+	let t_value = /*logo*/ ctx[3].title + "";
 	let t;
 
 	return {
@@ -3068,7 +3068,7 @@ function create_if_block_3(ctx) {
 			insert_hydration(target, t, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 4 && t_value !== (t_value = /*logo*/ ctx[2].title + "")) set_data(t, t_value);
+			if (dirty & /*logo*/ 8 && t_value !== (t_value = /*logo*/ ctx[3].title + "")) set_data(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) detach(t);
@@ -3106,13 +3106,13 @@ function create_each_block_1(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 16 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
+			if (dirty & /*site_nav*/ 16 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
 				attr(a, "href", a_href_value);
 			}
 
-			if (dirty & /*site_nav, window*/ 8) {
+			if (dirty & /*site_nav, window*/ 16) {
 				toggle_class(a, "active", /*link*/ ctx[13].url === window.location.pathname);
 			}
 		},
@@ -3138,18 +3138,18 @@ function create_if_block_2(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*logo*/ ctx[2].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[3].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*logo*/ ctx[3].image.alt);
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 4 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) {
+			if (dirty & /*logo*/ 8 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[3].image.url)) {
 				attr(img, "src", img_src_value);
 			}
 
-			if (dirty & /*logo*/ 4 && img_alt_value !== (img_alt_value = /*logo*/ ctx[2].image.alt)) {
+			if (dirty & /*logo*/ 8 && img_alt_value !== (img_alt_value = /*logo*/ ctx[3].image.alt)) {
 				attr(img, "alt", img_alt_value);
 			}
 		},
@@ -3161,7 +3161,7 @@ function create_if_block_2(ctx) {
 
 // (149:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
-	let t_value = /*logo*/ ctx[2].title + "";
+	let t_value = /*logo*/ ctx[3].title + "";
 	let t;
 
 	return {
@@ -3175,7 +3175,7 @@ function create_if_block_1$1(ctx) {
 			insert_hydration(target, t, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 4 && t_value !== (t_value = /*logo*/ ctx[2].title + "")) set_data(t, t_value);
+			if (dirty & /*logo*/ 8 && t_value !== (t_value = /*logo*/ ctx[3].title + "")) set_data(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) detach(t);
@@ -3193,7 +3193,7 @@ function create_if_block$1(ctx) {
 	let current;
 	let mounted;
 	let dispose;
-	let each_value = /*site_nav*/ ctx[3];
+	let each_value = /*site_nav*/ ctx[4];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
@@ -3264,8 +3264,8 @@ function create_if_block$1(ctx) {
 			}
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8) {
-				each_value = /*site_nav*/ ctx[3];
+			if (dirty & /*site_nav*/ 16) {
+				each_value = /*site_nav*/ ctx[4];
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
@@ -3344,9 +3344,9 @@ function create_each_block(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 16 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
+			if (dirty & /*site_nav*/ 16 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3375,23 +3375,23 @@ function create_fragment$2(ctx) {
 	let t4;
 	let div3;
 	let h1;
+	let raw_value = /*headline*/ ctx[1].html + "";
 	let t5;
-	let t6;
 	let button1;
-	let t7;
+	let t6;
 	let header_aria_label_value;
 	let current;
 	let mounted;
 	let dispose;
 
 	function select_block_type(ctx, dirty) {
-		if (/*logo*/ ctx[2].title) return create_if_block_3;
-		if (/*logo*/ ctx[2].image.url) return create_if_block_4;
+		if (/*logo*/ ctx[3].title) return create_if_block_3;
+		if (/*logo*/ ctx[3].image.url) return create_if_block_4;
 	}
 
 	let current_block_type = select_block_type(ctx);
 	let if_block0 = current_block_type && current_block_type(ctx);
-	let each_value_1 = /*site_nav*/ ctx[3];
+	let each_value_1 = /*site_nav*/ ctx[4];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -3399,8 +3399,8 @@ function create_fragment$2(ctx) {
 	}
 
 	function select_block_type_1(ctx, dirty) {
-		if (/*logo*/ ctx[2].title) return create_if_block_1$1;
-		if (/*logo*/ ctx[2].image.url) return create_if_block_2;
+		if (/*logo*/ ctx[3].title) return create_if_block_1$1;
+		if (/*logo*/ ctx[3].image.url) return create_if_block_2;
 	}
 
 	let current_block_type_1 = select_block_type_1(ctx);
@@ -3440,10 +3440,9 @@ function create_fragment$2(ctx) {
 			t4 = space();
 			div3 = element("div");
 			h1 = element("h1");
-			t5 = text(/*headline*/ ctx[1]);
-			t6 = space();
+			t5 = space();
 			button1 = element("button");
-			t7 = text(/*buttontext*/ ctx[4]);
+			t6 = text(/*buttontext*/ ctx[2]);
 			this.h();
 		},
 		l(nodes) {
@@ -3499,12 +3498,11 @@ function create_fragment$2(ctx) {
 			var div3_nodes = children(div3);
 			h1 = claim_element(div3_nodes, "H1", { class: true });
 			var h1_nodes = children(h1);
-			t5 = claim_text(h1_nodes, /*headline*/ ctx[1]);
 			h1_nodes.forEach(detach);
-			t6 = claim_space(div3_nodes);
+			t5 = claim_space(div3_nodes);
 			button1 = claim_element(div3_nodes, "BUTTON", {});
 			var button1_nodes = children(button1);
-			t7 = claim_text(button1_nodes, /*buttontext*/ ctx[4]);
+			t6 = claim_text(button1_nodes, /*buttontext*/ ctx[2]);
 			button1_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
 			header_nodes.forEach(detach);
@@ -3562,10 +3560,10 @@ function create_fragment$2(ctx) {
 			append_hydration(header, t4);
 			append_hydration(header, div3);
 			append_hydration(div3, h1);
-			append_hydration(h1, t5);
-			append_hydration(div3, t6);
+			h1.innerHTML = raw_value;
+			append_hydration(div3, t5);
 			append_hydration(div3, button1);
-			append_hydration(button1, t7);
+			append_hydration(button1, t6);
 			current = true;
 
 			if (!mounted) {
@@ -3590,8 +3588,8 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (dirty & /*site_nav, window*/ 8) {
-				each_value_1 = /*site_nav*/ ctx[3];
+			if (dirty & /*site_nav, window*/ 16) {
+				each_value_1 = /*site_nav*/ ctx[4];
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -3648,8 +3646,7 @@ function create_fragment$2(ctx) {
 				check_outros();
 			}
 
-			if (!current || dirty & /*headline*/ 2) set_data(t5, /*headline*/ ctx[1]);
-			if (!current || dirty & /*buttontext*/ 16) set_data(t7, /*buttontext*/ ctx[4]);
+			if ((!current || dirty & /*headline*/ 2) && raw_value !== (raw_value = /*headline*/ ctx[1].html + "")) h1.innerHTML = raw_value;			if (!current || dirty & /*buttontext*/ 4) set_data(t6, /*buttontext*/ ctx[2]);
 
 			if (!current || dirty & /*background*/ 1) {
 				set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
@@ -3701,9 +3698,9 @@ function instance$2($$self, $$props, $$invalidate) {
 	let { description } = $$props;
 	let { background } = $$props;
 	let { headline } = $$props;
+	let { buttontext } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
-	let { buttontext } = $$props;
 	let mobileNavOpen = false;
 
 	const click_handler = () => $$invalidate(5, mobileNavOpen = true);
@@ -3719,17 +3716,17 @@ function instance$2($$self, $$props, $$invalidate) {
 		if ('description' in $$props) $$invalidate(8, description = $$props.description);
 		if ('background' in $$props) $$invalidate(0, background = $$props.background);
 		if ('headline' in $$props) $$invalidate(1, headline = $$props.headline);
-		if ('logo' in $$props) $$invalidate(2, logo = $$props.logo);
-		if ('site_nav' in $$props) $$invalidate(3, site_nav = $$props.site_nav);
-		if ('buttontext' in $$props) $$invalidate(4, buttontext = $$props.buttontext);
+		if ('buttontext' in $$props) $$invalidate(2, buttontext = $$props.buttontext);
+		if ('logo' in $$props) $$invalidate(3, logo = $$props.logo);
+		if ('site_nav' in $$props) $$invalidate(4, site_nav = $$props.site_nav);
 	};
 
 	return [
 		background,
 		headline,
+		buttontext,
 		logo,
 		site_nav,
-		buttontext,
 		mobileNavOpen,
 		favicon,
 		title,
@@ -3750,9 +3747,9 @@ class Component$2 extends SvelteComponent {
 			description: 8,
 			background: 0,
 			headline: 1,
-			logo: 2,
-			site_nav: 3,
-			buttontext: 4
+			buttontext: 2,
+			logo: 3,
+			site_nav: 4
 		});
 	}
 }
@@ -5322,6 +5319,7 @@ function create_fragment$9(ctx) {
 					"html": "<p>Nurture a balanced connection with your dog and overcome behavioral challenges. </p>\n<p>Book a consultation now for expert guidance and support.</p>",
 					"markdown": "Nurture a balanced connection with your dog and overcome behavioral challenges. \n\nBook a consultation now for expert guidance and support."
 				},
+				buttontext: "Book Now",
 				logo: {
 					"image": {
 						"alt": "",
@@ -5348,8 +5346,7 @@ function create_fragment$9(ctx) {
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					}
-				],
-				buttontext: "Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support.\nNurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. BOOK NOW"
+				]
 			}
 		});
 
