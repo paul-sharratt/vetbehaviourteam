@@ -1014,8 +1014,12 @@ function create_fragment(ctx) {
 	let link1;
 	let title_value;
 	let meta2;
+	let script0;
+	let script0_src_value;
+	let script1;
+	let t0;
 	let style;
-	let t;
+	let t1;
 	document.title = title_value = /*title*/ ctx[1];
 
 	return {
@@ -1025,12 +1029,15 @@ function create_fragment(ctx) {
 			link0 = element("link");
 			link1 = element("link");
 			meta2 = element("meta");
+			script0 = element("script");
+			script1 = element("script");
+			t0 = text("window.onload = function() {\n  const urlObj = new URL(url);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
 			style = element("style");
-			t = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t1 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1t7ohez', document.head);
+			const head_nodes = head_selector('svelte-19ek09i', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 
@@ -1043,9 +1050,16 @@ function create_fragment(ctx) {
 
 			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
 			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
+			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
+			var script0_nodes = children(script0);
+			script0_nodes.forEach(detach);
+			script1 = claim_element(head_nodes, "SCRIPT", { type: true });
+			var script1_nodes = children(script1);
+			t0 = claim_text(script1_nodes, "window.onload = function() {\n  const urlObj = new URL(url);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
+			script1_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t1 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1062,6 +1076,8 @@ function create_fragment(ctx) {
 			attr(link1, "href", "https://fonts.bunny.net");
 			attr(meta2, "name", "description");
 			attr(meta2, "content", /*description*/ ctx[2]);
+			if (!src_url_equal(script0.src, script0_src_value = "https://app.greminders.com/widgets/booking.js")) attr(script0, "src", script0_src_value);
+			attr(script1, "type", "text/javascript");
 		},
 		m(target, anchor) {
 			append_hydration(document.head, meta0);
@@ -1069,8 +1085,11 @@ function create_fragment(ctx) {
 			append_hydration(document.head, link0);
 			append_hydration(document.head, link1);
 			append_hydration(document.head, meta2);
+			append_hydration(document.head, script0);
+			append_hydration(document.head, script1);
+			append_hydration(script1, t0);
 			append_hydration(document.head, style);
-			append_hydration(style, t);
+			append_hydration(style, t1);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link0_href_value !== (link0_href_value = /*favicon*/ ctx[0].url)) {
@@ -1093,6 +1112,8 @@ function create_fragment(ctx) {
 			detach(link0);
 			detach(link1);
 			detach(meta2);
+			detach(script0);
+			detach(script1);
 			detach(style);
 		}
 	};
@@ -2984,17 +3005,17 @@ class Component$1 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[11] = list[i].link;
+	child_ctx[13] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[11] = list[i].link;
+	child_ctx[13] = list[i].link;
 	return child_ctx;
 }
 
-// (132:33) 
+// (137:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3031,7 +3052,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (130:8) {#if logo.title}
+// (135:8) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3055,10 +3076,10 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (137:8) {#each site_nav as { link }}
+// (142:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[11].label + "";
+	let t_value = /*link*/ ctx[13].label + "";
 	let t;
 	let a_href_value;
 
@@ -3077,22 +3098,22 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(a, "class", "link svelte-1bglzju");
-			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
-			toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
+			attr(a, "href", a_href_value = /*link*/ ctx[13].url);
+			toggle_class(a, "active", /*link*/ ctx[13].url === window.location.pathname);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
 				attr(a, "href", a_href_value);
 			}
 
 			if (dirty & /*site_nav, window*/ 8) {
-				toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
+				toggle_class(a, "active", /*link*/ ctx[13].url === window.location.pathname);
 			}
 		},
 		d(detaching) {
@@ -3101,7 +3122,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (146:33) 
+// (151:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3138,7 +3159,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (144:8) {#if logo.title}
+// (149:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3162,7 +3183,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (156:6) {#if mobileNavOpen}
+// (161:6) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3238,7 +3259,7 @@ function create_if_block$1(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler_1*/ ctx[9]);
+				dispose = listen(button, "click", /*click_handler_1*/ ctx[10]);
 				mounted = true;
 			}
 		},
@@ -3295,10 +3316,10 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (158:10) {#each site_nav as { link }}
+// (163:10) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[11].label + "";
+	let t_value = /*link*/ ctx[13].label + "";
 	let t;
 	let a_href_value;
 
@@ -3316,16 +3337,16 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[13].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[13].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[13].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3348,13 +3369,16 @@ function create_fragment$2(ctx) {
 	let div1;
 	let a1;
 	let t2;
-	let button;
+	let button0;
 	let icon;
 	let t3;
 	let t4;
 	let div3;
 	let h1;
 	let t5;
+	let t6;
+	let button1;
+	let t7;
 	let header_aria_label_value;
 	let current;
 	let mounted;
@@ -3386,7 +3410,7 @@ function create_fragment$2(ctx) {
 			props: { height: "30", icon: "eva:menu-outline" }
 		});
 
-	let if_block2 = /*mobileNavOpen*/ ctx[4] && create_if_block$1(ctx);
+	let if_block2 = /*mobileNavOpen*/ ctx[5] && create_if_block$1(ctx);
 
 	return {
 		c() {
@@ -3409,7 +3433,7 @@ function create_fragment$2(ctx) {
 			a1 = element("a");
 			if (if_block1) if_block1.c();
 			t2 = space();
-			button = element("button");
+			button0 = element("button");
 			create_component(icon.$$.fragment);
 			t3 = space();
 			if (if_block2) if_block2.c();
@@ -3417,6 +3441,9 @@ function create_fragment$2(ctx) {
 			div3 = element("div");
 			h1 = element("h1");
 			t5 = text(/*headline*/ ctx[1]);
+			t6 = space();
+			button1 = element("button");
+			t7 = text(/*buttontext*/ ctx[4]);
 			this.h();
 		},
 		l(nodes) {
@@ -3459,10 +3486,10 @@ function create_fragment$2(ctx) {
 			if (if_block1) if_block1.l(a1_nodes);
 			a1_nodes.forEach(detach);
 			t2 = claim_space(div1_nodes);
-			button = claim_element(div1_nodes, "BUTTON", { id: true, "aria-label": true });
-			var button_nodes = children(button);
-			claim_component(icon.$$.fragment, button_nodes);
-			button_nodes.forEach(detach);
+			button0 = claim_element(div1_nodes, "BUTTON", { id: true, "aria-label": true });
+			var button0_nodes = children(button0);
+			claim_component(icon.$$.fragment, button0_nodes);
+			button0_nodes.forEach(detach);
 			t3 = claim_space(div1_nodes);
 			if (if_block2) if_block2.l(div1_nodes);
 			div1_nodes.forEach(detach);
@@ -3474,6 +3501,11 @@ function create_fragment$2(ctx) {
 			var h1_nodes = children(h1);
 			t5 = claim_text(h1_nodes, /*headline*/ ctx[1]);
 			h1_nodes.forEach(detach);
+			t6 = claim_space(div3_nodes);
+			button1 = claim_element(div3_nodes, "BUTTON", {});
+			var button1_nodes = children(button1);
+			t7 = claim_text(button1_nodes, /*buttontext*/ ctx[4]);
+			button1_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
 			header_nodes.forEach(detach);
 			div4_nodes.forEach(detach);
@@ -3487,8 +3519,8 @@ function create_fragment$2(ctx) {
 			attr(div0, "class", "desktop-nav svelte-1bglzju");
 			attr(a1, "href", "/");
 			attr(a1, "class", "logo svelte-1bglzju");
-			attr(button, "id", "open");
-			attr(button, "aria-label", "Open mobile navigation");
+			attr(button0, "id", "open");
+			attr(button0, "aria-label", "Open mobile navigation");
 			attr(div1, "class", "mobile-nav svelte-1bglzju");
 			attr(div2, "class", "section-container svelte-1bglzju");
 			attr(h1, "class", "headline svelte-1bglzju");
@@ -3523,18 +3555,25 @@ function create_fragment$2(ctx) {
 			append_hydration(div1, a1);
 			if (if_block1) if_block1.m(a1, null);
 			append_hydration(div1, t2);
-			append_hydration(div1, button);
-			mount_component(icon, button, null);
+			append_hydration(div1, button0);
+			mount_component(icon, button0, null);
 			append_hydration(div1, t3);
 			if (if_block2) if_block2.m(div1, null);
 			append_hydration(header, t4);
 			append_hydration(header, div3);
 			append_hydration(div3, h1);
 			append_hydration(h1, t5);
+			append_hydration(div3, t6);
+			append_hydration(div3, button1);
+			append_hydration(button1, t7);
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler*/ ctx[8]);
+				dispose = [
+					listen(button0, "click", /*click_handler*/ ctx[9]),
+					listen(button1, "click", /*click_handler_2*/ ctx[11])
+				];
+
 				mounted = true;
 			}
 		},
@@ -3586,11 +3625,11 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (/*mobileNavOpen*/ ctx[4]) {
+			if (/*mobileNavOpen*/ ctx[5]) {
 				if (if_block2) {
 					if_block2.p(ctx, dirty);
 
-					if (dirty & /*mobileNavOpen*/ 16) {
+					if (dirty & /*mobileNavOpen*/ 32) {
 						transition_in(if_block2, 1);
 					}
 				} else {
@@ -3610,6 +3649,7 @@ function create_fragment$2(ctx) {
 			}
 
 			if (!current || dirty & /*headline*/ 2) set_data(t5, /*headline*/ ctx[1]);
+			if (!current || dirty & /*buttontext*/ 16) set_data(t7, /*buttontext*/ ctx[4]);
 
 			if (!current || dirty & /*background*/ 1) {
 				set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
@@ -3646,9 +3686,13 @@ function create_fragment$2(ctx) {
 			destroy_component(icon);
 			if (if_block2) if_block2.d();
 			mounted = false;
-			dispose();
+			run_all(dispose);
 		}
 	};
+}
+
+function buttonClick() {
+	GReminders.BookingWidget.open();
 }
 
 function instance$2($$self, $$props, $$invalidate) {
@@ -3659,19 +3703,25 @@ function instance$2($$self, $$props, $$invalidate) {
 	let { headline } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
+	let { buttontext } = $$props;
 	let mobileNavOpen = false;
 
-	const click_handler = () => $$invalidate(4, mobileNavOpen = true);
-	const click_handler_1 = () => $$invalidate(4, mobileNavOpen = false);
+	const click_handler = () => $$invalidate(5, mobileNavOpen = true);
+	const click_handler_1 = () => $$invalidate(5, mobileNavOpen = false);
+
+	const click_handler_2 = () => {
+		buttonClick();
+	};
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(6, title = $$props.title);
-		if ('description' in $$props) $$invalidate(7, description = $$props.description);
+		if ('favicon' in $$props) $$invalidate(6, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(7, title = $$props.title);
+		if ('description' in $$props) $$invalidate(8, description = $$props.description);
 		if ('background' in $$props) $$invalidate(0, background = $$props.background);
 		if ('headline' in $$props) $$invalidate(1, headline = $$props.headline);
 		if ('logo' in $$props) $$invalidate(2, logo = $$props.logo);
 		if ('site_nav' in $$props) $$invalidate(3, site_nav = $$props.site_nav);
+		if ('buttontext' in $$props) $$invalidate(4, buttontext = $$props.buttontext);
 	};
 
 	return [
@@ -3679,12 +3729,14 @@ function instance$2($$self, $$props, $$invalidate) {
 		headline,
 		logo,
 		site_nav,
+		buttontext,
 		mobileNavOpen,
 		favicon,
 		title,
 		description,
 		click_handler,
-		click_handler_1
+		click_handler_1,
+		click_handler_2
 	];
 }
 
@@ -3693,13 +3745,14 @@ class Component$2 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
-			favicon: 5,
-			title: 6,
-			description: 7,
+			favicon: 6,
+			title: 7,
+			description: 8,
 			background: 0,
 			headline: 1,
 			logo: 2,
-			site_nav: 3
+			site_nav: 3,
+			buttontext: 4
 		});
 	}
 }
@@ -5292,7 +5345,8 @@ function create_fragment$9(ctx) {
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					}
-				]
+				],
+				buttontext: "BOOK NOW"
 			}
 		});
 
@@ -5313,7 +5367,7 @@ function create_fragment$9(ctx) {
 					"label": "WE CAN HELP - CONTACT US"
 				},
 				content: {
-					"html": "<p>We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains&nbsp;AGAIN,&nbsp;it can be stressful, frustrating and difficult to live with. Worse still if your loved&nbsp;one starts to become aggressive towards you or other animals!</p>\n<p>The Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by&nbsp;filling in the blanks of why your pet is behaving the way they are.</p>\n<p>Our passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.</p>",
+					"html": "<p>We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains&nbsp;AGAIN,&nbsp;it can be stressful, frustrating and difficult to live with. Worse still if your loved&nbsp;one starts to become aggressive towards you or other animals!</p><p>The Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by&nbsp;filling in the blanks of why your pet is behaving the way they are.</p><p>Our passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.</p>",
 					"markdown": "We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains AGAIN, it can be stressful, frustrating and difficult to live with. Worse still if your loved one starts to become aggressive towards you or other animals!\n\nThe Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by filling in the blanks of why your pet is behaving the way they are.\n\nOur passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.\n\n"
 				}
 			}

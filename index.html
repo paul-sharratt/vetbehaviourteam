@@ -3,12 +3,61 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-1t7ohez_START -->
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-19ek09i_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <meta name="description" content="Kindness + Science. The best of both worlds">
+    <script src="https://app.greminders.com/widgets/booking.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            const urlObj = new URL(url);
+            const searchParams = urlObj.searchParams;
+
+            GReminders.BookingWidget.initialize(
+                //create an event type and put the link below: https://app.greminders.com/event-types
+                //or use with Routing Forms: https://app.greminders.com/routing-forms
+                'https://app.greminders.com/c/paulsharratt/test',
+
+                //here are all the options
+                {
+                    // you can trigger this based on a button or some other action
+                    anchorEl: document.getElementById('schedule_button'), //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code 
+
+                    fields: {
+                        first_name: '', // you can prepopulate the fields here if you already have this information
+                        last_name: '',
+                        phone: '',
+                        email: '',
+                        auto_submit: false,
+                        remember_me: true,
+                        utm_source: searchParams.get('utm_source') || '',
+                        utm_medium: searchParams.get('utm_medium') || '',
+                        utm_campaign: searchParams.get('utm_campaign') || '',
+                        utm_content: searchParams.get('utm_content') || '',
+                        utm_term: searchParams.get('utm_term') || ''
+                    },
+                    styles: {
+                        zIndex: 100
+                    }
+                }
+            );
+            GReminders.BookingWidget.onSuccess(function(event_id, form_data) {
+                //we automatically close the widget on successful booking, you can continue your flow here
+                GReminders.BookingWidget.close();
+                alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));
+            });
+            GReminders.BookingWidget.onError(function(message) {
+                //if we encounter a booking error you can trigger a different error or retry
+                GReminders.BookingWidget.close();
+                alert('Error! ' + message);
+            });
+
+            // or trigger the widget using this: 
+            // GReminders.BookingWidget.open();
+        };
+    </script>
     <style>
         /* Reset & standardize default styles */
         @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
@@ -148,7 +197,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-1t7ohez_END -->
+    </style><!-- HEAD_svelte-19ek09i_END -->
     <style>
         header.svelte-1bglzju.svelte-1bglzju {
             color: white;
@@ -491,12 +540,23 @@
                         <nav class="svelte-1bglzju"><a class="link svelte-1bglzju" href="/about">About</a><a class="link svelte-1bglzju" href="/mission">Mission</a><a class="link svelte-1bglzju" href="/team">Team</a><a class="link svelte-1bglzju" href="/blog">Blog</a></nav>
                     </div>
                     <div class="mobile-nav svelte-1bglzju"><a href="/" class="logo svelte-1bglzju">Vet Behaviour Team</a>
-                        <button id="open" aria-label="Open mobile navigation"></button>
+                        <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                                <g id="iconifySvelte0">
+                                    <g id="iconifySvelte1">
+                                        <g id="iconifySvelte2" fill="currentColor">
+                                            <rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" />
+                                            <rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" />
+                                            <rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" />
+                                        </g>
+                                    </g>
+                                </g><!-- HTML_TAG_END -->
+                            </svg></button>
                     </div>
                 </div>
                 <div class="section-container svelte-1bglzju">
                     <h1 class="headline svelte-1bglzju">
                     </h1>
+                    <button>BOOK NOW</button>
                 </div>
             </header>
         </div>
