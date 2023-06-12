@@ -199,22 +199,152 @@
         }
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
-        header.svelte-1v4fjnw.svelte-1v4fjnw {
+        :root {
+            --no-of-slides: 4;
+            --slides-in-view: 4;
+            --slide-width: 320px;
+            --slide-height: 260px;
+            --iteration-time: 20s
+        }
+
+        @-webkit-keyframes svelte-1f5nsxz-scroll {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))
+            }
+        }
+
+        @keyframes svelte-1f5nsxz-scroll {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))
+            }
+        }
+
+        .carousel__wrapper.svelte-1f5nsxz.svelte-1f5nsxz {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto
+        }
+
+        .carousel.svelte-1f5nsxz.svelte-1f5nsxz {
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            flex: 1;
+            display: flex;
+            align-items: center
+        }
+
+        .carousel__slide.svelte-1f5nsxz.svelte-1f5nsxz {
+            -webkit-animation: svelte-1f5nsxz-scroll var(--iteration-time) linear infinite;
+            animation: svelte-1f5nsxz-scroll var(--iteration-time) linear infinite;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            width: var(--slide-width);
+            height: var(--slide-height);
+            box-sizing: border-box
+        }
+
+        .carousel__image.svelte-1f5nsxz.svelte-1f5nsxz {
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            margin: 15px 20px
+        }
+
+        .carousel__slide.svelte-1f5nsxz.svelte-1f5nsxz {
+            position: relative
+        }
+
+        .carousel.svelte-1f5nsxz.svelte-1f5nsxz {
+            counter-reset: slideNo
+        }
+
+        header.svelte-1f5nsxz.svelte-1f5nsxz {
             color: white;
             background-size: cover;
             background-position: center center;
-            display: grid;
-            gap: 20rem;
-            height: 100vh
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            -webkit-animation: svelte-1f5nsxz-gradient 15s ease infinite;
+            animation: svelte-1f5nsxz-gradient 15s ease infinite
         }
 
-        .section-container.svelte-1v4fjnw.svelte-1v4fjnw {
+        .flex.svelte-1f5nsxz.svelte-1f5nsxz {
+            display: flex
+        }
+
+        @-webkit-keyframes svelte-1f5nsxz-MoveUpDown {
+
+            0%,
+            100% {
+                top: 0
+            }
+
+            50% {
+                top: 50px
+            }
+        }
+
+        @keyframes svelte-1f5nsxz-MoveUpDown {
+
+            0%,
+            100% {
+                top: 0
+            }
+
+            50% {
+                top: 50px
+            }
+        }
+
+        @-webkit-keyframes svelte-1f5nsxz-gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes svelte-1f5nsxz-gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        .section-container.svelte-1f5nsxz.svelte-1f5nsxz {
             width: 100%;
-            padding-top: 1rem;
-            padding-bottom: 1rem
+            padding: 15px
         }
 
-        .section-container-2.svelte-1v4fjnw.svelte-1v4fjnw {
+        .section-container-2.svelte-1f5nsxz.svelte-1f5nsxz {
             width: 100%;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -226,47 +356,47 @@
             background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .5) 20%, rgba(0, 0, 0, .65))
         }
 
-        .buttons.svelte-1v4fjnw.svelte-1v4fjnw {
+        .buttons.svelte-1f5nsxz.svelte-1f5nsxz {
             display: flex;
             gap: 20px
         }
 
-        .logo.svelte-1v4fjnw.svelte-1v4fjnw {
+        .logo.svelte-1f5nsxz.svelte-1f5nsxz {
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.2
         }
 
-        .desktop-nav.svelte-1v4fjnw.svelte-1v4fjnw {
+        .desktop-nav.svelte-1f5nsxz.svelte-1f5nsxz {
             display: none;
             align-items: center;
             justify-content: space-between;
             width: 100%
         }
 
-        .desktop-nav.svelte-1v4fjnw nav.svelte-1v4fjnw {
+        .desktop-nav.svelte-1f5nsxz nav.svelte-1f5nsxz {
             display: flex;
             gap: 2rem
         }
 
-        .desktop-nav.svelte-1v4fjnw nav a.link.svelte-1v4fjnw {
+        .desktop-nav.svelte-1f5nsxz nav a.link.svelte-1f5nsxz {
             border-color: transparent;
             transition: border-color 0.1s;
             font-size: 0.95rem
         }
 
-        .desktop-nav.svelte-1v4fjnw nav a.link.svelte-1v4fjnw:hover,
-        .desktop-nav.svelte-1v4fjnw nav a.link .active.svelte-1v4fjnw {
+        .desktop-nav.svelte-1f5nsxz nav a.link.svelte-1f5nsxz:hover,
+        .desktop-nav.svelte-1f5nsxz nav a.link .active.svelte-1f5nsxz {
             border-color: initial
         }
 
         @media(min-width: 800px) {
-            .desktop-nav.svelte-1v4fjnw.svelte-1v4fjnw {
+            .desktop-nav.svelte-1f5nsxz.svelte-1f5nsxz {
                 display: flex
             }
         }
 
-        .mobile-nav.svelte-1v4fjnw.svelte-1v4fjnw {
+        .mobile-nav.svelte-1f5nsxz.svelte-1f5nsxz {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -275,23 +405,23 @@
         }
 
         @media(min-width: 800px) {
-            .mobile-nav.svelte-1v4fjnw.svelte-1v4fjnw {
+            .mobile-nav.svelte-1f5nsxz.svelte-1f5nsxz {
                 display: none
             }
         }
 
-        .headline.svelte-1v4fjnw.svelte-1v4fjnw {
+        .headline.svelte-1f5nsxz.svelte-1f5nsxz {
             font-size: clamp(1rem, 10vw, 2rem);
             max-width: 800px;
             padding: 2rem;
             line-height: 1.1
         }
 
-        .headline.svelte-1v4fjnw p {
+        .headline.svelte-1f5nsxz p {
             margin-bottom: 20px
         }
 
-        #popup.svelte-1v4fjnw.svelte-1v4fjnw {
+        #popup.svelte-1f5nsxz.svelte-1f5nsxz {
             color: #222;
             font-size: 1.25rem;
             display: grid;
@@ -307,7 +437,7 @@
             z-index: 1
         }
 
-        #popup.svelte-1v4fjnw button#close.svelte-1v4fjnw {
+        #popup.svelte-1f5nsxz button#close.svelte-1f5nsxz {
             position: absolute;
             right: 1rem;
             top: 1rem
@@ -608,12 +738,12 @@
 
     <div class="section" id="section-2696e4cd-389a-426a-8dee-105a9bf74736">
         <div class="component">
-            <header style="background-image:url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686462686522alfie-cute-copy-1-1140x610.jpg')" role="img" aria-label="" class="svelte-1v4fjnw">
-                <div class="section-container svelte-1v4fjnw">
-                    <div class="desktop-nav svelte-1v4fjnw"><a href="/" class="logo svelte-1v4fjnw">Vet Behaviour Team</a>
-                        <nav class="svelte-1v4fjnw"><a class="link svelte-1v4fjnw" href="/about">About</a><a class="link svelte-1v4fjnw" href="/mission">Mission</a><a class="link svelte-1v4fjnw" href="/team">Team</a><a class="link svelte-1v4fjnw" href="/blog">Blog</a></nav>
+            <header aria-label="" class="svelte-1f5nsxz">
+                <div class="section-container svelte-1f5nsxz">
+                    <div class="desktop-nav svelte-1f5nsxz"><a href="/" class="logo svelte-1f5nsxz">Vet Behaviour Team</a>
+                        <nav class="svelte-1f5nsxz"><a class="link svelte-1f5nsxz" href="/about">About</a><a class="link svelte-1f5nsxz" href="/mission">Mission</a><a class="link svelte-1f5nsxz" href="/team">Team</a><a class="link svelte-1f5nsxz" href="/blog">Blog</a></nav>
                     </div>
-                    <div class="mobile-nav svelte-1v4fjnw"><a href="/" class="logo svelte-1v4fjnw">Vet Behaviour Team</a>
+                    <div class="mobile-nav svelte-1f5nsxz"><a href="/" class="logo svelte-1f5nsxz">Vet Behaviour Team</a>
                         <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
                                 <g id="iconifySvelte0">
                                     <g id="iconifySvelte1">
@@ -627,12 +757,70 @@
                             </svg></button>
                     </div>
                 </div>
-                <div class="section-container-2 svelte-1v4fjnw">
-                    <h1 class="headline svelte-1v4fjnw"><!-- HTML_TAG_START -->
-                        <p>Nurture a balanced connection with your dog and overcome behavioral challenges. </p>
+                <section class="carousel svelte-1f5nsxz">
+                    <div class="container-fluid px-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="carousel__wrapper svelte-1f5nsxz">
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    </div>
+
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464594509linking.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464750720hypervigilance.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464808768pawlift.png');"></div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-1f5nsxz">
+                                        <div class="carousel__image svelte-1f5nsxz" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686464880883lip%20licking.png');"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="section-container-2 svelte-1f5nsxz">
+                    <h1 class="headline svelte-1f5nsxz"><!-- HTML_TAG_START -->
+                        <p>Nurture a balanced connection with your dog and overcome behavioral challenges.</p>
                         <p>Book a consultation now for expert guidance and support.</p><!-- HTML_TAG_END -->
                     </h1>
-                    <div class="flex buttons svelte-1v4fjnw"><button class="button" onclick="GReminders.BookingWidget.open();">BOOK NOW</button>
+                    <div class="flex buttons svelte-1f5nsxz"><button class="button" onclick="GReminders.BookingWidget.open();">BOOK NOW</button>
                         <button class="button">CONTACT US</button>
                     </div>
                 </div>
@@ -670,7 +858,7 @@
                     </div>
                     <div class="teaser svelte-1nd59xk">
                         <div class="body svelte-1nd59xk">
-                            <h2 class="title svelte-1nd59xk">MANZCVS </h2>
+                            <h2 class="title svelte-1nd59xk">MANZCVS</h2>
                             <div class="description"><!-- HTML_TAG_START -->
                                 <h1>MANZCVS qualification which means they are veterinarians with additional training and assessment by examination in veterinary behaviour.</h1><!-- HTML_TAG_END -->
                             </div>
