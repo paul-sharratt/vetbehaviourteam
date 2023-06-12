@@ -5318,7 +5318,10 @@ function create_fragment$9(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686462686522alfie-cute-copy-1-1140x610.jpg",
 					"size": 76
 				},
-				headline: "\n",
+				headline: {
+					"html": "<p>Nurture a balanced connection with your dog and overcome behavioral challenges. </p>\n<p>Book a consultation now for expert guidance and support.</p>",
+					"markdown": "Nurture a balanced connection with your dog and overcome behavioral challenges. \n\nBook a consultation now for expert guidance and support."
+				},
 				logo: {
 					"image": {
 						"alt": "",
@@ -5346,7 +5349,7 @@ function create_fragment$9(ctx) {
 						"link": { "url": "/blog", "label": "Blog" }
 					}
 				],
-				buttontext: "BOOK NOW"
+				buttontext: "Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support.\nNurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. Nurture a balanced connection with your dog and overcome behavioural challenges. Book a consultation now for expert guidance and support. BOOK NOW"
 			}
 		});
 
