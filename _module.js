@@ -399,6 +399,14 @@ function set_data(text, data) {
         return;
     text.data = data;
 }
+function set_style(node, key, value, important) {
+    if (value == null) {
+        node.style.removeProperty(key);
+    }
+    else {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
+}
 function toggle_class(element, name, toggle) {
     element.classList[toggle ? 'add' : 'remove'](name);
 }
@@ -3019,7 +3027,7 @@ function get_each_context_3(ctx, list, i) {
 	return child_ctx;
 }
 
-// (305:33) 
+// (309:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3056,7 +3064,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (303:8) {#if logo.title}
+// (307:8) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[4].title + "";
 	let t;
@@ -3080,7 +3088,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (310:8) {#each site_nav as { link }}
+// (314:8) {#each site_nav as { link }}
 function create_each_block_3(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[20].label + "";
@@ -3101,7 +3109,7 @@ function create_each_block_3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-7oljbk");
+			attr(a, "class", "link svelte-dte8ql");
 			attr(a, "href", a_href_value = /*link*/ ctx[20].url);
 			toggle_class(a, "active", /*link*/ ctx[20].url === window.location.pathname);
 		},
@@ -3126,7 +3134,7 @@ function create_each_block_3(ctx) {
 	};
 }
 
-// (319:33) 
+// (323:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3163,7 +3171,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (317:8) {#if logo.title}
+// (321:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[4].title + "";
 	let t;
@@ -3187,7 +3195,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (329:6) {#if mobileNavOpen}
+// (333:6) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3244,9 +3252,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-7oljbk");
+			attr(button, "class", "svelte-dte8ql");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-7oljbk");
+			attr(nav, "class", "svelte-dte8ql");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3320,7 +3328,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (331:10) {#each site_nav as { link }}
+// (335:10) {#each site_nav as { link }}
 function create_each_block_2(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[20].label + "";
@@ -3360,7 +3368,7 @@ function create_each_block_2(ctx) {
 	};
 }
 
-// (351:10) {#each slides as slide }
+// (355:10) {#each slides as slide }
 function create_each_block_1(ctx) {
 	let div2;
 	let div0;
@@ -3380,7 +3388,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true });
+			div2 = claim_element(nodes, "DIV", { style: true, class: true });
 			var div2_nodes = children(div2);
 			div0 = claim_element(div2_nodes, "DIV", { class: true, style: true });
 			children(div0).forEach(detach);
@@ -3393,10 +3401,11 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "carousel__image svelte-7oljbk");
+			attr(div0, "class", "carousel__image svelte-dte8ql");
 			attr(div0, "style", div0_style_value = `background-image: url('${/*slide*/ ctx[15].image.url}');`);
-			attr(div1, "class", "carousel__text svelte-7oljbk");
-			attr(div2, "class", "carousel__slide svelte-7oljbk");
+			attr(div1, "class", "carousel__text svelte-dte8ql");
+			set_style(div2, "height", "100%");
+			attr(div2, "class", "carousel__slide svelte-dte8ql");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div2, anchor);
@@ -3418,7 +3427,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (358:10) {#each slides as slide }
+// (362:10) {#each slides as slide }
 function create_each_block(ctx) {
 	let div2;
 	let div0;
@@ -3454,10 +3463,10 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "carousel__image svelte-7oljbk");
+			attr(div0, "class", "carousel__image svelte-dte8ql");
 			attr(div0, "style", div0_style_value = `background-image: url('${/*slide*/ ctx[15].image.url}');`);
-			attr(div1, "class", "carousel__text svelte-7oljbk");
-			attr(div2, "class", "carousel__slide svelte-7oljbk");
+			attr(div1, "class", "carousel__text svelte-dte8ql");
+			attr(div2, "class", "carousel__slide svelte-dte8ql");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div2, anchor);
@@ -3658,13 +3667,13 @@ function create_fragment$2(ctx) {
 			t4 = claim_space(header_nodes);
 			section = claim_element(header_nodes, "SECTION", { class: true });
 			var section_nodes = children(section);
-			div6 = claim_element(section_nodes, "DIV", { class: true });
+			div6 = claim_element(section_nodes, "DIV", { style: true, class: true });
 			var div6_nodes = children(div6);
-			div5 = claim_element(div6_nodes, "DIV", { class: true });
+			div5 = claim_element(div6_nodes, "DIV", { style: true, class: true });
 			var div5_nodes = children(div5);
-			div4 = claim_element(div5_nodes, "DIV", { class: true });
+			div4 = claim_element(div5_nodes, "DIV", { style: true, class: true });
 			var div4_nodes = children(div4);
-			div3 = claim_element(div4_nodes, "DIV", { class: true });
+			div3 = claim_element(div4_nodes, "DIV", { style: true, class: true });
 			var div3_nodes = children(div3);
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -3709,28 +3718,32 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-7oljbk");
-			attr(nav, "class", "svelte-7oljbk");
-			attr(div0, "class", "desktop-nav svelte-7oljbk");
+			attr(a0, "class", "logo svelte-dte8ql");
+			attr(nav, "class", "svelte-dte8ql");
+			attr(div0, "class", "desktop-nav svelte-dte8ql");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-7oljbk");
+			attr(a1, "class", "logo svelte-dte8ql");
 			attr(button0, "id", "open");
 			attr(button0, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-7oljbk");
-			attr(div2, "class", "section-container svelte-7oljbk");
-			attr(div3, "class", "carousel__wrapper svelte-7oljbk");
+			attr(div1, "class", "mobile-nav svelte-dte8ql");
+			attr(div2, "class", "section-container svelte-dte8ql");
+			set_style(div3, "height", "100%");
+			attr(div3, "class", "carousel__wrapper svelte-dte8ql");
+			set_style(div4, "height", "100%");
 			attr(div4, "class", "col-12");
+			set_style(div5, "height", "100%");
 			attr(div5, "class", "row");
+			set_style(div6, "height", "100%");
 			attr(div6, "class", "container-fluid px-0");
-			attr(section, "class", "carousel svelte-7oljbk");
-			attr(h1, "class", "headline svelte-7oljbk");
-			attr(button1, "class", "button");
+			attr(section, "class", "carousel svelte-dte8ql");
+			attr(h1, "class", "headline svelte-dte8ql");
+			attr(button1, "class", "button svelte-dte8ql");
 			attr(button1, "onclick", "GReminders.BookingWidget.open();");
-			attr(button2, "class", "button");
-			attr(div7, "class", "flex buttons svelte-7oljbk");
-			attr(div8, "class", "section-container-2 svelte-7oljbk");
+			attr(button2, "class", "button svelte-dte8ql");
+			attr(div7, "class", "flex buttons svelte-dte8ql");
+			attr(div8, "class", "section-container-2 svelte-dte8ql");
 			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
-			attr(header, "class", "svelte-7oljbk");
+			attr(header, "class", "svelte-dte8ql");
 			attr(div9, "class", "component");
 			attr(div10, "class", "section");
 			attr(div10, "id", "section-2696e4cd-389a-426a-8dee-105a9bf74736");
@@ -4108,12 +4121,12 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h20, "class", "heading svelte-mkpshf");
-			attr(h21, "class", "heading svelte-mkpshf");
-			attr(h3, "class", "heading svelte-mkpshf");
-			attr(header, "class", "svelte-mkpshf");
-			attr(div0, "class", "content svelte-mkpshf");
-			attr(section, "class", "section-container svelte-mkpshf");
+			attr(h20, "class", "heading svelte-19b4wr2");
+			attr(h21, "class", "heading svelte-19b4wr2");
+			attr(h3, "class", "heading svelte-19b4wr2");
+			attr(header, "class", "svelte-19b4wr2");
+			attr(div0, "class", "content svelte-19b4wr2");
+			attr(section, "class", "section-container svelte-19b4wr2");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-456d53b4-2eba-4cce-82fd-257c61c5a125");
@@ -4210,7 +4223,7 @@ function get_each_context$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (83:10) {#if teaser.link.url}
+// (90:10) {#if teaser.link.url}
 function create_if_block_1$2(ctx) {
 	let a;
 	let t_value = /*teaser*/ ctx[4].link.label + "";
@@ -4231,7 +4244,7 @@ function create_if_block_1$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1nd59xk");
+			attr(a, "class", "link svelte-1acae4j");
 			attr(a, "href", a_href_value = /*teaser*/ ctx[4].link.url);
 		},
 		m(target, anchor) {
@@ -4251,7 +4264,7 @@ function create_if_block_1$2(ctx) {
 	};
 }
 
-// (89:8) {#if teaser.image.url}
+// (96:8) {#if teaser.image.url}
 function create_if_block$2(ctx) {
 	let img;
 	let img_src_value;
@@ -4269,7 +4282,7 @@ function create_if_block$2(ctx) {
 		h() {
 			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) attr(img, "src", img_src_value);
 			attr(img, "alt", img_alt_value = /*teaser*/ ctx[4].image.alt);
-			attr(img, "class", "svelte-1nd59xk");
+			attr(img, "class", "svelte-1acae4j");
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
@@ -4289,7 +4302,7 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (78:4) {#each teasers as teaser}
+// (85:4) {#each teasers as teaser}
 function create_each_block$1(ctx) {
 	let div2;
 	let div1;
@@ -4343,10 +4356,10 @@ function create_each_block$1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "title svelte-1nd59xk");
-			attr(div0, "class", "description");
-			attr(div1, "class", "body svelte-1nd59xk");
-			attr(div2, "class", "teaser svelte-1nd59xk");
+			attr(h2, "class", "title svelte-1acae4j");
+			attr(div0, "class", "description svelte-1acae4j");
+			attr(div1, "class", "body svelte-1acae4j");
+			attr(div2, "class", "teaser svelte-1acae4j");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div2, anchor);
@@ -4445,8 +4458,8 @@ function create_fragment$4(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "teasers svelte-1nd59xk");
-			attr(section, "class", "section-container svelte-1nd59xk");
+			attr(div0, "class", "teasers svelte-1acae4j");
+			attr(section, "class", "section-container svelte-1acae4j");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-a4022420-12be-44a7-ad90-288ccceaaecf");
@@ -5857,30 +5870,26 @@ function create_fragment$9(ctx) {
 					"size": 76
 				},
 				headline: {
-					"html": "<p>Is your dog experiencing behavioural difficulties? </p>\n<p>We can help.</p>",
-					"markdown": "Is your dog experiencing behavioural difficulties? \n\nWe can help.\n\n"
+					"html": "<p>Struggling with your pet's behaviour?</p>\n<p>We can help.</p>",
+					"markdown": "Struggling with your pet's behaviour?\n\nWe can help.\n\n"
 				},
 				buttontext1: "BOOK NOW",
 				buttontext2: "CONTACT US",
 				logo: {
+					"title": "Vet Behaviour Team -  Kindness + Science",
 					"image": {
 						"alt": "",
-						"src": "",
-						"url": "",
-						"size": null
-					},
-					"title": "Vet Behaviour Team"
+						"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
+						"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
+						"size": 26
+					}
 				},
 				site_nav: [
 					{
 						"link": { "url": "/about", "label": "About" }
 					},
 					{
-						"link": {
-							"url": "/mission",
-							"label": "Mission",
-							"active": false
-						}
+						"link": { "url": "/mission", "label": "Mission" }
 					},
 					{
 						"link": { "url": "/team", "label": "Team" }
@@ -5985,11 +5994,11 @@ function create_fragment$9(ctx) {
 				},
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
-				heading1: "Does your dog seem 'untrainable'?",
-				heading2: "Have you tried BAH, check chains, citronella collars but nothing works?",
+				heading1: "Is your pet's behaviour stressing you out?",
+				heading2: "Aggression. Barking. Separation anxiety. Elimination problems. ",
 				content: {
-					"html": "<p>We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains&nbsp;AGAIN,&nbsp;it can be stressful, frustrating and difficult to live with. Worse still if your loved&nbsp;one starts to become aggressive towards you or other animals!</p><p>The Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by&nbsp;filling in the blanks of why your pet is behaving the way they are.</p><p>Our passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.</p>",
-					"markdown": "We love our pets. They are part of our family. But sometimes, when you come home to another chewed shoe, neighbour complaint about barking, or pee on the curtains AGAIN, it can be stressful, frustrating and difficult to live with. Worse still if your loved one starts to become aggressive towards you or other animals!\n\nThe Vet Behaviour Team can help. Your dog or cat is trying to tell you something. We are here to translate by filling in the blanks of why your pet is behaving the way they are.\n\nOur passion is to use current scientific understanding and kindness to help you and your pet live happy, harmonious lives.\n\n"
+					"html": "<p>We understand the deep bond you share with your pets – they're part of your family. But coming home to destruction, barking complaints from the neighbours, or pee-stained curtains AGAIN can be incredibly stressful and frustrating. It's even more heartbreaking when your beloved furry friend starts showing signs of aggression towards you or other animals.</p>\n<p>That's where The Vet Behaviour Team can help. Your dog or cat is trying to communicate something to you. Our mission is to decipher their behaviour and fill in the missing pieces, so you can understand why they're acting the way they are.</p>\n<p>With our team of passionate professionals, we combine the latest scientific knowledge with genuine kindness to support you and your pet living a happy and harmonious life. We're here to provide authentic guidance and help you navigate through the challenges. </p>",
+					"markdown": "We understand the deep bond you share with your pets – they're part of your family. But coming home to destruction, barking complaints from the neighbours, or pee-stained curtains AGAIN can be incredibly stressful and frustrating. It's even more heartbreaking when your beloved furry friend starts showing signs of aggression towards you or other animals.\n\nThat's where The Vet Behaviour Team can help. Your dog or cat is trying to communicate something to you. Our mission is to decipher their behaviour and fill in the missing pieces, so you can understand why they're acting the way they are.\n\nWith our team of passionate professionals, we combine the latest scientific knowledge with genuine kindness to support you and your pet living a happy and harmonious life. We're here to provide authentic guidance and help you navigate through the challenges. \n\n"
 				},
 				heading3: "We can help.",
 				button1: "BOOK NOW",
@@ -6016,24 +6025,22 @@ function create_fragment$9(ctx) {
 							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686550078041anzcvs-logo.png",
 							"size": 12
 						},
-						"title": "What is a veterinary behaviourist?",
+						"title": "What is a Behaviour Vet?",
 						"description": {
-							"html": "<p>A veterinary behaviourist in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. There are different qualifications for veterinary behaviourists, reflecting different levels of education as accredited by the ANZCVS (Australian and New Zealand College of Veterinary Scientists)</p>",
-							"markdown": "A veterinary behaviourist in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. There are different qualifications for veterinary behaviourists, reflecting different levels of education as accredited by the ANZCVS (Australian and New Zealand College of Veterinary Scientists)\n\n"
+							"html": "<p>A behaviour vet in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. </p>\n<p>The only way to achieve these qualifications are through extra study and examinations from the Australian and New Zealand College of Veterinary Scientists.</p>",
+							"markdown": "A behaviour vet in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. \n\nThe only way to achieve these qualifications are through extra study and examinations from the Australian and New Zealand College of Veterinary Scientists."
 						}
 					},
 					{
-						"link": { "url": "/", "label": "velit" },
+						"link": { "url": "", "label": "", "active": false },
 						"image": {
 							"alt": "",
-							"src": "https://picsum.photos/600/400?blur=10",
-							"url": "https://picsum.photos/600/400?blur=10",
-							"size": null
+							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/justin-veenema-NH1d0xX6Ldk-unsplash.jpg1686652013880"
 						},
-						"title": "MANZCVS",
+						"title": "Qualified Professionals",
 						"description": {
-							"html": "<h1>MANZCVS qualification which means they are veterinarians with additional training and assessment by examination in veterinary behaviour.</h1>",
-							"markdown": "# MANZCVS qualification which means they are veterinarians with additional training and assessment by examination in veterinary behaviour.\n\n"
+							"html": "<p>When you are seeing a Member of the College that means your pet is being treated by:</p>\n<ul>\n<li><p>A veterinarian who understands your pets physically and psychologically</p></li>\n<li><p>A veterinarian who is qualified in veterinary psychiatry and understands and is able to prescribe medication</p></li>\n<li><p>A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.</p></li>\n</ul>\n<!-- -->",
+							"markdown": "When you are seeing a Member of the College that means your pet is being treated by:\n\n- A veterinarian who understands your pets physically and psychologically\n\n- A veterinarian who is qualified in veterinary psychiatry and understands and is able to prescribe medication\n\n- A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.\n\n\n<!-- -->\n\n"
 						}
 					}
 				]
@@ -6053,8 +6060,8 @@ function create_fragment$9(ctx) {
 				teasers: [
 					{
 						"body": {
-							"html": "<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We both completed our Memberships in Veterinary Behavioural Medicine whilst working as “regular” veterinarians.</p>\n<p>So what does that mean? In the human sense, it means we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.</p>",
-							"markdown": "The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We both completed our Memberships in Veterinary Behavioural Medicine whilst working as “regular” veterinarians.\n\n\n\nSo what does that mean? In the human sense, it means we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.\n\n"
+							"html": "<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We have completed our Memberships in Veterinary Behavioural Medicine.</p><p></p><p>So what does that mean? In the human sense, it means we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.</p>",
+							"markdown": "The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We have completed our Memberships in Veterinary Behavioural Medicine.\n\n\n\nSo what does that mean? In the human sense, it means we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.\n\n"
 						},
 						"link": { "url": "/", "label": "Learn More" },
 						"image": {
@@ -6065,8 +6072,8 @@ function create_fragment$9(ctx) {
 					},
 					{
 						"body": {
-							"html": "<p>We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters lead happier and healthier lives. It was during this time we both were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive by forming Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible.</p>",
-							"markdown": "We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters lead happier and healthier lives. It was during this time we both were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive by forming Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible."
+							"html": "<p>We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters with behavioural issues. It was during this time we both were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive by forming Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible.</p>",
+							"markdown": "We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters with behavioural issues. It was during this time we both were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive by forming Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible.\n\n"
 						},
 						"link": { "url": "/", "label": "Learn More" },
 						"image": {
@@ -6129,7 +6136,7 @@ function create_fragment$9(ctx) {
 						"label": ""
 					},
 					{
-						"link": { "url": "/", "label": "tel:123-223-2321" },
+						"link": { "url": "/", "label": "0432881174" },
 						"label": "Phone"
 					}
 				],
@@ -6145,9 +6152,14 @@ function create_fragment$9(ctx) {
 						"placeholder": "something@gmail.com"
 					},
 					{
+						"type": "phone",
+						"label": "Mobile number",
+						"placeholder": ""
+					},
+					{
 						"type": "textarea",
 						"label": "Message",
-						"placeholder": "Tell us how you heard about us...."
+						"placeholder": "Tell us about the current problem with your pet"
 					}
 				]
 			}

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Primo" />
+    <!-- HEAD_svelte-dv8t5k_START -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <style>
+        /* Reset & standardize default styles */
+        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+        /* Design tokens (apply to components) */
+        :root {
+            /* Custom theme options */
+            --color-accent: #004700;
+
+            /* Base values */
+            --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+            --border-radius: 0;
+            --border-color: #e0e1e1;
+        }
+
+        /* Root element (use instead of `body`) */
+        #page {
+            font-family: system-ui, sans-serif;
+            color: #111;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            background: white;
+        }
+
+        /* Elements */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        a.link {
+            line-height: 1.3;
+
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        a.link:hover {
+            border-color: transparent;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            line-height: 1.15;
+
+        }
+
+        .button {
+            color: white;
+            background: var(--color-accent, rebeccapurple);
+            border-radius: 0;
+            padding: 18px 24px;
+            transition: var(--transition, 0.1s box-shadow);
+            border: 0;
+        }
+
+        /* reset */
+
+        .button:hover {
+            box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+        }
+
+        .button.inverted {
+            background: transparent;
+            color: var(--color-accent, rebeccapurple);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .content img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
+
+        .content a.link {
+            line-height: 1.3;
+            font-weight: 500;
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        .content a.link:hover {
+            border-color: transparent;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content blockquote {
+            padding: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--color-accent);
+        }
+    </style><!-- HEAD_svelte-dv8t5k_END -->
+    <style>
+        .section-container.svelte-2w0b9m.svelte-2w0b9m {
+            display: grid;
+            gap: 0.5rem;
+            place-items: center
+        }
+
+        .heading.svelte-2w0b9m.svelte-2w0b9m {
+            text-align: center
+        }
+
+        .subheading.svelte-2w0b9m.svelte-2w0b9m {
+            text-align: center;
+            margin-bottom: 2rem
+        }
+
+        .tiers.svelte-2w0b9m.svelte-2w0b9m {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            place-items: start;
+            gap: 3rem
+        }
+
+        .tiers.svelte-2w0b9m .tier.svelte-2w0b9m {
+            display: grid;
+            gap: 2rem;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem
+        }
+
+        .tiers.svelte-2w0b9m .tier header.svelte-2w0b9m {
+            display: grid;
+            gap: 0.5rem
+        }
+
+        .tiers.svelte-2w0b9m .tier header .title.svelte-2w0b9m {
+            font-size: 0.875rem;
+            color: var(--color-accent, rebeccapurple);
+            border: 2px solid var(--color-accent, rebeccapurple);
+            border-radius: 2rem;
+            font-weight: 500;
+            padding: 0.125rem 0.5rem;
+            justify-self: flex-start
+        }
+
+        .tiers.svelte-2w0b9m .tier header .price.svelte-2w0b9m {
+            font-weight: bold
+        }
+
+        .tiers.svelte-2w0b9m .tier header .price span.numerator.svelte-2w0b9m {
+            font-size: 2rem
+        }
+
+        .tiers.svelte-2w0b9m .tier hr.svelte-2w0b9m {
+            width: 100%;
+            border-color: var(--border-color, #eee)
+        }
+
+        .tiers.svelte-2w0b9m .tier ul.features.svelte-2w0b9m {
+            display: grid;
+            gap: 1rem
+        }
+
+        .tiers.svelte-2w0b9m .tier ul.features li.svelte-2w0b9m {
+            display: flex;
+            align-items: center
+        }
+
+        .tiers.svelte-2w0b9m .tier ul.features li .icon.svelte-2w0b9m {
+            margin-right: 1rem;
+            color: var(--color-accent, rebeccapurple)
+        }
+
+        .tiers.svelte-2w0b9m .tier .button.svelte-2w0b9m {
+            width: 100%;
+            text-align: center
+        }
+    </style>
+</head>
+
+<body id="page">
+
+    <div class="section" id="section-cd67eb14-1ece-4ff6-9d59-ee163a18c062">
+        <div class="component">
+            <section class="section-container svelte-2w0b9m">
+                <h2 class="heading svelte-2w0b9m">Appointments</h2>
+                <h3 class="subheading svelte-2w0b9m">Experience comprehensive and personalised care for your pet with VBT. Our commitment to your pet's well-being and mental health goes beyond a single consultation.</h3>
+                <div class="tiers svelte-2w0b9m">
+                    <div class="tier svelte-2w0b9m">
+                        <header class="svelte-2w0b9m">
+                            <h3 class="title svelte-2w0b9m">Initial behaviour consult</h3>
+                            <div class="price svelte-2w0b9m"><span class="numerator svelte-2w0b9m">$665</span>
+                                <span class="denominator svelte-2w0b9m">for single pet (canine or feline)</span>
+                            </div>
+                            <span class="description"><!-- HTML_TAG_START -->
+                                <p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p><!-- HTML_TAG_END -->
+                            </span>
+                        </header>
+                        <hr class="svelte-2w0b9m">
+                        <ul class="features svelte-2w0b9m">
+                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
+                                <span>- 2 hour house call</span>
+                            </li>
+                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
+                                <span>- behavioural diagnosis and tailored therapeutic plan</span>
+                            </li>
+                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
+                                <span>- travel within the Sydney metro area (30km from CBD)</span>
+                            </li>
+                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
+                                <span>- veterinary behaviour report</span>
+                            </li>
+                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
+                                <span>- 8 weeks email support</span>
+                            </li>
+                        </ul>
+                        <a href="/" class="button svelte-2w0b9m">Book now</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module">
+        const path = window.location.pathname === '/' ? '' : window.location.pathname
+        const [{
+            default: App
+        }] = await Promise.all([
+            import(path + '/_module.js')
+        ]).catch(e => console.error(e))
+        new App({
+            target: document.querySelector('body'),
+            hydrate: true,
+        })
+    </script>
+</body>
+
+</html>
