@@ -4223,331 +4223,8 @@ function get_each_context$1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (90:10) {#if teaser.link.url}
-function create_if_block_1$2(ctx) {
-	let a;
-	let t_value = /*teaser*/ ctx[4].link.label + "";
-	let t;
-	let a_href_value;
-
-	return {
-		c() {
-			a = element("a");
-			t = text(t_value);
-			this.h();
-		},
-		l(nodes) {
-			a = claim_element(nodes, "A", { class: true, href: true });
-			var a_nodes = children(a);
-			t = claim_text(a_nodes, t_value);
-			a_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(a, "class", "link svelte-1acae4j");
-			attr(a, "href", a_href_value = /*teaser*/ ctx[4].link.url);
-		},
-		m(target, anchor) {
-			insert_hydration(target, a, anchor);
-			append_hydration(a, t);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && t_value !== (t_value = /*teaser*/ ctx[4].link.label + "")) set_data(t, t_value);
-
-			if (dirty & /*teasers*/ 1 && a_href_value !== (a_href_value = /*teaser*/ ctx[4].link.url)) {
-				attr(a, "href", a_href_value);
-			}
-		},
-		d(detaching) {
-			if (detaching) detach(a);
-		}
-	};
-}
-
-// (96:8) {#if teaser.image.url}
-function create_if_block$2(ctx) {
-	let img;
-	let img_src_value;
-	let img_alt_value;
-
-	return {
-		c() {
-			img = element("img");
-			this.h();
-		},
-		l(nodes) {
-			img = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
-			this.h();
-		},
-		h() {
-			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*teaser*/ ctx[4].image.alt);
-			attr(img, "class", "svelte-1acae4j");
-		},
-		m(target, anchor) {
-			insert_hydration(target, img, anchor);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && !src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) {
-				attr(img, "src", img_src_value);
-			}
-
-			if (dirty & /*teasers*/ 1 && img_alt_value !== (img_alt_value = /*teaser*/ ctx[4].image.alt)) {
-				attr(img, "alt", img_alt_value);
-			}
-		},
-		d(detaching) {
-			if (detaching) detach(img);
-		}
-	};
-}
-
-// (85:4) {#each teasers as teaser}
-function create_each_block$1(ctx) {
-	let div2;
-	let div1;
-	let h2;
-	let t0_value = /*teaser*/ ctx[4].title + "";
-	let t0;
-	let t1;
-	let div0;
-	let raw_value = /*teaser*/ ctx[4].description.html + "";
-	let t2;
-	let t3;
-	let t4;
-	let if_block0 = /*teaser*/ ctx[4].link.url && create_if_block_1$2(ctx);
-	let if_block1 = /*teaser*/ ctx[4].image.url && create_if_block$2(ctx);
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			h2 = element("h2");
-			t0 = text(t0_value);
-			t1 = space();
-			div0 = element("div");
-			t2 = space();
-			if (if_block0) if_block0.c();
-			t3 = space();
-			if (if_block1) if_block1.c();
-			t4 = space();
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			h2 = claim_element(div1_nodes, "H2", { class: true });
-			var h2_nodes = children(h2);
-			t0 = claim_text(h2_nodes, t0_value);
-			h2_nodes.forEach(detach);
-			t1 = claim_space(div1_nodes);
-			div0 = claim_element(div1_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			t2 = claim_space(div1_nodes);
-			if (if_block0) if_block0.l(div1_nodes);
-			div1_nodes.forEach(detach);
-			t3 = claim_space(div2_nodes);
-			if (if_block1) if_block1.l(div2_nodes);
-			t4 = claim_space(div2_nodes);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(h2, "class", "title svelte-1acae4j");
-			attr(div0, "class", "description svelte-1acae4j");
-			attr(div1, "class", "body svelte-1acae4j");
-			attr(div2, "class", "teaser svelte-1acae4j");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, h2);
-			append_hydration(h2, t0);
-			append_hydration(div1, t1);
-			append_hydration(div1, div0);
-			div0.innerHTML = raw_value;
-			append_hydration(div1, t2);
-			if (if_block0) if_block0.m(div1, null);
-			append_hydration(div2, t3);
-			if (if_block1) if_block1.m(div2, null);
-			append_hydration(div2, t4);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && t0_value !== (t0_value = /*teaser*/ ctx[4].title + "")) set_data(t0, t0_value);
-			if (dirty & /*teasers*/ 1 && raw_value !== (raw_value = /*teaser*/ ctx[4].description.html + "")) div0.innerHTML = raw_value;
-			if (/*teaser*/ ctx[4].link.url) {
-				if (if_block0) {
-					if_block0.p(ctx, dirty);
-				} else {
-					if_block0 = create_if_block_1$2(ctx);
-					if_block0.c();
-					if_block0.m(div1, null);
-				}
-			} else if (if_block0) {
-				if_block0.d(1);
-				if_block0 = null;
-			}
-
-			if (/*teaser*/ ctx[4].image.url) {
-				if (if_block1) {
-					if_block1.p(ctx, dirty);
-				} else {
-					if_block1 = create_if_block$2(ctx);
-					if_block1.c();
-					if_block1.m(div2, t4);
-				}
-			} else if (if_block1) {
-				if_block1.d(1);
-				if_block1 = null;
-			}
-		},
-		d(detaching) {
-			if (detaching) detach(div2);
-			if (if_block0) if_block0.d();
-			if (if_block1) if_block1.d();
-		}
-	};
-}
-
-function create_fragment$4(ctx) {
-	let div2;
-	let div1;
-	let section;
-	let div0;
-	let each_value = /*teasers*/ ctx[0];
-	let each_blocks = [];
-
-	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
-	}
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			section = element("section");
-			div0 = element("div");
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].c();
-			}
-
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(div0_nodes);
-			}
-
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "teasers svelte-1acae4j");
-			attr(section, "class", "section-container svelte-1acae4j");
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-a4022420-12be-44a7-ad90-288ccceaaecf");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				if (each_blocks[i]) {
-					each_blocks[i].m(div0, null);
-				}
-			}
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*teasers*/ 1) {
-				each_value = /*teasers*/ ctx[0];
-				let i;
-
-				for (i = 0; i < each_value.length; i += 1) {
-					const child_ctx = get_each_context$1(ctx, each_value, i);
-
-					if (each_blocks[i]) {
-						each_blocks[i].p(child_ctx, dirty);
-					} else {
-						each_blocks[i] = create_each_block$1(child_ctx);
-						each_blocks[i].c();
-						each_blocks[i].m(div0, null);
-					}
-				}
-
-				for (; i < each_blocks.length; i += 1) {
-					each_blocks[i].d(1);
-				}
-
-				each_blocks.length = each_value.length;
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-			destroy_each(each_blocks, detaching);
-		}
-	};
-}
-
-function instance$4($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
-	let { title } = $$props;
-	let { description } = $$props;
-	let { teasers } = $$props;
-
-	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(2, title = $$props.title);
-		if ('description' in $$props) $$invalidate(3, description = $$props.description);
-		if ('teasers' in $$props) $$invalidate(0, teasers = $$props.teasers);
-	};
-
-	return [teasers, favicon, title, description];
-}
-
-class Component$4 extends SvelteComponent {
-	constructor(options) {
-		super();
-
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
-			favicon: 1,
-			title: 2,
-			description: 3,
-			teasers: 0
-		});
-	}
-}
-
-/* generated by Svelte v3.58.0 */
-
-function get_each_context$2(ctx, list, i) {
-	const child_ctx = ctx.slice();
-	child_ctx[4] = list[i];
-	return child_ctx;
-}
-
 // (103:10) {#if teaser.image.url}
-function create_if_block_1$3(ctx) {
+function create_if_block_1$2(ctx) {
 	let img;
 	let img_src_value;
 	let img_alt_value;
@@ -4585,7 +4262,7 @@ function create_if_block_1$3(ctx) {
 }
 
 // (109:12) {#if teaser.link.url}
-function create_if_block$3(ctx) {
+function create_if_block$2(ctx) {
 	let a;
 	let t_value = /*teaser*/ ctx[4].link.label + "";
 	let t;
@@ -4626,7 +4303,7 @@ function create_if_block$3(ctx) {
 }
 
 // (101:6) {#each teasers as teaser}
-function create_each_block$2(ctx) {
+function create_each_block$1(ctx) {
 	let div2;
 	let t0;
 	let div1;
@@ -4638,8 +4315,8 @@ function create_each_block$2(ctx) {
 	let raw_value = /*teaser*/ ctx[4].body.html + "";
 	let t3;
 	let t4;
-	let if_block0 = /*teaser*/ ctx[4].image.url && create_if_block_1$3(ctx);
-	let if_block1 = /*teaser*/ ctx[4].link.url && create_if_block$3(ctx);
+	let if_block0 = /*teaser*/ ctx[4].image.url && create_if_block_1$2(ctx);
+	let if_block1 = /*teaser*/ ctx[4].link.url && create_if_block$2(ctx);
 
 	return {
 		c() {
@@ -4703,7 +4380,7 @@ function create_each_block$2(ctx) {
 				if (if_block0) {
 					if_block0.p(ctx, dirty);
 				} else {
-					if_block0 = create_if_block_1$3(ctx);
+					if_block0 = create_if_block_1$2(ctx);
 					if_block0.c();
 					if_block0.m(div2, t0);
 				}
@@ -4718,7 +4395,7 @@ function create_each_block$2(ctx) {
 				if (if_block1) {
 					if_block1.p(ctx, dirty);
 				} else {
-					if_block1 = create_if_block$3(ctx);
+					if_block1 = create_if_block$2(ctx);
 					if_block1.c();
 					if_block1.m(div1, null);
 				}
@@ -4735,7 +4412,7 @@ function create_each_block$2(ctx) {
 	};
 }
 
-function create_fragment$5(ctx) {
+function create_fragment$4(ctx) {
 	let div3;
 	let div2;
 	let section;
@@ -4745,7 +4422,7 @@ function create_fragment$5(ctx) {
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
-		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+		each_blocks[i] = create_each_block$1(get_each_context$1(ctx, each_value, i));
 	}
 
 	return {
@@ -4812,6 +4489,329 @@ function create_fragment$5(ctx) {
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
+					const child_ctx = get_each_context$1(ctx, each_value, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+					} else {
+						each_blocks[i] = create_each_block$1(child_ctx);
+						each_blocks[i].c();
+						each_blocks[i].m(div0, null);
+					}
+				}
+
+				for (; i < each_blocks.length; i += 1) {
+					each_blocks[i].d(1);
+				}
+
+				each_blocks.length = each_value.length;
+			}
+		},
+		i: noop,
+		o: noop,
+		d(detaching) {
+			if (detaching) detach(div3);
+			destroy_each(each_blocks, detaching);
+		}
+	};
+}
+
+function instance$4($$self, $$props, $$invalidate) {
+	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { teasers } = $$props;
+
+	$$self.$$set = $$props => {
+		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(3, description = $$props.description);
+		if ('teasers' in $$props) $$invalidate(0, teasers = $$props.teasers);
+	};
+
+	return [teasers, favicon, title, description];
+}
+
+class Component$4 extends SvelteComponent {
+	constructor(options) {
+		super();
+
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+			favicon: 1,
+			title: 2,
+			description: 3,
+			teasers: 0
+		});
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function get_each_context$2(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[4] = list[i];
+	return child_ctx;
+}
+
+// (90:10) {#if teaser.link.url}
+function create_if_block_1$3(ctx) {
+	let a;
+	let t_value = /*teaser*/ ctx[4].link.label + "";
+	let t;
+	let a_href_value;
+
+	return {
+		c() {
+			a = element("a");
+			t = text(t_value);
+			this.h();
+		},
+		l(nodes) {
+			a = claim_element(nodes, "A", { class: true, href: true });
+			var a_nodes = children(a);
+			t = claim_text(a_nodes, t_value);
+			a_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a, "class", "link svelte-1acae4j");
+			attr(a, "href", a_href_value = /*teaser*/ ctx[4].link.url);
+		},
+		m(target, anchor) {
+			insert_hydration(target, a, anchor);
+			append_hydration(a, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*teasers*/ 1 && t_value !== (t_value = /*teaser*/ ctx[4].link.label + "")) set_data(t, t_value);
+
+			if (dirty & /*teasers*/ 1 && a_href_value !== (a_href_value = /*teaser*/ ctx[4].link.url)) {
+				attr(a, "href", a_href_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(a);
+		}
+	};
+}
+
+// (96:8) {#if teaser.image.url}
+function create_if_block$3(ctx) {
+	let img;
+	let img_src_value;
+	let img_alt_value;
+
+	return {
+		c() {
+			img = element("img");
+			this.h();
+		},
+		l(nodes) {
+			img = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
+			this.h();
+		},
+		h() {
+			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*teaser*/ ctx[4].image.alt);
+			attr(img, "class", "svelte-1acae4j");
+		},
+		m(target, anchor) {
+			insert_hydration(target, img, anchor);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*teasers*/ 1 && !src_url_equal(img.src, img_src_value = /*teaser*/ ctx[4].image.url)) {
+				attr(img, "src", img_src_value);
+			}
+
+			if (dirty & /*teasers*/ 1 && img_alt_value !== (img_alt_value = /*teaser*/ ctx[4].image.alt)) {
+				attr(img, "alt", img_alt_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(img);
+		}
+	};
+}
+
+// (85:4) {#each teasers as teaser}
+function create_each_block$2(ctx) {
+	let div2;
+	let div1;
+	let h2;
+	let t0_value = /*teaser*/ ctx[4].title + "";
+	let t0;
+	let t1;
+	let div0;
+	let raw_value = /*teaser*/ ctx[4].description.html + "";
+	let t2;
+	let t3;
+	let t4;
+	let if_block0 = /*teaser*/ ctx[4].link.url && create_if_block_1$3(ctx);
+	let if_block1 = /*teaser*/ ctx[4].image.url && create_if_block$3(ctx);
+
+	return {
+		c() {
+			div2 = element("div");
+			div1 = element("div");
+			h2 = element("h2");
+			t0 = text(t0_value);
+			t1 = space();
+			div0 = element("div");
+			t2 = space();
+			if (if_block0) if_block0.c();
+			t3 = space();
+			if (if_block1) if_block1.c();
+			t4 = space();
+			this.h();
+		},
+		l(nodes) {
+			div2 = claim_element(nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			h2 = claim_element(div1_nodes, "H2", { class: true });
+			var h2_nodes = children(h2);
+			t0 = claim_text(h2_nodes, t0_value);
+			h2_nodes.forEach(detach);
+			t1 = claim_space(div1_nodes);
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			div0_nodes.forEach(detach);
+			t2 = claim_space(div1_nodes);
+			if (if_block0) if_block0.l(div1_nodes);
+			div1_nodes.forEach(detach);
+			t3 = claim_space(div2_nodes);
+			if (if_block1) if_block1.l(div2_nodes);
+			t4 = claim_space(div2_nodes);
+			div2_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h2, "class", "title svelte-1acae4j");
+			attr(div0, "class", "description svelte-1acae4j");
+			attr(div1, "class", "body svelte-1acae4j");
+			attr(div2, "class", "teaser svelte-1acae4j");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div2, anchor);
+			append_hydration(div2, div1);
+			append_hydration(div1, h2);
+			append_hydration(h2, t0);
+			append_hydration(div1, t1);
+			append_hydration(div1, div0);
+			div0.innerHTML = raw_value;
+			append_hydration(div1, t2);
+			if (if_block0) if_block0.m(div1, null);
+			append_hydration(div2, t3);
+			if (if_block1) if_block1.m(div2, null);
+			append_hydration(div2, t4);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*teasers*/ 1 && t0_value !== (t0_value = /*teaser*/ ctx[4].title + "")) set_data(t0, t0_value);
+			if (dirty & /*teasers*/ 1 && raw_value !== (raw_value = /*teaser*/ ctx[4].description.html + "")) div0.innerHTML = raw_value;
+			if (/*teaser*/ ctx[4].link.url) {
+				if (if_block0) {
+					if_block0.p(ctx, dirty);
+				} else {
+					if_block0 = create_if_block_1$3(ctx);
+					if_block0.c();
+					if_block0.m(div1, null);
+				}
+			} else if (if_block0) {
+				if_block0.d(1);
+				if_block0 = null;
+			}
+
+			if (/*teaser*/ ctx[4].image.url) {
+				if (if_block1) {
+					if_block1.p(ctx, dirty);
+				} else {
+					if_block1 = create_if_block$3(ctx);
+					if_block1.c();
+					if_block1.m(div2, t4);
+				}
+			} else if (if_block1) {
+				if_block1.d(1);
+				if_block1 = null;
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(div2);
+			if (if_block0) if_block0.d();
+			if (if_block1) if_block1.d();
+		}
+	};
+}
+
+function create_fragment$5(ctx) {
+	let div2;
+	let div1;
+	let section;
+	let div0;
+	let each_value = /*teasers*/ ctx[0];
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value.length; i += 1) {
+		each_blocks[i] = create_each_block$2(get_each_context$2(ctx, each_value, i));
+	}
+
+	return {
+		c() {
+			div2 = element("div");
+			div1 = element("div");
+			section = element("section");
+			div0 = element("div");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			this.h();
+		},
+		l(nodes) {
+			div2 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div2_nodes = children(div2);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			section = claim_element(div1_nodes, "SECTION", { class: true });
+			var section_nodes = children(section);
+			div0 = claim_element(section_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(div0_nodes);
+			}
+
+			div0_nodes.forEach(detach);
+			section_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div0, "class", "teasers svelte-1acae4j");
+			attr(section, "class", "section-container svelte-1acae4j");
+			attr(div1, "class", "component");
+			attr(div2, "class", "section");
+			attr(div2, "id", "section-a4022420-12be-44a7-ad90-288ccceaaecf");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div2, anchor);
+			append_hydration(div2, div1);
+			append_hydration(div1, section);
+			append_hydration(section, div0);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(div0, null);
+				}
+			}
+		},
+		p(ctx, [dirty]) {
+			if (dirty & /*teasers*/ 1) {
+				each_value = /*teasers*/ ctx[0];
+				let i;
+
+				for (i = 0; i < each_value.length; i += 1) {
 					const child_ctx = get_each_context$2(ctx, each_value, i);
 
 					if (each_blocks[i]) {
@@ -4833,7 +4833,7 @@ function create_fragment$5(ctx) {
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(div3);
+			if (detaching) detach(div2);
 			destroy_each(each_blocks, detaching);
 		}
 	};
@@ -5889,10 +5889,13 @@ function create_fragment$9(ctx) {
 						"link": { "url": "/about", "label": "About" }
 					},
 					{
-						"link": { "label": "Pricing", "url": "/pricing" }
+						"link": { "url": "/pricing", "label": "Pricing" }
 					},
 					{
-						"link": { "url": "/blog", "label": "Blog" }
+						"link": {
+							"url": "/behaviour-fact-sheets",
+							"label": "Behaviour Fact Sheets"
+						}
 					}
 				],
 				slides: [
@@ -5992,10 +5995,10 @@ function create_fragment$9(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				heading1: "Is your pet's behaviour stressing you out?",
-				heading2: "Aggression. Barking. Separation anxiety. Elimination problems. ",
+				heading2: "Aggression. Anxiety disorders. Barking. Separation anxiety. Elimination problems. ",
 				content: {
-					"html": "<p>Our mission is to decipher their behaviour and fill in the missing pieces, so you can understand why they're acting the way they are.</p>\n<p>With our team of passionate professionals, we combine the latest scientific knowledge with genuine kindness to support you and your pet living a happy and harmonious life. We're here to provide authentic guidance and help you navigate through the challenges. </p>",
-					"markdown": "Our mission is to decipher their behaviour and fill in the missing pieces, so you can understand why they're acting the way they are.\n\nWith our team of passionate professionals, we combine the latest scientific knowledge with genuine kindness to support you and your pet living a happy and harmonious life. We're here to provide authentic guidance and help you navigate through the challenges. \n\n"
+					"html": "<p>Our mission is to decipher your pet's behaviour. We're here to provide guidance and help you navigate through the challenges. </p>\n<p>With our team of passionate professionals, we combine the latest scientific knowledge with kindness to support you and your pet living happy and harmonious lives. </p>",
+					"markdown": "Our mission is to decipher your pet's behaviour. We're here to provide guidance and help you navigate through the challenges. \n\nWith our team of passionate professionals, we combine the latest scientific knowledge with kindness to support you and your pet living happy and harmonious lives. \n\n"
 				},
 				heading3: "We can help.",
 				button1: "BOOK NOW",
@@ -6015,30 +6018,19 @@ function create_fragment$9(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				teasers: [
 					{
-						"link": { "url": "", "label": "", "active": false },
+						"body": {
+							"html": "<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. </p>\n<p>In the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind.  Our role is to take care of your pet's emotional and mental health needs.</p>",
+							"markdown": "The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. \n\n\nIn the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind.  Our role is to take care of your pet's emotional and mental health needs.\n\n"
+						},
+						"link": {
+							"url": "/about-us",
+							"label": "Learn More"
+						},
 						"image": {
 							"alt": "",
-							"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686550078041anzcvs-logo.png",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686550078041anzcvs-logo.png",
-							"size": 12
+							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/h-and-a-and-maebel-smiling1-e1421132984282-200x300.jpg1686466319642"
 						},
-						"title": "What is a Behaviour Vet?",
-						"description": {
-							"html": "<p>A behaviour vet in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. </p>\n<p>The only way to achieve these qualifications are through extra study and examinations from the Australian and New Zealand College of Veterinary Scientists.</p>",
-							"markdown": "A behaviour vet in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. \n\nThe only way to achieve these qualifications are through extra study and examinations from the Australian and New Zealand College of Veterinary Scientists."
-						}
-					},
-					{
-						"link": { "url": "", "label": "", "active": false },
-						"image": {
-							"alt": "",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/justin-veenema-NH1d0xX6Ldk-unsplash.jpg1686652013880"
-						},
-						"title": "Qualified Professionals",
-						"description": {
-							"html": "<p>When you are seeing a Member of the College that means your pet is being treated by:</p>\n<ul>\n<li><p>A veterinarian who understands your pets physically and psychologically</p></li>\n<li><p>A veterinarian who is qualified in veterinary psychiatry and understands and is able to prescribe medication</p></li>\n<li><p>A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.</p></li>\n</ul>\n<!-- -->",
-							"markdown": "When you are seeing a Member of the College that means your pet is being treated by:\n\n- A veterinarian who understands your pets physically and psychologically\n\n- A veterinarian who is qualified in veterinary psychiatry and understands and is able to prescribe medication\n\n- A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.\n\n\n<!-- -->\n\n"
-						}
+						"title": "Introducing VBT"
 					}
 				]
 			}
@@ -6056,42 +6048,16 @@ function create_fragment$9(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				teasers: [
 					{
-						"body": {
-							"html": "<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We have completed our Memberships in Veterinary Behavioural Medicine.</p>\n<p>So what does that mean? In the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.</p>",
-							"markdown": "The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We have completed our Memberships in Veterinary Behavioural Medicine.\n\n\n\nSo what does that mean? In the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.\n\n"
-						},
-						"link": { "url": "/", "label": "Learn More" },
+						"link": { "url": "", "label": "", "active": false },
 						"image": {
 							"alt": "",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/h-and-a-and-maebel-smiling1-e1421132984282-200x300.jpg1686466319642"
+							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/justin-veenema-NH1d0xX6Ldk-unsplash.jpg1686652013880"
 						},
-						"title": "Introducing VBT"
-					},
-					{
-						"body": {
-							"html": "<p>We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters with behavioural issues. During this time we were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive forming the Vet Behaviour Team to help families and their pets remain united, happy and healthy for as long as possible.</p>",
-							"markdown": "We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters with behavioural issues. During this time we were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive forming the Vet Behaviour Team to help families and their pets remain united, happy and healthy for as long as possible.\n\n"
-						},
-						"link": { "url": "/", "label": "Learn More" },
-						"image": {
-							"alt": "",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/FF-Certified-Professional-Logo-300x134.png1686466395056"
-						},
-						"title": "Our Story"
-					},
-					{
-						"body": {
-							"html": "<p>We are pleased to have Dr Caitlin McQuarrie join us in 2023. She has completed the CVE course in Veterinary Behavioural Medicine and is sitting for her Membership examinations this year.</p>\n<p>Dr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists examined for for the Veterinary Behaviour Memberships and was on the Australian Veterinary Palliative Care Advisory Council. Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.</p>",
-							"markdown": "We are pleased to have Dr Caitlin McQuarrie join us in 2023. She has completed the CVE course in Veterinary Behavioural Medicine and is sitting for her Membership examinations this year.\n\n\n\nDr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists examined for for the Veterinary Behaviour Memberships and was on the Australian Veterinary Palliative Care Advisory Council. Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.\n\n"
-						},
-						"link": { "url": "/", "label": "Learn More" },
-						"image": {
-							"alt": "",
-							"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png",
-							"size": 9
-						},
-						"title": "Who We Are"
+						"title": "Qualified Professionals. What is a Behaviour Vet?",
+						"description": {
+							"html": "<ul>\n<li><p>A veterinarian who understands your pets physically and psychologically</p></li>\n<li><p>A veterinarian who is qualified in veterinary psychiatry, can diagnose mental disorders and is able to prescribe medication</p></li>\n<li><p>A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.</p></li>\n</ul>",
+							"markdown": "- A veterinarian who understands your pets physically and psychologically\n\n- A veterinarian who is qualified in veterinary psychiatry, can diagnose mental disorders and is able to prescribe medication\n\n- A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.\n\n\n\n"
+						}
 					}
 				]
 			}

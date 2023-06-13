@@ -488,72 +488,6 @@
             line-height: 1.75
         }
 
-        .teasers.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 6rem
-        }
-
-        .teaser.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 3rem
-        }
-
-        .teaser.svelte-1acae4j img.svelte-1acae4j {
-            border-radius: var(--border-radius)
-        }
-
-        .teaser.svelte-1acae4j .body.svelte-1acae4j {
-            display: grid;
-            place-items: flex-start;
-            gap: 1.5rem;
-            padding: 0;
-            line-height: 1.5
-        }
-
-        .teaser.svelte-1acae4j .body .title.svelte-1acae4j {
-            font-size: 2.25rem;
-            font-weight: 500;
-            line-height: 1.25
-        }
-
-        @media(min-width: 800px) {
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                grid-template-columns: 1fr 1fr;
-                place-items: center
-                    /* switch direction for even items */
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 2
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 1
-            }
-        }
-
-        .description.svelte-1acae4j p {
-            margin-top: 10px
-        }
-
-        .description.svelte-1acae4j ul {
-            list-style-type: circle;
-            margin-left: 20px;
-            margin-top: 20px
-        }
-
-        @media(min-width: 1200px) {
-            section.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-        }
-
         section.svelte-1er6exq.svelte-1er6exq {
             background: #2b312b;
             color: white
@@ -630,6 +564,72 @@
 
             .body.svelte-1er6exq.svelte-1er6exq {
                 margin-bottom: 2.5rem
+            }
+        }
+
+        .teasers.svelte-1acae4j.svelte-1acae4j {
+            display: grid;
+            gap: 6rem
+        }
+
+        .teaser.svelte-1acae4j.svelte-1acae4j {
+            display: grid;
+            gap: 3rem
+        }
+
+        .teaser.svelte-1acae4j img.svelte-1acae4j {
+            border-radius: var(--border-radius)
+        }
+
+        .teaser.svelte-1acae4j .body.svelte-1acae4j {
+            display: grid;
+            place-items: flex-start;
+            gap: 1.5rem;
+            padding: 0;
+            line-height: 1.5
+        }
+
+        .teaser.svelte-1acae4j .body .title.svelte-1acae4j {
+            font-size: 2.25rem;
+            font-weight: 500;
+            line-height: 1.25
+        }
+
+        @media(min-width: 800px) {
+            .teaser.svelte-1acae4j.svelte-1acae4j {
+                grid-template-columns: 1fr 1fr;
+                place-items: center
+                    /* switch direction for even items */
+            }
+
+            .teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j {
+                grid-row: 1;
+                grid-column: 2
+            }
+
+            .teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j {
+                grid-row: 1;
+                grid-column: 1
+            }
+        }
+
+        .description.svelte-1acae4j p {
+            margin-top: 10px
+        }
+
+        .description.svelte-1acae4j ul {
+            list-style-type: circle;
+            margin-left: 20px;
+            margin-top: 20px
+        }
+
+        @media(min-width: 1200px) {
+            section.svelte-1acae4j.svelte-1acae4j {
+                gap: 6rem
+            }
+
+            .teaser.svelte-1acae4j.svelte-1acae4j {
+                gap: 6rem
             }
         }
 
@@ -766,7 +766,7 @@
             <header aria-label="" class="svelte-dte8ql">
                 <div class="section-container svelte-dte8ql">
                     <div class="desktop-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql">Vet Behaviour Team - Kindness + Science</a>
-                        <nav class="svelte-dte8ql"><a class="link svelte-dte8ql" href="/about">About</a><a class="link svelte-dte8ql" href="/pricing">Pricing</a><a class="link svelte-dte8ql" href="/blog">Blog</a></nav>
+                        <nav class="svelte-dte8ql"><a class="link svelte-dte8ql" href="/about">About</a><a class="link svelte-dte8ql" href="/pricing">Pricing</a><a class="link svelte-dte8ql" href="/behaviour-fact-sheets">Behaviour Fact Sheets</a></nav>
                     </div>
                     <div class="mobile-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql">Vet Behaviour Team - Kindness + Science</a>
                         <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
@@ -882,51 +882,12 @@
             <section class="section-container svelte-19b4wr2">
                 <header class="svelte-19b4wr2">
                     <h2 class="heading svelte-19b4wr2">Is your pet's behaviour stressing you out?</h2>
-                    <h2 class="heading svelte-19b4wr2">Aggression. Barking. Separation anxiety. Elimination problems. </h2>
+                    <h2 class="heading svelte-19b4wr2">Aggression. Anxiety disorders. Barking. Separation anxiety. Elimination problems. </h2>
                     <h3 class="heading svelte-19b4wr2">We can help.</h3>
                 </header>
                 <div class="content svelte-19b4wr2"><!-- HTML_TAG_START -->
-                    <p>Our mission is to decipher their behaviour and fill in the missing pieces, so you can understand why they're acting the way they are.</p>
-                    <p>With our team of passionate professionals, we combine the latest scientific knowledge with genuine kindness to support you and your pet living a happy and harmonious life. We're here to provide authentic guidance and help you navigate through the challenges. </p><!-- HTML_TAG_END -->
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-a4022420-12be-44a7-ad90-288ccceaaecf">
-        <div class="component">
-            <section class="section-container svelte-1acae4j">
-                <div class="teasers svelte-1acae4j">
-                    <div class="teaser svelte-1acae4j">
-                        <div class="body svelte-1acae4j">
-                            <h2 class="title svelte-1acae4j">What is a Behaviour Vet?</h2>
-                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
-                                <p>A behaviour vet in Australia is a qualified veterinarian who has undertaken post-graduate studies in veterinary behaviour and can diagnose and treat animal behaviour problems. </p>
-                                <p>The only way to achieve these qualifications are through extra study and examinations from the Australian and New Zealand College of Veterinary Scientists.</p><!-- HTML_TAG_END -->
-                            </div>
-                        </div>
-                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686550078041anzcvs-logo.png" alt="" class="svelte-1acae4j">
-                    </div>
-                    <div class="teaser svelte-1acae4j">
-                        <div class="body svelte-1acae4j">
-                            <h2 class="title svelte-1acae4j">Qualified Professionals</h2>
-                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
-                                <p>When you are seeing a Member of the College that means your pet is being treated by:</p>
-                                <ul>
-                                    <li>
-                                        <p>A veterinarian who understands your pets physically and psychologically</p>
-                                    </li>
-                                    <li>
-                                        <p>A veterinarian who is qualified in veterinary psychiatry and understands and is able to prescribe medication</p>
-                                    </li>
-                                    <li>
-                                        <p>A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.</p>
-                                    </li>
-                                </ul>
-                                <!-- --><!-- HTML_TAG_END -->
-                            </div>
-                        </div>
-                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/justin-veenema-NH1d0xX6Ldk-unsplash.jpg1686652013880" alt="" class="svelte-1acae4j">
-                    </div>
+                    <p>Our mission is to decipher your pet's behaviour. We're here to provide guidance and help you navigate through the challenges. </p>
+                    <p>With our team of passionate professionals, we combine the latest scientific knowledge with kindness to support you and your pet living happy and harmonious lives. </p><!-- HTML_TAG_END -->
                 </div>
             </section>
         </div>
@@ -940,34 +901,40 @@
                             <div class="content-section svelte-1er6exq">
                                 <h2 class="heading svelte-1er6exq">Introducing VBT</h2>
                                 <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. We have completed our Memberships in Veterinary Behavioural Medicine.</p>
-                                    <p>So what does that mean? In the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. As VBT is all about behaviour, we will let your own GP vet take care of all your animals physical needs, whilst we take care of its emotional ones.</p><!-- HTML_TAG_END -->
+                                    <p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience. </p>
+                                    <p>In the human sense, we are like your GP and psychiatrist rolled into one. We know all about your animal’s body and how it is intimately linked to its mind. Our role is to take care of your pet's emotional and mental health needs.</p><!-- HTML_TAG_END -->
                                 </div>
-                                <a class="button svelte-1er6exq" href="/">Learn More
+                                <a class="button svelte-1er6exq" href="/about-us">Learn More
                                 </a>
                             </div>
                         </div>
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/FF-Certified-Professional-Logo-300x134.png1686466395056" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq">Our Story</h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>We first formed a team together heading the Veterinary Behaviour Component of RSPCA NSW in 2013 working regionally to help animals within shelters with behavioural issues. During this time we were made acutely aware of the crippling effect mental disease has on an animal and their human families. So we decided to get proactive forming the Vet Behaviour Team to help families and their pets remain united, happy and healthy for as long as possible.</p><!-- HTML_TAG_END -->
-                                </div>
-                                <a class="button svelte-1er6exq" href="/">Learn More
-                                </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-a4022420-12be-44a7-ad90-288ccceaaecf">
+        <div class="component">
+            <section class="section-container svelte-1acae4j">
+                <div class="teasers svelte-1acae4j">
+                    <div class="teaser svelte-1acae4j">
+                        <div class="body svelte-1acae4j">
+                            <h2 class="title svelte-1acae4j">Qualified Professionals. What is a Behaviour Vet?</h2>
+                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
+                                <ul>
+                                    <li>
+                                        <p>A veterinarian who understands your pets physically and psychologically</p>
+                                    </li>
+                                    <li>
+                                        <p>A veterinarian who is qualified in veterinary psychiatry, can diagnose mental disorders and is able to prescribe medication</p>
+                                    </li>
+                                    <li>
+                                        <p>A veterinarian who is qualified in the rehabilitation (training) component of treating behavioural problems.</p>
+                                    </li>
+                                </ul><!-- HTML_TAG_END -->
                             </div>
                         </div>
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq">Who We Are</h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>We are pleased to have Dr Caitlin McQuarrie join us in 2023. She has completed the CVE course in Veterinary Behavioural Medicine and is sitting for her Membership examinations this year.</p>
-                                    <p>Dr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists examined for for the Veterinary Behaviour Memberships and was on the Australian Veterinary Palliative Care Advisory Council. Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.</p><!-- HTML_TAG_END -->
-                                </div>
-                                <a class="button svelte-1er6exq" href="/">Learn More
-                                </a>
-                            </div>
-                        </div>
+                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/justin-veenema-NH1d0xX6Ldk-unsplash.jpg1686652013880" alt="" class="svelte-1acae4j">
                     </div>
                 </div>
             </section>
