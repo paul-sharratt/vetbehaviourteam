@@ -149,125 +149,134 @@
         }
     </style><!-- HEAD_svelte-dv8t5k_END -->
     <style>
-        .section-container.svelte-2w0b9m.svelte-2w0b9m {
-            display: grid;
-            gap: 0.5rem;
-            place-items: center
-        }
-
-        .heading.svelte-2w0b9m.svelte-2w0b9m {
-            text-align: center
-        }
-
-        .subheading.svelte-2w0b9m.svelte-2w0b9m {
-            text-align: center;
-            margin-bottom: 2rem
-        }
-
-        .tiers.svelte-2w0b9m.svelte-2w0b9m {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            place-items: start;
-            gap: 3rem
-        }
-
-        .tiers.svelte-2w0b9m .tier.svelte-2w0b9m {
-            display: grid;
-            gap: 2rem;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius);
-            padding: 2.5rem 2rem
-        }
-
-        .tiers.svelte-2w0b9m .tier header.svelte-2w0b9m {
-            display: grid;
-            gap: 0.5rem
-        }
-
-        .tiers.svelte-2w0b9m .tier header .title.svelte-2w0b9m {
-            font-size: 0.875rem;
-            color: var(--color-accent, rebeccapurple);
-            border: 2px solid var(--color-accent, rebeccapurple);
-            border-radius: 2rem;
-            font-weight: 500;
-            padding: 0.125rem 0.5rem;
-            justify-self: flex-start
-        }
-
-        .tiers.svelte-2w0b9m .tier header .price.svelte-2w0b9m {
-            font-weight: bold
-        }
-
-        .tiers.svelte-2w0b9m .tier header .price span.numerator.svelte-2w0b9m {
-            font-size: 2rem
-        }
-
-        .tiers.svelte-2w0b9m .tier hr.svelte-2w0b9m {
-            width: 100%;
-            border-color: var(--border-color, #eee)
-        }
-
-        .tiers.svelte-2w0b9m .tier ul.features.svelte-2w0b9m {
+        .section-container.svelte-ja2udn {
+            padding-block: 6rem;
             display: grid;
             gap: 1rem
         }
 
-        .tiers.svelte-2w0b9m .tier ul.features li.svelte-2w0b9m {
-            display: flex;
-            align-items: center
+        .heading.svelte-7tm6a9.svelte-7tm6a9 {
+            text-align: center;
+            margin-bottom: 3rem
         }
 
-        .tiers.svelte-2w0b9m .tier ul.features li .icon.svelte-2w0b9m {
-            margin-right: 1rem;
+        ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+            display: grid;
+            place-items: center;
+            gap: 2rem
+        }
+
+        ul.cards.svelte-7tm6a9 li.svelte-7tm6a9 {
+            max-width: 400px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius)
+        }
+
+        ul.cards.svelte-7tm6a9 li figure.svelte-7tm6a9 {
+            display: grid;
+            place-items: center
+        }
+
+        ul.cards.svelte-7tm6a9 li figure img.svelte-7tm6a9 {
+            padding: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details.svelte-7tm6a9 {
+            display: grid;
+            gap: .25rem;
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.name.svelte-7tm6a9 {
+            font-weight: 600
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.title.svelte-7tm6a9 {
+            font-size: 1rem;
+            color: #444
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social.svelte-7tm6a9 {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            font-size: 1.5rem;
             color: var(--color-accent, rebeccapurple)
         }
 
-        .tiers.svelte-2w0b9m .tier .button.svelte-2w0b9m {
-            width: 100%;
-            text-align: center
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9 {
+            transition: var(--transition, 0.1s transform)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9:hover {
+            transform: scale(1.1)
+        }
+
+        @media(min-width: 600px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width: 1000px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr 1fr
+            }
         }
     </style>
 </head>
 
 <body id="page">
 
-    <div class="section" id="section-cd67eb14-1ece-4ff6-9d59-ee163a18c062">
+    <div class="section" id="section-0f0f7f68-ce14-45af-bc9f-dd45875f0ea7">
         <div class="component">
-            <section class="section-container svelte-2w0b9m">
-                <h2 class="heading svelte-2w0b9m">Appointments</h2>
-                <h3 class="subheading svelte-2w0b9m">Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.</h3>
-                <div class="tiers svelte-2w0b9m">
-                    <div class="tier svelte-2w0b9m">
-                        <header class="svelte-2w0b9m">
-                            <h3 class="title svelte-2w0b9m">Initial behaviour consult</h3>
-                            <div class="price svelte-2w0b9m"><span class="numerator svelte-2w0b9m">$665</span>
-                                <span class="denominator svelte-2w0b9m">for single pet (canine or feline)</span>
+            <aside class="section-container svelte-ja2udn">
+                <h3 class="heading"><!-- HTML_TAG_START -->
+                    <p>"To be without trees would, in the most literal way, to be without our roots."</p><!-- HTML_TAG_END -->
+                </h3>
+                <span class="attribution">-somebody somewhere</span>
+            </aside>
+        </div>
+    </div>
+    <div class="section" id="section-d163afba-8452-4a74-ac58-9880f5f17ac3">
+        <div class="component">
+            <section class="section-container svelte-7tm6a9">
+                <h2 class="heading svelte-7tm6a9">Our People</h2>
+                <ul class="cards svelte-7tm6a9">
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Jean Johnson</span>
+                                <span class="title svelte-7tm6a9">Lead UX Designer</span>
                             </div>
-                            <span class="description"><!-- HTML_TAG_START -->
-                                <p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p><!-- HTML_TAG_END -->
-                            </span>
-                        </header>
-                        <hr class="svelte-2w0b9m">
-                        <ul class="features svelte-2w0b9m">
-                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
-                                <span>- 2 hour house call</span>
-                            </li>
-                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
-                                <span>- behavioural diagnosis and tailored therapeutic plan</span>
-                            </li>
-                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
-                                <span>- travel within the Sydney metro area (30km from CBD)</span>
-                            </li>
-                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
-                                <span>- veterinary behaviour report</span>
-                            </li>
-                            <li class="svelte-2w0b9m"><span class="icon svelte-2w0b9m"></span>
-                                <span>- 8 weeks email support</span>
-                            </li>
-                        </ul>
-                        <a href="/" class="button svelte-2w0b9m">Book now</a>
-                    </div>
-                </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="officia" class="svelte-7tm6a9">
+                                </a><a href="/" aria-label="consequat" class="svelte-7tm6a9">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Creed Salem</span>
+                                <span class="title svelte-7tm6a9">Senior Developer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="esse" class="svelte-7tm6a9">
+                                </a><a href="/" aria-label="quis" class="svelte-7tm6a9">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </div>
     </div>

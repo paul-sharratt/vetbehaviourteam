@@ -3277,7 +3277,7 @@ function create_fragment$3(ctx) {
 					"size": 3
 				},
 				heading: "Appointments",
-				subheading: "Experience comprehensive and personalised care for your pet with VBT. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
+				subheading: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				tiers: [
 					{
 						"link": { "url": "/", "label": "Book now" },

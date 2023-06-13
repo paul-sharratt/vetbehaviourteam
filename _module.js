@@ -5876,23 +5876,20 @@ function create_fragment$9(ctx) {
 				buttontext1: "BOOK NOW",
 				buttontext2: "CONTACT US",
 				logo: {
-					"title": "Vet Behaviour Team -  Kindness + Science",
 					"image": {
 						"alt": "",
 						"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
 						"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
 						"size": 26
-					}
+					},
+					"title": "Vet Behaviour Team -  Kindness + Science"
 				},
 				site_nav: [
 					{
 						"link": { "url": "/about", "label": "About" }
 					},
 					{
-						"link": { "url": "/mission", "label": "Mission" }
-					},
-					{
-						"link": { "url": "/team", "label": "Team" }
+						"link": { "label": "Pricing", "url": "/pricing" }
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
@@ -6176,8 +6173,8 @@ function create_fragment$9(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<h3>BillionTrees <br></h3><p>321 Something St. Jackson, AL 20332</p>",
-					"markdown": "### BillionTrees <br>\n\n\n\n321 Something St. Jackson, AL 20332\n\n"
+					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>",
+					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n"
 				},
 				menus: [
 					{
