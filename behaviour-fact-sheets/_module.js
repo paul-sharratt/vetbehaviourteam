@@ -3312,10 +3312,10 @@ function create_fragment$4(ctx) {
 					"size": 3
 				},
 				quote: {
-					"html": "<p>\"To be without trees would, in the most literal way, to be without our roots.\"</p>",
-					"markdown": "\"To be without trees would, in the most literal way, to be without our roots.\""
+					"html": "<p>Our behavioural resources </p>",
+					"markdown": "Our behavioural resources\n\n"
 				},
-				attribution: "-somebody somewhere"
+				attribution: "These illustrations are FREE to download, share, print and distribute under these Creative Commons License terms:\n\nAttribution — Please give credit when sharing online and leave author and artist info on printed or online copies\nNoncommercial — Please do not make money with these images. They should be given away for free. No selling, no business/product advertising, no reprinting in books/magazines without checking with us first.\nNo Derivative Works — Please do not modify any of these images. No cropping, no editing, no translations or additional logos without checking with us first."
 			}
 		});
 
@@ -3327,7 +3327,7 @@ function create_fragment$4(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
-				heading: "Our People",
+				heading: "Our Posters",
 				people: [
 					{
 						"name": "Jean Johnson",
