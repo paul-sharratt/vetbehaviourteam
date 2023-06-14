@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Primo" />
+    <!-- HEAD_svelte-dv8t5k_START -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <style>
+        /* Reset & standardize default styles */
+        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+        /* Design tokens (apply to components) */
+        :root {
+            /* Custom theme options */
+            --color-accent: #004700;
+
+            /* Base values */
+            --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+            --border-radius: 0;
+            --border-color: #e0e1e1;
+        }
+
+        /* Root element (use instead of `body`) */
+        #page {
+            font-family: system-ui, sans-serif;
+            color: #111;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            background: white;
+        }
+
+        /* Elements */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        a.link {
+            line-height: 1.3;
+
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        a.link:hover {
+            border-color: transparent;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            line-height: 1.15;
+
+        }
+
+        .button {
+            color: white;
+            background: var(--color-accent, rebeccapurple);
+            border-radius: 0;
+            padding: 18px 24px;
+            transition: var(--transition, 0.1s box-shadow);
+            border: 0;
+        }
+
+        /* reset */
+
+        .button:hover {
+            box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+        }
+
+        .button.inverted {
+            background: transparent;
+            color: var(--color-accent, rebeccapurple);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .content img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
+
+        .content a.link {
+            line-height: 1.3;
+            font-weight: 500;
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        .content a.link:hover {
+            border-color: transparent;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content blockquote {
+            padding: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--color-accent);
+        }
+    </style><!-- HEAD_svelte-dv8t5k_END -->
+    <style>
+        .section-container.svelte-ja2udn {
+            padding-block: 6rem;
+            display: grid;
+            gap: 1rem
+        }
+    </style>
+</head>
+
+<body id="page">
+
+    <div class="section" id="section-7f2cdfdf-ce28-4066-8bee-304bf85dfc99">
+        <div class="component">
+            <aside class="section-container svelte-ja2udn">
+                <h3 class="heading"><!-- HTML_TAG_START -->
+                    <p>What we do</p><!-- HTML_TAG_END -->
+                </h3>
+                <span class="attribution">Over the next 2 months, we diligently work on refining the treatment plan to suit your pet's individual needs and your family's dynamics. We understand that each patient responds differently, which is why we fine-tune our rehabilitation techniques along the way. If your pet requires medication or you encounter any challenges with the training plan, we're here to assist you promptly and we can make adjustments during this period
+
+                    At VBT, we pride ourselves on our collaborative approach. With a team of dedicated professionals who have been working together for nearly a decade, you can rest assured that there will always be a knowledgeable behaviour vet available to provide care, even if your primary veterinarian is unavailable. Our team understands the intricacies of your pet's treatment program, ensuring seamless continuity of care whenever you need it.
+
+                    Choose VBT and experience the difference of comprehensive care, tailored to your pet's unique needs. Take advantage of our 8-week email support period, receive hassle-free refills for behavioural medications (if required), and benefit from a trusted team that puts your pet's well-being and mental health first. Your pet deserves the best, and we're here to provide it.
+
+
+                </span>
+            </aside>
+        </div>
+    </div>
+
+    <script type="module">
+        const path = window.location.pathname === '/' ? '' : window.location.pathname
+        const [{
+            default: App
+        }] = await Promise.all([
+            import(path + '/_module.js')
+        ]).catch(e => console.error(e))
+        new App({
+            target: document.querySelector('body'),
+            hydrate: true,
+        })
+    </script>
+</body>
+
+</html>

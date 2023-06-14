@@ -5459,13 +5459,13 @@ function create_fragment$9(ctx) {
 				},
 				headline: "Vet Behaviour Team",
 				logo: {
-					"title": "",
 					"image": {
 						"alt": "",
 						"src": "",
 						"url": "",
 						"size": null
-					}
+					},
+					"title": ""
 				},
 				site_nav: [
 					{
