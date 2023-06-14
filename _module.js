@@ -3388,7 +3388,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { style: true, class: true });
+			div2 = claim_element(nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
 			div0 = claim_element(div2_nodes, "DIV", { class: true, style: true });
 			children(div0).forEach(detach);
@@ -3404,7 +3404,6 @@ function create_each_block_1(ctx) {
 			attr(div0, "class", "carousel__image svelte-dte8ql");
 			attr(div0, "style", div0_style_value = `background-image: url('${/*slide*/ ctx[15].image.url}');`);
 			attr(div1, "class", "carousel__text svelte-dte8ql");
-			set_style(div2, "height", "100%");
 			attr(div2, "class", "carousel__slide svelte-dte8ql");
 		},
 		m(target, anchor) {
