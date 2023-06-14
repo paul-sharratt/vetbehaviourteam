@@ -5640,25 +5640,30 @@ function create_fragment$8(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>",
-					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n"
+					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
+					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
 				},
 				menus: [
 					{
+						"title": "Contact us",
 						"links": [
-							{ "link": { "url": "/", "label": "blog" } },
 							{
-								"link": { "url": "/", "label": "consectetur" }
+								"link": { "url": "/contact", "label": "blog" }
+							},
+							{
+								"link": {
+									"url": "/",
+									"label": "Terms and conditions"
+								}
 							}
-						],
-						"title": "About Us"
+						]
 					},
 					{
+						"title": "Get Involved",
 						"links": [
 							{ "link": { "url": "/", "label": "qui" } },
 							{ "link": { "url": "/", "label": "ex" } }
-						],
-						"title": "Get Involved"
+						]
 					}
 				]
 			}
