@@ -4120,12 +4120,12 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h20, "class", "heading svelte-19b4wr2");
-			attr(h21, "class", "heading svelte-19b4wr2");
-			attr(h3, "class", "heading svelte-19b4wr2");
-			attr(header, "class", "svelte-19b4wr2");
-			attr(div0, "class", "content svelte-19b4wr2");
-			attr(section, "class", "section-container svelte-19b4wr2");
+			attr(h20, "class", "heading svelte-19k9con");
+			attr(h21, "class", "heading svelte-19k9con");
+			attr(h3, "class", "heading svelte-19k9con");
+			attr(header, "class", "svelte-19k9con");
+			attr(div0, "class", "content svelte-19k9con");
+			attr(section, "class", "section-container svelte-19k9con");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-456d53b4-2eba-4cce-82fd-257c61c5a125");
