@@ -4585,7 +4585,7 @@ function create_fragment$9(ctx) {
 							"alt": "",
 							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-karolina-grabowska-5993415crop.jpg1686744404682"
 						},
-						"title": "Experience comprehensive and personalised care for your pet.",
+						"title": "Comprehensive and personalised care for your pet.",
 						"description": {
 							"html": "<p>Our commitment to your pet's well-being and mental health goes beyond a single consultation.</p>",
 							"markdown": "Our commitment to your pet's well-being and mental health goes beyond a single consultation."
