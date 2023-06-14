@@ -4160,7 +4160,7 @@ function get_each_context$2(ctx, list, i) {
 	return child_ctx;
 }
 
-// (55:2) {#if buttons.length > 0}
+// (56:2) {#if buttons.length > 0}
 function create_if_block$3(ctx) {
 	let div;
 	let each_value = /*buttons*/ ctx[2];
@@ -4192,7 +4192,7 @@ function create_if_block$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div, "class", "buttons svelte-u2t6n5");
+			attr(div, "class", "buttons svelte-1vqf56x");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
@@ -4234,7 +4234,7 @@ function create_if_block$3(ctx) {
 	};
 }
 
-// (57:6) {#each buttons as button, i}
+// (58:6) {#each buttons as button, i}
 function create_each_block$2(ctx) {
 	let a;
 	let t_value = /*button*/ ctx[4].link.label + "";
@@ -4255,7 +4255,7 @@ function create_each_block$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button svelte-u2t6n5");
+			attr(a, "class", "button svelte-1vqf56x");
 			attr(a, "href", a_href_value = /*button*/ ctx[4].link.url);
 		},
 		m(target, anchor) {
@@ -4325,9 +4325,9 @@ function create_fragment$7(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "heading svelte-u2t6n5");
-			attr(span, "class", "subheading svelte-u2t6n5");
-			attr(header, "class", "section-container svelte-u2t6n5");
+			attr(div0, "class", "heading svelte-1vqf56x");
+			attr(span, "class", "subheading svelte-1vqf56x");
+			attr(header, "class", "section-container svelte-1vqf56x");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-a391e770-a8ed-457c-9f49-fb6c98953678");

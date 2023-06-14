@@ -478,11 +478,40 @@
             }
         }
 
-        .section-container.svelte-1fq63ia {
+        .section-container.svelte-1vqf56x.svelte-1vqf56x {
             background-color: #afc5c5;
-            padding-block: 6rem;
             display: grid;
+            gap: 1.5rem;
+            place-items: center;
+            text-align: center
+        }
+
+        .heading.svelte-1vqf56x.svelte-1vqf56x {
+            font-size: 4rem;
+            font-family: system-ui, sans-serif
+        }
+
+        @media(min-width: 700px) {
+            .heading.svelte-1vqf56x.svelte-1vqf56x {
+                font-size: 2rem
+            }
+        }
+
+        .subheading.svelte-1vqf56x.svelte-1vqf56x {
+            font-size: 1.25rem
+        }
+
+        .buttons.svelte-1vqf56x.svelte-1vqf56x {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
             gap: 1rem
+        }
+
+        .buttons.svelte-1vqf56x .button.svelte-1vqf56x:not(:only-child):last-child {
+            background: inherit;
+            border: 2px solid var(--color-accent, rebeccapurple);
+            color: var(--color, #222)
         }
 
         .section-container.svelte-1twigpw.svelte-1twigpw {
@@ -642,10 +671,10 @@
                         <div class="body svelte-1acae4j">
                             <h2 class="title svelte-1acae4j">Veterinary Behaviour consultations</h2>
                             <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
-                                <p>Our mission is to decipher your pet's behaviour. We're here to provide guidance and help you navigate through the challenges.</p>
+                                <p>Our mission is to decipher your pet's behaviour. Behavioural problems can cause frustration, stress and damage the bond between you and your pet. We're here to provide guidance and help you navigate through the challenges.</p>
                                 <p>With our team of passionate professionals, we combine the latest scientific knowledge with kindness to support you and your pet living happy and harmonious lives.</p><!-- HTML_TAG_END -->
                             </div>
-                            <a class="link svelte-1acae4j" href="/">Read more
+                            <a class="link svelte-1acae4j" href="/what-we-do">Read more
                             </a>
                         </div>
                         <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739823014pexels-blue-bird-7210698small.jpg" alt="" class="svelte-1acae4j">
@@ -660,7 +689,7 @@
                 <div class="content2 svelte-cexu5p"><!-- HTML_TAG_START -->
                     <h2 id="whoweare">Who we are</h2>
                     <p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.</p>
-                    <p>In the human sense, we are like your GP and psychiatrist rolled into one. We recognize the intimate relationship between our pets' emotional state and physical condition. Behavioural problems can cause frustration, stress and damage the bond between you and your pet. Our team's mission is to prioritise their mental health and well-being, teaching them safe and alternative behaviours and ensuring your pets are living their best lives.</p><!-- HTML_TAG_END -->
+                    <p>In the human sense, we are like your GP and psychiatrist rolled into one. We recognize the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. Our team's mission is to prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.</p><!-- HTML_TAG_END -->
                 </div>
             </section>
         </div>
@@ -684,14 +713,13 @@
             </section>
         </div>
     </div>
-    <div class="section" id="section-1d5443a4-fbd8-4e3f-97f5-1cd1f4d1b613">
+    <div class="section" id="section-8e36e315-518f-4aeb-b4c8-2b2a8d51a4f1">
         <div class="component">
-            <aside class="section-container svelte-1fq63ia">
-                <h3 class="heading"><!-- HTML_TAG_START -->
-                    <p>Kindness + Science. The best of both worlds.</p><!-- HTML_TAG_END -->
-                </h3>
-                <span class="attribution"></span>
-            </aside>
+            <header class="section-container svelte-1vqf56x">
+                <div class="heading svelte-1vqf56x">Kindness + Science</div>
+                <span class="subheading svelte-1vqf56x">The best of both worlds</span>
+                <div class="buttons svelte-1vqf56x"><a class="button svelte-1vqf56x" href="/what-we-do">What we do</a><a class="button svelte-1vqf56x" href="/">Book online</a></div>
+            </header>
         </div>
     </div>
     <div class="section" id="section-9b2f1f5e-5073-4610-8259-cae416280c74">
