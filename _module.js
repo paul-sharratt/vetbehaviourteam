@@ -4120,12 +4120,12 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(h20, "class", "heading svelte-19k9con");
-			attr(h21, "class", "heading svelte-19k9con");
-			attr(h3, "class", "heading svelte-19k9con");
-			attr(header, "class", "svelte-19k9con");
-			attr(div0, "class", "content svelte-19k9con");
-			attr(section, "class", "section-container svelte-19k9con");
+			attr(h20, "class", "heading svelte-19b4wr2");
+			attr(h21, "class", "heading svelte-19b4wr2");
+			attr(h3, "class", "heading svelte-19b4wr2");
+			attr(header, "class", "svelte-19b4wr2");
+			attr(div0, "class", "content svelte-19b4wr2");
+			attr(section, "class", "section-container svelte-19b4wr2");
 			attr(div1, "class", "component");
 			attr(div2, "class", "section");
 			attr(div2, "id", "section-456d53b4-2eba-4cce-82fd-257c61c5a125");
@@ -4260,7 +4260,7 @@ function create_if_block_1$2(ctx) {
 	};
 }
 
-// (109:12) {#if teaser.link.label}
+// (109:12) {#if teaser.link.url}
 function create_if_block$2(ctx) {
 	let a;
 	let t_value = /*teaser*/ ctx[4].link.label + "";
@@ -4315,7 +4315,7 @@ function create_each_block$1(ctx) {
 	let t3;
 	let t4;
 	let if_block0 = /*teaser*/ ctx[4].image.url && create_if_block_1$2(ctx);
-	let if_block1 = /*teaser*/ ctx[4].link.label && create_if_block$2(ctx);
+	let if_block1 = /*teaser*/ ctx[4].link.url && create_if_block$2(ctx);
 
 	return {
 		c() {
@@ -4390,7 +4390,7 @@ function create_each_block$1(ctx) {
 
 			if (dirty & /*teasers*/ 1 && t1_value !== (t1_value = /*teaser*/ ctx[4].title + "")) set_data(t1, t1_value);
 			if (dirty & /*teasers*/ 1 && raw_value !== (raw_value = /*teaser*/ ctx[4].body.html + "")) div0.innerHTML = raw_value;
-			if (/*teaser*/ ctx[4].link.label) {
+			if (/*teaser*/ ctx[4].link.url) {
 				if (if_block1) {
 					if_block1.p(ctx, dirty);
 				} else {

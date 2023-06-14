@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="generator" content="Primo" />
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-ucmgnd_START -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <meta name="description" content="Kindness + Science. The best of both worlds">
+    <script src="https://app.greminders.com/widgets/booking.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            const urlObj = new URL(window.location.href);
+            const searchParams = urlObj.searchParams;
+
+            GReminders.BookingWidget.initialize(
+                //create an event type and put the link below: https://app.greminders.com/event-types
+                //or use with Routing Forms: https://app.greminders.com/routing-forms
+                'https://app.greminders.com/c/paulsharratt/test',
+
+                //here are all the options
+                {
+                    // you can trigger this based on a button or some other action
+                    anchorEl: document.getElementById('schedule_button'), //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code 
+
+                    fields: {
+                        first_name: '', // you can prepopulate the fields here if you already have this information
+                        last_name: '',
+                        phone: '',
+                        email: '',
+                        auto_submit: false,
+                        remember_me: true,
+                        utm_source: searchParams.get('utm_source') || '',
+                        utm_medium: searchParams.get('utm_medium') || '',
+                        utm_campaign: searchParams.get('utm_campaign') || '',
+                        utm_content: searchParams.get('utm_content') || '',
+                        utm_term: searchParams.get('utm_term') || ''
+                    },
+                    styles: {
+                        zIndex: 100
+                    }
+                }
+            );
+            GReminders.BookingWidget.onSuccess(function(event_id, form_data) {
+                //we automatically close the widget on successful booking, you can continue your flow here
+                GReminders.BookingWidget.close();
+                alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));
+            });
+            GReminders.BookingWidget.onError(function(message) {
+                //if we encounter a booking error you can trigger a different error or retry
+                GReminders.BookingWidget.close();
+                alert('Error! ' + message);
+            });
+
+            // or trigger the widget using this: 
+            // GReminders.BookingWidget.open();
+        };
+    </script>
+    <style>
+        /* Reset & standardize default styles */
+        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+        /* Design tokens (apply to components) */
+        :root {
+            /* Custom theme options */
+            --color-accent: #004700;
+
+            /* Base values */
+            --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+            --border-radius: 0;
+            --border-color: #e0e1e1;
+        }
+
+        /* Root element (use instead of `body`) */
+        #page {
+            font-family: system-ui, sans-serif;
+            color: #111;
+            line-height: 1.5;
+            font-size: 1.125rem;
+            background: white;
+        }
+
+        /* Elements */
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+
+        a.link {
+            line-height: 1.3;
+
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        a.link:hover {
+            border-color: transparent;
+        }
+
+        .heading {
+            font-size: 2.5rem;
+            line-height: 1.15;
+
+        }
+
+        .button {
+            color: white;
+            background: var(--color-accent, rebeccapurple);
+            border-radius: 0;
+            padding: 18px 24px;
+            transition: var(--transition, 0.1s box-shadow);
+            border: 0;
+        }
+
+        /* reset */
+
+        .button:hover {
+            box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+        }
+
+        .button.inverted {
+            background: transparent;
+            color: var(--color-accent, rebeccapurple);
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content p {
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .content img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius);
+        }
+
+        .content a.link {
+            line-height: 1.3;
+            font-weight: 500;
+            border-bottom: 2px solid var(--color-accent);
+            transform: translateY(-2px);
+            /* move link back into place */
+            transition: var(--transition, 0.1s border);
+        }
+
+        .content a.link:hover {
+            border-color: transparent;
+        }
+
+        .content h1 {
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .content ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem;
+        }
+
+        .content blockquote {
+            padding: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--color-accent);
+        }
+    </style><!-- HEAD_svelte-ucmgnd_END -->
+    <style>
+        :root {
+            --no-of-slides: 9;
+            --slides-in-view: 4;
+            --slide-width: 300px;
+            --slide-height: 300px;
+            --iteration-time: 30s
+        }
+
+        @-webkit-keyframes svelte-dte8ql-scroll {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))
+            }
+        }
+
+        @keyframes svelte-dte8ql-scroll {
+            0% {
+                transform: translateX(0)
+            }
+
+            100% {
+                transform: translateX(calc(var(--slide-width) * var(--no-of-slides)* -1))
+            }
+        }
+
+        .carousel__wrapper.svelte-dte8ql.svelte-dte8ql {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto
+        }
+
+        .carousel.svelte-dte8ql.svelte-dte8ql {
+            overflow: hidden;
+            width: 100%;
+            height: 400px;
+            max-height: 100%;
+            flex: 1;
+            display: flex;
+            align-items: center
+        }
+
+        .carousel__slide.svelte-dte8ql.svelte-dte8ql {
+            -webkit-animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
+            animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
+            display: flex;
+            flex-direction: column;
+            flex: 0 0 auto;
+            width: var(--slide-width);
+            height: var(--slide-height);
+            box-sizing: border-box
+        }
+
+        .carousel__image.svelte-dte8ql.svelte-dte8ql {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100%;
+            margin: 15px 20px
+        }
+
+        .carousel__text.svelte-dte8ql.svelte-dte8ql {
+            background: #00000044;
+            text-align: center;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 20px;
+            align-self: center
+        }
+
+        .carousel__slide.svelte-dte8ql.svelte-dte8ql {
+            position: relative
+        }
+
+        .carousel.svelte-dte8ql.svelte-dte8ql {
+            counter-reset: slideNo
+        }
+
+        header.svelte-dte8ql.svelte-dte8ql {
+            color: white;
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background: #afc5c5;
+            background-size: 400% 400%
+        }
+
+        .flex.svelte-dte8ql.svelte-dte8ql {
+            display: flex
+        }
+
+        @-webkit-keyframes svelte-dte8ql-MoveUpDown {
+
+            0%,
+            100% {
+                top: 0
+            }
+
+            50% {
+                top: 50px
+            }
+        }
+
+        @keyframes svelte-dte8ql-MoveUpDown {
+
+            0%,
+            100% {
+                top: 0
+            }
+
+            50% {
+                top: 50px
+            }
+        }
+
+        @-webkit-keyframes svelte-dte8ql-gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        @keyframes svelte-dte8ql-gradient {
+            0% {
+                background-position: 0% 50%
+            }
+
+            50% {
+                background-position: 100% 50%
+            }
+
+            100% {
+                background-position: 0% 50%
+            }
+        }
+
+        .section-container.svelte-dte8ql.svelte-dte8ql {
+            width: 100%;
+            padding: 15px
+        }
+
+        .section-container-2.svelte-dte8ql.svelte-dte8ql {
+            width: 100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .5) 15%, rgba(0, 0, 0, .65))
+        }
+
+        .buttons.svelte-dte8ql.svelte-dte8ql {
+            display: flex;
+            gap: 20px
+        }
+
+        .logo.svelte-dte8ql.svelte-dte8ql {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2
+        }
+
+        .desktop-nav.svelte-dte8ql.svelte-dte8ql {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%
+        }
+
+        .desktop-nav.svelte-dte8ql nav.svelte-dte8ql {
+            display: flex;
+            gap: 2rem
+        }
+
+        .desktop-nav.svelte-dte8ql nav a.link.svelte-dte8ql {
+            border-color: transparent;
+            transition: border-color 0.1s;
+            font-size: 0.95rem
+        }
+
+        .desktop-nav.svelte-dte8ql nav a.link.svelte-dte8ql:hover,
+        .desktop-nav.svelte-dte8ql nav a.link .active.svelte-dte8ql {
+            border-color: initial
+        }
+
+        @media(min-width: 800px) {
+            .desktop-nav.svelte-dte8ql.svelte-dte8ql {
+                display: flex
+            }
+        }
+
+        .mobile-nav.svelte-dte8ql.svelte-dte8ql {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-weight: 500
+        }
+
+        @media(min-width: 800px) {
+            .mobile-nav.svelte-dte8ql.svelte-dte8ql {
+                display: none
+            }
+        }
+
+        .headline.svelte-dte8ql.svelte-dte8ql {
+            font-size: clamp(1rem, 10vw, 2rem);
+            max-width: 800px;
+            padding: 2rem;
+            line-height: 1.1;
+            padding-bottom: 0
+        }
+
+        .headline.svelte-dte8ql p {
+            margin-bottom: 20px
+        }
+
+        #popup.svelte-dte8ql.svelte-dte8ql {
+            color: #222;
+            font-size: 1.25rem;
+            display: grid;
+            gap: 1rem;
+            position: absolute;
+            text-align: center;
+            background-color: var(--background-color, white);
+            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
+            border-radius: var(--border-radius);
+            inset: 0.5rem;
+            bottom: initial;
+            padding: 2rem;
+            z-index: 1
+        }
+
+        #popup.svelte-dte8ql button#close.svelte-dte8ql {
+            position: absolute;
+            right: 1rem;
+            top: 1rem
+        }
+
+        .button.svelte-dte8ql.svelte-dte8ql {
+            background: #ffc14f;
+            color: black
+        }
+
+        .content.svelte-1yexq97 img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .content.svelte-1yexq97 p {
+            padding: 0.25rem 0;
+            line-height: 1.5
+        }
+
+        .content.svelte-1yexq97 a {
+            border-bottom: 2px solid
+        }
+
+        .content.svelte-1yexq97 h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem
+        }
+
+        .content.svelte-1yexq97 ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 blockquote {
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .heading.svelte-7tm6a9.svelte-7tm6a9 {
+            text-align: center;
+            margin-bottom: 3rem
+        }
+
+        ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+            display: grid;
+            place-items: center;
+            gap: 2rem
+        }
+
+        ul.cards.svelte-7tm6a9 li.svelte-7tm6a9 {
+            max-width: 400px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius)
+        }
+
+        ul.cards.svelte-7tm6a9 li figure.svelte-7tm6a9 {
+            display: grid;
+            place-items: center
+        }
+
+        ul.cards.svelte-7tm6a9 li figure img.svelte-7tm6a9 {
+            padding: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details.svelte-7tm6a9 {
+            display: grid;
+            gap: .25rem;
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.name.svelte-7tm6a9 {
+            font-weight: 600
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.title.svelte-7tm6a9 {
+            font-size: 1rem;
+            color: #444
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social.svelte-7tm6a9 {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--color-accent, rebeccapurple)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9 {
+            transition: var(--transition, 0.1s transform)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9:hover {
+            transform: scale(1.1)
+        }
+
+        @media(min-width: 600px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width: 1000px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+
+        .section-container.svelte-ja2udn {
+            padding-block: 6rem;
+            display: grid;
+            gap: 1rem
+        }
+
+        footer.svelte-u1zmy0.svelte-u1zmy0 {
+            background: #2b312b;
+            color: white
+        }
+
+        .section-container.svelte-u1zmy0.svelte-u1zmy0 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 4rem
+        }
+
+        .content.svelte-u1zmy0.svelte-u1zmy0 {
+            margin: initial;
+            padding: 0;
+            line-height: 1.1
+        }
+
+        .nav-items.svelte-u1zmy0.svelte-u1zmy0 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4rem
+        }
+
+        .nav-items.svelte-u1zmy0 ul.svelte-u1zmy0 {
+            display: grid;
+            gap: 0.5rem
+        }
+
+        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0 {
+            border-bottom: 2px solid white
+        }
+
+        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0:hover {
+            border-color: transparent
+        }
+
+        .nav-items.svelte-u1zmy0 h3.svelte-u1zmy0 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 1rem
+        }
+
+        .heading.svelte-7tm6a9.svelte-7tm6a9 {
+            text-align: center;
+            margin-bottom: 3rem
+        }
+
+        ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+            display: grid;
+            place-items: center;
+            gap: 2rem
+        }
+
+        ul.cards.svelte-7tm6a9 li.svelte-7tm6a9 {
+            max-width: 400px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius)
+        }
+
+        ul.cards.svelte-7tm6a9 li figure.svelte-7tm6a9 {
+            display: grid;
+            place-items: center
+        }
+
+        ul.cards.svelte-7tm6a9 li figure img.svelte-7tm6a9 {
+            padding: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details.svelte-7tm6a9 {
+            display: grid;
+            gap: .25rem;
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.name.svelte-7tm6a9 {
+            font-weight: 600
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.title.svelte-7tm6a9 {
+            font-size: 1rem;
+            color: #444
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social.svelte-7tm6a9 {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--color-accent, rebeccapurple)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9 {
+            transition: var(--transition, 0.1s transform)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9:hover {
+            transform: scale(1.1)
+        }
+
+        @media(min-width: 600px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width: 1000px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+
+        .content.svelte-1yexq97 img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .content.svelte-1yexq97 p {
+            padding: 0.25rem 0;
+            line-height: 1.5
+        }
+
+        .content.svelte-1yexq97 a {
+            border-bottom: 2px solid
+        }
+
+        .content.svelte-1yexq97 h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem
+        }
+
+        .content.svelte-1yexq97 ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 blockquote {
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .content.svelte-1yexq97 img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .content.svelte-1yexq97 p {
+            padding: 0.25rem 0;
+            line-height: 1.5
+        }
+
+        .content.svelte-1yexq97 a {
+            border-bottom: 2px solid
+        }
+
+        .content.svelte-1yexq97 h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        .content.svelte-1yexq97 h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem
+        }
+
+        .content.svelte-1yexq97 ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 blockquote {
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .heading.svelte-7tm6a9.svelte-7tm6a9 {
+            text-align: center;
+            margin-bottom: 3rem
+        }
+
+        ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+            display: grid;
+            place-items: center;
+            gap: 2rem
+        }
+
+        ul.cards.svelte-7tm6a9 li.svelte-7tm6a9 {
+            max-width: 400px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color, #eee);
+            border-radius: var(--border-radius)
+        }
+
+        ul.cards.svelte-7tm6a9 li figure.svelte-7tm6a9 {
+            display: grid;
+            place-items: center
+        }
+
+        ul.cards.svelte-7tm6a9 li figure img.svelte-7tm6a9 {
+            padding: 2rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            width: 100%
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details.svelte-7tm6a9 {
+            display: grid;
+            gap: .25rem;
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.name.svelte-7tm6a9 {
+            font-weight: 600
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .details span.title.svelte-7tm6a9 {
+            font-size: 1rem;
+            color: #444
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social.svelte-7tm6a9 {
+            display: flex;
+            justify-content: center;
+            gap: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--color-accent, rebeccapurple)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9 {
+            transition: var(--transition, 0.1s transform)
+        }
+
+        ul.cards.svelte-7tm6a9 li .info .social a.svelte-7tm6a9:hover {
+            transform: scale(1.1)
+        }
+
+        @media(min-width: 600px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width: 1000px) {
+            ul.cards.svelte-7tm6a9.svelte-7tm6a9 {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+    </style>
+</head>
+
+<body id="page">
+
+    <div class="section" id="section-5c93ef43-77d0-4086-9036-e0a347c3c623">
+        <div class="component">
+            <header aria-label="" class="svelte-dte8ql">
+                <div class="section-container svelte-dte8ql">
+                    <div class="desktop-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql">Vet Behaviour Team - Kindness + Science</a>
+                        <nav class="svelte-dte8ql"><a class="link svelte-dte8ql" href="/vetbehaviourteam/about-us/">About</a><a class="link svelte-dte8ql" href="/vetbehaviourteam/pricing/">Pricing</a><a class="link svelte-dte8ql" href="/vetbehaviourteam/behaviour-fact-sheets">Behaviour Fact Sheets</a></nav>
+                    </div>
+                    <div class="mobile-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql">Vet Behaviour Team - Kindness + Science</a>
+                        <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                                <g id="iconifySvelte0">
+                                    <g id="iconifySvelte1">
+                                        <g id="iconifySvelte2" fill="currentColor">
+                                            <rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" />
+                                            <rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" />
+                                            <rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" />
+                                        </g>
+                                    </g>
+                                </g><!-- HTML_TAG_END -->
+                            </svg></button>
+                    </div>
+                </div>
+                <section class="carousel svelte-dte8ql">
+                    <div style="height:100%;" class="container-fluid px-0">
+                        <div style="height:100%;" class="row">
+                            <div style="height:100%;" class="col-12">
+                                <div style="height:100%;" class="carousel__wrapper svelte-dte8ql">
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Lip Licking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Paw Lift</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hypervigilant</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Bare Teeth</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Barking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Destructive</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hiding</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Jumping and Mouthing</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hyperactive</div>
+                                    </div>
+
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Lip Licking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Paw Lift</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hypervigilant</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Bare Teeth</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Barking</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Destructive</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hiding</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Jumping and Mouthing</div>
+                                    </div>
+                                    <div class="carousel__slide svelte-dte8ql">
+                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-dte8ql">Hyperactive</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="section-container-2 svelte-dte8ql">
+                    <h1 class="headline svelte-dte8ql"><!-- HTML_TAG_START -->
+                        <p>Our Behaviour Resources</p><!-- HTML_TAG_END -->
+                    </h1>
+                    <div class="flex buttons svelte-dte8ql"><button class="button svelte-dte8ql" onclick="GReminders.BookingWidget.open();"></button>
+                        <button class="button svelte-dte8ql"></button>
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div class="section" id="section-fc593fe2-952f-473a-8faa-e4c383a9481a">
+        <div class="component">
+            <div class="section">
+                <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
+                    <p>These illustrations&nbsp;are FREE to download, share, print and distribute under&nbsp;<a target="_blank" rel="noopener noreferrer nofollow" class="link link" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">these Creative Commons License terms:</a></p>
+                    <ol>
+                        <li>
+                            <p><strong>Attribution</strong>&nbsp;—&nbsp;Please give credit when sharing online and leave author and artist&nbsp;info on printed or online copies</p>
+                        </li>
+                        <li>
+                            <p><strong>Noncommercial&nbsp;</strong>— Please do not make money with these images. They should be given away for free. No selling, no business/product advertising, no reprinting in books/magazines&nbsp;without checking with us first.</p>
+                        </li>
+                        <li>
+                            <p><strong>No Derivative Works&nbsp;</strong>— Please do not modify any of these images. No cropping, no editing, no&nbsp;translations&nbsp;or additional logos without checking with us first.</p>
+                        </li>
+                    </ol><!-- HTML_TAG_END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section-465921ed-eb92-4f14-9dff-828fb638a31f">
+        <div class="component">
+            <section class="section-container svelte-7tm6a9">
+                <h2 class="heading svelte-7tm6a9"></h2>
+                <ul class="cards svelte-7tm6a9">
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Jean Johnson</span>
+                                <span class="title svelte-7tm6a9">Lead UX Designer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="officia" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="consequat" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Creed Salem</span>
+                                <span class="title svelte-7tm6a9">Senior Developer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="esse" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="quis" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-a5de337a-4536-45cb-99d6-49c37d4c4922">
+        <div class="component">
+            <aside class="section-container svelte-ja2udn">
+                <h3 class="heading"><!-- HTML_TAG_START -->
+                    <p>Kindness + Science. The best of both worlds.</p><!-- HTML_TAG_END -->
+                </h3>
+                <span class="attribution"></span>
+            </aside>
+        </div>
+    </div>
+    <div class="section" id="section-e821f3e3-0436-4a30-bd02-1c1fd600de5e">
+        <div class="component">
+            <footer class="svelte-u1zmy0">
+                <div class="section-container svelte-u1zmy0">
+                    <div class="content svelte-u1zmy0"><!-- HTML_TAG_START -->
+                        <p>Vet Behaviour Team
+                            0432 881 174</p>
+                        <p>ABN: 34603289176</p>
+                        <p>copyright© Vet Behaviour Team pty ltd 2023</p><!-- HTML_TAG_END -->
+                    </div>
+                    <div class="nav-items svelte-u1zmy0">
+                        <nav>
+                            <h3 class="svelte-u1zmy0">About Us</h3>
+                            <ul class="svelte-u1zmy0">
+                                <li><a class="link svelte-u1zmy0" href="/">blog</a>
+                                </li>
+                                <li><a class="link svelte-u1zmy0" href="/">consectetur</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav>
+                            <h3 class="svelte-u1zmy0">Get Involved</h3>
+                            <ul class="svelte-u1zmy0">
+                                <li><a class="link svelte-u1zmy0" href="/">qui</a>
+                                </li>
+                                <li><a class="link svelte-u1zmy0" href="/">ex</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div class="section" id="section-72cf4162-7d3e-43c5-b2e3-60b5d5117f43">
+        <div class="component">
+            <section class="section-container svelte-7tm6a9">
+                <h2 class="heading svelte-7tm6a9">Our People</h2>
+                <ul class="cards svelte-7tm6a9">
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Jean Johnson</span>
+                                <span class="title svelte-7tm6a9">Lead UX Designer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="officia" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="consequat" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Creed Salem</span>
+                                <span class="title svelte-7tm6a9">Senior Developer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="esse" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="quis" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-51588a75-cb37-4a1b-b5f2-bfb5ea8b4273">
+        <div class="component">
+            <div class="section">
+                <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
+                    <h1 id="heading1">Heading 1</h1>
+                    <h2 id="heading2">Heading 2</h2>
+                    <h3 id="heading3">Heading 3</h3>
+                    <p>A simple paragraph. <strong>Duis aute</strong> irure dolor in reprehenderit in voluptate velit esse cillum dolore <em>eu fugiat</em> nulla pariatur. Excepteur sint <strong>occaecat cupidatat</strong> non proident, sunt in culpa qui officia <a href="/">deserunt mollit</a> anim id est laborum.</p><!-- HTML_TAG_END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section-e004f950-ea70-4050-b515-7b734319d045">
+        <div class="component">
+            <div class="section">
+                <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
+                    <h1 id="heading1">Heading 1</h1>
+                    <h2 id="heading2">Heading 2</h2>
+                    <h3 id="heading3">Heading 3</h3>
+                    <p>A simple paragraph. <strong>Duis aute</strong> irure dolor in reprehenderit in voluptate velit esse cillum dolore <em>eu fugiat</em> nulla pariatur. Excepteur sint <strong>occaecat cupidatat</strong> non proident, sunt in culpa qui officia <a href="/">deserunt mollit</a> anim id est laborum.</p><!-- HTML_TAG_END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section-4d05e4fd-ffb2-46be-8d81-85464c3d8764">
+        <div class="component">
+            <section class="section-container svelte-7tm6a9">
+                <h2 class="heading svelte-7tm6a9">Our People</h2>
+                <ul class="cards svelte-7tm6a9">
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Jean Johnson</span>
+                                <span class="title svelte-7tm6a9">Lead UX Designer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="officia" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="consequat" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-7tm6a9">
+                        <figure class="svelte-7tm6a9"><img alt="" src="https://picsum.photos/600/400?blur=10" class="svelte-7tm6a9">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-7tm6a9"><span class="name svelte-7tm6a9">Creed Salem</span>
+                                <span class="title svelte-7tm6a9">Senior Developer</span>
+                            </div>
+                            <div class="social svelte-7tm6a9"><a href="/" aria-label="esse" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a><a href="/" aria-label="quis" class="svelte-7tm6a9"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START -->
+                                        <path fill="currentColor" d="M22.46 6c-.77.35-1.6.58-2.46.69c.88-.53 1.56-1.37 1.88-2.38c-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29c0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15c0 1.49.75 2.81 1.91 3.56c-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07a4.28 4.28 0 0 0 4 2.98a8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56c.84-.6 1.56-1.36 2.14-2.23Z" /><!-- HTML_TAG_END -->
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script type="module">
+        const path = window.location.pathname === '/' ? '' : window.location.pathname
+        const [{
+            default: App
+        }] = await Promise.all([
+            import(path + '/_module.js')
+        ]).catch(e => console.error(e))
+        new App({
+            target: document.querySelector('body'),
+            hydrate: true,
+        })
+    </script>
+</body>
+
+</html>
