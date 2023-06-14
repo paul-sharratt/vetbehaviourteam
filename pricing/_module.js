@@ -3371,7 +3371,7 @@ function create_fragment$4(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
-				heading: "Appointments",
+				heading: "Pricing",
 				subheading: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				tiers: [
 					{

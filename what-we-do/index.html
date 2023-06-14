@@ -226,6 +226,72 @@
             top: 1rem
         }
 
+        .teasers.svelte-1acae4j.svelte-1acae4j {
+            display: grid;
+            gap: 6rem
+        }
+
+        .teaser.svelte-1acae4j.svelte-1acae4j {
+            display: grid;
+            gap: 3rem
+        }
+
+        .teaser.svelte-1acae4j img.svelte-1acae4j {
+            border-radius: var(--border-radius)
+        }
+
+        .teaser.svelte-1acae4j .body.svelte-1acae4j {
+            display: grid;
+            place-items: flex-start;
+            gap: 1.5rem;
+            padding: 0;
+            line-height: 1.5
+        }
+
+        .teaser.svelte-1acae4j .body .title.svelte-1acae4j {
+            font-size: 2.25rem;
+            font-weight: 500;
+            line-height: 1.25
+        }
+
+        @media(min-width: 800px) {
+            .teaser.svelte-1acae4j.svelte-1acae4j {
+                grid-template-columns: 1fr 1fr;
+                place-items: center
+                    /* switch direction for even items */
+            }
+
+            .teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j {
+                grid-row: 1;
+                grid-column: 2
+            }
+
+            .teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j {
+                grid-row: 1;
+                grid-column: 1
+            }
+        }
+
+        .description.svelte-1acae4j p {
+            margin-top: 10px
+        }
+
+        .description.svelte-1acae4j ul {
+            list-style-type: circle;
+            margin-left: 20px;
+            margin-top: 20px
+        }
+
+        @media(min-width: 1200px) {
+            section.svelte-1acae4j.svelte-1acae4j {
+                gap: 6rem
+            }
+
+            .teaser.svelte-1acae4j.svelte-1acae4j {
+                gap: 6rem
+            }
+        }
+
         .content.svelte-1yexq97 img {
             width: 100%;
             margin: 2rem 0;
@@ -382,36 +448,37 @@
             border-radius: var(--border-radius)
         }
 
-        .section-container.svelte-5bp2xm.svelte-5bp2xm {
+        .section-container.svelte-5ikq18.svelte-5ikq18 {
             display: grid;
             gap: 1.5rem;
             place-items: center;
             text-align: center
         }
 
-        .heading.svelte-5bp2xm.svelte-5bp2xm {
+        .heading.svelte-5ikq18.svelte-5ikq18 {
             font-size: 3rem;
-            font-weight: 800
+            font-weight: 800;
+            font-family: system-ui, sans-serif
         }
 
         @media(min-width: 700px) {
-            .heading.svelte-5bp2xm.svelte-5bp2xm {
+            .heading.svelte-5ikq18.svelte-5ikq18 {
                 font-size: 4rem
             }
         }
 
-        .subheading.svelte-5bp2xm.svelte-5bp2xm {
+        .subheading.svelte-5ikq18.svelte-5ikq18 {
             font-size: 1.25rem
         }
 
-        .buttons.svelte-5bp2xm.svelte-5bp2xm {
+        .buttons.svelte-5ikq18.svelte-5ikq18 {
             margin-top: 0.5rem;
             display: flex;
             flex-wrap: wrap;
             gap: 1rem
         }
 
-        .buttons.svelte-5bp2xm .button.svelte-5bp2xm:not(:only-child):last-child {
+        .buttons.svelte-5ikq18 .button.svelte-5ikq18:not(:only-child):last-child {
             background: inherit;
             border: 2px solid var(--color-accent, rebeccapurple);
             color: var(--color, #222)
@@ -443,12 +510,31 @@
             </header>
         </div>
     </div>
+    <div class="section" id="section-d3c49100-6473-41a7-a5d1-e5122e65137a">
+        <div class="component">
+            <section class="section-container svelte-1acae4j">
+                <div class="teasers svelte-1acae4j">
+                    <div class="teaser svelte-1acae4j">
+                        <div class="body svelte-1acae4j">
+                            <h2 class="title svelte-1acae4j">Experience comprehensive and personalised care for your pet.</h2>
+                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
+                                <p>Our commitment to your pet's well-being and mental health goes beyond a single consultation.</p><!-- HTML_TAG_END -->
+                            </div>
+                            <a class="link svelte-1acae4j" href="/">Book Online
+                            </a>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1538935732373-f7a495fea3f6?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2759&amp;q=80" alt="" class="svelte-1acae4j">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
     <div class="section" id="section-b59a9458-d1d0-4bed-a1ad-6e3d1add6bd0">
         <div class="component">
             <div class="section">
                 <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
-                    <h1 id="priortotheconsult">Prior to the consult</h1>
-                    <p>Please fill out the behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian. </p><!-- HTML_TAG_END -->
+                    <h2 id="priortotheconsult">Prior to the consult</h2>
+                    <p>Please fill out the behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian.</p><!-- HTML_TAG_END -->
                 </div>
             </div>
         </div>
@@ -457,7 +543,7 @@
         <div class="component">
             <div class="section">
                 <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
-                    <h1 id="duringtheconsult">During the consult</h1>
+                    <h2 id="duringtheconsult">During the consult</h2>
                     <p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p><!-- HTML_TAG_END -->
                 </div>
             </div>
@@ -467,19 +553,19 @@
         <div class="component">
             <div class="section">
                 <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
-                    <h1 id="aftertheconsult">After the consult</h1>
-                    <p>Over the next 2 months, we diligently work on refining the treatment plan to suit your pet's individual needs and your family's dynamics. We understand that each patient responds differently, which is why we fine-tune our rehabilitation techniques along the way. If your pet requires medication or you encounter any challenges with the training plan, we're here to assist you promptly and we can make adjustments during this period. </p>
-                    <p>Choose VBT and experience the difference of comprehensive care, tailored to your pet's unique needs. Take advantage of our 8-week email support period, receive hassle-free refills for behavioural medications (if required), and benefit from a trusted team that puts your pet's well-being and mental health first. </p><!-- HTML_TAG_END -->
+                    <h2>After the consult</h2>
+                    <p>Over the next 2 months, we diligently work on refining the treatment plan to suit your pet's individual needs and your family's dynamics. We understand that each patient responds differently, which is why we fine-tune our rehabilitation techniques along the way. If your pet requires medication or you encounter any challenges with the training plan, we're here to assist you promptly and we can make adjustments during this period.</p>
+                    <p>Choose VBT and experience the difference of comprehensive care, tailored to your pet's unique needs. Take advantage of our 8-week email support period, receive hassle-free refills for behavioural medications (if required), and benefit from a trusted team that puts your pet's well-being and mental health first.</p><!-- HTML_TAG_END -->
                 </div>
             </div>
         </div>
     </div>
     <div class="section" id="section-a391e770-a8ed-457c-9f49-fb6c98953678">
         <div class="component">
-            <header class="section-container svelte-5bp2xm">
-                <h1 class="heading svelte-5bp2xm">Kindness + Science</h1>
-                <span class="subheading svelte-5bp2xm">The best of both worlds</span>
-                <div class="buttons svelte-5bp2xm"><a class="button svelte-5bp2xm" href="/">Book now</a><a class="button svelte-5bp2xm" href="/">Contact us</a></div>
+            <header class="section-container svelte-5ikq18">
+                <div class="heading svelte-5ikq18">Kindness + Science</div>
+                <span class="subheading svelte-5ikq18">The best of both worlds</span>
+                <div class="buttons svelte-5ikq18"><a class="button svelte-5ikq18" href="/">Book now</a><a class="button svelte-5ikq18" href="/">Contact us</a></div>
             </header>
         </div>
     </div>
