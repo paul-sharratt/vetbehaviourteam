@@ -5886,14 +5886,20 @@ function create_fragment$9(ctx) {
 				},
 				site_nav: [
 					{
-						"link": { "url": "/about", "label": "About" }
-					},
-					{
-						"link": { "url": "/pricing", "label": "Pricing" }
+						"link": {
+							"url": "/vetbehaviourteam/about-us/",
+							"label": "About"
+						}
 					},
 					{
 						"link": {
-							"url": "/behaviour-fact-sheets",
+							"url": "/vetbehaviourteam/pricing/",
+							"label": "Pricing"
+						}
+					},
+					{
+						"link": {
+							"url": "/vetbehaviourteam/behaviour-fact-sheets",
 							"label": "Behaviour Fact Sheets"
 						}
 					}
