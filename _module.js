@@ -4260,7 +4260,7 @@ function create_if_block_1$2(ctx) {
 	};
 }
 
-// (109:12) {#if teaser.link.url}
+// (109:12) {#if teaser.link.label}
 function create_if_block$2(ctx) {
 	let a;
 	let t_value = /*teaser*/ ctx[4].link.label + "";
@@ -4315,7 +4315,7 @@ function create_each_block$1(ctx) {
 	let t3;
 	let t4;
 	let if_block0 = /*teaser*/ ctx[4].image.url && create_if_block_1$2(ctx);
-	let if_block1 = /*teaser*/ ctx[4].link.url && create_if_block$2(ctx);
+	let if_block1 = /*teaser*/ ctx[4].link.label && create_if_block$2(ctx);
 
 	return {
 		c() {
@@ -4390,7 +4390,7 @@ function create_each_block$1(ctx) {
 
 			if (dirty & /*teasers*/ 1 && t1_value !== (t1_value = /*teaser*/ ctx[4].title + "")) set_data(t1, t1_value);
 			if (dirty & /*teasers*/ 1 && raw_value !== (raw_value = /*teaser*/ ctx[4].body.html + "")) div0.innerHTML = raw_value;
-			if (/*teaser*/ ctx[4].link.url) {
+			if (/*teaser*/ ctx[4].link.label) {
 				if (if_block1) {
 					if_block1.p(ctx, dirty);
 				} else {
