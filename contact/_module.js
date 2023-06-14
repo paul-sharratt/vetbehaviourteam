@@ -399,6 +399,17 @@ function set_data(text, data) {
         return;
     text.data = data;
 }
+function set_style(node, key, value, important) {
+    if (value == null) {
+        node.style.removeProperty(key);
+    }
+    else {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
+}
+function toggle_class(element, name, toggle) {
+    element.classList[toggle ? 'add' : 'remove'](name);
+}
 function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
     const e = document.createEvent('CustomEvent');
     e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -1001,8 +1012,15 @@ function create_fragment(ctx) {
 	let link0;
 	let link0_href_value;
 	let link1;
+	let title_value;
+	let meta2;
+	let script0;
+	let script0_src_value;
+	let script1;
+	let t0;
 	let style;
-	let t;
+	let t1;
+	document.title = title_value = /*title*/ ctx[1];
 
 	return {
 		c() {
@@ -1010,12 +1028,16 @@ function create_fragment(ctx) {
 			meta1 = element("meta");
 			link0 = element("link");
 			link1 = element("link");
+			meta2 = element("meta");
+			script0 = element("script");
+			script1 = element("script");
+			t0 = text("window.onload = function() {\n  const urlObj = new URL(window.location.href);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
 			style = element("style");
-			t = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t1 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-dv8t5k', document.head);
+			const head_nodes = head_selector('svelte-ucmgnd', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 
@@ -1027,9 +1049,17 @@ function create_fragment(ctx) {
 			});
 
 			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
+			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
+			var script0_nodes = children(script0);
+			script0_nodes.forEach(detach);
+			script1 = claim_element(head_nodes, "SCRIPT", { type: true });
+			var script1_nodes = children(script1);
+			t0 = claim_text(script1_nodes, "window.onload = function() {\n  const urlObj = new URL(window.location.href);\n  const searchParams = urlObj.searchParams;\n  \n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/paulsharratt/test',\n        \n        //here are all the options\n        {\n            // you can trigger this based on a button or some other action\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: searchParams.get('utm_source') || '',     \n                utm_medium: searchParams.get('utm_medium') || '',     \n                utm_campaign: searchParams.get('utm_campaign') || '', \n                utm_content: searchParams.get('utm_content') || '',   \n                utm_term: searchParams.get('utm_term') || '' \n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        GReminders.BookingWidget.close();\n        alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));\n    });\n    GReminders.BookingWidget.onError(function(message) {\n        //if we encounter a booking error you can trigger a different error or retry\n        GReminders.BookingWidget.close();\n        alert('Error! ' + message);\n    });\n        \n    // or trigger the widget using this: \n    // GReminders.BookingWidget.open();\n};\n");
+			script1_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t1 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1044,18 +1074,34 @@ function create_fragment(ctx) {
 			attr(link0, "href", link0_href_value = /*favicon*/ ctx[0].url);
 			attr(link1, "rel", "preconnect");
 			attr(link1, "href", "https://fonts.bunny.net");
+			attr(meta2, "name", "description");
+			attr(meta2, "content", /*description*/ ctx[2]);
+			if (!src_url_equal(script0.src, script0_src_value = "https://app.greminders.com/widgets/booking.js")) attr(script0, "src", script0_src_value);
+			attr(script1, "type", "text/javascript");
 		},
 		m(target, anchor) {
 			append_hydration(document.head, meta0);
 			append_hydration(document.head, meta1);
 			append_hydration(document.head, link0);
 			append_hydration(document.head, link1);
+			append_hydration(document.head, meta2);
+			append_hydration(document.head, script0);
+			append_hydration(document.head, script1);
+			append_hydration(script1, t0);
 			append_hydration(document.head, style);
-			append_hydration(style, t);
+			append_hydration(style, t1);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link0_href_value !== (link0_href_value = /*favicon*/ ctx[0].url)) {
 				attr(link0, "href", link0_href_value);
+			}
+
+			if (dirty & /*title*/ 2 && title_value !== (title_value = /*title*/ ctx[1])) {
+				document.title = title_value;
+			}
+
+			if (dirty & /*description*/ 4) {
+				attr(meta2, "content", /*description*/ ctx[2]);
 			}
 		},
 		i: noop,
@@ -1065,6 +1111,9 @@ function create_fragment(ctx) {
 			detach(meta1);
 			detach(link0);
 			detach(link1);
+			detach(meta2);
+			detach(script0);
+			detach(script1);
 			detach(style);
 		}
 	};
@@ -1072,18 +1121,22 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('description' in $$props) $$invalidate(2, description = $$props.description);
 	};
 
-	return [favicon];
+	return [favicon, title, description];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0 });
+		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
@@ -2952,17 +3005,17 @@ class Component$1 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
-// (105:31) 
+// (130:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -2978,18 +3031,18 @@ function create_if_block_4(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*logo*/ ctx[0].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*logo*/ ctx[2].image.alt);
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 1 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) {
+			if (dirty & /*logo*/ 4 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) {
 				attr(img, "src", img_src_value);
 			}
 
-			if (dirty & /*logo*/ 1 && img_alt_value !== (img_alt_value = /*logo*/ ctx[0].image.alt)) {
+			if (dirty & /*logo*/ 4 && img_alt_value !== (img_alt_value = /*logo*/ ctx[2].image.alt)) {
 				attr(img, "alt", img_alt_value);
 			}
 		},
@@ -2999,9 +3052,9 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (103:6) {#if logo.title}
+// (128:8) {#if logo.title}
 function create_if_block_3(ctx) {
-	let t_value = /*logo*/ ctx[0].title + "";
+	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
 
 	return {
@@ -3015,7 +3068,7 @@ function create_if_block_3(ctx) {
 			insert_hydration(target, t, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 1 && t_value !== (t_value = /*logo*/ ctx[0].title + "")) set_data(t, t_value);
+			if (dirty & /*logo*/ 4 && t_value !== (t_value = /*logo*/ ctx[2].title + "")) set_data(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) detach(t);
@@ -3023,10 +3076,10 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (110:6) {#each site_nav as { link }}
+// (135:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[7].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -3044,18 +3097,23 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1grguq5");
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
+			attr(a, "class", "link svelte-1643yvf");
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[7].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
+			}
+
+			if (dirty & /*site_nav, window*/ 8) {
+				toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
 			}
 		},
 		d(detaching) {
@@ -3064,7 +3122,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (119:31) 
+// (144:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3080,18 +3138,18 @@ function create_if_block_2(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*logo*/ ctx[0].image.alt);
+			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*logo*/ ctx[2].image.alt);
 		},
 		m(target, anchor) {
 			insert_hydration(target, img, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 1 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[0].image.url)) {
+			if (dirty & /*logo*/ 4 && !src_url_equal(img.src, img_src_value = /*logo*/ ctx[2].image.url)) {
 				attr(img, "src", img_src_value);
 			}
 
-			if (dirty & /*logo*/ 1 && img_alt_value !== (img_alt_value = /*logo*/ ctx[0].image.alt)) {
+			if (dirty & /*logo*/ 4 && img_alt_value !== (img_alt_value = /*logo*/ ctx[2].image.alt)) {
 				attr(img, "alt", img_alt_value);
 			}
 		},
@@ -3101,9 +3159,9 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (117:6) {#if logo.title}
+// (142:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
-	let t_value = /*logo*/ ctx[0].title + "";
+	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
 
 	return {
@@ -3117,7 +3175,7 @@ function create_if_block_1$1(ctx) {
 			insert_hydration(target, t, anchor);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*logo*/ 1 && t_value !== (t_value = /*logo*/ ctx[0].title + "")) set_data(t, t_value);
+			if (dirty & /*logo*/ 4 && t_value !== (t_value = /*logo*/ ctx[2].title + "")) set_data(t, t_value);
 		},
 		d(detaching) {
 			if (detaching) detach(t);
@@ -3125,7 +3183,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (129:4) {#if mobileNavOpen}
+// (154:6) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3135,7 +3193,7 @@ function create_if_block$1(ctx) {
 	let current;
 	let mounted;
 	let dispose;
-	let each_value = /*site_nav*/ ctx[1];
+	let each_value = /*site_nav*/ ctx[3];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
@@ -3182,9 +3240,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-1grguq5");
+			attr(button, "class", "svelte-1643yvf");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-1grguq5");
+			attr(nav, "class", "svelte-1643yvf");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3201,13 +3259,13 @@ function create_if_block$1(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler_1*/ ctx[5]);
+				dispose = listen(button, "click", /*click_handler_1*/ ctx[9]);
 				mounted = true;
 			}
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 2) {
-				each_value = /*site_nav*/ ctx[1];
+			if (dirty & /*site_nav*/ 8) {
+				each_value = /*site_nav*/ ctx[3];
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
@@ -3258,10 +3316,10 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (131:8) {#each site_nav as { link }}
+// (156:10) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[7].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -3279,16 +3337,16 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[7].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3299,9 +3357,10 @@ function create_each_block(ctx) {
 }
 
 function create_fragment$2(ctx) {
-	let div3;
-	let div2;
+	let div5;
+	let div4;
 	let header;
+	let div2;
 	let div0;
 	let a0;
 	let t0;
@@ -3313,18 +3372,23 @@ function create_fragment$2(ctx) {
 	let button;
 	let icon;
 	let t3;
+	let t4;
+	let div3;
+	let h1;
+	let t5;
+	let header_aria_label_value;
 	let current;
 	let mounted;
 	let dispose;
 
 	function select_block_type(ctx, dirty) {
-		if (/*logo*/ ctx[0].title) return create_if_block_3;
-		if (/*logo*/ ctx[0].image.url) return create_if_block_4;
+		if (/*logo*/ ctx[2].title) return create_if_block_3;
+		if (/*logo*/ ctx[2].image.url) return create_if_block_4;
 	}
 
 	let current_block_type = select_block_type(ctx);
 	let if_block0 = current_block_type && current_block_type(ctx);
-	let each_value_1 = /*site_nav*/ ctx[1];
+	let each_value_1 = /*site_nav*/ ctx[3];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -3332,8 +3396,8 @@ function create_fragment$2(ctx) {
 	}
 
 	function select_block_type_1(ctx, dirty) {
-		if (/*logo*/ ctx[0].title) return create_if_block_1$1;
-		if (/*logo*/ ctx[0].image.url) return create_if_block_2;
+		if (/*logo*/ ctx[2].title) return create_if_block_1$1;
+		if (/*logo*/ ctx[2].image.url) return create_if_block_2;
 	}
 
 	let current_block_type_1 = select_block_type_1(ctx);
@@ -3343,13 +3407,14 @@ function create_fragment$2(ctx) {
 			props: { height: "30", icon: "eva:menu-outline" }
 		});
 
-	let if_block2 = /*mobileNavOpen*/ ctx[2] && create_if_block$1(ctx);
+	let if_block2 = /*mobileNavOpen*/ ctx[4] && create_if_block$1(ctx);
 
 	return {
 		c() {
-			div3 = element("div");
-			div2 = element("div");
+			div5 = element("div");
+			div4 = element("div");
 			header = element("header");
+			div2 = element("div");
 			div0 = element("div");
 			a0 = element("a");
 			if (if_block0) if_block0.c();
@@ -3369,16 +3434,29 @@ function create_fragment$2(ctx) {
 			create_component(icon.$$.fragment);
 			t3 = space();
 			if (if_block2) if_block2.c();
+			t4 = space();
+			div3 = element("div");
+			h1 = element("h1");
+			t5 = text(/*headline*/ ctx[1]);
 			this.h();
 		},
 		l(nodes) {
-			div3 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div3_nodes = children(div3);
-			div2 = claim_element(div3_nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			header = claim_element(div2_nodes, "HEADER", { class: true });
+			div5 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div5_nodes = children(div5);
+			div4 = claim_element(div5_nodes, "DIV", { class: true });
+			var div4_nodes = children(div4);
+
+			header = claim_element(div4_nodes, "HEADER", {
+				style: true,
+				role: true,
+				"aria-label": true,
+				class: true
+			});
+
 			var header_nodes = children(header);
-			div0 = claim_element(header_nodes, "DIV", { class: true });
+			div2 = claim_element(header_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			div0 = claim_element(div2_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
 			a0 = claim_element(div0_nodes, "A", { href: true, class: true });
 			var a0_nodes = children(a0);
@@ -3394,8 +3472,8 @@ function create_fragment$2(ctx) {
 
 			nav_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
-			t1 = claim_space(header_nodes);
-			div1 = claim_element(header_nodes, "DIV", { class: true });
+			t1 = claim_space(div2_nodes);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
 			a1 = claim_element(div1_nodes, "A", { href: true, class: true });
 			var a1_nodes = children(a1);
@@ -3409,31 +3487,47 @@ function create_fragment$2(ctx) {
 			t3 = claim_space(div1_nodes);
 			if (if_block2) if_block2.l(div1_nodes);
 			div1_nodes.forEach(detach);
-			header_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
+			t4 = claim_space(header_nodes);
+			div3 = claim_element(header_nodes, "DIV", { class: true });
+			var div3_nodes = children(div3);
+			h1 = claim_element(div3_nodes, "H1", { class: true });
+			var h1_nodes = children(h1);
+			t5 = claim_text(h1_nodes, /*headline*/ ctx[1]);
+			h1_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
+			header_nodes.forEach(detach);
+			div4_nodes.forEach(detach);
+			div5_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-1grguq5");
-			attr(nav, "class", "svelte-1grguq5");
-			attr(div0, "class", "desktop-nav svelte-1grguq5");
+			attr(a0, "class", "logo svelte-1643yvf");
+			attr(nav, "class", "svelte-1643yvf");
+			attr(div0, "class", "desktop-nav svelte-1643yvf");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-1grguq5");
+			attr(a1, "class", "logo svelte-1643yvf");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-1grguq5");
-			attr(header, "class", "section-container svelte-1grguq5");
-			attr(div2, "class", "component");
-			attr(div3, "class", "section");
-			attr(div3, "id", "section-727da8ff-18a1-450f-b126-eb8adc035639");
+			attr(div1, "class", "mobile-nav svelte-1643yvf");
+			attr(div2, "class", "section-container svelte-1643yvf");
+			attr(h1, "class", "headline svelte-1643yvf");
+			attr(div3, "class", "section-container svelte-1643yvf");
+			set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
+			attr(header, "role", "img");
+			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
+			attr(header, "class", "svelte-1643yvf");
+			attr(div4, "class", "component");
+			attr(div5, "class", "section");
+			attr(div5, "id", "section-66e14924-b26b-4c2b-a32c-b79f711bae43");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div3, anchor);
-			append_hydration(div3, div2);
-			append_hydration(div2, header);
-			append_hydration(header, div0);
+			insert_hydration(target, div5, anchor);
+			append_hydration(div5, div4);
+			append_hydration(div4, header);
+			append_hydration(header, div2);
+			append_hydration(div2, div0);
 			append_hydration(div0, a0);
 			if (if_block0) if_block0.m(a0, null);
 			append_hydration(div0, t0);
@@ -3445,8 +3539,8 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			append_hydration(header, t1);
-			append_hydration(header, div1);
+			append_hydration(div2, t1);
+			append_hydration(div2, div1);
 			append_hydration(div1, a1);
 			if (if_block1) if_block1.m(a1, null);
 			append_hydration(div1, t2);
@@ -3454,10 +3548,14 @@ function create_fragment$2(ctx) {
 			mount_component(icon, button, null);
 			append_hydration(div1, t3);
 			if (if_block2) if_block2.m(div1, null);
+			append_hydration(header, t4);
+			append_hydration(header, div3);
+			append_hydration(div3, h1);
+			append_hydration(h1, t5);
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler*/ ctx[4]);
+				dispose = listen(button, "click", /*click_handler*/ ctx[8]);
 				mounted = true;
 			}
 		},
@@ -3474,8 +3572,8 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (dirty & /*site_nav*/ 2) {
-				each_value_1 = /*site_nav*/ ctx[1];
+			if (dirty & /*site_nav, window*/ 8) {
+				each_value_1 = /*site_nav*/ ctx[3];
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -3509,11 +3607,11 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (/*mobileNavOpen*/ ctx[2]) {
+			if (/*mobileNavOpen*/ ctx[4]) {
 				if (if_block2) {
 					if_block2.p(ctx, dirty);
 
-					if (dirty & /*mobileNavOpen*/ 4) {
+					if (dirty & /*mobileNavOpen*/ 16) {
 						transition_in(if_block2, 1);
 					}
 				} else {
@@ -3531,6 +3629,16 @@ function create_fragment$2(ctx) {
 
 				check_outros();
 			}
+
+			if (!current || dirty & /*headline*/ 2) set_data(t5, /*headline*/ ctx[1]);
+
+			if (!current || dirty & /*background*/ 1) {
+				set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
+			}
+
+			if (!current || dirty & /*background*/ 1 && header_aria_label_value !== (header_aria_label_value = /*background*/ ctx[0].alt)) {
+				attr(header, "aria-label", header_aria_label_value);
+			}
 		},
 		i(local) {
 			if (current) return;
@@ -3544,7 +3652,7 @@ function create_fragment$2(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div3);
+			if (detaching) detach(div5);
 
 			if (if_block0) {
 				if_block0.d();
@@ -3566,26 +3674,54 @@ function create_fragment$2(ctx) {
 
 function instance$2($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { background } = $$props;
+	let { headline } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
 	let mobileNavOpen = false;
 
-	const click_handler = () => $$invalidate(2, mobileNavOpen = true);
-	const click_handler_1 = () => $$invalidate(2, mobileNavOpen = false);
+	const click_handler = () => $$invalidate(4, mobileNavOpen = true);
+	const click_handler_1 = () => $$invalidate(4, mobileNavOpen = false);
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
-		if ('logo' in $$props) $$invalidate(0, logo = $$props.logo);
-		if ('site_nav' in $$props) $$invalidate(1, site_nav = $$props.site_nav);
+		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(6, title = $$props.title);
+		if ('description' in $$props) $$invalidate(7, description = $$props.description);
+		if ('background' in $$props) $$invalidate(0, background = $$props.background);
+		if ('headline' in $$props) $$invalidate(1, headline = $$props.headline);
+		if ('logo' in $$props) $$invalidate(2, logo = $$props.logo);
+		if ('site_nav' in $$props) $$invalidate(3, site_nav = $$props.site_nav);
 	};
 
-	return [logo, site_nav, mobileNavOpen, favicon, click_handler, click_handler_1];
+	return [
+		background,
+		headline,
+		logo,
+		site_nav,
+		mobileNavOpen,
+		favicon,
+		title,
+		description,
+		click_handler,
+		click_handler_1
+	];
 }
 
 class Component$2 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$2, create_fragment$2, safe_not_equal, { favicon: 3, logo: 0, site_nav: 1 });
+
+		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+			favicon: 5,
+			title: 6,
+			description: 7,
+			background: 0,
+			headline: 1,
+			logo: 2,
+			site_nav: 3
+		});
 	}
 }
 
@@ -3593,205 +3729,283 @@ class Component$2 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[2] = list[i];
+	child_ctx[7] = list[i];
+	child_ctx[9] = i;
 	return child_ctx;
 }
 
-// (88:10) {#if teaser.link.url}
-function create_if_block_1$2(ctx) {
+function get_each_context_1$1(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[10] = list[i].label;
+	child_ctx[11] = list[i].link;
+	return child_ctx;
+}
+
+// (95:6) {#each social as { label, link }}
+function create_each_block_1$1(ctx) {
+	let div;
+	let span;
+	let t0_value = /*label*/ ctx[10] + "";
+	let t0;
+	let t1;
 	let a;
-	let t_value = /*teaser*/ ctx[2].link.label + "";
-	let t;
+	let t2_value = /*link*/ ctx[11].label + "";
+	let t2;
 	let a_href_value;
+	let t3;
 
 	return {
 		c() {
+			div = element("div");
+			span = element("span");
+			t0 = text(t0_value);
+			t1 = space();
 			a = element("a");
-			t = text(t_value);
+			t2 = text(t2_value);
+			t3 = space();
 			this.h();
 		},
 		l(nodes) {
-			a = claim_element(nodes, "A", { class: true, href: true });
+			div = claim_element(nodes, "DIV", { class: true });
+			var div_nodes = children(div);
+			span = claim_element(div_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t0 = claim_text(span_nodes, t0_value);
+			span_nodes.forEach(detach);
+			t1 = claim_space(div_nodes);
+			a = claim_element(div_nodes, "A", { href: true, class: true });
 			var a_nodes = children(a);
-			t = claim_text(a_nodes, t_value);
+			t2 = claim_text(a_nodes, t2_value);
 			a_nodes.forEach(detach);
+			t3 = claim_space(div_nodes);
+			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1acae4j");
-			attr(a, "href", a_href_value = /*teaser*/ ctx[2].link.url);
+			attr(span, "class", "label svelte-1twigpw");
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			attr(a, "class", "svelte-1twigpw");
+			attr(div, "class", "item svelte-1twigpw");
 		},
 		m(target, anchor) {
-			insert_hydration(target, a, anchor);
-			append_hydration(a, t);
+			insert_hydration(target, div, anchor);
+			append_hydration(div, span);
+			append_hydration(span, t0);
+			append_hydration(div, t1);
+			append_hydration(div, a);
+			append_hydration(a, t2);
+			append_hydration(div, t3);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && t_value !== (t_value = /*teaser*/ ctx[2].link.label + "")) set_data(t, t_value);
+			if (dirty & /*social*/ 4 && t0_value !== (t0_value = /*label*/ ctx[10] + "")) set_data(t0, t0_value);
+			if (dirty & /*social*/ 4 && t2_value !== (t2_value = /*link*/ ctx[11].label + "")) set_data(t2, t2_value);
 
-			if (dirty & /*teasers*/ 1 && a_href_value !== (a_href_value = /*teaser*/ ctx[2].link.url)) {
+			if (dirty & /*social*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
 		d(detaching) {
-			if (detaching) detach(a);
+			if (detaching) detach(div);
 		}
 	};
 }
 
-// (94:8) {#if teaser.image.url}
-function create_if_block$2(ctx) {
-	let img;
-	let img_src_value;
-	let img_alt_value;
-
-	return {
-		c() {
-			img = element("img");
-			this.h();
-		},
-		l(nodes) {
-			img = claim_element(nodes, "IMG", { src: true, alt: true, class: true });
-			this.h();
-		},
-		h() {
-			if (!src_url_equal(img.src, img_src_value = /*teaser*/ ctx[2].image.url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*teaser*/ ctx[2].image.alt);
-			attr(img, "class", "svelte-1acae4j");
-		},
-		m(target, anchor) {
-			insert_hydration(target, img, anchor);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && !src_url_equal(img.src, img_src_value = /*teaser*/ ctx[2].image.url)) {
-				attr(img, "src", img_src_value);
-			}
-
-			if (dirty & /*teasers*/ 1 && img_alt_value !== (img_alt_value = /*teaser*/ ctx[2].image.alt)) {
-				attr(img, "alt", img_alt_value);
-			}
-		},
-		d(detaching) {
-			if (detaching) detach(img);
-		}
-	};
-}
-
-// (83:4) {#each teasers as teaser}
-function create_each_block$1(ctx) {
-	let div2;
-	let div1;
-	let h2;
-	let t0_value = /*teaser*/ ctx[2].title + "";
+// (112:6) {:else}
+function create_else_block$1(ctx) {
+	let label;
+	let span;
+	let t0_value = /*input*/ ctx[7].label + "";
 	let t0;
 	let t1;
-	let div0;
-	let raw_value = /*teaser*/ ctx[2].description.html + "";
-	let t2;
-	let t3;
-	let t4;
-	let if_block0 = /*teaser*/ ctx[2].link.url && create_if_block_1$2(ctx);
-	let if_block1 = /*teaser*/ ctx[2].image.url && create_if_block$2(ctx);
+	let input;
+	let input_type_value;
+	let input_placeholder_value;
 
 	return {
 		c() {
-			div2 = element("div");
-			div1 = element("div");
-			h2 = element("h2");
+			label = element("label");
+			span = element("span");
 			t0 = text(t0_value);
 			t1 = space();
-			div0 = element("div");
-			t2 = space();
-			if (if_block0) if_block0.c();
-			t3 = space();
-			if (if_block1) if_block1.c();
-			t4 = space();
+			input = element("input");
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			h2 = claim_element(div1_nodes, "H2", { class: true });
-			var h2_nodes = children(h2);
-			t0 = claim_text(h2_nodes, t0_value);
-			h2_nodes.forEach(detach);
-			t1 = claim_space(div1_nodes);
-			div0 = claim_element(div1_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			t2 = claim_space(div1_nodes);
-			if (if_block0) if_block0.l(div1_nodes);
-			div1_nodes.forEach(detach);
-			t3 = claim_space(div2_nodes);
-			if (if_block1) if_block1.l(div2_nodes);
-			t4 = claim_space(div2_nodes);
-			div2_nodes.forEach(detach);
+			label = claim_element(nodes, "LABEL", { class: true });
+			var label_nodes = children(label);
+			span = claim_element(label_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t0 = claim_text(span_nodes, t0_value);
+			span_nodes.forEach(detach);
+			t1 = claim_space(label_nodes);
+
+			input = claim_element(label_nodes, "INPUT", {
+				type: true,
+				placeholder: true,
+				class: true
+			});
+
+			label_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(h2, "class", "title svelte-1acae4j");
-			attr(div0, "class", "description svelte-1acae4j");
-			attr(div1, "class", "body svelte-1acae4j");
-			attr(div2, "class", "teaser svelte-1acae4j");
+			attr(span, "class", "svelte-1twigpw");
+			attr(input, "type", input_type_value = /*input*/ ctx[7].type || "text");
+			attr(input, "placeholder", input_placeholder_value = /*input*/ ctx[7].placeholder);
+			attr(input, "class", "svelte-1twigpw");
+			attr(label, "class", "svelte-1twigpw");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, h2);
-			append_hydration(h2, t0);
-			append_hydration(div1, t1);
-			append_hydration(div1, div0);
-			div0.innerHTML = raw_value;
-			append_hydration(div1, t2);
-			if (if_block0) if_block0.m(div1, null);
-			append_hydration(div2, t3);
-			if (if_block1) if_block1.m(div2, null);
-			append_hydration(div2, t4);
+			insert_hydration(target, label, anchor);
+			append_hydration(label, span);
+			append_hydration(span, t0);
+			append_hydration(label, t1);
+			append_hydration(label, input);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*teasers*/ 1 && t0_value !== (t0_value = /*teaser*/ ctx[2].title + "")) set_data(t0, t0_value);
-			if (dirty & /*teasers*/ 1 && raw_value !== (raw_value = /*teaser*/ ctx[2].description.html + "")) div0.innerHTML = raw_value;
-			if (/*teaser*/ ctx[2].link.url) {
-				if (if_block0) {
-					if_block0.p(ctx, dirty);
-				} else {
-					if_block0 = create_if_block_1$2(ctx);
-					if_block0.c();
-					if_block0.m(div1, null);
-				}
-			} else if (if_block0) {
-				if_block0.d(1);
-				if_block0 = null;
+			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[7].label + "")) set_data(t0, t0_value);
+
+			if (dirty & /*inputs*/ 8 && input_type_value !== (input_type_value = /*input*/ ctx[7].type || "text")) {
+				attr(input, "type", input_type_value);
 			}
 
-			if (/*teaser*/ ctx[2].image.url) {
-				if (if_block1) {
-					if_block1.p(ctx, dirty);
-				} else {
-					if_block1 = create_if_block$2(ctx);
-					if_block1.c();
-					if_block1.m(div2, t4);
-				}
-			} else if (if_block1) {
-				if_block1.d(1);
-				if_block1 = null;
+			if (dirty & /*inputs*/ 8 && input_placeholder_value !== (input_placeholder_value = /*input*/ ctx[7].placeholder)) {
+				attr(input, "placeholder", input_placeholder_value);
 			}
 		},
 		d(detaching) {
-			if (detaching) detach(div2);
-			if (if_block0) if_block0.d();
-			if (if_block1) if_block1.d();
+			if (detaching) detach(label);
+		}
+	};
+}
+
+// (107:6) {#if input.type === "textarea"}
+function create_if_block$2(ctx) {
+	let label;
+	let span;
+	let t0_value = /*input*/ ctx[7].label + "";
+	let t0;
+	let t1;
+	let textarea;
+	let textarea_placeholder_value;
+
+	return {
+		c() {
+			label = element("label");
+			span = element("span");
+			t0 = text(t0_value);
+			t1 = space();
+			textarea = element("textarea");
+			this.h();
+		},
+		l(nodes) {
+			label = claim_element(nodes, "LABEL", { class: true });
+			var label_nodes = children(label);
+			span = claim_element(label_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t0 = claim_text(span_nodes, t0_value);
+			span_nodes.forEach(detach);
+			t1 = claim_space(label_nodes);
+			textarea = claim_element(label_nodes, "TEXTAREA", { placeholder: true, class: true });
+			children(textarea).forEach(detach);
+			label_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(span, "class", "svelte-1twigpw");
+			attr(textarea, "placeholder", textarea_placeholder_value = /*input*/ ctx[7].placeholder);
+			attr(textarea, "class", "svelte-1twigpw");
+			attr(label, "class", "svelte-1twigpw");
+		},
+		m(target, anchor) {
+			insert_hydration(target, label, anchor);
+			append_hydration(label, span);
+			append_hydration(span, t0);
+			append_hydration(label, t1);
+			append_hydration(label, textarea);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[7].label + "")) set_data(t0, t0_value);
+
+			if (dirty & /*inputs*/ 8 && textarea_placeholder_value !== (textarea_placeholder_value = /*input*/ ctx[7].placeholder)) {
+				attr(textarea, "placeholder", textarea_placeholder_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(label);
+		}
+	};
+}
+
+// (106:4) {#each inputs as input, i}
+function create_each_block$1(ctx) {
+	let if_block_anchor;
+
+	function select_block_type(ctx, dirty) {
+		if (/*input*/ ctx[7].type === "textarea") return create_if_block$2;
+		return create_else_block$1;
+	}
+
+	let current_block_type = select_block_type(ctx);
+	let if_block = current_block_type(ctx);
+
+	return {
+		c() {
+			if_block.c();
+			if_block_anchor = empty();
+		},
+		l(nodes) {
+			if_block.l(nodes);
+			if_block_anchor = empty();
+		},
+		m(target, anchor) {
+			if_block.m(target, anchor);
+			insert_hydration(target, if_block_anchor, anchor);
+		},
+		p(ctx, dirty) {
+			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block) {
+				if_block.p(ctx, dirty);
+			} else {
+				if_block.d(1);
+				if_block = current_block_type(ctx);
+
+				if (if_block) {
+					if_block.c();
+					if_block.m(if_block_anchor.parentNode, if_block_anchor);
+				}
+			}
+		},
+		d(detaching) {
+			if_block.d(detaching);
+			if (detaching) detach(if_block_anchor);
 		}
 	};
 }
 
 function create_fragment$3(ctx) {
-	let div2;
-	let div1;
+	let div4;
+	let div3;
 	let section;
+	let div2;
+	let h2;
+	let t0;
+	let t1;
 	let div0;
-	let each_value = /*teasers*/ ctx[0];
+	let t2;
+	let div1;
+	let t3;
+	let form;
+	let t4;
+	let button;
+	let t5;
+	let each_value_1 = /*social*/ ctx[2];
+	let each_blocks_1 = [];
+
+	for (let i = 0; i < each_value_1.length; i += 1) {
+		each_blocks_1[i] = create_each_block_1$1(get_each_context_1$1(ctx, each_value_1, i));
+	}
+
+	let each_value = /*inputs*/ ctx[3];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
@@ -3800,59 +4014,152 @@ function create_fragment$3(ctx) {
 
 	return {
 		c() {
-			div2 = element("div");
-			div1 = element("div");
+			div4 = element("div");
+			div3 = element("div");
 			section = element("section");
+			div2 = element("div");
+			h2 = element("h2");
+			t0 = text(/*heading*/ ctx[0]);
+			t1 = space();
 			div0 = element("div");
+			t2 = space();
+			div1 = element("div");
+
+			for (let i = 0; i < each_blocks_1.length; i += 1) {
+				each_blocks_1[i].c();
+			}
+
+			t3 = space();
+			form = element("form");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
+			t4 = space();
+			button = element("button");
+			t5 = text("Submit");
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
+			div4 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div4_nodes = children(div4);
+			div3 = claim_element(div4_nodes, "DIV", { class: true });
+			var div3_nodes = children(div3);
+			section = claim_element(div3_nodes, "SECTION", { class: true });
+			var section_nodes = children(section);
+			div2 = claim_element(section_nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
+			h2 = claim_element(div2_nodes, "H2", { class: true });
+			var h2_nodes = children(h2);
+			t0 = claim_text(h2_nodes, /*heading*/ ctx[0]);
+			h2_nodes.forEach(detach);
+			t1 = claim_space(div2_nodes);
+			div0 = claim_element(div2_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			div0_nodes.forEach(detach);
+			t2 = claim_space(div2_nodes);
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
 
-			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(div0_nodes);
+			for (let i = 0; i < each_blocks_1.length; i += 1) {
+				each_blocks_1[i].l(div1_nodes);
 			}
 
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
+			t3 = claim_space(section_nodes);
+			form = claim_element(section_nodes, "FORM", { class: true });
+			var form_nodes = children(form);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(form_nodes);
+			}
+
+			t4 = claim_space(form_nodes);
+			button = claim_element(form_nodes, "BUTTON", { class: true, type: true });
+			var button_nodes = children(button);
+			t5 = claim_text(button_nodes, "Submit");
+			button_nodes.forEach(detach);
+			form_nodes.forEach(detach);
+			section_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
+			div4_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "teasers svelte-1acae4j");
-			attr(section, "class", "section-container svelte-1acae4j");
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-d3c49100-6473-41a7-a5d1-e5122e65137a");
+			attr(h2, "class", "heading");
+			attr(div0, "class", "description");
+			attr(div1, "class", "social-links svelte-1twigpw");
+			attr(div2, "class", "body svelte-1twigpw");
+			attr(button, "class", "button svelte-1twigpw");
+			attr(button, "type", "submit");
+			attr(form, "class", "svelte-1twigpw");
+			attr(section, "class", "section-container svelte-1twigpw");
+			attr(div3, "class", "component");
+			attr(div4, "class", "section");
+			attr(div4, "id", "section-004c1386-ee18-41eb-a9ef-f78b9326c545");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
+			insert_hydration(target, div4, anchor);
+			append_hydration(div4, div3);
+			append_hydration(div3, section);
+			append_hydration(section, div2);
+			append_hydration(div2, h2);
+			append_hydration(h2, t0);
+			append_hydration(div2, t1);
+			append_hydration(div2, div0);
+			div0.innerHTML = /*subheading*/ ctx[1];
+			append_hydration(div2, t2);
 			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
+
+			for (let i = 0; i < each_blocks_1.length; i += 1) {
+				if (each_blocks_1[i]) {
+					each_blocks_1[i].m(div1, null);
+				}
+			}
+
+			append_hydration(section, t3);
+			append_hydration(section, form);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
-					each_blocks[i].m(div0, null);
+					each_blocks[i].m(form, null);
 				}
 			}
+
+			append_hydration(form, t4);
+			append_hydration(form, button);
+			append_hydration(button, t5);
 		},
 		p(ctx, [dirty]) {
-			if (dirty & /*teasers*/ 1) {
-				each_value = /*teasers*/ ctx[0];
+			if (dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
+			if (dirty & /*subheading*/ 2) div0.innerHTML = /*subheading*/ ctx[1];
+			if (dirty & /*social*/ 4) {
+				each_value_1 = /*social*/ ctx[2];
+				let i;
+
+				for (i = 0; i < each_value_1.length; i += 1) {
+					const child_ctx = get_each_context_1$1(ctx, each_value_1, i);
+
+					if (each_blocks_1[i]) {
+						each_blocks_1[i].p(child_ctx, dirty);
+					} else {
+						each_blocks_1[i] = create_each_block_1$1(child_ctx);
+						each_blocks_1[i].c();
+						each_blocks_1[i].m(div1, null);
+					}
+				}
+
+				for (; i < each_blocks_1.length; i += 1) {
+					each_blocks_1[i].d(1);
+				}
+
+				each_blocks_1.length = each_value_1.length;
+			}
+
+			if (dirty & /*inputs*/ 8) {
+				each_value = /*inputs*/ ctx[3];
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
@@ -3863,7 +4170,7 @@ function create_fragment$3(ctx) {
 					} else {
 						each_blocks[i] = create_each_block$1(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(div0, null);
+						each_blocks[i].m(form, t4);
 					}
 				}
 
@@ -3877,7 +4184,8 @@ function create_fragment$3(ctx) {
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(div2);
+			if (detaching) detach(div4);
+			destroy_each(each_blocks_1, detaching);
 			destroy_each(each_blocks, detaching);
 		}
 	};
@@ -3885,352 +4193,39 @@ function create_fragment$3(ctx) {
 
 function instance$3($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
-	let { teasers } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { heading } = $$props;
+	let { subheading } = $$props;
+	let { social } = $$props;
+	let { inputs } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
-		if ('teasers' in $$props) $$invalidate(0, teasers = $$props.teasers);
+		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(5, title = $$props.title);
+		if ('description' in $$props) $$invalidate(6, description = $$props.description);
+		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
+		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
+		if ('social' in $$props) $$invalidate(2, social = $$props.social);
+		if ('inputs' in $$props) $$invalidate(3, inputs = $$props.inputs);
 	};
 
-	return [teasers, favicon];
+	return [heading, subheading, social, inputs, favicon, title, description];
 }
 
 class Component$3 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$3, create_fragment$3, safe_not_equal, { favicon: 1, teasers: 0 });
-	}
-}
 
-/* generated by Svelte v3.58.0 */
-
-function create_fragment$4(ctx) {
-	let div2;
-	let div1;
-	let section;
-	let div0;
-	let raw_value = /*content*/ ctx[0].html + "";
-	let section_style_value;
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			section = element("section");
-			div0 = element("div");
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true, style: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "content2 svelte-cexu5p");
-			attr(section, "class", "section-container");
-			attr(section, "style", section_style_value = `background-color: ${/*background*/ ctx[1]};`);
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-b59a9458-d1d0-4bed-a1ad-6e3d1add6bd0");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-			div0.innerHTML = raw_value;
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
-			if (dirty & /*background*/ 2 && section_style_value !== (section_style_value = `background-color: ${/*background*/ ctx[1]};`)) {
-				attr(section, "style", section_style_value);
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-		}
-	};
-}
-
-function instance$4($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
-	let { content } = $$props;
-	let { background } = $$props;
-
-	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('content' in $$props) $$invalidate(0, content = $$props.content);
-		if ('background' in $$props) $$invalidate(1, background = $$props.background);
-	};
-
-	return [content, background, favicon];
-}
-
-class Component$4 extends SvelteComponent {
-	constructor(options) {
-		super();
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, { favicon: 2, content: 0, background: 1 });
-	}
-}
-
-/* generated by Svelte v3.58.0 */
-
-function create_fragment$5(ctx) {
-	let div2;
-	let div1;
-	let section;
-	let div0;
-	let raw_value = /*content*/ ctx[0].html + "";
-	let section_style_value;
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			section = element("section");
-			div0 = element("div");
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true, style: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "content2 svelte-cexu5p");
-			attr(section, "class", "section-container");
-			attr(section, "style", section_style_value = `background-color: ${/*background*/ ctx[1]};`);
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-71ad15d4-a658-47b6-995d-135a522d9768");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-			div0.innerHTML = raw_value;
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
-			if (dirty & /*background*/ 2 && section_style_value !== (section_style_value = `background-color: ${/*background*/ ctx[1]};`)) {
-				attr(section, "style", section_style_value);
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-		}
-	};
-}
-
-function instance$5($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
-	let { content } = $$props;
-	let { background } = $$props;
-
-	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('content' in $$props) $$invalidate(0, content = $$props.content);
-		if ('background' in $$props) $$invalidate(1, background = $$props.background);
-	};
-
-	return [content, background, favicon];
-}
-
-class Component$5 extends SvelteComponent {
-	constructor(options) {
-		super();
-		init(this, options, instance$5, create_fragment$5, safe_not_equal, { favicon: 2, content: 0, background: 1 });
-	}
-}
-
-/* generated by Svelte v3.58.0 */
-
-function create_fragment$6(ctx) {
-	let div2;
-	let div1;
-	let section;
-	let div0;
-	let raw_value = /*content*/ ctx[0].html + "";
-	let section_style_value;
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			section = element("section");
-			div0 = element("div");
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true, style: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "content2 svelte-cexu5p");
-			attr(section, "class", "section-container");
-			attr(section, "style", section_style_value = `background-color: ${/*background*/ ctx[1]};`);
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-29ba536f-b912-4012-9e93-47ffa4b9933f");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-			div0.innerHTML = raw_value;
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
-			if (dirty & /*background*/ 2 && section_style_value !== (section_style_value = `background-color: ${/*background*/ ctx[1]};`)) {
-				attr(section, "style", section_style_value);
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-		}
-	};
-}
-
-function instance$6($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
-	let { content } = $$props;
-	let { background } = $$props;
-
-	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('content' in $$props) $$invalidate(0, content = $$props.content);
-		if ('background' in $$props) $$invalidate(1, background = $$props.background);
-	};
-
-	return [content, background, favicon];
-}
-
-class Component$6 extends SvelteComponent {
-	constructor(options) {
-		super();
-		init(this, options, instance$6, create_fragment$6, safe_not_equal, { favicon: 2, content: 0, background: 1 });
-	}
-}
-
-/* generated by Svelte v3.58.0 */
-
-function create_fragment$7(ctx) {
-	let div2;
-	let div1;
-	let section;
-	let div0;
-	let raw_value = /*content*/ ctx[0].html + "";
-	let section_style_value;
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			section = element("section");
-			div0 = element("div");
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true, style: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "content2 svelte-cexu5p");
-			attr(section, "class", "section-container");
-			attr(section, "style", section_style_value = `background-color: ${/*background*/ ctx[1]};`);
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-08d71651-684f-4a9f-9948-84f497605af7");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-			div0.innerHTML = raw_value;
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
-			if (dirty & /*background*/ 2 && section_style_value !== (section_style_value = `background-color: ${/*background*/ ctx[1]};`)) {
-				attr(section, "style", section_style_value);
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-		}
-	};
-}
-
-function instance$7($$self, $$props, $$invalidate) {
-	let { favicon } = $$props;
-	let { content } = $$props;
-	let { background } = $$props;
-
-	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('content' in $$props) $$invalidate(0, content = $$props.content);
-		if ('background' in $$props) $$invalidate(1, background = $$props.background);
-	};
-
-	return [content, background, favicon];
-}
-
-class Component$7 extends SvelteComponent {
-	constructor(options) {
-		super();
-		init(this, options, instance$7, create_fragment$7, safe_not_equal, { favicon: 2, content: 0, background: 1 });
+		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
+			favicon: 4,
+			title: 5,
+			description: 6,
+			heading: 0,
+			subheading: 1,
+			social: 2,
+			inputs: 3
+		});
 	}
 }
 
@@ -4238,15 +4233,181 @@ class Component$7 extends SvelteComponent {
 
 function get_each_context$2(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[4] = list[i];
-	child_ctx[6] = i;
+	child_ctx[2] = list[i].title;
+	child_ctx[5] = list[i].links;
 	return child_ctx;
 }
 
-// (56:2) {#if buttons.length > 0}
-function create_if_block$3(ctx) {
-	let div;
-	let each_value = /*buttons*/ ctx[2];
+function get_each_context_1$2(ctx, list, i) {
+	const child_ctx = ctx.slice();
+	child_ctx[8] = list[i].link;
+	return child_ctx;
+}
+
+// (66:12) {#each links as { link }}
+function create_each_block_1$2(ctx) {
+	let li;
+	let a;
+	let t0_value = /*link*/ ctx[8].label + "";
+	let t0;
+	let a_href_value;
+	let t1;
+
+	return {
+		c() {
+			li = element("li");
+			a = element("a");
+			t0 = text(t0_value);
+			t1 = space();
+			this.h();
+		},
+		l(nodes) {
+			li = claim_element(nodes, "LI", {});
+			var li_nodes = children(li);
+			a = claim_element(li_nodes, "A", { class: true, href: true });
+			var a_nodes = children(a);
+			t0 = claim_text(a_nodes, t0_value);
+			a_nodes.forEach(detach);
+			t1 = claim_space(li_nodes);
+			li_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a, "class", "link svelte-u1zmy0");
+			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
+		},
+		m(target, anchor) {
+			insert_hydration(target, li, anchor);
+			append_hydration(li, a);
+			append_hydration(a, t0);
+			append_hydration(li, t1);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*link*/ ctx[8].label + "")) set_data(t0, t0_value);
+
+			if (dirty & /*menus*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
+				attr(a, "href", a_href_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(li);
+		}
+	};
+}
+
+// (62:6) {#each menus as { title, links }}
+function create_each_block$2(ctx) {
+	let nav;
+	let h3;
+	let t0_value = /*title*/ ctx[2] + "";
+	let t0;
+	let t1;
+	let ul;
+	let t2;
+	let each_value_1 = /*links*/ ctx[5];
+	let each_blocks = [];
+
+	for (let i = 0; i < each_value_1.length; i += 1) {
+		each_blocks[i] = create_each_block_1$2(get_each_context_1$2(ctx, each_value_1, i));
+	}
+
+	return {
+		c() {
+			nav = element("nav");
+			h3 = element("h3");
+			t0 = text(t0_value);
+			t1 = space();
+			ul = element("ul");
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].c();
+			}
+
+			t2 = space();
+			this.h();
+		},
+		l(nodes) {
+			nav = claim_element(nodes, "NAV", {});
+			var nav_nodes = children(nav);
+			h3 = claim_element(nav_nodes, "H3", { class: true });
+			var h3_nodes = children(h3);
+			t0 = claim_text(h3_nodes, t0_value);
+			h3_nodes.forEach(detach);
+			t1 = claim_space(nav_nodes);
+			ul = claim_element(nav_nodes, "UL", { class: true });
+			var ul_nodes = children(ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				each_blocks[i].l(ul_nodes);
+			}
+
+			ul_nodes.forEach(detach);
+			t2 = claim_space(nav_nodes);
+			nav_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h3, "class", "svelte-u1zmy0");
+			attr(ul, "class", "svelte-u1zmy0");
+		},
+		m(target, anchor) {
+			insert_hydration(target, nav, anchor);
+			append_hydration(nav, h3);
+			append_hydration(h3, t0);
+			append_hydration(nav, t1);
+			append_hydration(nav, ul);
+
+			for (let i = 0; i < each_blocks.length; i += 1) {
+				if (each_blocks[i]) {
+					each_blocks[i].m(ul, null);
+				}
+			}
+
+			append_hydration(nav, t2);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*title*/ ctx[2] + "")) set_data(t0, t0_value);
+
+			if (dirty & /*menus*/ 2) {
+				each_value_1 = /*links*/ ctx[5];
+				let i;
+
+				for (i = 0; i < each_value_1.length; i += 1) {
+					const child_ctx = get_each_context_1$2(ctx, each_value_1, i);
+
+					if (each_blocks[i]) {
+						each_blocks[i].p(child_ctx, dirty);
+					} else {
+						each_blocks[i] = create_each_block_1$2(child_ctx);
+						each_blocks[i].c();
+						each_blocks[i].m(ul, null);
+					}
+				}
+
+				for (; i < each_blocks.length; i += 1) {
+					each_blocks[i].d(1);
+				}
+
+				each_blocks.length = each_value_1.length;
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(nav);
+			destroy_each(each_blocks, detaching);
+		}
+	};
+}
+
+function create_fragment$4(ctx) {
+	let div4;
+	let div3;
+	let footer;
+	let div2;
+	let div0;
+	let raw_value = /*content*/ ctx[0].html + "";
+	let t;
+	let div1;
+	let each_value = /*menus*/ ctx[1];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value.length; i += 1) {
@@ -4255,7 +4416,13 @@ function create_if_block$3(ctx) {
 
 	return {
 		c() {
-			div = element("div");
+			div4 = element("div");
+			div3 = element("div");
+			footer = element("footer");
+			div2 = element("div");
+			div0 = element("div");
+			t = space();
+			div1 = element("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
@@ -4264,31 +4431,61 @@ function create_if_block$3(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			div = claim_element(nodes, "DIV", { class: true });
-			var div_nodes = children(div);
+			div4 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div4_nodes = children(div4);
+			div3 = claim_element(div4_nodes, "DIV", { class: true });
+			var div3_nodes = children(div3);
+			footer = claim_element(div3_nodes, "FOOTER", { class: true });
+			var footer_nodes = children(footer);
+			div2 = claim_element(footer_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			div0 = claim_element(div2_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			div0_nodes.forEach(detach);
+			t = claim_space(div2_nodes);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
-				each_blocks[i].l(div_nodes);
+				each_blocks[i].l(div1_nodes);
 			}
 
-			div_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
+			footer_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
+			div4_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div, "class", "buttons svelte-tz3ntf");
+			attr(div0, "class", "content svelte-u1zmy0");
+			attr(div1, "class", "nav-items svelte-u1zmy0");
+			attr(div2, "class", "section-container svelte-u1zmy0");
+			attr(footer, "class", "svelte-u1zmy0");
+			attr(div3, "class", "component");
+			attr(div4, "class", "section");
+			attr(div4, "id", "section-5d857e09-1973-4bcd-9490-d3b2e17c570c");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div, anchor);
+			insert_hydration(target, div4, anchor);
+			append_hydration(div4, div3);
+			append_hydration(div3, footer);
+			append_hydration(footer, div2);
+			append_hydration(div2, div0);
+			div0.innerHTML = raw_value;
+			append_hydration(div2, t);
+			append_hydration(div2, div1);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
-					each_blocks[i].m(div, null);
+					each_blocks[i].m(div1, null);
 				}
 			}
 		},
-		p(ctx, dirty) {
-			if (dirty & /*buttons*/ 4) {
-				each_value = /*buttons*/ ctx[2];
+		p(ctx, [dirty]) {
+			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
+			if (dirty & /*menus*/ 2) {
+				each_value = /*menus*/ ctx[1];
 				let i;
 
 				for (i = 0; i < each_value.length; i += 1) {
@@ -4299,7 +4496,7 @@ function create_if_block$3(ctx) {
 					} else {
 						each_blocks[i] = create_each_block$2(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(div, null);
+						each_blocks[i].m(div1, null);
 					}
 				}
 
@@ -4310,200 +4507,73 @@ function create_if_block$3(ctx) {
 				each_blocks.length = each_value.length;
 			}
 		},
+		i: noop,
+		o: noop,
 		d(detaching) {
-			if (detaching) detach(div);
+			if (detaching) detach(div4);
 			destroy_each(each_blocks, detaching);
 		}
 	};
 }
 
-// (58:6) {#each buttons as button, i}
-function create_each_block$2(ctx) {
-	let a;
-	let t_value = /*button*/ ctx[4].link.label + "";
-	let t;
-	let a_href_value;
-
-	return {
-		c() {
-			a = element("a");
-			t = text(t_value);
-			this.h();
-		},
-		l(nodes) {
-			a = claim_element(nodes, "A", { class: true, href: true });
-			var a_nodes = children(a);
-			t = claim_text(a_nodes, t_value);
-			a_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(a, "class", "button svelte-tz3ntf");
-			attr(a, "href", a_href_value = /*button*/ ctx[4].link.url);
-		},
-		m(target, anchor) {
-			insert_hydration(target, a, anchor);
-			append_hydration(a, t);
-		},
-		p(ctx, dirty) {
-			if (dirty & /*buttons*/ 4 && t_value !== (t_value = /*button*/ ctx[4].link.label + "")) set_data(t, t_value);
-
-			if (dirty & /*buttons*/ 4 && a_href_value !== (a_href_value = /*button*/ ctx[4].link.url)) {
-				attr(a, "href", a_href_value);
-			}
-		},
-		d(detaching) {
-			if (detaching) detach(a);
-		}
-	};
-}
-
-function create_fragment$8(ctx) {
-	let div2;
-	let div1;
-	let header;
-	let div0;
-	let t0;
-	let t1;
-	let span;
-	let t2;
-	let t3;
-	let if_block = /*buttons*/ ctx[2].length > 0 && create_if_block$3(ctx);
-
-	return {
-		c() {
-			div2 = element("div");
-			div1 = element("div");
-			header = element("header");
-			div0 = element("div");
-			t0 = text(/*heading*/ ctx[0]);
-			t1 = space();
-			span = element("span");
-			t2 = text(/*subheading*/ ctx[1]);
-			t3 = space();
-			if (if_block) if_block.c();
-			this.h();
-		},
-		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			header = claim_element(div1_nodes, "HEADER", { class: true });
-			var header_nodes = children(header);
-			div0 = claim_element(header_nodes, "DIV", { class: true });
-			var div0_nodes = children(div0);
-			t0 = claim_text(div0_nodes, /*heading*/ ctx[0]);
-			div0_nodes.forEach(detach);
-			t1 = claim_space(header_nodes);
-			span = claim_element(header_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			t2 = claim_text(span_nodes, /*subheading*/ ctx[1]);
-			span_nodes.forEach(detach);
-			t3 = claim_space(header_nodes);
-			if (if_block) if_block.l(header_nodes);
-			header_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
-			this.h();
-		},
-		h() {
-			attr(div0, "class", "heading svelte-tz3ntf");
-			attr(span, "class", "subheading svelte-tz3ntf");
-			attr(header, "class", "section-container svelte-tz3ntf");
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-a391e770-a8ed-457c-9f49-fb6c98953678");
-		},
-		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, header);
-			append_hydration(header, div0);
-			append_hydration(div0, t0);
-			append_hydration(header, t1);
-			append_hydration(header, span);
-			append_hydration(span, t2);
-			append_hydration(header, t3);
-			if (if_block) if_block.m(header, null);
-		},
-		p(ctx, [dirty]) {
-			if (dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
-			if (dirty & /*subheading*/ 2) set_data(t2, /*subheading*/ ctx[1]);
-
-			if (/*buttons*/ ctx[2].length > 0) {
-				if (if_block) {
-					if_block.p(ctx, dirty);
-				} else {
-					if_block = create_if_block$3(ctx);
-					if_block.c();
-					if_block.m(header, null);
-				}
-			} else if (if_block) {
-				if_block.d(1);
-				if_block = null;
-			}
-		},
-		i: noop,
-		o: noop,
-		d(detaching) {
-			if (detaching) detach(div2);
-			if (if_block) if_block.d();
-		}
-	};
-}
-
-function instance$8($$self, $$props, $$invalidate) {
+function instance$4($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
-	let { heading } = $$props;
-	let { subheading } = $$props;
-	let { buttons } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { content } = $$props;
+	let { menus } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
-		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
-		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
-		if ('buttons' in $$props) $$invalidate(2, buttons = $$props.buttons);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(4, description = $$props.description);
+		if ('content' in $$props) $$invalidate(0, content = $$props.content);
+		if ('menus' in $$props) $$invalidate(1, menus = $$props.menus);
 	};
 
-	return [heading, subheading, buttons, favicon];
+	return [content, menus, title, favicon, description];
 }
 
-class Component$8 extends SvelteComponent {
+class Component$4 extends SvelteComponent {
 	constructor(options) {
 		super();
 
-		init(this, options, instance$8, create_fragment$8, safe_not_equal, {
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
 			favicon: 3,
-			heading: 0,
-			subheading: 1,
-			buttons: 2
+			title: 2,
+			description: 4,
+			content: 0,
+			menus: 1
 		});
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-function instance$9($$self, $$props, $$invalidate) {
+function instance$5($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('description' in $$props) $$invalidate(2, description = $$props.description);
 	};
 
-	return [favicon];
+	return [favicon, title, description];
 }
 
-class Component$9 extends SvelteComponent {
+class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$9, null, safe_not_equal, { favicon: 0 });
+		init(this, options, instance$5, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-function create_fragment$9(ctx) {
+function create_fragment$5(ctx) {
 	let component_0;
 	let t0;
 	let component_1;
@@ -4513,14 +4583,6 @@ function create_fragment$9(ctx) {
 	let component_3;
 	let t3;
 	let component_4;
-	let t4;
-	let component_5;
-	let t5;
-	let component_6;
-	let t6;
-	let component_7;
-	let t7;
-	let component_8;
 	let current;
 
 	component_0 = new Component({
@@ -4530,7 +4592,9 @@ function create_fragment$9(ctx) {
 					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
-				}
+				},
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds"
 			}
 		});
 
@@ -4542,29 +4606,60 @@ function create_fragment$9(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				background: {
+					"alt": "",
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
+					"size": 475
+				},
+				headline: "Vet Behaviour Team",
 				logo: {
 					"image": {
 						"alt": "",
-						"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg",
-						"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg",
-						"size": 3
+						"src": "",
+						"url": "",
+						"size": null
 					},
-					"title": "Vet Behaviour Team"
+					"title": ""
 				},
 				site_nav: [
 					{
-						"link": {
-							"url": "",
-							"label": "Home",
-							"active": false
-						}
+						"link": { "url": "/about-us", "label": "About us" }
 					},
-					{ "link": { "url": "/", "label": "About" } },
 					{
 						"link": {
-							"url": "https://primosites.vercel.app/primo-library",
-							"label": "Contact"
+							"url": "/what-we-do",
+							"label": "Consultations"
 						}
+					},
+					{
+						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
+					},
+					{
+						"link": {
+							"url": "/testimonials",
+							"label": "Testimonials"
+						}
+					},
+					{
+						"link": {
+							"url": "/behaviour-resources",
+							"label": "Behaviour resources"
+						}
+					},
+					{
+						"link": { "url": "/blog", "label": "Blog" }
+					},
+					{
+						"link": { "url": "/faq", "label": "FAQ" }
+					},
+					{
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
@@ -4578,18 +4673,40 @@ function create_fragment$9(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
-				teasers: [
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				heading: "Contact Us",
+				subheading: "We'd love to hear from you.",
+				social: [
 					{
-						"link": { "url": "/", "label": "Book Online" },
-						"image": {
-							"alt": "",
-							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-karolina-grabowska-5993415crop.jpg1686744404682"
-						},
-						"title": "Experience comprehensive and personalised care for your pet.",
-						"description": {
-							"html": "<p>Our commitment to your pet's well-being and mental health goes beyond a single consultation.</p>",
-							"markdown": "Our commitment to your pet's well-being and mental health goes beyond a single consultation."
-						}
+						"link": { "url": "/", "label": "" },
+						"label": ""
+					},
+					{
+						"link": { "url": "/", "label": "0432881174" },
+						"label": "Phone"
+					}
+				],
+				inputs: [
+					{
+						"type": "text",
+						"label": "Name",
+						"placeholder": "Name"
+					},
+					{
+						"type": "email",
+						"label": "Email",
+						"placeholder": "something@gmail.com"
+					},
+					{
+						"type": "phone",
+						"label": "Mobile number",
+						"placeholder": ""
+					},
+					{
+						"type": "textarea",
+						"label": "Message",
+						"placeholder": "Tell us about the current problem with your pet"
 					}
 				]
 			}
@@ -4603,11 +4720,30 @@ function create_fragment$9(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<h2 id=\"priortotheconsult\">Prior to the consult</h2>\n<p>Please fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian.</p>",
-					"markdown": "## Prior to the consult\n\nPlease fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian.\n\n"
+					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>",
+					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n"
 				},
-				background: "#afc5c5"
+				menus: [
+					{
+						"links": [
+							{ "link": { "url": "/", "label": "blog" } },
+							{
+								"link": { "url": "/", "label": "consectetur" }
+							}
+						],
+						"title": "About Us"
+					},
+					{
+						"links": [
+							{ "link": { "url": "/", "label": "qui" } },
+							{ "link": { "url": "/", "label": "ex" } }
+						],
+						"title": "Get Involved"
+					}
+				]
 			}
 		});
 
@@ -4619,75 +4755,8 @@ function create_fragment$9(ctx) {
 					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
 					"size": 3
 				},
-				content: {
-					"html": "<h2 id=\"duringtheconsult\">During the consult</h2>\n<p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. The initial consultation is a 2 hour house call consult. </p>\n<p>Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management plan for you and your pet based on your goals. In some cases, this may include medication. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p>",
-					"markdown": "## During the consult\n\nDuring the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. The initial consultation is a 2 hour house call consult. \n\nOur expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management plan for you and your pet based on your goals. In some cases, this may include medication. We believe in empowering you with knowledge, so you can make informed decisions for your pet.\n\n"
-				},
-				background: "Eiusmod eiusmod tempor"
-			}
-		});
-
-	component_5 = new Component$6({
-			props: {
-				favicon: {
-					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
-				},
-				content: {
-					"html": "<h2 id=\"aftertheconsult\">After the consult</h2>\n<p>Over the next 2 months, we diligently work on refining the treatment plan to suit your pet's individual needs and your family's dynamics. We understand that each patient responds differently, which is why we fine-tune our rehabilitation techniques along the way. If your pet requires medication or you encounter any challenges with the training plan, we're here to assist you promptly and we can make adjustments during this period.</p>\n<p>Choose VBT and experience the difference of comprehensive care, tailored to your pet's unique needs. Take advantage of our 8-week email support period, receive hassle-free refills for behavioural medications (if required), and benefit from a trusted team that puts your pet's well-being and mental health first.</p>",
-					"markdown": "## After the consult\n\nOver the next 2 months, we diligently work on refining the treatment plan to suit your pet's individual needs and your family's dynamics. We understand that each patient responds differently, which is why we fine-tune our rehabilitation techniques along the way. If your pet requires medication or you encounter any challenges with the training plan, we're here to assist you promptly and we can make adjustments during this period.\n\nChoose VBT and experience the difference of comprehensive care, tailored to your pet's unique needs. Take advantage of our 8-week email support period, receive hassle-free refills for behavioural medications (if required), and benefit from a trusted team that puts your pet's well-being and mental health first.\n\n"
-				},
-				background: " #afc5c5"
-			}
-		});
-
-	component_6 = new Component$7({
-			props: {
-				favicon: {
-					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
-				},
-				content: {
-					"html": "<h2 id=\"8weekspostconsult\">8 weeks post consult</h2>\n<p>Follow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation via telehealth to review progress and refine the treatment plan.</p>",
-					"markdown": "## 8 weeks post consult\n\nFollow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation via telehealth to review progress and refine the treatment plan.\n\n"
-				},
-				background: "Eiusmod eiusmod tempor"
-			}
-		});
-
-	component_7 = new Component$8({
-			props: {
-				favicon: {
-					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
-				},
-				heading: "Kindness + Science",
-				subheading: "The best of both worlds",
-				buttons: [
-					{
-						"link": { "url": "/", "label": "Book now" }
-					},
-					{
-						"link": { "url": "/", "label": "Contact us" }
-					}
-				]
-			}
-		});
-
-	component_8 = new Component$9({
-			props: {
-				favicon: {
-					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
-				}
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds"
 			}
 		});
 
@@ -4702,14 +4771,6 @@ function create_fragment$9(ctx) {
 			create_component(component_3.$$.fragment);
 			t3 = space();
 			create_component(component_4.$$.fragment);
-			t4 = space();
-			create_component(component_5.$$.fragment);
-			t5 = space();
-			create_component(component_6.$$.fragment);
-			t6 = space();
-			create_component(component_7.$$.fragment);
-			t7 = space();
-			create_component(component_8.$$.fragment);
 		},
 		l(nodes) {
 			claim_component(component_0.$$.fragment, nodes);
@@ -4721,14 +4782,6 @@ function create_fragment$9(ctx) {
 			claim_component(component_3.$$.fragment, nodes);
 			t3 = claim_space(nodes);
 			claim_component(component_4.$$.fragment, nodes);
-			t4 = claim_space(nodes);
-			claim_component(component_5.$$.fragment, nodes);
-			t5 = claim_space(nodes);
-			claim_component(component_6.$$.fragment, nodes);
-			t6 = claim_space(nodes);
-			claim_component(component_7.$$.fragment, nodes);
-			t7 = claim_space(nodes);
-			claim_component(component_8.$$.fragment, nodes);
 		},
 		m(target, anchor) {
 			mount_component(component_0, target, anchor);
@@ -4740,14 +4793,6 @@ function create_fragment$9(ctx) {
 			mount_component(component_3, target, anchor);
 			insert_hydration(target, t3, anchor);
 			mount_component(component_4, target, anchor);
-			insert_hydration(target, t4, anchor);
-			mount_component(component_5, target, anchor);
-			insert_hydration(target, t5, anchor);
-			mount_component(component_6, target, anchor);
-			insert_hydration(target, t6, anchor);
-			mount_component(component_7, target, anchor);
-			insert_hydration(target, t7, anchor);
-			mount_component(component_8, target, anchor);
 			current = true;
 		},
 		p: noop,
@@ -4758,10 +4803,6 @@ function create_fragment$9(ctx) {
 			transition_in(component_2.$$.fragment, local);
 			transition_in(component_3.$$.fragment, local);
 			transition_in(component_4.$$.fragment, local);
-			transition_in(component_5.$$.fragment, local);
-			transition_in(component_6.$$.fragment, local);
-			transition_in(component_7.$$.fragment, local);
-			transition_in(component_8.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
@@ -4770,10 +4811,6 @@ function create_fragment$9(ctx) {
 			transition_out(component_2.$$.fragment, local);
 			transition_out(component_3.$$.fragment, local);
 			transition_out(component_4.$$.fragment, local);
-			transition_out(component_5.$$.fragment, local);
-			transition_out(component_6.$$.fragment, local);
-			transition_out(component_7.$$.fragment, local);
-			transition_out(component_8.$$.fragment, local);
 			current = false;
 		},
 		d(detaching) {
@@ -4786,23 +4823,15 @@ function create_fragment$9(ctx) {
 			destroy_component(component_3, detaching);
 			if (detaching) detach(t3);
 			destroy_component(component_4, detaching);
-			if (detaching) detach(t4);
-			destroy_component(component_5, detaching);
-			if (detaching) detach(t5);
-			destroy_component(component_6, detaching);
-			if (detaching) detach(t6);
-			destroy_component(component_7, detaching);
-			if (detaching) detach(t7);
-			destroy_component(component_8, detaching);
 		}
 	};
 }
 
-class Component$a extends SvelteComponent {
+class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, null, create_fragment$9, safe_not_equal, {});
+		init(this, options, null, create_fragment$5, safe_not_equal, {});
 	}
 }
 
-export default Component$a;
+export default Component$6;
