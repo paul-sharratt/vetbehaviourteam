@@ -6970,13 +6970,13 @@ function create_fragment$c(ctx) {
 				},
 				headline: "",
 				logo: {
-					"title": "",
 					"image": {
 						"alt": "",
 						"src": "",
 						"url": "",
 						"size": null
-					}
+					},
+					"title": ""
 				},
 				site_nav: [
 					{
@@ -7248,7 +7248,6 @@ function create_fragment$c(ctx) {
 				},
 				menus: [
 					{
-						"title": "Contact us",
 						"links": [
 							{
 								"link": { "url": "/contact", "label": "blog" }
@@ -7259,14 +7258,15 @@ function create_fragment$c(ctx) {
 									"label": "Terms and conditions"
 								}
 							}
-						]
+						],
+						"title": "Contact us"
 					},
 					{
-						"title": "Get Involved",
 						"links": [
 							{ "link": { "url": "/", "label": "qui" } },
 							{ "link": { "url": "/", "label": "ex" } }
-						]
+						],
+						"title": "Get Involved"
 					}
 				]
 			}
