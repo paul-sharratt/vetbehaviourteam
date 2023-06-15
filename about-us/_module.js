@@ -4361,13 +4361,13 @@ function create_fragment$5(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				logo: {
-					"title": "Vet Behaviour Team",
 					"image": {
 						"alt": "",
 						"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg",
 						"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg",
 						"size": 3
-					}
+					},
+					"title": "Vet Behaviour Team"
 				},
 				site_nav: [
 					{
@@ -4387,34 +4387,28 @@ function create_fragment$5(ctx) {
 						"link": { "url": "/contact", "label": "Contact us" }
 					},
 					{
-						"link": { "label": "Pricing", "url": "/pricing" }
+						"link": { "url": "/pricing", "label": "Pricing" }
 					},
 					{
-						"link": { "label": "Book online", "url": "/book" }
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
-						"link": { "label": "FAQ", "url": "/faq" }
+						"link": { "url": "/faq", "label": "FAQ" }
 					},
 					{
 						"link": {
-							"label": "Behaviour Resources",
-							"url": "/behaviour-resources"
+							"url": "/testimonials",
+							"label": "Testimonials"
 						}
 					},
 					{
 						"link": {
-							"label": "Testimonials",
-							"url": "/testimonials"
+							"url": "/behaviour-resources",
+							"label": "Behaviour resources"
 						}
 					},
 					{
-						"link": {
-							"label": "Behaviour resources",
-							"url": "/behaviour-resources"
-						}
-					},
-					{
-						"link": { "label": "Blog", "url": "/blog" }
+						"link": { "url": "/blog", "label": "Blog" }
 					}
 				]
 			}

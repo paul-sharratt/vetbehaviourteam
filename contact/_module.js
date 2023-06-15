@@ -3005,17 +3005,17 @@ class Component$1 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[11] = list[i].link;
+	child_ctx[10] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[11] = list[i].link;
+	child_ctx[10] = list[i].link;
 	return child_ctx;
 }
 
-// (130:33) 
+// (134:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3052,7 +3052,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (128:8) {#if logo.title}
+// (132:8) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3076,10 +3076,10 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (135:8) {#each site_nav as { link }}
+// (139:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[11].label + "";
+	let t_value = /*link*/ ctx[10].label + "";
 	let t;
 	let a_href_value;
 
@@ -3097,23 +3097,23 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-1643yvf");
-			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
-			toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
+			attr(a, "class", "link svelte-nvhtf1");
+			attr(a, "href", a_href_value = /*link*/ ctx[10].url);
+			toggle_class(a, "active", /*link*/ ctx[10].url === window.location.pathname);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[10].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[10].url)) {
 				attr(a, "href", a_href_value);
 			}
 
 			if (dirty & /*site_nav, window*/ 8) {
-				toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
+				toggle_class(a, "active", /*link*/ ctx[10].url === window.location.pathname);
 			}
 		},
 		d(detaching) {
@@ -3122,7 +3122,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (144:33) 
+// (148:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3159,7 +3159,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (142:8) {#if logo.title}
+// (146:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3183,7 +3183,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (154:6) {#if mobileNavOpen}
+// (158:6) {#if mobileNavOpen2}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3240,9 +3240,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-1643yvf");
+			attr(button, "class", "svelte-nvhtf1");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-1643yvf");
+			attr(nav, "class", "svelte-nvhtf1");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3316,10 +3316,10 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (156:10) {#each site_nav as { link }}
+// (160:10) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[11].label + "";
+	let t_value = /*link*/ ctx[10].label + "";
 	let t;
 	let a_href_value;
 
@@ -3337,16 +3337,16 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[10].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[10].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[10].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3407,7 +3407,7 @@ function create_fragment$2(ctx) {
 			props: { height: "30", icon: "eva:menu-outline" }
 		});
 
-	let if_block2 = /*mobileNavOpen*/ ctx[4] && create_if_block$1(ctx);
+	let if_block2 = /*mobileNavOpen2*/ ctx[4] && create_if_block$1(ctx);
 
 	return {
 		c() {
@@ -3503,21 +3503,21 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-1643yvf");
-			attr(nav, "class", "svelte-1643yvf");
-			attr(div0, "class", "desktop-nav svelte-1643yvf");
+			attr(a0, "class", "logo svelte-nvhtf1");
+			attr(nav, "class", "svelte-nvhtf1");
+			attr(div0, "class", "desktop-nav svelte-nvhtf1");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-1643yvf");
+			attr(a1, "class", "logo svelte-nvhtf1");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-1643yvf");
-			attr(div2, "class", "section-container svelte-1643yvf");
-			attr(h1, "class", "headline svelte-1643yvf");
-			attr(div3, "class", "section-container svelte-1643yvf");
+			attr(div1, "class", "mobile-nav svelte-nvhtf1");
+			attr(div2, "class", "section-container svelte-nvhtf1");
+			attr(h1, "class", "headline svelte-nvhtf1");
+			attr(div3, "class", "section-container svelte-nvhtf1");
 			set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
 			attr(header, "role", "img");
 			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
-			attr(header, "class", "svelte-1643yvf");
+			attr(header, "class", "svelte-nvhtf1");
 			attr(div4, "class", "component");
 			attr(div5, "class", "section");
 			attr(div5, "id", "section-66e14924-b26b-4c2b-a32c-b79f711bae43");
@@ -3607,11 +3607,11 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (/*mobileNavOpen*/ ctx[4]) {
+			if (/*mobileNavOpen2*/ ctx[4]) {
 				if (if_block2) {
 					if_block2.p(ctx, dirty);
 
-					if (dirty & /*mobileNavOpen*/ 16) {
+					if (dirty & /*mobileNavOpen2*/ 16) {
 						transition_in(if_block2, 1);
 					}
 				} else {
@@ -3680,10 +3680,9 @@ function instance$2($$self, $$props, $$invalidate) {
 	let { headline } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
-	let mobileNavOpen = false;
-
-	const click_handler = () => $$invalidate(4, mobileNavOpen = true);
-	const click_handler_1 = () => $$invalidate(4, mobileNavOpen = false);
+	let mobileNavOpen2 = false;
+	const click_handler = () => $$invalidate(4, mobileNavOpen2 = true);
+	const click_handler_1 = () => $$invalidate(4, mobileNavOpen2 = false);
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
@@ -3700,7 +3699,7 @@ function instance$2($$self, $$props, $$invalidate) {
 		headline,
 		logo,
 		site_nav,
-		mobileNavOpen,
+		mobileNavOpen2,
 		favicon,
 		title,
 		description,
@@ -4638,9 +4637,6 @@ function create_fragment$5(ctx) {
 						"link": { "url": "/pricing", "label": "Pricing" }
 					},
 					{
-						"link": { "url": "/book", "label": "Book online" }
-					},
-					{
 						"link": {
 							"url": "/testimonials",
 							"label": "Testimonials"
@@ -4649,17 +4645,17 @@ function create_fragment$5(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour resources"
+							"label": "Behaviour Resources"
 						}
 					},
 					{
-						"link": { "url": "/blog", "label": "Blog" }
+						"link": { "label": "Book online", "url": "/book" }
 					},
 					{
 						"link": { "url": "/faq", "label": "FAQ" }
 					},
 					{
-						"link": { "url": "/contact", "label": "Contact" }
+						"link": { "url": "/blog", "label": "Blog" }
 					}
 				]
 			}

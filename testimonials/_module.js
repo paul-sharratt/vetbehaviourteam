@@ -4973,7 +4973,7 @@ function get_each_context_1$2(ctx, list, i) {
 }
 
 // (100:6) {#if person.image.url}
-function create_if_block$4(ctx) {
+function create_if_block_1$3(ctx) {
 	let figure;
 	let img;
 	let img_alt_value;
@@ -5017,7 +5017,84 @@ function create_if_block$4(ctx) {
 	};
 }
 
-// (111:10) {#each person.social_links as {link, icon}}
+// (110:10) {:else}
+function create_else_block$1(ctx) {
+	let span;
+	let t_value = /*person*/ ctx[5].title + "";
+	let t;
+
+	return {
+		c() {
+			span = element("span");
+			t = text(t_value);
+			this.h();
+		},
+		l(nodes) {
+			span = claim_element(nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t = claim_text(span_nodes, t_value);
+			span_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(span, "class", "title svelte-7tm6a9");
+		},
+		m(target, anchor) {
+			insert_hydration(target, span, anchor);
+			append_hydration(span, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*people*/ 2 && t_value !== (t_value = /*person*/ ctx[5].title + "")) set_data(t, t_value);
+		},
+		d(detaching) {
+			if (detaching) detach(span);
+		}
+	};
+}
+
+// (108:10) {#if person.file}
+function create_if_block$4(ctx) {
+	let a;
+	let t_value = /*person*/ ctx[5].title + "";
+	let t;
+	let a_href_value;
+
+	return {
+		c() {
+			a = element("a");
+			t = text(t_value);
+			this.h();
+		},
+		l(nodes) {
+			a = claim_element(nodes, "A", { class: true, download: true, href: true });
+			var a_nodes = children(a);
+			t = claim_text(a_nodes, t_value);
+			a_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(a, "class", "title svelte-7tm6a9");
+			attr(a, "download", "");
+			attr(a, "href", a_href_value = /*person*/ ctx[5].file);
+		},
+		m(target, anchor) {
+			insert_hydration(target, a, anchor);
+			append_hydration(a, t);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*people*/ 2 && t_value !== (t_value = /*person*/ ctx[5].title + "")) set_data(t, t_value);
+
+			if (dirty & /*people*/ 2 && a_href_value !== (a_href_value = /*person*/ ctx[5].file)) {
+				attr(a, "href", a_href_value);
+			}
+		},
+		d(detaching) {
+			if (detaching) detach(a);
+		}
+	};
+}
+
+// (116:10) {#each person.social_links as {link, icon}}
 function create_each_block_1$2(ctx) {
 	let a;
 	let icon;
@@ -5093,18 +5170,23 @@ function create_each_block$3(ctx) {
 	let t0;
 	let div2;
 	let div0;
-	let span0;
+	let span;
 	let t1_value = /*person*/ ctx[5].name + "";
 	let t1;
 	let t2;
-	let span1;
-	let t3_value = /*person*/ ctx[5].title + "";
 	let t3;
-	let t4;
 	let div1;
-	let t5;
+	let t4;
 	let current;
-	let if_block = /*person*/ ctx[5].image.url && create_if_block$4(ctx);
+	let if_block0 = /*person*/ ctx[5].image.url && create_if_block_1$3(ctx);
+
+	function select_block_type(ctx, dirty) {
+		if (/*person*/ ctx[5].file) return create_if_block$4;
+		return create_else_block$1;
+	}
+
+	let current_block_type = select_block_type(ctx);
+	let if_block1 = current_block_type(ctx);
 	let each_value_1 = /*person*/ ctx[5].social_links;
 	let each_blocks = [];
 
@@ -5119,45 +5201,41 @@ function create_each_block$3(ctx) {
 	return {
 		c() {
 			li = element("li");
-			if (if_block) if_block.c();
+			if (if_block0) if_block0.c();
 			t0 = space();
 			div2 = element("div");
 			div0 = element("div");
-			span0 = element("span");
+			span = element("span");
 			t1 = text(t1_value);
 			t2 = space();
-			span1 = element("span");
-			t3 = text(t3_value);
-			t4 = space();
+			if_block1.c();
+			t3 = space();
 			div1 = element("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
-			t5 = space();
+			t4 = space();
 			this.h();
 		},
 		l(nodes) {
 			li = claim_element(nodes, "LI", { class: true });
 			var li_nodes = children(li);
-			if (if_block) if_block.l(li_nodes);
+			if (if_block0) if_block0.l(li_nodes);
 			t0 = claim_space(li_nodes);
 			div2 = claim_element(li_nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
 			div0 = claim_element(div2_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
-			span0 = claim_element(div0_nodes, "SPAN", { class: true });
-			var span0_nodes = children(span0);
-			t1 = claim_text(span0_nodes, t1_value);
-			span0_nodes.forEach(detach);
+			span = claim_element(div0_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t1 = claim_text(span_nodes, t1_value);
+			span_nodes.forEach(detach);
 			t2 = claim_space(div0_nodes);
-			span1 = claim_element(div0_nodes, "SPAN", { class: true });
-			var span1_nodes = children(span1);
-			t3 = claim_text(span1_nodes, t3_value);
-			span1_nodes.forEach(detach);
+			if_block1.l(div0_nodes);
 			div0_nodes.forEach(detach);
-			t4 = claim_space(div2_nodes);
+			t3 = claim_space(div2_nodes);
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
 
@@ -5167,13 +5245,12 @@ function create_each_block$3(ctx) {
 
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
-			t5 = claim_space(li_nodes);
+			t4 = claim_space(li_nodes);
 			li_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(span0, "class", "name svelte-7tm6a9");
-			attr(span1, "class", "title svelte-7tm6a9");
+			attr(span, "class", "name svelte-7tm6a9");
 			attr(div0, "class", "details svelte-7tm6a9");
 			attr(div1, "class", "social svelte-7tm6a9");
 			attr(div2, "class", "info");
@@ -5181,16 +5258,15 @@ function create_each_block$3(ctx) {
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
-			if (if_block) if_block.m(li, null);
+			if (if_block0) if_block0.m(li, null);
 			append_hydration(li, t0);
 			append_hydration(li, div2);
 			append_hydration(div2, div0);
-			append_hydration(div0, span0);
-			append_hydration(span0, t1);
+			append_hydration(div0, span);
+			append_hydration(span, t1);
 			append_hydration(div0, t2);
-			append_hydration(div0, span1);
-			append_hydration(span1, t3);
-			append_hydration(div2, t4);
+			if_block1.m(div0, null);
+			append_hydration(div2, t3);
 			append_hydration(div2, div1);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -5199,25 +5275,36 @@ function create_each_block$3(ctx) {
 				}
 			}
 
-			append_hydration(li, t5);
+			append_hydration(li, t4);
 			current = true;
 		},
 		p(ctx, dirty) {
 			if (/*person*/ ctx[5].image.url) {
-				if (if_block) {
-					if_block.p(ctx, dirty);
+				if (if_block0) {
+					if_block0.p(ctx, dirty);
 				} else {
-					if_block = create_if_block$4(ctx);
-					if_block.c();
-					if_block.m(li, t0);
+					if_block0 = create_if_block_1$3(ctx);
+					if_block0.c();
+					if_block0.m(li, t0);
 				}
-			} else if (if_block) {
-				if_block.d(1);
-				if_block = null;
+			} else if (if_block0) {
+				if_block0.d(1);
+				if_block0 = null;
 			}
 
 			if ((!current || dirty & /*people*/ 2) && t1_value !== (t1_value = /*person*/ ctx[5].name + "")) set_data(t1, t1_value);
-			if ((!current || dirty & /*people*/ 2) && t3_value !== (t3_value = /*person*/ ctx[5].title + "")) set_data(t3, t3_value);
+
+			if (current_block_type === (current_block_type = select_block_type(ctx)) && if_block1) {
+				if_block1.p(ctx, dirty);
+			} else {
+				if_block1.d(1);
+				if_block1 = current_block_type(ctx);
+
+				if (if_block1) {
+					if_block1.c();
+					if_block1.m(div0, null);
+				}
+			}
 
 			if (dirty & /*people*/ 2) {
 				each_value_1 = /*person*/ ctx[5].social_links;
@@ -5266,7 +5353,8 @@ function create_each_block$3(ctx) {
 		},
 		d(detaching) {
 			if (detaching) detach(li);
-			if (if_block) if_block.d();
+			if (if_block0) if_block0.d();
+			if_block1.d();
 			destroy_each(each_blocks, detaching);
 		}
 	};
@@ -5530,23 +5618,47 @@ function create_fragment$8(ctx) {
 				site_nav: [
 					{
 						"link": {
-							"url": "/about",
-							"label": "About",
+							"url": "/",
+							"label": "Homepage",
+							"active": false
+						}
+					},
+					{
+						"link": { "url": "/about-us", "label": "About us" }
+					},
+					{
+						"link": {
+							"url": "/what-we-do",
+							"label": "What we do",
 							"active": false
 						}
 					},
 					{
 						"link": {
-							"url": "/mission",
-							"label": "Mission",
-							"active": false
+							"label": "Testimonials",
+							"url": "/testimonials"
 						}
 					},
 					{
-						"link": { "url": "/team", "label": "Team" }
+						"link": { "label": "Pricing", "url": "/pricing" }
+					},
+					{
+						"link": { "label": "Book online", "url": "/book" }
+					},
+					{
+						"link": {
+							"label": "Behaviour resources",
+							"url": "/behaviour-resources"
+						}
+					},
+					{
+						"link": { "label": "FAQ", "url": "/faq" }
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
+					},
+					{
+						"link": { "label": "Contact us", "url": "/contact" }
 					}
 				]
 			}

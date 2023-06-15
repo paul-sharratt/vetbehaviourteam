@@ -4636,34 +4636,55 @@ function create_fragment$9(ctx) {
 				},
 				headline: "Vet Behaviour Team",
 				logo: {
-					"title": "",
 					"image": {
 						"alt": "",
 						"src": "",
 						"url": "",
 						"size": null
-					}
+					},
+					"title": ""
 				},
 				site_nav: [
 					{
 						"link": {
-							"url": "/about",
-							"label": "About",
+							"url": "/",
+							"label": "About us",
 							"active": false
 						}
 					},
 					{
 						"link": {
-							"url": "/mission",
-							"label": "Mission",
+							"url": "/about-us",
+							"label": "About us",
 							"active": false
 						}
 					},
 					{
-						"link": { "url": "/team", "label": "Team" }
+						"link": { "url": "/pricing", "label": "Pricing" }
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
+					},
+					{
+						"link": { "label": "Book online", "url": "/book" }
+					},
+					{
+						"link": {
+							"label": "Testimonials",
+							"url": "/testimonials"
+						}
+					},
+					{
+						"link": { "label": "FAQ", "url": "/faq" }
+					},
+					{
+						"link": {
+							"label": "Behaviour resources",
+							"url": "/behaviour-resources"
+						}
+					},
+					{
+						"link": { "label": "Contact us", "url": "/contact" }
 					}
 				]
 			}

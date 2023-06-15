@@ -4343,7 +4343,7 @@ function create_fragment$4(ctx) {
 					{
 						"link": { "url": "/", "label": "Book now" },
 						"price": {
-							"numerator": "$665",
+							"numerator": "$695",
 							"denominator": "for single pet (canine or feline)"
 						},
 						"title": "Initial behaviour consult",
