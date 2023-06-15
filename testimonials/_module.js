@@ -5645,6 +5645,7 @@ function create_fragment$8(ctx) {
 				},
 				menus: [
 					{
+						"title": "Contact us",
 						"links": [
 							{
 								"link": { "url": "/contact", "label": "blog" }
@@ -5655,15 +5656,14 @@ function create_fragment$8(ctx) {
 									"label": "Terms and conditions"
 								}
 							}
-						],
-						"title": "Contact us"
+						]
 					},
 					{
+						"title": "Get Involved",
 						"links": [
 							{ "link": { "url": "/", "label": "qui" } },
 							{ "link": { "url": "/", "label": "ex" } }
-						],
-						"title": "Get Involved"
+						]
 					}
 				]
 			}

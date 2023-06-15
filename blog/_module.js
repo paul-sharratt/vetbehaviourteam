@@ -6970,13 +6970,13 @@ function create_fragment$c(ctx) {
 				},
 				headline: "",
 				logo: {
+					"title": "",
 					"image": {
 						"alt": "",
 						"src": "",
 						"url": "",
 						"size": null
-					},
-					"title": ""
+					}
 				},
 				site_nav: [
 					{
@@ -7026,13 +7026,8 @@ function create_fragment$c(ctx) {
 				buttontext1: "",
 				buttontext2: "",
 				logo: {
-					"image": {
-						"alt": "",
-						"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
-						"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1590984122147vbt%20logo.png",
-						"size": 26
-					},
-					"title": "Vet Behaviour Team -  Kindness + Science"
+					"image": { "url": "", "alt": "" },
+					"title": ""
 				},
 				site_nav: [
 					{
@@ -7248,6 +7243,7 @@ function create_fragment$c(ctx) {
 				},
 				menus: [
 					{
+						"title": "Contact us",
 						"links": [
 							{
 								"link": { "url": "/contact", "label": "blog" }
@@ -7258,15 +7254,14 @@ function create_fragment$c(ctx) {
 									"label": "Terms and conditions"
 								}
 							}
-						],
-						"title": "Contact us"
+						]
 					},
 					{
+						"title": "Get Involved",
 						"links": [
 							{ "link": { "url": "/", "label": "qui" } },
 							{ "link": { "url": "/", "label": "ex" } }
-						],
-						"title": "Get Involved"
+						]
 					}
 				]
 			}

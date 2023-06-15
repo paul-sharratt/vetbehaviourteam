@@ -3121,17 +3121,17 @@ class Component$1 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].link;
+	child_ctx[11] = list[i].link;
 	return child_ctx;
 }
 
-// (134:33) 
+// (130:33) 
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3168,7 +3168,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (132:8) {#if logo.title}
+// (128:8) {#if logo.title}
 function create_if_block_3(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3192,10 +3192,10 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (139:8) {#each site_nav as { link }}
+// (135:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[10].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -3213,23 +3213,23 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "link svelte-nvhtf1");
-			attr(a, "href", a_href_value = /*link*/ ctx[10].url);
-			toggle_class(a, "active", /*link*/ ctx[10].url === window.location.pathname);
+			attr(a, "class", "link svelte-1643yvf");
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[10].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[10].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 
 			if (dirty & /*site_nav, window*/ 8) {
-				toggle_class(a, "active", /*link*/ ctx[10].url === window.location.pathname);
+				toggle_class(a, "active", /*link*/ ctx[11].url === window.location.pathname);
 			}
 		},
 		d(detaching) {
@@ -3238,7 +3238,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (148:33) 
+// (144:33) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3275,7 +3275,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (146:8) {#if logo.title}
+// (142:8) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[2].title + "";
 	let t;
@@ -3299,7 +3299,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (158:6) {#if mobileNavOpen2}
+// (154:6) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3356,9 +3356,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-nvhtf1");
+			attr(button, "class", "svelte-1643yvf");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-nvhtf1");
+			attr(nav, "class", "svelte-1643yvf");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3432,10 +3432,10 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (160:10) {#each site_nav as { link }}
+// (156:10) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[10].label + "";
+	let t_value = /*link*/ ctx[11].label + "";
 	let t;
 	let a_href_value;
 
@@ -3453,16 +3453,16 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[10].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[10].label + "")) set_data(t, t_value);
+			if (dirty & /*site_nav*/ 8 && t_value !== (t_value = /*link*/ ctx[11].label + "")) set_data(t, t_value);
 
-			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[10].url)) {
+			if (dirty & /*site_nav*/ 8 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3523,7 +3523,7 @@ function create_fragment$2(ctx) {
 			props: { height: "30", icon: "eva:menu-outline" }
 		});
 
-	let if_block2 = /*mobileNavOpen2*/ ctx[4] && create_if_block$1(ctx);
+	let if_block2 = /*mobileNavOpen*/ ctx[4] && create_if_block$1(ctx);
 
 	return {
 		c() {
@@ -3619,21 +3619,21 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			attr(a0, "href", "/");
-			attr(a0, "class", "logo svelte-nvhtf1");
-			attr(nav, "class", "svelte-nvhtf1");
-			attr(div0, "class", "desktop-nav svelte-nvhtf1");
+			attr(a0, "class", "logo svelte-1643yvf");
+			attr(nav, "class", "svelte-1643yvf");
+			attr(div0, "class", "desktop-nav svelte-1643yvf");
 			attr(a1, "href", "/");
-			attr(a1, "class", "logo svelte-nvhtf1");
+			attr(a1, "class", "logo svelte-1643yvf");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div1, "class", "mobile-nav svelte-nvhtf1");
-			attr(div2, "class", "section-container svelte-nvhtf1");
-			attr(h1, "class", "headline svelte-nvhtf1");
-			attr(div3, "class", "section-container svelte-nvhtf1");
+			attr(div1, "class", "mobile-nav svelte-1643yvf");
+			attr(div2, "class", "section-container svelte-1643yvf");
+			attr(h1, "class", "headline svelte-1643yvf");
+			attr(div3, "class", "section-container svelte-1643yvf");
 			set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
 			attr(header, "role", "img");
 			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
-			attr(header, "class", "svelte-nvhtf1");
+			attr(header, "class", "svelte-1643yvf");
 			attr(div4, "class", "component");
 			attr(div5, "class", "section");
 			attr(div5, "id", "section-a0d72083-4217-4957-9e56-f97052682126");
@@ -3723,11 +3723,11 @@ function create_fragment$2(ctx) {
 				}
 			}
 
-			if (/*mobileNavOpen2*/ ctx[4]) {
+			if (/*mobileNavOpen*/ ctx[4]) {
 				if (if_block2) {
 					if_block2.p(ctx, dirty);
 
-					if (dirty & /*mobileNavOpen2*/ 16) {
+					if (dirty & /*mobileNavOpen*/ 16) {
 						transition_in(if_block2, 1);
 					}
 				} else {
@@ -3796,9 +3796,10 @@ function instance$2($$self, $$props, $$invalidate) {
 	let { headline } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
-	let mobileNavOpen2 = false;
-	const click_handler = () => $$invalidate(4, mobileNavOpen2 = true);
-	const click_handler_1 = () => $$invalidate(4, mobileNavOpen2 = false);
+	let mobileNavOpen = false;
+
+	const click_handler = () => $$invalidate(4, mobileNavOpen = true);
+	const click_handler_1 = () => $$invalidate(4, mobileNavOpen = false);
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
@@ -3815,7 +3816,7 @@ function instance$2($$self, $$props, $$invalidate) {
 		headline,
 		logo,
 		site_nav,
-		mobileNavOpen2,
+		mobileNavOpen,
 		favicon,
 		title,
 		description,
@@ -4917,17 +4918,66 @@ function create_fragment$6(ctx) {
 				heading: "Frequently Asked Questions",
 				items: [
 					{
-						"title": "Est ullamco consequat",
+						"title": "Where will the consultation occur?",
 						"description": {
-							"html": "<h1 id=\"thisissomemarkdown\">This is some markdown</h1>",
-							"markdown": "# This is some markdown"
+							"html": "<p>We come to you, that way we can see the ins and outs of your pets daily life and make recommendations specific to your home. Travel costs are included in your consultation price for all those in the Sydney Metro area , however there is a surcharge for pets who live outside \nfor 30-50km beyond Sydney CBD - $50 travel surcharge\nfor 50-100km beyond Sydney CBD - $100 travel surcharge</p>",
+							"markdown": "We come to you, that way we can see the ins and outs of your pets daily life and make recommendations specific to your home. Travel costs are included in your consultation price for all those in the Sydney Metro area , however there is a surcharge for pets who live outside \nfor 30-50km beyond Sydney CBD - $50 travel surcharge\nfor 50-100km beyond Sydney CBD - $100 travel surcharge\n"
 						}
 					},
 					{
-						"title": "Irure exercitation nostrud",
+						"title": "How much is the consultation?",
 						"description": {
-							"html": "<h1 id=\"thisissomemarkdown\">This is some markdown</h1>",
-							"markdown": "# This is some markdown"
+							"html": "<p>Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation provides for 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a revisit.</p>",
+							"markdown": "Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation provides for 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a revisit."
+						}
+					},
+					{
+						"title": "How do I pay?",
+						"description": {
+							"html": "<p>You will be invoiced directly after the consultation with details on how to pay via direct bank transfer.</p>",
+							"markdown": "You will be invoiced directly after the consultation with details on how to pay via direct bank transfer."
+						}
+					},
+					{
+						"title": "Can you prescribe medication?",
+						"description": {
+							"html": "<p>As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs.</p>",
+							"markdown": "As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs."
+						}
+					},
+					{
+						"title": "Are you a trainer?",
+						"description": {
+							"html": "<p>Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be.</p>",
+							"markdown": "Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be."
+						}
+					},
+					{
+						"title": "Do I need a referral?",
+						"description": {
+							"html": "<p>No, you can book a consultation with us without a veterinary referral. We will request your pets veterinary history be sent through to us so we have the full clinical picture whilst making our assessment.</p>",
+							"markdown": "No, you can book a consultation with us without a veterinary referral. We will request your pets veterinary history be sent through to us so we have the full clinical picture whilst making our assessment."
+						}
+					},
+					{
+						"title": "Do you use punishment or balanced training?",
+						"description": {
+							"html": "<p>No, we believe in using only scientifically backed and ethical methods of treatment, so that means no choke/prong collars, no yelling or throwing things at your pet and no periods of enforced isolation.</p>",
+							"markdown": "No, we believe in using only scientifically backed and ethical methods of treatment, so that means no choke/prong collars, no yelling or throwing things at your pet and no periods of enforced isolation."
+						}
+					},
+					{
+						"title": "Will you tell me not to cuddle my dog or let it sleep on my bed?",
+						"description": {
+							"html": "<p>Absolutely not ! As long as both you and your pet enjoy that there is no reason to stop! At VBT we are all about improving the bond between our clients and their furry family members!</p>",
+							"markdown": "Absolutely not ! As long as both you and your pet enjoy that there is no reason to stop! At VBT we are all about improving the bond between our clients and their furry family members!"
+						}
+					},
+					{
+						"title": "Do you treat cats as well as dogs?",
+						"description": {
+							"html": "<p>Do you treat cats as well as dogs?</p>",
+							"markdown": "Do you treat cats as well as dogs?"
 						}
 					}
 				]
@@ -4976,6 +5026,7 @@ function create_fragment$6(ctx) {
 				},
 				menus: [
 					{
+						"title": "Contact us",
 						"links": [
 							{
 								"link": { "url": "/contact", "label": "blog" }
@@ -4986,15 +5037,14 @@ function create_fragment$6(ctx) {
 									"label": "Terms and conditions"
 								}
 							}
-						],
-						"title": "Contact us"
+						]
 					},
 					{
+						"title": "Get Involved",
 						"links": [
 							{ "link": { "url": "/", "label": "qui" } },
 							{ "link": { "url": "/", "label": "ex" } }
-						],
-						"title": "Get Involved"
+						]
 					}
 				]
 			}
