@@ -3009,7 +3009,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (124:31) 
+// (127:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3046,7 +3046,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (122:6) {#if logo.title}
+// (125:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3070,7 +3070,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (134:4) {#if mobileNavOpen}
+// (137:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3127,9 +3127,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-1cb1z63");
+			attr(button, "class", "svelte-16h229n");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-1cb1z63");
+			attr(nav, "class", "svelte-16h229n");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3203,7 +3203,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (136:8) {#each site_nav as { link }}
+// (139:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a0;
 	let t0;
@@ -3310,23 +3310,23 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "class", "link  svelte-1cb1z63");
+			attr(a0, "class", "link  svelte-16h229n");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-1cb1z63");
+			attr(a1, "class", "link  svelte-16h229n");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-1cb1z63");
+			attr(a2, "class", "link  svelte-16h229n");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-1cb1z63");
+			attr(a3, "class", "link  svelte-16h229n");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-1cb1z63");
+			attr(a4, "class", "link  svelte-16h229n");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-1cb1z63");
+			attr(a5, "class", "link  svelte-16h229n");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-1cb1z63");
+			attr(a6, "class", "link  svelte-16h229n");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-1cb1z63");
+			attr(a7, "class", "link  svelte-16h229n");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-1cb1z63");
+			attr(a8, "class", "link  svelte-16h229n");
 			attr(a8, "href", "/contact");
 		},
 		m(target, anchor) {
@@ -3384,9 +3384,9 @@ function create_fragment$2(ctx) {
 	let div4;
 	let div3;
 	let header;
+	let div1;
 	let div0;
 	let t0;
-	let div1;
 	let nav;
 	let a0;
 	let t1;
@@ -3444,9 +3444,9 @@ function create_fragment$2(ctx) {
 			div4 = element("div");
 			div3 = element("div");
 			header = element("header");
+			div1 = element("div");
 			div0 = element("div");
 			t0 = space();
-			div1 = element("div");
 			nav = element("nav");
 			a0 = element("a");
 			t1 = text("About us");
@@ -3492,11 +3492,11 @@ function create_fragment$2(ctx) {
 			var div3_nodes = children(div3);
 			header = claim_element(div3_nodes, "HEADER", { class: true });
 			var header_nodes = children(header);
-			div0 = claim_element(header_nodes, "DIV", { style: true });
-			children(div0).forEach(detach);
-			t0 = claim_space(header_nodes);
 			div1 = claim_element(header_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
+			div0 = claim_element(div1_nodes, "DIV", { style: true });
+			children(div0).forEach(detach);
+			t0 = claim_space(div1_nodes);
 			nav = claim_element(div1_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 			a0 = claim_element(nav_nodes, "A", { class: true, href: true });
@@ -3567,32 +3567,32 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			set_style(div0, "flex", "1");
-			attr(a0, "class", "link  svelte-1cb1z63");
+			attr(a0, "class", "link  svelte-16h229n");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-1cb1z63");
+			attr(a1, "class", "link  svelte-16h229n");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-1cb1z63");
+			attr(a2, "class", "link  svelte-16h229n");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-1cb1z63");
+			attr(a3, "class", "link  svelte-16h229n");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-1cb1z63");
+			attr(a4, "class", "link  svelte-16h229n");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-1cb1z63");
+			attr(a5, "class", "link  svelte-16h229n");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-1cb1z63");
+			attr(a6, "class", "link  svelte-16h229n");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-1cb1z63");
+			attr(a7, "class", "link  svelte-16h229n");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-1cb1z63");
+			attr(a8, "class", "link  svelte-16h229n");
 			attr(a8, "href", "/contact");
-			attr(nav, "class", "menu-links svelte-1cb1z63");
-			attr(div1, "class", "desktop-nav svelte-1cb1z63");
+			attr(nav, "class", "menu-links svelte-16h229n");
+			attr(div1, "class", "desktop-nav svelte-16h229n");
 			attr(a9, "href", "/");
-			attr(a9, "class", "logo svelte-1cb1z63");
+			attr(a9, "class", "logo svelte-16h229n");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div2, "class", "mobile-nav svelte-1cb1z63");
-			attr(header, "class", "section-container svelte-1cb1z63");
+			attr(div2, "class", "mobile-nav svelte-16h229n");
+			attr(header, "class", "section-container svelte-16h229n");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
 			attr(div4, "id", "section-68af2293-19a3-442e-b3a4-74f9e84b9a93");
@@ -3601,9 +3601,9 @@ function create_fragment$2(ctx) {
 			insert_hydration(target, div4, anchor);
 			append_hydration(div4, div3);
 			append_hydration(div3, header);
-			append_hydration(header, div0);
-			append_hydration(header, t0);
 			append_hydration(header, div1);
+			append_hydration(div1, div0);
+			append_hydration(div1, t0);
 			append_hydration(div1, nav);
 			append_hydration(nav, a0);
 			append_hydration(a0, t1);
