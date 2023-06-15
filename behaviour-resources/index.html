@@ -199,6 +199,88 @@
         }
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
+        .section-container.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            position: absolute;
+            width: 100%;
+            top: 0
+        }
+
+        .logo.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.2
+        }
+
+        .desktop-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%
+        }
+
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n.svelte-16h229n {
+            display: flex;
+            gap: 2rem
+        }
+
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n a.link.svelte-16h229n {
+            text-shadow: 0px 0px 5px black;
+            color: white;
+            border-color: transparent;
+            transition: border-color 0.1s;
+            font-size: 0.95rem
+        }
+
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n a.link.svelte-16h229n:hover {
+            border-color: initial
+        }
+
+        @media(min-width: 800px) {
+            .desktop-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+                display: flex
+            }
+        }
+
+        .mobile-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            font-weight: 500
+        }
+
+        @media(min-width: 800px) {
+            .mobile-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+                display: none
+            }
+        }
+
+        #popup.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            font-size: 1.25rem;
+            display: grid;
+            gap: 1rem;
+            position: absolute;
+            text-align: center;
+            background-color: var(--background-color, white);
+            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
+            border-radius: var(--border-radius);
+            inset: 0.5rem;
+            bottom: initial;
+            padding: 2rem;
+            z-index: 1
+        }
+
+        #popup.svelte-16h229n button#close.svelte-16h229n.svelte-16h229n {
+            position: absolute;
+            right: 1rem;
+            top: 1rem
+        }
+
         :root {
             --no-of-slides: 9;
             --slides-in-view: 4;
@@ -227,7 +309,7 @@
             }
         }
 
-        .carousel__wrapper.svelte-dte8ql.svelte-dte8ql {
+        .carousel__wrapper.svelte-dte8ql {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -236,7 +318,7 @@
             margin: 0 auto
         }
 
-        .carousel.svelte-dte8ql.svelte-dte8ql {
+        .carousel.svelte-dte8ql {
             overflow: hidden;
             width: 100%;
             height: 400px;
@@ -246,7 +328,7 @@
             align-items: center
         }
 
-        .carousel__slide.svelte-dte8ql.svelte-dte8ql {
+        .carousel__slide.svelte-dte8ql {
             -webkit-animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
             animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
             display: flex;
@@ -257,7 +339,7 @@
             box-sizing: border-box
         }
 
-        .carousel__image.svelte-dte8ql.svelte-dte8ql {
+        .carousel__image.svelte-dte8ql {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -265,7 +347,7 @@
             margin: 15px 20px
         }
 
-        .carousel__text.svelte-dte8ql.svelte-dte8ql {
+        .carousel__text.svelte-dte8ql {
             background: #00000044;
             text-align: center;
             padding: 5px 10px;
@@ -274,15 +356,15 @@
             align-self: center
         }
 
-        .carousel__slide.svelte-dte8ql.svelte-dte8ql {
+        .carousel__slide.svelte-dte8ql {
             position: relative
         }
 
-        .carousel.svelte-dte8ql.svelte-dte8ql {
+        .carousel.svelte-dte8ql {
             counter-reset: slideNo
         }
 
-        header.svelte-dte8ql.svelte-dte8ql {
+        header.svelte-dte8ql {
             color: white;
             background-size: cover;
             background-position: center center;
@@ -345,12 +427,12 @@
             }
         }
 
-        .section-container.svelte-dte8ql.svelte-dte8ql {
+        .section-container.svelte-dte8ql {
             width: 100%;
             padding: 15px
         }
 
-        .section-container-2.svelte-dte8ql.svelte-dte8ql {
+        .section-container-2.svelte-dte8ql {
             width: 100%;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -362,56 +444,11 @@
             background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .5) 15%, rgba(0, 0, 0, .65))
         }
 
-        .logo.svelte-dte8ql.svelte-dte8ql {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2
-        }
+        @media(min-width: 800px) {}
 
-        .desktop-nav.svelte-dte8ql.svelte-dte8ql {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%
-        }
+        @media(min-width: 800px) {}
 
-        .desktop-nav.svelte-dte8ql nav.svelte-dte8ql {
-            display: flex;
-            gap: 2rem
-        }
-
-        .desktop-nav.svelte-dte8ql nav a.link.svelte-dte8ql {
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        .desktop-nav.svelte-dte8ql nav a.link.svelte-dte8ql:hover,
-        .desktop-nav.svelte-dte8ql nav a.link .active.svelte-dte8ql {
-            border-color: initial
-        }
-
-        @media(min-width: 800px) {
-            .desktop-nav.svelte-dte8ql.svelte-dte8ql {
-                display: flex
-            }
-        }
-
-        .mobile-nav.svelte-dte8ql.svelte-dte8ql {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500
-        }
-
-        @media(min-width: 800px) {
-            .mobile-nav.svelte-dte8ql.svelte-dte8ql {
-                display: none
-            }
-        }
-
-        .headline.svelte-dte8ql.svelte-dte8ql {
+        .headline.svelte-dte8ql {
             font-size: clamp(1rem, 10vw, 2rem);
             max-width: 800px;
             padding: 2rem;
@@ -421,28 +458,6 @@
 
         .headline.svelte-dte8ql p {
             margin-bottom: 20px
-        }
-
-        #popup.svelte-dte8ql.svelte-dte8ql {
-            color: #222;
-            font-size: 1.25rem;
-            display: grid;
-            gap: 1rem;
-            position: absolute;
-            text-align: center;
-            background-color: var(--background-color, white);
-            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
-            border-radius: var(--border-radius);
-            inset: 0.5rem;
-            bottom: initial;
-            padding: 2rem;
-            z-index: 1
-        }
-
-        #popup.svelte-dte8ql button#close.svelte-dte8ql {
-            position: absolute;
-            right: 1rem;
-            top: 1rem
         }
 
         .content2.svelte-cexu5p img {
@@ -686,27 +701,42 @@
 
 <body id="page">
 
+    <div class="section" id="section-2cdbbc37-3e97-4241-920e-919c13440e08">
+        <div class="component">
+            <header class="section-container svelte-16h229n">
+                <div class="desktop-nav svelte-16h229n">
+                    <div style="flex:1;"></div>
+                    <nav class="menu-links svelte-16h229n"><a class="link  svelte-16h229n" href="/about-us">About us</a>
+                        <a class="link  svelte-16h229n" href="/what-we-do">What we do</a>
+                        <a class="link  svelte-16h229n" href="/pricing">Pricing</a>
+                        <a class="link  svelte-16h229n" href="/book">Book online</a>
+                        <a class="link  svelte-16h229n" href="/testimonials">Testimonials</a>
+                        <a class="link  svelte-16h229n" href="/behaviour-resources">Behaviour resources</a>
+                        <a class="link  svelte-16h229n" href="/blog">Blog</a>
+                        <a class="link  svelte-16h229n" href="/faq">FAQ</a>
+                        <a class="link  svelte-16h229n" href="/contact">Contact</a>
+                    </nav>
+                </div>
+                <div class="mobile-nav svelte-16h229n"><a href="/" class="logo svelte-16h229n">Vet Behaviour Team</a>
+                    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                            <g id="iconifySvelte0">
+                                <g id="iconifySvelte1">
+                                    <g id="iconifySvelte2" fill="currentColor">
+                                        <rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" />
+                                        <rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" />
+                                        <rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" />
+                                    </g>
+                                </g>
+                            </g><!-- HTML_TAG_END -->
+                        </svg></button>
+                </div>
+            </header>
+        </div>
+    </div>
     <div class="section" id="section-5c93ef43-77d0-4086-9036-e0a347c3c623">
         <div class="component">
             <header aria-label="" class="svelte-dte8ql">
-                <div class="section-container svelte-dte8ql">
-                    <div class="desktop-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql"></a>
-                        <nav class="svelte-dte8ql"><a class="link svelte-dte8ql" href="/vetbehaviourteam/about-us/">About us</a><a class="link svelte-dte8ql" href="/vetbehaviourteam/pricing/">Pricing</a><a class="link svelte-dte8ql" href="/vetbehaviourteam/behaviour-fact-sheets">Behaviour Fact Sheets</a></nav>
-                    </div>
-                    <div class="mobile-nav svelte-dte8ql"><a href="/" class="logo svelte-dte8ql"></a>
-                        <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
-                                <g id="iconifySvelte0">
-                                    <g id="iconifySvelte1">
-                                        <g id="iconifySvelte2" fill="currentColor">
-                                            <rect width="18" height="2" x="3" y="11" rx=".95" ry=".95" />
-                                            <rect width="18" height="2" x="3" y="16" rx=".95" ry=".95" />
-                                            <rect width="18" height="2" x="3" y="6" rx=".95" ry=".95" />
-                                        </g>
-                                    </g>
-                                </g><!-- HTML_TAG_END -->
-                            </svg></button>
-                    </div>
-                </div>
+                <div class="section-container svelte-dte8ql"></div>
                 <section class="carousel svelte-dte8ql">
                     <div style="height:100%;" class="container-fluid px-0">
                         <div style="height:100%;" class="row">

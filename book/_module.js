@@ -3592,7 +3592,7 @@ function create_fragment$2(ctx) {
 			attr(header, "class", "section-container svelte-16h229n");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
-			attr(div4, "id", "section-68af2293-19a3-442e-b3a4-74f9e84b9a93");
+			attr(div4, "id", "section-2c0bbb25-6827-43ff-8ba0-36d6a09dc7a5");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div4, anchor);
@@ -4346,7 +4346,7 @@ function create_fragment$6(ctx) {
 						"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg",
 						"size": 3
 					},
-					"title": ""
+					"title": "Vet Behaviour Team"
 				},
 				site_nav: [
 					{
