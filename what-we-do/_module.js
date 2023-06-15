@@ -4666,25 +4666,25 @@ function create_fragment$9(ctx) {
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "label": "Book online", "url": "/book" }
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
-							"label": "Testimonials",
-							"url": "/testimonials"
+							"url": "/testimonials",
+							"label": "Testimonials"
 						}
 					},
 					{
-						"link": { "label": "FAQ", "url": "/faq" }
+						"link": { "url": "/faq", "label": "FAQ" }
 					},
 					{
 						"link": {
-							"label": "Behaviour resources",
-							"url": "/behaviour-resources"
+							"url": "/behaviour-resources",
+							"label": "Behaviour resources"
 						}
 					},
 					{
-						"link": { "label": "Contact us", "url": "/contact" }
+						"link": { "url": "/contact", "label": "Contact us" }
 					}
 				]
 			}

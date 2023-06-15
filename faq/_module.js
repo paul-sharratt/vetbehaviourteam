@@ -4870,11 +4870,14 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "Consultations"
+							"label": "What we do"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -4885,17 +4888,17 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour Resources"
+							"label": "Behaviour resources"
 						}
 					},
 					{
-						"link": { "label": "Book online", "url": "/book" }
+						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
 						"link": { "url": "/faq", "label": "FAQ" }
 					},
 					{
-						"link": { "url": "/blog", "label": "Blog" }
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
@@ -4913,6 +4916,13 @@ function create_fragment$6(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				heading: "Frequently Asked Questions",
 				items: [
+					{
+						"title": "Are you a trainer?",
+						"description": {
+							"html": "<p>Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be.</p>",
+							"markdown": "Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be."
+						}
+					},
 					{
 						"title": "Where will the consultation occur?",
 						"description": {
@@ -4939,13 +4949,6 @@ function create_fragment$6(ctx) {
 						"description": {
 							"html": "<p>As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs.</p>",
 							"markdown": "As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs."
-						}
-					},
-					{
-						"title": "Are you a trainer?",
-						"description": {
-							"html": "<p>Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be.</p>",
-							"markdown": "Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be."
 						}
 					},
 					{
@@ -5017,32 +5020,10 @@ function create_fragment$6(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
-					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
+					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
+					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
 				},
-				menus: [
-					{
-						"title": "Contact us",
-						"links": [
-							{
-								"link": { "url": "/contact", "label": "blog" }
-							},
-							{
-								"link": {
-									"url": "/",
-									"label": "Terms and conditions"
-								}
-							}
-						]
-					},
-					{
-						"title": "Get Involved",
-						"links": [
-							{ "link": { "url": "/", "label": "qui" } },
-							{ "link": { "url": "/", "label": "ex" } }
-						]
-					}
-				]
+				menus: []
 			}
 		});
 

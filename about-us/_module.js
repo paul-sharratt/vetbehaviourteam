@@ -4468,32 +4468,10 @@ function create_fragment$5(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176</p>\n<p>copyright© Vet Behaviour Team pty ltd 2023</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
-					"markdown": "Vet Behaviour Team\n0432 881 174\n\nABN: 34603289176\n\ncopyright© Vet Behaviour Team pty ltd 2023\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
+					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
+					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
 				},
-				menus: [
-					{
-						"title": "Contact us",
-						"links": [
-							{
-								"link": { "url": "/contact", "label": "blog" }
-							},
-							{
-								"link": {
-									"url": "/",
-									"label": "Terms and conditions"
-								}
-							}
-						]
-					},
-					{
-						"title": "Get Involved",
-						"links": [
-							{ "link": { "url": "/", "label": "qui" } },
-							{ "link": { "url": "/", "label": "ex" } }
-						]
-					}
-				]
+				menus: []
 			}
 		});
 
