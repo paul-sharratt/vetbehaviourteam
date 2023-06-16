@@ -4410,11 +4410,11 @@ function create_fragment$6(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				background: {
 					"alt": "",
-					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686749692026pexels-julissa-helmuth-5166200.jpg",
-					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686749692026pexels-julissa-helmuth-5166200.jpg",
-					"size": 467
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686911944981pexels-cats-coming-1395320.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686911944981pexels-cats-coming-1395320.jpg",
+					"size": 460
 				},
-				headline: "",
+				headline: "Vet Behaviour Team",
 				logo: {
 					"image": {
 						"alt": "",
