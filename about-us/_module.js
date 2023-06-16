@@ -3006,7 +3006,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (127:31) 
+// (128:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3043,7 +3043,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (125:6) {#if logo.title}
+// (126:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3067,7 +3067,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (137:4) {#if mobileNavOpen}
+// (138:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3124,9 +3124,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-16h229n");
+			attr(button, "class", "svelte-ex5tl8");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-16h229n");
+			attr(nav, "class", "svelte-ex5tl8");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3200,7 +3200,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (139:8) {#each site_nav as { link }}
+// (140:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a0;
 	let t0;
@@ -3307,23 +3307,23 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "class", "link  svelte-16h229n");
+			attr(a0, "class", "link  svelte-ex5tl8");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
+			attr(a1, "class", "link  svelte-ex5tl8");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
+			attr(a2, "class", "link  svelte-ex5tl8");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
+			attr(a3, "class", "link  svelte-ex5tl8");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
+			attr(a4, "class", "link  svelte-ex5tl8");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
+			attr(a5, "class", "link  svelte-ex5tl8");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
+			attr(a6, "class", "link  svelte-ex5tl8");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
+			attr(a7, "class", "link  svelte-ex5tl8");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
+			attr(a8, "class", "link  svelte-ex5tl8");
 			attr(a8, "href", "/contact");
 		},
 		m(target, anchor) {
@@ -3564,32 +3564,32 @@ function create_fragment$2(ctx) {
 		},
 		h() {
 			set_style(div0, "flex", "1");
-			attr(a0, "class", "link  svelte-16h229n");
+			attr(a0, "class", "link  svelte-ex5tl8");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
+			attr(a1, "class", "link  svelte-ex5tl8");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
+			attr(a2, "class", "link  svelte-ex5tl8");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
+			attr(a3, "class", "link  svelte-ex5tl8");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
+			attr(a4, "class", "link  svelte-ex5tl8");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
+			attr(a5, "class", "link  svelte-ex5tl8");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
+			attr(a6, "class", "link  svelte-ex5tl8");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
+			attr(a7, "class", "link  svelte-ex5tl8");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
+			attr(a8, "class", "link  svelte-ex5tl8");
 			attr(a8, "href", "/contact");
-			attr(nav, "class", "menu-links svelte-16h229n");
-			attr(div1, "class", "desktop-nav svelte-16h229n");
+			attr(nav, "class", "menu-links svelte-ex5tl8");
+			attr(div1, "class", "desktop-nav svelte-ex5tl8");
 			attr(a9, "href", "/");
-			attr(a9, "class", "logo svelte-16h229n");
+			attr(a9, "class", "logo svelte-ex5tl8");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div2, "class", "mobile-nav svelte-16h229n");
-			attr(header, "class", "section-container svelte-16h229n");
+			attr(div2, "class", "mobile-nav svelte-ex5tl8");
+			attr(header, "class", "section-container svelte-ex5tl8");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
 			attr(div4, "id", "section-f2017979-f28c-45b3-ba7b-e9886e545603");
@@ -4542,8 +4542,8 @@ function create_fragment$5(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
-					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
+					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
+					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
 				},
 				menus: []
 			}
