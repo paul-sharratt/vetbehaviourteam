@@ -5053,9 +5053,9 @@ function create_fragment$7(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				background: {
 					"alt": "",
-					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
-					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
-					"size": 475
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686912137131pexels-jonas-mohamadi-1416784.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686912137131pexels-jonas-mohamadi-1416784.jpg",
+					"size": 517
 				},
 				headline: "Vet Behaviour Team",
 				logo: {
@@ -5074,14 +5074,11 @@ function create_fragment$7(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "What we do"
+							"label": "Consultations"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
-					},
-					{
-						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -5092,17 +5089,14 @@ function create_fragment$7(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour resources"
+							"label": "Behaviour Resources"
 						}
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "url": "/faq", "label": "FAQ" }
-					},
-					{
-						"link": { "url": "/contact", "label": "Contact" }
+						"link": { "url": "/contact", "label": "Contact us" }
 					}
 				]
 			}
@@ -5224,8 +5218,8 @@ function create_fragment$7(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
-					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
+					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
+					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
 				},
 				menus: []
 			}
