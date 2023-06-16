@@ -5833,11 +5833,14 @@ function create_fragment$a(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "Consultations"
+							"label": "What we do"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -5848,14 +5851,17 @@ function create_fragment$a(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour Resources"
+							"label": "Behaviour resources"
 						}
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "url": "/contact", "label": "Contact us" }
+						"link": { "url": "/faq", "label": "FAQ" }
+					},
+					{
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
@@ -5883,7 +5889,7 @@ function create_fragment$a(ctx) {
 							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739823014pexels-blue-bird-7210698small.jpg",
 							"size": 419
 						},
-						"title": "Veterinary Behaviour consultations",
+						"title": "Veterinary Behaviour Consultations",
 						"description": {
 							"html": "<p>Our mission is to decipher your pet's behaviour. Behavioural problems can cause frustration, stress and damage the bond between you and your pet. We're here to provide guidance and help you navigate through the challenges.</p>\n<p>With our team of passionate professionals, we combine the latest evidence-based scientific knowledge with kindness to support you and your pet living happy, harmonious lives.</p>",
 							"markdown": "Our mission is to decipher your pet's behaviour. Behavioural problems can cause frustration, stress and damage the bond between you and your pet. We're here to provide guidance and help you navigate through the challenges.\n\nWith our team of passionate professionals, we combine the latest evidence-based scientific knowledge with kindness to support you and your pet living happy, harmonious lives.\n\n"
@@ -5904,8 +5910,8 @@ function create_fragment$a(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<h2 id=\"whoweare\">Who we are</h2>\n<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.</p>\n<p>In the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. Our team's mission is to prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.</p>",
-					"markdown": "## Who we are\n\nThe Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.\n\nIn the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. Our team's mission is to prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.\n\n"
+					"html": "<h2 id=\"whoweare\">Who we are</h2>\n<p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.</p>\n<p>In the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. We prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.</p>",
+					"markdown": "## Who we are\n\nThe Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.\n\nIn the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. We prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.\n\n"
 				},
 				background: "#afc5c5"
 			}
@@ -5932,8 +5938,8 @@ function create_fragment$a(ctx) {
 						},
 						"title": "What we do",
 						"description": {
-							"html": "<p>As veterinarians we can diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.</p>\n<p>As qualified professionals in veterinary psychiatry, we can diagnose and treat these mental health issues. We are able to prescribe medication when required.</p>\n<p>We only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.  </p>",
-							"markdown": "As veterinarians we can diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.\n\nAs qualified professionals in veterinary psychiatry, we can diagnose and treat these mental health issues. We are able to prescribe medication when required.\n\nWe only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.  \n\n\n"
+							"html": "<p>As veterinarians we diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.</p>\n<p>As qualified professionals in veterinary psychiatry, we can diagnose and treat these mental health issues. We are able to prescribe medication when required.</p>\n<p>We only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.</p>",
+							"markdown": "As veterinarians we diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.\n\nAs qualified professionals in veterinary psychiatry, we can diagnose and treat these mental health issues. We are able to prescribe medication when required.\n\nWe only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.\n\n"
 						}
 					}
 				]

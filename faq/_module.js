@@ -5074,11 +5074,14 @@ function create_fragment$7(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "Consultations"
+							"label": "What we do"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -5089,14 +5092,17 @@ function create_fragment$7(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour Resources"
+							"label": "Behaviour resources"
 						}
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "url": "/contact", "label": "Contact us" }
+						"link": { "url": "/faq", "label": "FAQ" }
+					},
+					{
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
@@ -5117,8 +5123,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Are you a trainer?",
 						"description": {
-							"html": "<p>Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be.</p>",
-							"markdown": "Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work. Anxious animals are often super smart students but their fear gets in the way a lot, and that’s where we step in to help them be the happiest they can be."
+							"html": "<p>Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work.</p>",
+							"markdown": "Rehabilitation training is an important part of the story, and yes we do incorporate it into all of our treatment plans. Rehabilitation training relies on strategies to help your pet make new associations with things that trigger them rather than focusing on traditional obedience work."
 						}
 					},
 					{
@@ -5131,15 +5137,15 @@ function create_fragment$7(ctx) {
 					{
 						"title": "How much is the consultation?",
 						"description": {
-							"html": "<p>Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation provides for 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a revisit.</p>",
-							"markdown": "Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation provides for 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a revisit."
+							"html": "<p>Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation includes 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a recheck consultation for help.</p>",
+							"markdown": "Pop over to our pricing page for specifics on consultation costs, but remember that our initial consultation includes 8 weeks of email follow-ups/questions so you won’t be left stranded waiting for a recheck consultation for help."
 						}
 					},
 					{
 						"title": "How do I pay?",
 						"description": {
-							"html": "<p>You will be invoiced directly after the consultation with details on how to pay via direct bank transfer.</p>",
-							"markdown": "You will be invoiced directly after the consultation with details on how to pay via direct bank transfer."
+							"html": "<p>You will be invoiced directly after the consultation with details on how to pay via direct bank transfer. If you would like to pay via credit card, please touch base with us for options.</p>",
+							"markdown": "You will be invoiced directly after the consultation with details on how to pay via direct bank transfer. If you would like to pay via credit card, please touch base with us for options."
 						}
 					},
 					{
@@ -5152,8 +5158,8 @@ function create_fragment$7(ctx) {
 					{
 						"title": "Do I need a referral?",
 						"description": {
-							"html": "<p>No, you can book a consultation with us without a veterinary referral. We will request your pets veterinary history be sent through to us so we have the full clinical picture whilst making our assessment.</p>",
-							"markdown": "No, you can book a consultation with us without a veterinary referral. We will request your pets veterinary history be sent through to us so we have the full clinical picture whilst making our assessment."
+							"html": "<p>No, you can book a consultation with us without a veterinary referral. We will request your pet's veterinary history be sent through to us so we have the full clinical picture whilst making our assessment.</p>",
+							"markdown": "No, you can book a consultation with us without a veterinary referral. We will request your pet's veterinary history be sent through to us so we have the full clinical picture whilst making our assessment."
 						}
 					},
 					{
@@ -5164,17 +5170,17 @@ function create_fragment$7(ctx) {
 						}
 					},
 					{
-						"title": "Will you tell me not to cuddle my dog or let it sleep on my bed?",
+						"title": "Do you treat cats as well as dogs?",
 						"description": {
-							"html": "<p>Absolutely not ! As long as both you and your pet enjoy that there is no reason to stop! At VBT we are all about improving the bond between our clients and their furry family members!</p>",
-							"markdown": "Absolutely not ! As long as both you and your pet enjoy that there is no reason to stop! At VBT we are all about improving the bond between our clients and their furry family members!"
+							"html": "<p>Absolutely! Cats suffer anxiety too and luckily they respond to rehabilitation training and management just as well as dogs do, we just may choose to use some fishier smelling treats. </p>",
+							"markdown": "Absolutely! Cats suffer anxiety too and luckily they respond to rehabilitation training and management just as well as dogs do, we just may choose to use some fishier smelling treats. "
 						}
 					},
 					{
-						"title": "Do you treat cats as well as dogs?",
+						"title": "How long will it take to fix the behaviour problem?",
 						"description": {
-							"html": "<p>Do you treat cats as well as dogs?</p>",
-							"markdown": "Do you treat cats as well as dogs?"
+							"html": "<p>Every individual case varies and some problems are more complex than others. We cannot guarantee a 'fix' but we will support you every step of the way in helping you and your pet, from understanding the root of the problem, working together on environmental changes, behaviour modification training and guiding you through the challenges. </p>",
+							"markdown": "Every individual case varies and some problems are more complex than others. We cannot guarantee a 'fix' but we will support you every step of the way in helping you and your pet, from understanding the root of the problem, working together on environmental changes, behaviour modification training and guiding you through the challenges. "
 						}
 					}
 				]

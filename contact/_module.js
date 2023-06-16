@@ -4831,11 +4831,14 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "Consultations"
+							"label": "What we do"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -4846,14 +4849,17 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour Resources"
+							"label": "Behaviour resources"
 						}
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "url": "/contact", "label": "Contact us" }
+						"link": { "url": "/faq", "label": "FAQ" }
+					},
+					{
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}

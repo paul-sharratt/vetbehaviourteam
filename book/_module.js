@@ -4379,9 +4379,9 @@ function create_fragment$6(ctx) {
 				description: "Kindness + Science. The best of both worlds",
 				background: {
 					"alt": "",
-					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
-					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg",
-					"size": 475
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686913534004pexels-ray-bilcliff-1509237.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686913534004pexels-ray-bilcliff-1509237.jpg",
+					"size": 400
 				},
 				headline: "Vet Behaviour Team",
 				logo: {
@@ -4400,11 +4400,14 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/what-we-do",
-							"label": "Consultations"
+							"label": "What we do"
 						}
 					},
 					{
 						"link": { "url": "/pricing", "label": "Pricing" }
+					},
+					{
+						"link": { "url": "/book", "label": "Book online" }
 					},
 					{
 						"link": {
@@ -4415,14 +4418,17 @@ function create_fragment$6(ctx) {
 					{
 						"link": {
 							"url": "/behaviour-resources",
-							"label": "Behaviour Resources"
+							"label": "Behaviour resources"
 						}
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
 					},
 					{
-						"link": { "url": "/contact", "label": "Contact us" }
+						"link": { "url": "/faq", "label": "FAQ" }
+					},
+					{
+						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
