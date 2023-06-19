@@ -199,7 +199,7 @@
         }
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
-        .section-container.svelte-h5kj7j.svelte-h5kj7j {
+        .section-container.svelte-1rzfyq8.svelte-1rzfyq8 {
             padding-top: 1rem;
             padding-bottom: 1rem;
             position: fixed;
@@ -208,22 +208,21 @@
             max-width: none !important
         }
 
-        .logo.svelte-h5kj7j.svelte-h5kj7j {
+        .logo.svelte-1rzfyq8.svelte-1rzfyq8 {
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.2
         }
 
-        .desktop-nav.svelte-h5kj7j.svelte-h5kj7j {
+        .desktop-nav.svelte-1rzfyq8.svelte-1rzfyq8 {
             display: none;
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            display: flex;
             gap: 2rem
         }
 
-        .desktop-nav.svelte-h5kj7j a.link.svelte-h5kj7j {
+        .desktop-nav.svelte-1rzfyq8 a.link.svelte-1rzfyq8 {
             text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
             color: white;
             border-color: transparent;
@@ -231,17 +230,17 @@
             font-size: 0.95rem
         }
 
-        .desktop-nav.svelte-h5kj7j a.link.svelte-h5kj7j:hover {
+        .desktop-nav.svelte-1rzfyq8 a.link.svelte-1rzfyq8:hover {
             border-color: initial
         }
 
-        @media(min-width: 800px) {
-            .desktop-nav.svelte-h5kj7j.svelte-h5kj7j {
+        @media(min-width: 900px) {
+            .desktop-nav.svelte-1rzfyq8.svelte-1rzfyq8 {
                 display: flex
             }
         }
 
-        .mobile-nav.svelte-h5kj7j.svelte-h5kj7j {
+        .mobile-nav.svelte-1rzfyq8.svelte-1rzfyq8 {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -249,13 +248,21 @@
             font-weight: 500
         }
 
-        @media(min-width: 800px) {
-            .mobile-nav.svelte-h5kj7j.svelte-h5kj7j {
+        .mobile-nav.svelte-1rzfyq8 .logo.svelte-1rzfyq8 {
+            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
+            color: white;
+            border-color: transparent;
+            transition: border-color 0.1s;
+            font-size: 0.95rem
+        }
+
+        @media(min-width: 900px) {
+            .mobile-nav.svelte-1rzfyq8.svelte-1rzfyq8 {
                 display: none
             }
         }
 
-        #popup.svelte-h5kj7j.svelte-h5kj7j {
+        #popup.svelte-1rzfyq8.svelte-1rzfyq8 {
             font-size: 1.25rem;
             display: grid;
             gap: 1rem;
@@ -267,13 +274,16 @@
             inset: 0.5rem;
             bottom: initial;
             padding: 2rem;
-            z-index: 1
+            z-index: 1;
+            max-height: calc(100vh - 20px);
+            overflow-y: auto
         }
 
-        #popup.svelte-h5kj7j button#close.svelte-h5kj7j {
-            position: absolute;
-            right: 1rem;
-            top: 1rem
+        #close.svelte-1rzfyq8.svelte-1rzfyq8 {
+            position: fixed;
+            right: 2rem;
+            top: 1rem;
+            background-color: #ffffff77
         }
 
         header.svelte-nvhtf1 {
@@ -406,21 +416,22 @@
 
     <div class="section" id="section-2c0bbb25-6827-43ff-8ba0-36d6a09dc7a5">
         <div class="component">
-            <header class="section-container svelte-h5kj7j">
-                <nav class="desktop-nav menu-links svelte-h5kj7j"><a class="link  svelte-h5kj7j" href="/">VBT</a>
+            <header class="section-container svelte-1rzfyq8">
+                <nav class="desktop-nav menu-links svelte-1rzfyq8"><a class="link  svelte-1rzfyq8" href="/">VBT</a>
                     <div style="flex:1;"></div>
-                    <a class="link  svelte-h5kj7j" href="/about-us">About us</a>
-                    <a class="link  svelte-h5kj7j" href="/what-we-do">What we do</a>
-                    <a class="link  svelte-h5kj7j" href="/pricing">Pricing</a>
-                    <a class="link  svelte-h5kj7j" href="/book">Book online</a>
-                    <a class="link  svelte-h5kj7j" href="/testimonials">Testimonials</a>
-                    <a class="link  svelte-h5kj7j" href="/behaviour-resources">Behaviour resources</a>
-                    <a class="link  svelte-h5kj7j" href="/blog">Blog</a>
-                    <a class="link  svelte-h5kj7j" href="/faq">FAQ</a>
-                    <a class="link  svelte-h5kj7j" href="/contact">Contact</a>
+                    <a class="link  svelte-1rzfyq8" href="/about-us">About us</a>
+                    <a class="link  svelte-1rzfyq8" href="/what-we-do">What we do</a>
+                    <a class="link  svelte-1rzfyq8" href="/pricing">Pricing</a>
+                    <a class="link  svelte-1rzfyq8" href="/book">Book online</a>
+                    <a class="link  svelte-1rzfyq8" href="/testimonials">Testimonials</a>
+                    <a class="link  svelte-1rzfyq8" href="/behaviour-resources">Behaviour resources</a>
+                    <a class="link  svelte-1rzfyq8" href="/blog">Blog</a>
+                    <a class="link  svelte-1rzfyq8" href="/faq">FAQ</a>
+                    <a class="link  svelte-1rzfyq8" href="/contact">Contact</a>
                 </nav>
 
-                <div class="mobile-nav svelte-h5kj7j"><a href="/" class="logo svelte-h5kj7j">Vet Behaviour Team</a>
+                <div class="mobile-nav svelte-1rzfyq8"><a href="/" class="logo svelte-1rzfyq8">VBT
+                    </a>
                     <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
                             <g id="iconifySvelte0">
                                 <g id="iconifySvelte1">
