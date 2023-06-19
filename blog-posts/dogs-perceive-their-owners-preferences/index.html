@@ -276,83 +276,104 @@
             top: 1rem
         }
 
-        section.svelte-1er6exq.svelte-1er6exq {
-            background: #2b312b;
-            color: white
-        }
-
-        .teasers.svelte-1er6exq.svelte-1er6exq {
+        header.svelte-19bt6nw {
+            color: white;
+            background-size: cover;
             display: grid;
-            gap: 6rem
+            gap: 20rem
         }
 
-        .teaser.svelte-1er6exq.svelte-1er6exq {
+        .section-container.svelte-19bt6nw {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem
+        }
+
+        @media(min-width: 800px) {}
+
+        @media(min-width: 800px) {}
+
+        .headline.svelte-19bt6nw {
+            font-size: clamp(2rem, 10vw, 3.5rem);
+            max-width: 800px;
+            padding-bottom: 2rem;
+            line-height: 1.1
+        }
+
+        .section-container.svelte-so1len {
             display: grid;
-            gap: 1rem
+            gap: 1rem;
+            place-items: center
         }
 
-        .teaser.svelte-1er6exq img.svelte-1er6exq {
-            border-radius: var(--border-radius)
-        }
-
-        .teaser.svelte-1er6exq .content-section.svelte-1er6exq {
-            display: grid;
-            place-items: flex-start;
-            padding: 0
-        }
-
-        .teaser.svelte-1er6exq .content-section .heading.svelte-1er6exq {
-            margin-bottom: 1.25rem
-        }
-
-        .teaser.svelte-1er6exq .content-section .body.svelte-1er6exq {
+        .heading.svelte-so1len {
             margin-bottom: 2rem
         }
 
-        .teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq {
-            background-color: transparent;
-            border: 1.5px solid white
+        img.svelte-so1len {
+            width: 100%
         }
 
-        .teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq:hover {
-            box-shadow: 0 0 0 2px white
+        .content.svelte-1yexq97 img {
+            width: 100%;
+            margin: 2rem 0;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
         }
 
-        @media(min-width: 800px) {
-            .teaser.svelte-1er6exq.svelte-1er6exq {
-                grid-template-columns: 1fr 1fr;
-                place-items: center;
-                gap: 4rem
-                    /* switch direction for even items */
-            }
-
-            .teaser.svelte-1er6exq:nth-child(odd) img.svelte-1er6exq {
-                grid-row: 1;
-                grid-column: 2
-            }
-
-            .teaser.svelte-1er6exq:nth-child(even) img.svelte-1er6exq {
-                grid-row: 1;
-                grid-column: 1
-            }
+        .content.svelte-1yexq97 p {
+            padding: 0.25rem 0;
+            line-height: 1.5
         }
 
-        @media(min-width: 1200px) {
-            section.svelte-1er6exq.svelte-1er6exq {
-                gap: 6rem
-            }
+        .content.svelte-1yexq97 a {
+            border-bottom: 2px solid
+        }
 
-            .teaser.svelte-1er6exq.svelte-1er6exq {
-                gap: 10rem
-            }
+        .content.svelte-1yexq97 h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
 
-            .heading.svelte-1er6exq.svelte-1er6exq {
-                margin-bottom: 5rem
-            }
+        .content.svelte-1yexq97 h2 {
+            font-size: 2.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
 
-            .body.svelte-1er6exq.svelte-1er6exq {
-                margin-bottom: 2.5rem
-            }
+        .content.svelte-1yexq97 h3 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem
+        }
+
+        .content.svelte-1yexq97 ul {
+            list-style: disc;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 ol {
+            list-style: decimal;
+            padding: 0.5rem 0;
+            padding-left: 1.25rem
+        }
+
+        .content.svelte-1yexq97 blockquote {
+            padding: 2rem;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--border-radius)
+        }
+
+        .section-container.svelte-1fq63ia {
+            background-color: #afc5c5;
+            padding-block: 6rem;
+            display: grid;
+            gap: 1rem
         }
 
         footer.svelte-u1zmy0.svelte-u1zmy0 {
@@ -402,7 +423,7 @@
 
 <body id="page">
 
-    <div class="section" id="section-f2017979-f28c-45b3-ba7b-e9886e545603">
+    <div class="section" id="section-d5c8481f-dcf3-463f-9d78-2c8a05f1d045">
         <div class="component">
             <header class="section-container svelte-h5kj7j">
                 <nav class="desktop-nav menu-links svelte-h5kj7j"><a class="link  svelte-h5kj7j" href="/">VBT</a>
@@ -434,36 +455,44 @@
             </header>
         </div>
     </div>
-    <div class="section" id="section-fae65643-2753-4f2a-8961-daf65b0c4fd3">
+    <div class="section" id="section-bcd49a86-d42c-4f8e-8460-735b0c921cf4">
         <div class="component">
-            <section class="svelte-1er6exq">
-                <div class="section-container svelte-1er6exq">
-                    <div class="teasers svelte-1er6exq">
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686740155741pexels-christian-domingues-731022.jpg" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq">Our Story</h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>Dr Amanda and Dr Heather met at the RSPCA NSW working together to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families. </p>
-                                    <p>So we decided to form the Vet Behaviour Team to help families and their pets remain united, happy and healthy for as long as possible.</p><!-- HTML_TAG_END -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq"></h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>We are pleased to have Dr Caitlin McQuarrie join us in 2023. She has completed the CVE course in Veterinary Behavioural Medicine and is sitting for her Membership examinations this year.</p>
-                                    <p>Dr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists examined for the Veterinary Behaviour Memberships and was on the Australian Veterinary Palliative Care Advisory Council. </p>
-                                    <p>Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.</p><!-- HTML_TAG_END -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <header style="background-image:url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686911944981pexels-cats-coming-1395320.jpg')" role="img" aria-label="" class="svelte-19bt6nw">
+                <div class="section-container svelte-19bt6nw"></div>
+                <div class="section-container svelte-19bt6nw">
+                    <h1 class="headline svelte-19bt6nw">Vet Behaviour Team</h1>
                 </div>
-            </section>
+            </header>
         </div>
     </div>
-    <div class="section" id="section-6aa72c92-96cf-4a54-9d20-d7fc5de29649">
+    <div class="section" id="section-305835bb-8937-4e53-a321-70e15473f082">
+        <div class="component">
+            <header class="section-container svelte-so1len"><span class="superhead svelte-so1len">19th June 2023</span>
+                <h1 class="heading svelte-so1len">Dogs perceive their owners' preferences (but do their own thing anyway)</h1>
+                <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858" alt="" class="svelte-so1len">
+            </header>
+        </div>
+    </div>
+    <div class="section" id="section-912b2439-1d39-41ff-a29b-4245fd4a9174">
+        <div class="component">
+            <div class="section">
+                <div class="section-container content svelte-1yexq97"><!-- HTML_TAG_START -->
+                    <p>The age at which human infants can understand their parents is intensely studied by scientists, with research showing that 18-month-old babies are able to discern an adult’s preferences when offered two different types of foods. But do dogs have the same ability? <a target="_blank" rel="noopener noreferrer nofollow" class="link link" href="https://www.sciencefocus.com/news/dogs-perceive-their-owners-preferences-but-do-their-own-thing-anyway/">Researchers at Eötvös Loránd University decided to find out</a>.</p><!-- HTML_TAG_END -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="section-3824c5c2-43d9-4652-8492-ec68aed48eb5">
+        <div class="component">
+            <aside class="section-container svelte-1fq63ia">
+                <h3 class="heading"><!-- HTML_TAG_START -->
+                    <p>Kindness + Science. The best of both worlds.</p><!-- HTML_TAG_END -->
+                </h3>
+                <span class="attribution"></span>
+            </aside>
+        </div>
+    </div>
+    <div class="section" id="section-f9772772-2f81-4d98-befd-0cb81fbbe802">
         <div class="component">
             <footer class="svelte-u1zmy0">
                 <div class="section-container svelte-u1zmy0">

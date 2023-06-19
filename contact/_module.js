@@ -259,6 +259,13 @@ function listen(node, event, handler, options) {
     node.addEventListener(event, handler, options);
     return () => node.removeEventListener(event, handler, options);
 }
+function prevent_default(fn) {
+    return function (event) {
+        event.preventDefault();
+        // @ts-ignore
+        return fn.call(this, event);
+    };
+}
 function attr(node, attribute, value) {
     if (value == null)
         node.removeAttribute(attribute);
@@ -3006,7 +3013,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (127:31) 
+// (126:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3043,7 +3050,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (125:6) {#if logo.title}
+// (124:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3067,7 +3074,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (137:4) {#if mobileNavOpen}
+// (136:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3124,9 +3131,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-16h229n");
+			attr(button, "class", "svelte-h5kj7j");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-16h229n");
+			attr(nav, "class", "svelte-h5kj7j");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3200,7 +3207,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (139:8) {#each site_nav as { link }}
+// (138:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a0;
 	let t0;
@@ -3307,23 +3314,23 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "class", "link  svelte-16h229n");
+			attr(a0, "class", "link ");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
+			attr(a1, "class", "link ");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
+			attr(a2, "class", "link ");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
+			attr(a3, "class", "link ");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
+			attr(a4, "class", "link ");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
+			attr(a5, "class", "link ");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
+			attr(a6, "class", "link ");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
+			attr(a7, "class", "link ");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
+			attr(a8, "class", "link ");
 			attr(a8, "href", "/contact");
 		},
 		m(target, anchor) {
@@ -3378,15 +3385,14 @@ function create_each_block(ctx) {
 }
 
 function create_fragment$2(ctx) {
-	let div4;
 	let div3;
+	let div2;
 	let header;
-	let div1;
-	let div0;
-	let t0;
 	let nav;
 	let a0;
+	let t0;
 	let t1;
+	let div0;
 	let t2;
 	let a1;
 	let t3;
@@ -3412,12 +3418,15 @@ function create_fragment$2(ctx) {
 	let a8;
 	let t17;
 	let t18;
-	let div2;
 	let a9;
 	let t19;
+	let t20;
+	let div1;
+	let a10;
+	let t21;
 	let button;
 	let icon;
-	let t20;
+	let t22;
 	let current;
 	let mounted;
 	let dispose;
@@ -3438,172 +3447,176 @@ function create_fragment$2(ctx) {
 
 	return {
 		c() {
-			div4 = element("div");
 			div3 = element("div");
+			div2 = element("div");
 			header = element("header");
-			div1 = element("div");
-			div0 = element("div");
-			t0 = space();
 			nav = element("nav");
 			a0 = element("a");
-			t1 = text("About us");
+			t0 = text("VBT");
+			t1 = space();
+			div0 = element("div");
 			t2 = space();
 			a1 = element("a");
-			t3 = text("What we do");
+			t3 = text("About us");
 			t4 = space();
 			a2 = element("a");
-			t5 = text("Pricing");
+			t5 = text("What we do");
 			t6 = space();
 			a3 = element("a");
-			t7 = text("Book online");
+			t7 = text("Pricing");
 			t8 = space();
 			a4 = element("a");
-			t9 = text("Testimonials");
+			t9 = text("Book online");
 			t10 = space();
 			a5 = element("a");
-			t11 = text("Behaviour resources");
+			t11 = text("Testimonials");
 			t12 = space();
 			a6 = element("a");
-			t13 = text("Blog");
+			t13 = text("Behaviour resources");
 			t14 = space();
 			a7 = element("a");
-			t15 = text("FAQ");
+			t15 = text("Blog");
 			t16 = space();
 			a8 = element("a");
-			t17 = text("Contact");
+			t17 = text("FAQ");
 			t18 = space();
-			div2 = element("div");
 			a9 = element("a");
+			t19 = text("Contact");
+			t20 = space();
+			div1 = element("div");
+			a10 = element("a");
 			if (if_block0) if_block0.c();
-			t19 = space();
+			t21 = space();
 			button = element("button");
 			create_component(icon.$$.fragment);
-			t20 = space();
+			t22 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
 		l(nodes) {
-			div4 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div4_nodes = children(div4);
-			div3 = claim_element(div4_nodes, "DIV", { class: true });
+			div3 = claim_element(nodes, "DIV", { class: true, id: true });
 			var div3_nodes = children(div3);
-			header = claim_element(div3_nodes, "HEADER", { class: true });
+			div2 = claim_element(div3_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			header = claim_element(div2_nodes, "HEADER", { class: true });
 			var header_nodes = children(header);
-			div1 = claim_element(header_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			div0 = claim_element(div1_nodes, "DIV", { style: true });
-			children(div0).forEach(detach);
-			t0 = claim_space(div1_nodes);
-			nav = claim_element(div1_nodes, "NAV", { class: true });
+			nav = claim_element(header_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 			a0 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a0_nodes = children(a0);
-			t1 = claim_text(a0_nodes, "About us");
+			t0 = claim_text(a0_nodes, "VBT");
 			a0_nodes.forEach(detach);
+			t1 = claim_space(nav_nodes);
+			div0 = claim_element(nav_nodes, "DIV", { style: true });
+			children(div0).forEach(detach);
 			t2 = claim_space(nav_nodes);
 			a1 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a1_nodes = children(a1);
-			t3 = claim_text(a1_nodes, "What we do");
+			t3 = claim_text(a1_nodes, "About us");
 			a1_nodes.forEach(detach);
 			t4 = claim_space(nav_nodes);
 			a2 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a2_nodes = children(a2);
-			t5 = claim_text(a2_nodes, "Pricing");
+			t5 = claim_text(a2_nodes, "What we do");
 			a2_nodes.forEach(detach);
 			t6 = claim_space(nav_nodes);
 			a3 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a3_nodes = children(a3);
-			t7 = claim_text(a3_nodes, "Book online");
+			t7 = claim_text(a3_nodes, "Pricing");
 			a3_nodes.forEach(detach);
 			t8 = claim_space(nav_nodes);
 			a4 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a4_nodes = children(a4);
-			t9 = claim_text(a4_nodes, "Testimonials");
+			t9 = claim_text(a4_nodes, "Book online");
 			a4_nodes.forEach(detach);
 			t10 = claim_space(nav_nodes);
 			a5 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a5_nodes = children(a5);
-			t11 = claim_text(a5_nodes, "Behaviour resources");
+			t11 = claim_text(a5_nodes, "Testimonials");
 			a5_nodes.forEach(detach);
 			t12 = claim_space(nav_nodes);
 			a6 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a6_nodes = children(a6);
-			t13 = claim_text(a6_nodes, "Blog");
+			t13 = claim_text(a6_nodes, "Behaviour resources");
 			a6_nodes.forEach(detach);
 			t14 = claim_space(nav_nodes);
 			a7 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a7_nodes = children(a7);
-			t15 = claim_text(a7_nodes, "FAQ");
+			t15 = claim_text(a7_nodes, "Blog");
 			a7_nodes.forEach(detach);
 			t16 = claim_space(nav_nodes);
 			a8 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a8_nodes = children(a8);
-			t17 = claim_text(a8_nodes, "Contact");
+			t17 = claim_text(a8_nodes, "FAQ");
 			a8_nodes.forEach(detach);
-			nav_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			t18 = claim_space(header_nodes);
-			div2 = claim_element(header_nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			a9 = claim_element(div2_nodes, "A", { href: true, class: true });
+			t18 = claim_space(nav_nodes);
+			a9 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a9_nodes = children(a9);
-			if (if_block0) if_block0.l(a9_nodes);
+			t19 = claim_text(a9_nodes, "Contact");
 			a9_nodes.forEach(detach);
-			t19 = claim_space(div2_nodes);
-			button = claim_element(div2_nodes, "BUTTON", { id: true, "aria-label": true });
+			nav_nodes.forEach(detach);
+			t20 = claim_space(header_nodes);
+			div1 = claim_element(header_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			a10 = claim_element(div1_nodes, "A", { href: true, class: true });
+			var a10_nodes = children(a10);
+			if (if_block0) if_block0.l(a10_nodes);
+			a10_nodes.forEach(detach);
+			t21 = claim_space(div1_nodes);
+			button = claim_element(div1_nodes, "BUTTON", { id: true, "aria-label": true });
 			var button_nodes = children(button);
 			claim_component(icon.$$.fragment, button_nodes);
 			button_nodes.forEach(detach);
-			t20 = claim_space(div2_nodes);
-			if (if_block1) if_block1.l(div2_nodes);
-			div2_nodes.forEach(detach);
+			t22 = claim_space(div1_nodes);
+			if (if_block1) if_block1.l(div1_nodes);
+			div1_nodes.forEach(detach);
 			header_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
-			div4_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
+			attr(a0, "class", "link  svelte-h5kj7j");
+			attr(a0, "href", "/");
 			set_style(div0, "flex", "1");
-			attr(a0, "class", "link  svelte-16h229n");
-			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
-			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
-			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
-			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
-			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
-			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
-			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
-			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
-			attr(a8, "href", "/contact");
-			attr(nav, "class", "menu-links svelte-16h229n");
-			attr(div1, "class", "desktop-nav svelte-16h229n");
-			attr(a9, "href", "/");
-			attr(a9, "class", "logo svelte-16h229n");
+			attr(a1, "class", "link  svelte-h5kj7j");
+			attr(a1, "href", "/about-us");
+			attr(a2, "class", "link  svelte-h5kj7j");
+			attr(a2, "href", "/what-we-do");
+			attr(a3, "class", "link  svelte-h5kj7j");
+			attr(a3, "href", "/pricing");
+			attr(a4, "class", "link  svelte-h5kj7j");
+			attr(a4, "href", "/book");
+			attr(a5, "class", "link  svelte-h5kj7j");
+			attr(a5, "href", "/testimonials");
+			attr(a6, "class", "link  svelte-h5kj7j");
+			attr(a6, "href", "/behaviour-resources");
+			attr(a7, "class", "link  svelte-h5kj7j");
+			attr(a7, "href", "/blog");
+			attr(a8, "class", "link  svelte-h5kj7j");
+			attr(a8, "href", "/faq");
+			attr(a9, "class", "link  svelte-h5kj7j");
+			attr(a9, "href", "/contact");
+			attr(nav, "class", "desktop-nav menu-links svelte-h5kj7j");
+			attr(a10, "href", "/");
+			attr(a10, "class", "logo svelte-h5kj7j");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div2, "class", "mobile-nav svelte-16h229n");
-			attr(header, "class", "section-container svelte-16h229n");
-			attr(div3, "class", "component");
-			attr(div4, "class", "section");
-			attr(div4, "id", "section-20f3c578-7bd4-4fae-8c21-7492f40e73e9");
+			attr(div1, "class", "mobile-nav svelte-h5kj7j");
+			attr(header, "class", "section-container svelte-h5kj7j");
+			attr(div2, "class", "component");
+			attr(div3, "class", "section");
+			attr(div3, "id", "section-20f3c578-7bd4-4fae-8c21-7492f40e73e9");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div4, anchor);
-			append_hydration(div4, div3);
-			append_hydration(div3, header);
-			append_hydration(header, div1);
-			append_hydration(div1, div0);
-			append_hydration(div1, t0);
-			append_hydration(div1, nav);
+			insert_hydration(target, div3, anchor);
+			append_hydration(div3, div2);
+			append_hydration(div2, header);
+			append_hydration(header, nav);
 			append_hydration(nav, a0);
-			append_hydration(a0, t1);
+			append_hydration(a0, t0);
+			append_hydration(nav, t1);
+			append_hydration(nav, div0);
 			append_hydration(nav, t2);
 			append_hydration(nav, a1);
 			append_hydration(a1, t3);
@@ -3628,15 +3641,18 @@ function create_fragment$2(ctx) {
 			append_hydration(nav, t16);
 			append_hydration(nav, a8);
 			append_hydration(a8, t17);
-			append_hydration(header, t18);
-			append_hydration(header, div2);
-			append_hydration(div2, a9);
-			if (if_block0) if_block0.m(a9, null);
-			append_hydration(div2, t19);
-			append_hydration(div2, button);
+			append_hydration(nav, t18);
+			append_hydration(nav, a9);
+			append_hydration(a9, t19);
+			append_hydration(header, t20);
+			append_hydration(header, div1);
+			append_hydration(div1, a10);
+			if (if_block0) if_block0.m(a10, null);
+			append_hydration(div1, t21);
+			append_hydration(div1, button);
 			mount_component(icon, button, null);
-			append_hydration(div2, t20);
-			if (if_block1) if_block1.m(div2, null);
+			append_hydration(div1, t22);
+			if (if_block1) if_block1.m(div1, null);
 			current = true;
 
 			if (!mounted) {
@@ -3653,7 +3669,7 @@ function create_fragment$2(ctx) {
 
 				if (if_block0) {
 					if_block0.c();
-					if_block0.m(a9, null);
+					if_block0.m(a10, null);
 				}
 			}
 
@@ -3668,7 +3684,7 @@ function create_fragment$2(ctx) {
 					if_block1 = create_if_block$1(ctx);
 					if_block1.c();
 					transition_in(if_block1, 1);
-					if_block1.m(div2, null);
+					if_block1.m(div1, null);
 				}
 			} else if (if_block1) {
 				group_outros();
@@ -3692,7 +3708,7 @@ function create_fragment$2(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div4);
+			if (detaching) detach(div3);
 
 			if (if_block0) {
 				if_block0.d();
@@ -3889,27 +3905,27 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i];
-	child_ctx[9] = i;
+	child_ctx[8] = list[i];
+	child_ctx[10] = i;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[10] = list[i].label;
-	child_ctx[11] = list[i].link;
+	child_ctx[11] = list[i].label;
+	child_ctx[12] = list[i].link;
 	return child_ctx;
 }
 
-// (95:6) {#each social as { label, link }}
+// (132:6) {#each social as { label, link }}
 function create_each_block_1(ctx) {
 	let div;
 	let span;
-	let t0_value = /*label*/ ctx[10] + "";
+	let t0_value = /*label*/ ctx[11] + "";
 	let t0;
 	let t1;
 	let a;
-	let t2_value = /*link*/ ctx[11].label + "";
+	let t2_value = /*link*/ ctx[12].label + "";
 	let t2;
 	let a_href_value;
 	let t3;
@@ -3943,7 +3959,7 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(span, "class", "label svelte-1twigpw");
-			attr(a, "href", a_href_value = /*link*/ ctx[11].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[12].url);
 			attr(a, "class", "svelte-1twigpw");
 			attr(div, "class", "item svelte-1twigpw");
 		},
@@ -3957,10 +3973,10 @@ function create_each_block_1(ctx) {
 			append_hydration(div, t3);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*social*/ 4 && t0_value !== (t0_value = /*label*/ ctx[10] + "")) set_data(t0, t0_value);
-			if (dirty & /*social*/ 4 && t2_value !== (t2_value = /*link*/ ctx[11].label + "")) set_data(t2, t2_value);
+			if (dirty & /*social*/ 4 && t0_value !== (t0_value = /*label*/ ctx[11] + "")) set_data(t0, t0_value);
+			if (dirty & /*social*/ 4 && t2_value !== (t2_value = /*link*/ ctx[12].label + "")) set_data(t2, t2_value);
 
-			if (dirty & /*social*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[11].url)) {
+			if (dirty & /*social*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[12].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3970,14 +3986,15 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (112:6) {:else}
+// (149:6) {:else}
 function create_else_block$1(ctx) {
 	let label;
 	let span;
-	let t0_value = /*input*/ ctx[7].label + "";
+	let t0_value = /*input*/ ctx[8].label + "";
 	let t0;
 	let t1;
 	let input;
+	let input_name_value;
 	let input_type_value;
 	let input_placeholder_value;
 
@@ -4000,6 +4017,7 @@ function create_else_block$1(ctx) {
 			t1 = claim_space(label_nodes);
 
 			input = claim_element(label_nodes, "INPUT", {
+				name: true,
 				type: true,
 				placeholder: true,
 				class: true
@@ -4010,8 +4028,9 @@ function create_else_block$1(ctx) {
 		},
 		h() {
 			attr(span, "class", "svelte-1twigpw");
-			attr(input, "type", input_type_value = /*input*/ ctx[7].type || "text");
-			attr(input, "placeholder", input_placeholder_value = /*input*/ ctx[7].placeholder);
+			attr(input, "name", input_name_value = /*input*/ ctx[8].label);
+			attr(input, "type", input_type_value = /*input*/ ctx[8].type || "text");
+			attr(input, "placeholder", input_placeholder_value = /*input*/ ctx[8].placeholder);
 			attr(input, "class", "svelte-1twigpw");
 			attr(label, "class", "svelte-1twigpw");
 		},
@@ -4023,13 +4042,17 @@ function create_else_block$1(ctx) {
 			append_hydration(label, input);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[7].label + "")) set_data(t0, t0_value);
+			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[8].label + "")) set_data(t0, t0_value);
 
-			if (dirty & /*inputs*/ 8 && input_type_value !== (input_type_value = /*input*/ ctx[7].type || "text")) {
+			if (dirty & /*inputs*/ 8 && input_name_value !== (input_name_value = /*input*/ ctx[8].label)) {
+				attr(input, "name", input_name_value);
+			}
+
+			if (dirty & /*inputs*/ 8 && input_type_value !== (input_type_value = /*input*/ ctx[8].type || "text")) {
 				attr(input, "type", input_type_value);
 			}
 
-			if (dirty & /*inputs*/ 8 && input_placeholder_value !== (input_placeholder_value = /*input*/ ctx[7].placeholder)) {
+			if (dirty & /*inputs*/ 8 && input_placeholder_value !== (input_placeholder_value = /*input*/ ctx[8].placeholder)) {
 				attr(input, "placeholder", input_placeholder_value);
 			}
 		},
@@ -4039,14 +4062,15 @@ function create_else_block$1(ctx) {
 	};
 }
 
-// (107:6) {#if input.type === "textarea"}
+// (144:6) {#if input.type === "textarea"}
 function create_if_block$2(ctx) {
 	let label;
 	let span;
-	let t0_value = /*input*/ ctx[7].label + "";
+	let t0_value = /*input*/ ctx[8].label + "";
 	let t0;
 	let t1;
 	let textarea;
+	let textarea_name_value;
 	let textarea_placeholder_value;
 
 	return {
@@ -4066,14 +4090,21 @@ function create_if_block$2(ctx) {
 			t0 = claim_text(span_nodes, t0_value);
 			span_nodes.forEach(detach);
 			t1 = claim_space(label_nodes);
-			textarea = claim_element(label_nodes, "TEXTAREA", { placeholder: true, class: true });
+
+			textarea = claim_element(label_nodes, "TEXTAREA", {
+				name: true,
+				placeholder: true,
+				class: true
+			});
+
 			children(textarea).forEach(detach);
 			label_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
 			attr(span, "class", "svelte-1twigpw");
-			attr(textarea, "placeholder", textarea_placeholder_value = /*input*/ ctx[7].placeholder);
+			attr(textarea, "name", textarea_name_value = /*input*/ ctx[8].label);
+			attr(textarea, "placeholder", textarea_placeholder_value = /*input*/ ctx[8].placeholder);
 			attr(textarea, "class", "svelte-1twigpw");
 			attr(label, "class", "svelte-1twigpw");
 		},
@@ -4085,9 +4116,13 @@ function create_if_block$2(ctx) {
 			append_hydration(label, textarea);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[7].label + "")) set_data(t0, t0_value);
+			if (dirty & /*inputs*/ 8 && t0_value !== (t0_value = /*input*/ ctx[8].label + "")) set_data(t0, t0_value);
 
-			if (dirty & /*inputs*/ 8 && textarea_placeholder_value !== (textarea_placeholder_value = /*input*/ ctx[7].placeholder)) {
+			if (dirty & /*inputs*/ 8 && textarea_name_value !== (textarea_name_value = /*input*/ ctx[8].label)) {
+				attr(textarea, "name", textarea_name_value);
+			}
+
+			if (dirty & /*inputs*/ 8 && textarea_placeholder_value !== (textarea_placeholder_value = /*input*/ ctx[8].placeholder)) {
 				attr(textarea, "placeholder", textarea_placeholder_value);
 			}
 		},
@@ -4097,12 +4132,12 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (106:4) {#each inputs as input, i}
+// (143:4) {#each inputs as input, i}
 function create_each_block$1(ctx) {
 	let if_block_anchor;
 
 	function select_block_type(ctx, dirty) {
-		if (/*input*/ ctx[7].type === "textarea") return create_if_block$2;
+		if (/*input*/ ctx[8].type === "textarea") return create_if_block$2;
 		return create_else_block$1;
 	}
 
@@ -4158,6 +4193,8 @@ function create_fragment$4(ctx) {
 	let t4;
 	let button;
 	let t5;
+	let mounted;
+	let dispose;
 	let each_value_1 = /*social*/ ctx[2];
 	let each_blocks_1 = [];
 
@@ -4229,7 +4266,7 @@ function create_fragment$4(ctx) {
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
 			t3 = claim_space(section_nodes);
-			form = claim_element(section_nodes, "FORM", { class: true });
+			form = claim_element(section_nodes, "FORM", { method: true, action: true, class: true });
 			var form_nodes = children(form);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -4254,6 +4291,8 @@ function create_fragment$4(ctx) {
 			attr(div2, "class", "body svelte-1twigpw");
 			attr(button, "class", "button svelte-1twigpw");
 			attr(button, "type", "submit");
+			attr(form, "method", "POST");
+			attr(form, "action", "https://us-central1-tour-nament.cloudfunctions.net/sendMail");
 			attr(form, "class", "svelte-1twigpw");
 			attr(section, "class", "section-container svelte-1twigpw");
 			attr(div3, "class", "component");
@@ -4291,6 +4330,11 @@ function create_fragment$4(ctx) {
 			append_hydration(form, t4);
 			append_hydration(form, button);
 			append_hydration(button, t5);
+
+			if (!mounted) {
+				dispose = listen(form, "submit", prevent_default(/*handleSubmit*/ ctx[4]));
+				mounted = true;
+			}
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*heading*/ 1) set_data(t0, /*heading*/ ctx[0]);
@@ -4347,6 +4391,8 @@ function create_fragment$4(ctx) {
 			if (detaching) detach(div4);
 			destroy_each(each_blocks_1, detaching);
 			destroy_each(each_blocks, detaching);
+			mounted = false;
+			dispose();
 		}
 	};
 }
@@ -4360,17 +4406,52 @@ function instance$4($$self, $$props, $$invalidate) {
 	let { social } = $$props;
 	let { inputs } = $$props;
 
+	const handleSubmit = e => {
+		// getting the action url
+		const ACTION_URL = e.target.action;
+
+		// get the form fields data and convert it to URLSearchParams
+		const formData = new FormData(e.target);
+
+		const data = new URLSearchParams();
+
+		for (let field of formData) {
+			const [key, value] = field;
+			console.log(key, value);
+
+			switch (key) {
+				case 'Name':
+					data.append('name', value);
+					break;
+				case 'Email':
+					data.append('email', value);
+					break;
+				case 'Mobile number':
+					data.append('phone', value);
+					break;
+				case 'Message':
+					data.append('message', value);
+					break;
+			}
+		}
+
+		// check the form's method and send the fetch accordingly
+		if (e.target.method.toLowerCase() == 'get') fetch(`${ACTION_URL}?${data}`); else {
+			fetch(ACTION_URL, { method: 'POST', body: data });
+		}
+	};
+
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(4, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(5, title = $$props.title);
-		if ('description' in $$props) $$invalidate(6, description = $$props.description);
+		if ('favicon' in $$props) $$invalidate(5, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(6, title = $$props.title);
+		if ('description' in $$props) $$invalidate(7, description = $$props.description);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
 		if ('social' in $$props) $$invalidate(2, social = $$props.social);
 		if ('inputs' in $$props) $$invalidate(3, inputs = $$props.inputs);
 	};
 
-	return [heading, subheading, social, inputs, favicon, title, description];
+	return [heading, subheading, social, inputs, handleSubmit, favicon, title, description];
 }
 
 class Component$4 extends SvelteComponent {
@@ -4378,9 +4459,9 @@ class Component$4 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
-			favicon: 4,
-			title: 5,
-			description: 6,
+			favicon: 5,
+			title: 6,
+			description: 7,
 			heading: 0,
 			subheading: 1,
 			social: 2,
@@ -4923,8 +5004,8 @@ function create_fragment$6(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
-					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
+					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
+					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
 				},
 				menus: []
 			}

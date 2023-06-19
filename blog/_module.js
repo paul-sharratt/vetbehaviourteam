@@ -3006,7 +3006,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (127:31) 
+// (126:31) 
 function create_if_block_2(ctx) {
 	let img;
 	let img_src_value;
@@ -3043,7 +3043,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (125:6) {#if logo.title}
+// (124:6) {#if logo.title}
 function create_if_block_1$1(ctx) {
 	let t_value = /*logo*/ ctx[0].title + "";
 	let t;
@@ -3067,7 +3067,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (137:4) {#if mobileNavOpen}
+// (136:4) {#if mobileNavOpen}
 function create_if_block$1(ctx) {
 	let nav;
 	let t;
@@ -3124,9 +3124,9 @@ function create_if_block$1(ctx) {
 		h() {
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-16h229n");
+			attr(button, "class", "svelte-h5kj7j");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-16h229n");
+			attr(nav, "class", "svelte-h5kj7j");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3200,7 +3200,7 @@ function create_if_block$1(ctx) {
 	};
 }
 
-// (139:8) {#each site_nav as { link }}
+// (138:8) {#each site_nav as { link }}
 function create_each_block(ctx) {
 	let a0;
 	let t0;
@@ -3307,23 +3307,23 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "class", "link  svelte-16h229n");
+			attr(a0, "class", "link ");
 			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
+			attr(a1, "class", "link ");
 			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
+			attr(a2, "class", "link ");
 			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
+			attr(a3, "class", "link ");
 			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
+			attr(a4, "class", "link ");
 			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
+			attr(a5, "class", "link ");
 			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
+			attr(a6, "class", "link ");
 			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
+			attr(a7, "class", "link ");
 			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
+			attr(a8, "class", "link ");
 			attr(a8, "href", "/contact");
 		},
 		m(target, anchor) {
@@ -3378,15 +3378,14 @@ function create_each_block(ctx) {
 }
 
 function create_fragment$2(ctx) {
-	let div4;
 	let div3;
+	let div2;
 	let header;
-	let div1;
-	let div0;
-	let t0;
 	let nav;
 	let a0;
+	let t0;
 	let t1;
+	let div0;
 	let t2;
 	let a1;
 	let t3;
@@ -3412,12 +3411,15 @@ function create_fragment$2(ctx) {
 	let a8;
 	let t17;
 	let t18;
-	let div2;
 	let a9;
 	let t19;
+	let t20;
+	let div1;
+	let a10;
+	let t21;
 	let button;
 	let icon;
-	let t20;
+	let t22;
 	let current;
 	let mounted;
 	let dispose;
@@ -3438,172 +3440,176 @@ function create_fragment$2(ctx) {
 
 	return {
 		c() {
-			div4 = element("div");
 			div3 = element("div");
+			div2 = element("div");
 			header = element("header");
-			div1 = element("div");
-			div0 = element("div");
-			t0 = space();
 			nav = element("nav");
 			a0 = element("a");
-			t1 = text("About us");
+			t0 = text("VBT");
+			t1 = space();
+			div0 = element("div");
 			t2 = space();
 			a1 = element("a");
-			t3 = text("What we do");
+			t3 = text("About us");
 			t4 = space();
 			a2 = element("a");
-			t5 = text("Pricing");
+			t5 = text("What we do");
 			t6 = space();
 			a3 = element("a");
-			t7 = text("Book online");
+			t7 = text("Pricing");
 			t8 = space();
 			a4 = element("a");
-			t9 = text("Testimonials");
+			t9 = text("Book online");
 			t10 = space();
 			a5 = element("a");
-			t11 = text("Behaviour resources");
+			t11 = text("Testimonials");
 			t12 = space();
 			a6 = element("a");
-			t13 = text("Blog");
+			t13 = text("Behaviour resources");
 			t14 = space();
 			a7 = element("a");
-			t15 = text("FAQ");
+			t15 = text("Blog");
 			t16 = space();
 			a8 = element("a");
-			t17 = text("Contact");
+			t17 = text("FAQ");
 			t18 = space();
-			div2 = element("div");
 			a9 = element("a");
+			t19 = text("Contact");
+			t20 = space();
+			div1 = element("div");
+			a10 = element("a");
 			if (if_block0) if_block0.c();
-			t19 = space();
+			t21 = space();
 			button = element("button");
 			create_component(icon.$$.fragment);
-			t20 = space();
+			t22 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
 		l(nodes) {
-			div4 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div4_nodes = children(div4);
-			div3 = claim_element(div4_nodes, "DIV", { class: true });
+			div3 = claim_element(nodes, "DIV", { class: true, id: true });
 			var div3_nodes = children(div3);
-			header = claim_element(div3_nodes, "HEADER", { class: true });
+			div2 = claim_element(div3_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			header = claim_element(div2_nodes, "HEADER", { class: true });
 			var header_nodes = children(header);
-			div1 = claim_element(header_nodes, "DIV", { class: true });
-			var div1_nodes = children(div1);
-			div0 = claim_element(div1_nodes, "DIV", { style: true });
-			children(div0).forEach(detach);
-			t0 = claim_space(div1_nodes);
-			nav = claim_element(div1_nodes, "NAV", { class: true });
+			nav = claim_element(header_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 			a0 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a0_nodes = children(a0);
-			t1 = claim_text(a0_nodes, "About us");
+			t0 = claim_text(a0_nodes, "VBT");
 			a0_nodes.forEach(detach);
+			t1 = claim_space(nav_nodes);
+			div0 = claim_element(nav_nodes, "DIV", { style: true });
+			children(div0).forEach(detach);
 			t2 = claim_space(nav_nodes);
 			a1 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a1_nodes = children(a1);
-			t3 = claim_text(a1_nodes, "What we do");
+			t3 = claim_text(a1_nodes, "About us");
 			a1_nodes.forEach(detach);
 			t4 = claim_space(nav_nodes);
 			a2 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a2_nodes = children(a2);
-			t5 = claim_text(a2_nodes, "Pricing");
+			t5 = claim_text(a2_nodes, "What we do");
 			a2_nodes.forEach(detach);
 			t6 = claim_space(nav_nodes);
 			a3 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a3_nodes = children(a3);
-			t7 = claim_text(a3_nodes, "Book online");
+			t7 = claim_text(a3_nodes, "Pricing");
 			a3_nodes.forEach(detach);
 			t8 = claim_space(nav_nodes);
 			a4 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a4_nodes = children(a4);
-			t9 = claim_text(a4_nodes, "Testimonials");
+			t9 = claim_text(a4_nodes, "Book online");
 			a4_nodes.forEach(detach);
 			t10 = claim_space(nav_nodes);
 			a5 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a5_nodes = children(a5);
-			t11 = claim_text(a5_nodes, "Behaviour resources");
+			t11 = claim_text(a5_nodes, "Testimonials");
 			a5_nodes.forEach(detach);
 			t12 = claim_space(nav_nodes);
 			a6 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a6_nodes = children(a6);
-			t13 = claim_text(a6_nodes, "Blog");
+			t13 = claim_text(a6_nodes, "Behaviour resources");
 			a6_nodes.forEach(detach);
 			t14 = claim_space(nav_nodes);
 			a7 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a7_nodes = children(a7);
-			t15 = claim_text(a7_nodes, "FAQ");
+			t15 = claim_text(a7_nodes, "Blog");
 			a7_nodes.forEach(detach);
 			t16 = claim_space(nav_nodes);
 			a8 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a8_nodes = children(a8);
-			t17 = claim_text(a8_nodes, "Contact");
+			t17 = claim_text(a8_nodes, "FAQ");
 			a8_nodes.forEach(detach);
-			nav_nodes.forEach(detach);
-			div1_nodes.forEach(detach);
-			t18 = claim_space(header_nodes);
-			div2 = claim_element(header_nodes, "DIV", { class: true });
-			var div2_nodes = children(div2);
-			a9 = claim_element(div2_nodes, "A", { href: true, class: true });
+			t18 = claim_space(nav_nodes);
+			a9 = claim_element(nav_nodes, "A", { class: true, href: true });
 			var a9_nodes = children(a9);
-			if (if_block0) if_block0.l(a9_nodes);
+			t19 = claim_text(a9_nodes, "Contact");
 			a9_nodes.forEach(detach);
-			t19 = claim_space(div2_nodes);
-			button = claim_element(div2_nodes, "BUTTON", { id: true, "aria-label": true });
+			nav_nodes.forEach(detach);
+			t20 = claim_space(header_nodes);
+			div1 = claim_element(header_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			a10 = claim_element(div1_nodes, "A", { href: true, class: true });
+			var a10_nodes = children(a10);
+			if (if_block0) if_block0.l(a10_nodes);
+			a10_nodes.forEach(detach);
+			t21 = claim_space(div1_nodes);
+			button = claim_element(div1_nodes, "BUTTON", { id: true, "aria-label": true });
 			var button_nodes = children(button);
 			claim_component(icon.$$.fragment, button_nodes);
 			button_nodes.forEach(detach);
-			t20 = claim_space(div2_nodes);
-			if (if_block1) if_block1.l(div2_nodes);
-			div2_nodes.forEach(detach);
+			t22 = claim_space(div1_nodes);
+			if (if_block1) if_block1.l(div1_nodes);
+			div1_nodes.forEach(detach);
 			header_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
-			div4_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
+			attr(a0, "class", "link  svelte-h5kj7j");
+			attr(a0, "href", "/");
 			set_style(div0, "flex", "1");
-			attr(a0, "class", "link  svelte-16h229n");
-			attr(a0, "href", "/about-us");
-			attr(a1, "class", "link  svelte-16h229n");
-			attr(a1, "href", "/what-we-do");
-			attr(a2, "class", "link  svelte-16h229n");
-			attr(a2, "href", "/pricing");
-			attr(a3, "class", "link  svelte-16h229n");
-			attr(a3, "href", "/book");
-			attr(a4, "class", "link  svelte-16h229n");
-			attr(a4, "href", "/testimonials");
-			attr(a5, "class", "link  svelte-16h229n");
-			attr(a5, "href", "/behaviour-resources");
-			attr(a6, "class", "link  svelte-16h229n");
-			attr(a6, "href", "/blog");
-			attr(a7, "class", "link  svelte-16h229n");
-			attr(a7, "href", "/faq");
-			attr(a8, "class", "link  svelte-16h229n");
-			attr(a8, "href", "/contact");
-			attr(nav, "class", "menu-links svelte-16h229n");
-			attr(div1, "class", "desktop-nav svelte-16h229n");
-			attr(a9, "href", "/");
-			attr(a9, "class", "logo svelte-16h229n");
+			attr(a1, "class", "link  svelte-h5kj7j");
+			attr(a1, "href", "/about-us");
+			attr(a2, "class", "link  svelte-h5kj7j");
+			attr(a2, "href", "/what-we-do");
+			attr(a3, "class", "link  svelte-h5kj7j");
+			attr(a3, "href", "/pricing");
+			attr(a4, "class", "link  svelte-h5kj7j");
+			attr(a4, "href", "/book");
+			attr(a5, "class", "link  svelte-h5kj7j");
+			attr(a5, "href", "/testimonials");
+			attr(a6, "class", "link  svelte-h5kj7j");
+			attr(a6, "href", "/behaviour-resources");
+			attr(a7, "class", "link  svelte-h5kj7j");
+			attr(a7, "href", "/blog");
+			attr(a8, "class", "link  svelte-h5kj7j");
+			attr(a8, "href", "/faq");
+			attr(a9, "class", "link  svelte-h5kj7j");
+			attr(a9, "href", "/contact");
+			attr(nav, "class", "desktop-nav menu-links svelte-h5kj7j");
+			attr(a10, "href", "/");
+			attr(a10, "class", "logo svelte-h5kj7j");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(div2, "class", "mobile-nav svelte-16h229n");
-			attr(header, "class", "section-container svelte-16h229n");
-			attr(div3, "class", "component");
-			attr(div4, "class", "section");
-			attr(div4, "id", "section-d02d29a1-a8e3-4985-af0e-315b8ff8820f");
+			attr(div1, "class", "mobile-nav svelte-h5kj7j");
+			attr(header, "class", "section-container svelte-h5kj7j");
+			attr(div2, "class", "component");
+			attr(div3, "class", "section");
+			attr(div3, "id", "section-d02d29a1-a8e3-4985-af0e-315b8ff8820f");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div4, anchor);
-			append_hydration(div4, div3);
-			append_hydration(div3, header);
-			append_hydration(header, div1);
-			append_hydration(div1, div0);
-			append_hydration(div1, t0);
-			append_hydration(div1, nav);
+			insert_hydration(target, div3, anchor);
+			append_hydration(div3, div2);
+			append_hydration(div2, header);
+			append_hydration(header, nav);
 			append_hydration(nav, a0);
-			append_hydration(a0, t1);
+			append_hydration(a0, t0);
+			append_hydration(nav, t1);
+			append_hydration(nav, div0);
 			append_hydration(nav, t2);
 			append_hydration(nav, a1);
 			append_hydration(a1, t3);
@@ -3628,15 +3634,18 @@ function create_fragment$2(ctx) {
 			append_hydration(nav, t16);
 			append_hydration(nav, a8);
 			append_hydration(a8, t17);
-			append_hydration(header, t18);
-			append_hydration(header, div2);
-			append_hydration(div2, a9);
-			if (if_block0) if_block0.m(a9, null);
-			append_hydration(div2, t19);
-			append_hydration(div2, button);
+			append_hydration(nav, t18);
+			append_hydration(nav, a9);
+			append_hydration(a9, t19);
+			append_hydration(header, t20);
+			append_hydration(header, div1);
+			append_hydration(div1, a10);
+			if (if_block0) if_block0.m(a10, null);
+			append_hydration(div1, t21);
+			append_hydration(div1, button);
 			mount_component(icon, button, null);
-			append_hydration(div2, t20);
-			if (if_block1) if_block1.m(div2, null);
+			append_hydration(div1, t22);
+			if (if_block1) if_block1.m(div1, null);
 			current = true;
 
 			if (!mounted) {
@@ -3653,7 +3662,7 @@ function create_fragment$2(ctx) {
 
 				if (if_block0) {
 					if_block0.c();
-					if_block0.m(a9, null);
+					if_block0.m(a10, null);
 				}
 			}
 
@@ -3668,7 +3677,7 @@ function create_fragment$2(ctx) {
 					if_block1 = create_if_block$1(ctx);
 					if_block1.c();
 					transition_in(if_block1, 1);
-					if_block1.m(div2, null);
+					if_block1.m(div1, null);
 				}
 			} else if (if_block1) {
 				group_outros();
@@ -3692,7 +3701,7 @@ function create_fragment$2(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div4);
+			if (detaching) detach(div3);
 
 			if (if_block0) {
 				if_block0.d();
@@ -3888,6 +3897,91 @@ class Component$3 extends SvelteComponent {
 /* generated by Svelte v3.58.0 */
 
 function create_fragment$4(ctx) {
+	let div3;
+	let div2;
+	let div1;
+	let div0;
+	let raw_value = /*content*/ ctx[0].html + "";
+
+	return {
+		c() {
+			div3 = element("div");
+			div2 = element("div");
+			div1 = element("div");
+			div0 = element("div");
+			this.h();
+		},
+		l(nodes) {
+			div3 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div3_nodes = children(div3);
+			div2 = claim_element(div3_nodes, "DIV", { class: true });
+			var div2_nodes = children(div2);
+			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			var div1_nodes = children(div1);
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			div0_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			div2_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(div0, "class", "section-container content svelte-1yexq97");
+			attr(div1, "class", "section");
+			attr(div2, "class", "component");
+			attr(div3, "class", "section");
+			attr(div3, "id", "section-4b6a4074-244c-45ec-ad8f-06785c8efdb9");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div3, anchor);
+			append_hydration(div3, div2);
+			append_hydration(div2, div1);
+			append_hydration(div1, div0);
+			div0.innerHTML = raw_value;
+		},
+		p(ctx, [dirty]) {
+			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;		},
+		i: noop,
+		o: noop,
+		d(detaching) {
+			if (detaching) detach(div3);
+		}
+	};
+}
+
+function instance$4($$self, $$props, $$invalidate) {
+	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { content } = $$props;
+
+	$$self.$$set = $$props => {
+		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(3, description = $$props.description);
+		if ('content' in $$props) $$invalidate(0, content = $$props.content);
+	};
+
+	return [content, favicon, title, description];
+}
+
+class Component$4 extends SvelteComponent {
+	constructor(options) {
+		super();
+
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+			favicon: 1,
+			title: 2,
+			description: 3,
+			content: 0
+		});
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function create_fragment$5(ctx) {
 	let div1;
 	let div0;
 	let aside;
@@ -3957,7 +4051,7 @@ function create_fragment$4(ctx) {
 	};
 }
 
-function instance$4($$self, $$props, $$invalidate) {
+function instance$5($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
@@ -3975,11 +4069,11 @@ function instance$4($$self, $$props, $$invalidate) {
 	return [quote, attribution, favicon, title, description];
 }
 
-class Component$4 extends SvelteComponent {
+class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
 
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
 			favicon: 2,
 			title: 3,
 			description: 4,
@@ -4158,7 +4252,7 @@ function create_each_block$1(ctx) {
 	};
 }
 
-function create_fragment$5(ctx) {
+function create_fragment$6(ctx) {
 	let div4;
 	let div3;
 	let footer;
@@ -4276,7 +4370,7 @@ function create_fragment$5(ctx) {
 	};
 }
 
-function instance$5($$self, $$props, $$invalidate) {
+function instance$6($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
@@ -4294,11 +4388,11 @@ function instance$5($$self, $$props, $$invalidate) {
 	return [content, menus, title, favicon, description];
 }
 
-class Component$5 extends SvelteComponent {
+class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
 
-		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
+		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
 			favicon: 3,
 			title: 2,
 			description: 4,
@@ -4310,7 +4404,7 @@ class Component$5 extends SvelteComponent {
 
 /* generated by Svelte v3.58.0 */
 
-function instance$6($$self, $$props, $$invalidate) {
+function instance$7($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
@@ -4324,16 +4418,16 @@ function instance$6($$self, $$props, $$invalidate) {
 	return [favicon, title, description];
 }
 
-class Component$6 extends SvelteComponent {
+class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$6, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
+		init(this, options, instance$7, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-function create_fragment$6(ctx) {
+function create_fragment$7(ctx) {
 	let component_0;
 	let t0;
 	let component_1;
@@ -4345,6 +4439,8 @@ function create_fragment$6(ctx) {
 	let component_4;
 	let t4;
 	let component_5;
+	let t5;
+	let component_6;
 	let current;
 
 	component_0 = new Component({
@@ -4459,11 +4555,10 @@ function create_fragment$6(ctx) {
 				},
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
-				quote: {
-					"html": "<p>Kindness + Science. The best of both worlds.</p>",
-					"markdown": "Kindness + Science. The best of both worlds.\n\n"
-				},
-				attribution: ""
+				content: {
+					"html": "<p><a href=\"/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div>\n<div style=\"text-align:center;\">19th June 2023</div>\n<p></a></p>\n<p><a href=\"/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div>\n<div style=\"text-align:center;\">28th May 2023</div>\n<p></a></p>",
+					"markdown": "\n\n<a href=\"/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div><div style=\"text-align:center;\">19th June 2023</div></a>\n\n<a href=\"/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div><div style=\"text-align:center;\">28th May 2023</div></a>"
+				}
 			}
 		});
 
@@ -4477,15 +4572,33 @@ function create_fragment$6(ctx) {
 				},
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
+				quote: {
+					"html": "<p>Kindness + Science. The best of both worlds.</p>",
+					"markdown": "Kindness + Science. The best of both worlds.\n\n"
+				},
+				attribution: ""
+			}
+		});
+
+	component_5 = new Component$6({
+			props: {
+				favicon: {
+					"alt": "",
+					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
+					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
+					"size": 3
+				},
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Working Sydney Wide &amp; Online</p>\n<p>Vet Behaviour Team\n0432 881 174</p>\n<p>ABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023</p>\n<p>terms and conditions</p>\n<p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p>",
-					"markdown": "Working Sydney Wide & Online\n\nVet Behaviour Team\n0432 881 174\n\nABN: 34603289176\ncopyright© Vet Behaviour Team pty ltd 2023\n\nterms and conditions\n\nVet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.\n"
+					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
+					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
 				},
 				menus: []
 			}
 		});
 
-	component_5 = new Component$6({
+	component_6 = new Component$7({
 			props: {
 				favicon: {
 					"alt": "",
@@ -4511,6 +4624,8 @@ function create_fragment$6(ctx) {
 			create_component(component_4.$$.fragment);
 			t4 = space();
 			create_component(component_5.$$.fragment);
+			t5 = space();
+			create_component(component_6.$$.fragment);
 		},
 		l(nodes) {
 			claim_component(component_0.$$.fragment, nodes);
@@ -4524,6 +4639,8 @@ function create_fragment$6(ctx) {
 			claim_component(component_4.$$.fragment, nodes);
 			t4 = claim_space(nodes);
 			claim_component(component_5.$$.fragment, nodes);
+			t5 = claim_space(nodes);
+			claim_component(component_6.$$.fragment, nodes);
 		},
 		m(target, anchor) {
 			mount_component(component_0, target, anchor);
@@ -4537,6 +4654,8 @@ function create_fragment$6(ctx) {
 			mount_component(component_4, target, anchor);
 			insert_hydration(target, t4, anchor);
 			mount_component(component_5, target, anchor);
+			insert_hydration(target, t5, anchor);
+			mount_component(component_6, target, anchor);
 			current = true;
 		},
 		p: noop,
@@ -4548,6 +4667,7 @@ function create_fragment$6(ctx) {
 			transition_in(component_3.$$.fragment, local);
 			transition_in(component_4.$$.fragment, local);
 			transition_in(component_5.$$.fragment, local);
+			transition_in(component_6.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
@@ -4557,6 +4677,7 @@ function create_fragment$6(ctx) {
 			transition_out(component_3.$$.fragment, local);
 			transition_out(component_4.$$.fragment, local);
 			transition_out(component_5.$$.fragment, local);
+			transition_out(component_6.$$.fragment, local);
 			current = false;
 		},
 		d(detaching) {
@@ -4571,15 +4692,17 @@ function create_fragment$6(ctx) {
 			destroy_component(component_4, detaching);
 			if (detaching) detach(t4);
 			destroy_component(component_5, detaching);
+			if (detaching) detach(t5);
+			destroy_component(component_6, detaching);
 		}
 	};
 }
 
-class Component$7 extends SvelteComponent {
+class Component$8 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, null, create_fragment$6, safe_not_equal, {});
+		init(this, options, null, create_fragment$7, safe_not_equal, {});
 	}
 }
 
-export default Component$7;
+export default Component$8;
