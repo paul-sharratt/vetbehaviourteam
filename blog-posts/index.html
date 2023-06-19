@@ -199,48 +199,54 @@
         }
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
-        .section-container.svelte-8nrzr7.svelte-8nrzr7 {
+        .section-container.svelte-16h229n.svelte-16h229n.svelte-16h229n {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             padding-top: 1rem;
             padding-bottom: 1rem;
-            position: fixed;
+            position: absolute;
             width: 100%;
-            top: 0;
-            max-width: none !important
+            top: 0
         }
 
-        .logo.svelte-8nrzr7.svelte-8nrzr7 {
+        .logo.svelte-16h229n.svelte-16h229n.svelte-16h229n {
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.2
         }
 
-        .desktop-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        .desktop-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
             display: none;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
+            width: 100%
+        }
+
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n.svelte-16h229n {
+            display: flex;
             gap: 2rem
         }
 
-        .desktop-nav.svelte-8nrzr7 a.link.svelte-8nrzr7 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n a.link.svelte-16h229n {
+            text-shadow: 0px 0px 5px black;
             color: white;
             border-color: transparent;
             transition: border-color 0.1s;
             font-size: 0.95rem
         }
 
-        .desktop-nav.svelte-8nrzr7 a.link.svelte-8nrzr7:hover {
+        .desktop-nav.svelte-16h229n nav.svelte-16h229n a.link.svelte-16h229n:hover {
             border-color: initial
         }
 
-        @media(min-width: 900px) {
-            .desktop-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        @media(min-width: 800px) {
+            .desktop-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
                 display: flex
             }
         }
 
-        .mobile-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        .mobile-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -248,21 +254,13 @@
             font-weight: 500
         }
 
-        .mobile-nav.svelte-8nrzr7 .logo.svelte-8nrzr7 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
-            color: white;
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        @media(min-width: 900px) {
-            .mobile-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        @media(min-width: 800px) {
+            .mobile-nav.svelte-16h229n.svelte-16h229n.svelte-16h229n {
                 display: none
             }
         }
 
-        #popup.svelte-8nrzr7.svelte-8nrzr7 {
+        #popup.svelte-16h229n.svelte-16h229n.svelte-16h229n {
             font-size: 1.25rem;
             display: grid;
             gap: 1rem;
@@ -274,20 +272,13 @@
             inset: 0.5rem;
             bottom: initial;
             padding: 2rem;
-            z-index: 1;
-            max-height: calc(100vh - 20px);
-            overflow-y: auto
+            z-index: 1
         }
 
-        #open.svelte-8nrzr7.svelte-8nrzr7 {
-            background-color: #ffffff99
-        }
-
-        #close.svelte-8nrzr7.svelte-8nrzr7 {
-            position: fixed;
-            right: 2rem;
-            top: 1rem;
-            background-color: #ffffff40
+        #popup.svelte-16h229n button#close.svelte-16h229n.svelte-16h229n {
+            position: absolute;
+            right: 1rem;
+            top: 1rem
         }
 
         header.svelte-19bt6nw {
@@ -439,23 +430,22 @@
 
     <div class="section" id="section-237f1a24-19e8-4455-9cdc-c9aec2c48e06">
         <div class="component">
-            <header class="section-container svelte-8nrzr7">
-                <nav class="desktop-nav menu-links svelte-8nrzr7"><a class="link  svelte-8nrzr7" href="/">VBT</a>
+            <header class="section-container svelte-16h229n">
+                <div class="desktop-nav svelte-16h229n">
                     <div style="flex:1;"></div>
-                    <a class="link  svelte-8nrzr7" href="/about-us">About us</a>
-                    <a class="link  svelte-8nrzr7" href="/what-we-do">What we do</a>
-                    <a class="link  svelte-8nrzr7" href="/pricing">Pricing</a>
-                    <a class="link  svelte-8nrzr7" href="/book">Book online</a>
-                    <a class="link  svelte-8nrzr7" href="/testimonials">Testimonials</a>
-                    <a class="link  svelte-8nrzr7" href="/behaviour-resources">Behaviour resources</a>
-                    <a class="link  svelte-8nrzr7" href="/blog">Blog</a>
-                    <a class="link  svelte-8nrzr7" href="/faq">FAQ</a>
-                    <a class="link  svelte-8nrzr7" href="/contact">Contact</a>
-                </nav>
-
-                <div class="mobile-nav svelte-8nrzr7"><a href="/" class="logo svelte-8nrzr7">VBT
-                    </a>
-                    <button id="open" aria-label="Open mobile navigation" class="svelte-8nrzr7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                    <nav class="menu-links svelte-16h229n"><a class="link  svelte-16h229n" href="/about-us">About us</a>
+                        <a class="link  svelte-16h229n" href="/what-we-do">What we do</a>
+                        <a class="link  svelte-16h229n" href="/pricing">Pricing</a>
+                        <a class="link  svelte-16h229n" href="/book">Book online</a>
+                        <a class="link  svelte-16h229n" href="/testimonials">Testimonials</a>
+                        <a class="link  svelte-16h229n" href="/behaviour-resources">Behaviour resources</a>
+                        <a class="link  svelte-16h229n" href="/blog">Blog</a>
+                        <a class="link  svelte-16h229n" href="/faq">FAQ</a>
+                        <a class="link  svelte-16h229n" href="/contact">Contact</a>
+                    </nav>
+                </div>
+                <div class="mobile-nav svelte-16h229n"><a href="/" class="logo svelte-16h229n">Vet Behaviour Team</a>
+                    <button id="open" aria-label="Open mobile navigation"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
                             <g id="iconifySvelte0">
                                 <g id="iconifySvelte1">
                                     <g id="iconifySvelte2" fill="currentColor">
@@ -512,14 +502,13 @@
             <footer class="svelte-u1zmy0">
                 <div class="section-container svelte-u1zmy0">
                     <div class="content svelte-u1zmy0"><!-- HTML_TAG_START -->
-                        <p><em>Working Sydney Wide & Online</em></p>
-                        <p>Vet Behaviour Team <br>
+                        <p>Working Sydney Wide &amp; Online</p>
+                        <p>Vet Behaviour Team
                             0432 881 174</p>
-                        <p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>
-                        <p><a href="https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf" download style="font-weight:bold;font-size:14px;">TERMS AND CONDITIONS</a></p>
-                        <p>
-                            <font size="2">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>
-                        </p><!-- HTML_TAG_END -->
+                        <p>ABN: 34603289176
+                            copyright© Vet Behaviour Team pty ltd 2023</p>
+                        <p>terms and conditions</p>
+                        <p>Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</p><!-- HTML_TAG_END -->
                     </div>
                     <div class="nav-items svelte-u1zmy0"></div>
                 </div>
