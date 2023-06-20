@@ -3,61 +3,23 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-ucmgnd_START -->
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-14ftlfh_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8Q3XW1L1NY');
+    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
     <link rel="preconnect" href="https://fonts.bunny.net">
     <meta name="description" content="Kindness + Science. The best of both worlds">
-    <script src="https://app.greminders.com/widgets/booking.js"></script>
-    <script type="text/javascript">
-        window.onload = function() {
-            const urlObj = new URL(window.location.href);
-            const searchParams = urlObj.searchParams;
-
-            GReminders.BookingWidget.initialize(
-                //create an event type and put the link below: https://app.greminders.com/event-types
-                //or use with Routing Forms: https://app.greminders.com/routing-forms
-                'https://app.greminders.com/c/paulsharratt/test',
-
-                //here are all the options
-                {
-                    // you can trigger this based on a button or some other action
-                    anchorEl: document.getElementById('schedule_button'), //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code 
-
-                    fields: {
-                        first_name: '', // you can prepopulate the fields here if you already have this information
-                        last_name: '',
-                        phone: '',
-                        email: '',
-                        auto_submit: false,
-                        remember_me: true,
-                        utm_source: searchParams.get('utm_source') || '',
-                        utm_medium: searchParams.get('utm_medium') || '',
-                        utm_campaign: searchParams.get('utm_campaign') || '',
-                        utm_content: searchParams.get('utm_content') || '',
-                        utm_term: searchParams.get('utm_term') || ''
-                    },
-                    styles: {
-                        zIndex: 100
-                    }
-                }
-            );
-            GReminders.BookingWidget.onSuccess(function(event_id, form_data) {
-                //we automatically close the widget on successful booking, you can continue your flow here
-                GReminders.BookingWidget.close();
-                alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));
-            });
-            GReminders.BookingWidget.onError(function(message) {
-                //if we encounter a booking error you can trigger a different error or retry
-                GReminders.BookingWidget.close();
-                alert('Error! ' + message);
-            });
-
-            // or trigger the widget using this: 
-            // GReminders.BookingWidget.open();
-        };
-    </script>
     <style>
         /* Reset & standardize default styles */
         @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
@@ -197,7 +159,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-ucmgnd_END -->
+    </style><!-- HEAD_svelte-14ftlfh_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
@@ -502,7 +464,9 @@
             <aside class="section-container svelte-y3tb85">
                 <h2 class="heading svelte-y3tb85">Testimonials</h2>
                 <div class="testimonial svelte-y3tb85">
-                    <div class="card svelte-y3tb85"><span class="quote-icon svelte-y3tb85"></span>
+                    <div class="card svelte-y3tb85"><span class="quote-icon svelte-y3tb85"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="0.88em" height="1em" viewBox="0 0 448 512" class="iconify iconify--fa6-solid"><!-- HTML_TAG_START -->
+                                <path fill="currentColor" d="M448 296c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8h-64c-35.3 0-64-28.7-64-64v-64c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v136zm-256 0c0 66.3-53.7 120-120 120h-8c-17.7 0-32-14.3-32-32s14.3-32 32-32h8c30.9 0 56-25.1 56-56v-8H64c-35.3 0-64-28.7-64-64v-64c0-35.3 28.7-64 64-64h64c35.3 0 64 28.7 64 64v136z" /><!-- HTML_TAG_END -->
+                            </svg></span>
                         <img class="top-image svelte-y3tb85" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg" alt="">
                         <div class="quote svelte-y3tb85" data-key="testimonials[0].quote"><!-- HTML_TAG_START -->
                             <h1 id="thechangesindaisysbehaviourhavebeennothingshortofamiraclesincecontactingvbtweadopteddaisyfromashelterwhenshewasonly3monthsoldwehadnoideathatpuppiescanbebornwithanxietywejustthoughtsheneededmoretrainingherseparationandgeneralisedanxietyweremakingitimpossibletolivewithitwastakingoverourlivesandherswetriedeverytrainingtechniquebuttheyjustwerentworking">The changes in Daisy’s behaviour have been nothing short of a miracle since contacting VBT. We adopted Daisy from a shelter when she was only 3 months old. We had no idea that puppies can be born with anxiety; we just thought she needed more training. Her separation and generalised anxiety were making it impossible to live with. It was taking over our lives and hers! We tried every training technique but they just weren’t working.</h1>
@@ -514,8 +478,12 @@
                             <span class="title svelte-y3tb85" data-key="testimonials[0].title">'Daisy'</span>
                         </div>
                     </div>
-                    <div class="controls svelte-y3tb85"><button disabled aria-label="Show previous item" class="svelte-y3tb85"></button>
-                        <button aria-label="Show next item" class="svelte-y3tb85"></button>
+                    <div class="controls svelte-y3tb85"><button disabled aria-label="Show previous item" class="svelte-y3tb85"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 16 16" class="iconify iconify--charm"><!-- HTML_TAG_START -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.25 3.75L5.75 8l4.5 4.25" /><!-- HTML_TAG_END -->
+                            </svg></button>
+                        <button aria-label="Show next item" class="svelte-y3tb85"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 16 16" class="iconify iconify--charm"><!-- HTML_TAG_START -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 12.25L10.25 8l-4.5-4.25" /><!-- HTML_TAG_END -->
+                            </svg></button>
                     </div>
                 </div>
             </aside>

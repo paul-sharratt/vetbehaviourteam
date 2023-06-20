@@ -3,13 +3,9 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-qp6fln_START -->
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-xyj5mp_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <meta name="description" content="Kindness + Science. The best of both worlds">
-    <script src="https://app.greminders.com/widgets/booking.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -21,54 +17,9 @@
 
         gtag('config', 'G-8Q3XW1L1NY');
     </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            const urlObj = new URL(window.location.href);
-            const searchParams = urlObj.searchParams;
-
-            GReminders.BookingWidget.initialize(
-                //create an event type and put the link below: https://app.greminders.com/event-types
-                //or use with Routing Forms: https://app.greminders.com/routing-forms
-                'https://app.greminders.com/c/paulsharratt/test',
-
-                //here are all the options
-                {
-                    // you can trigger this based on a button or some other action
-                    anchorEl: document.getElementById('schedule_button'), //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code 
-
-                    fields: {
-                        first_name: '', // you can prepopulate the fields here if you already have this information
-                        last_name: '',
-                        phone: '',
-                        email: '',
-                        auto_submit: false,
-                        remember_me: true,
-                        utm_source: searchParams.get('utm_source') || '',
-                        utm_medium: searchParams.get('utm_medium') || '',
-                        utm_campaign: searchParams.get('utm_campaign') || '',
-                        utm_content: searchParams.get('utm_content') || '',
-                        utm_term: searchParams.get('utm_term') || ''
-                    },
-                    styles: {
-                        zIndex: 100
-                    }
-                }
-            );
-            GReminders.BookingWidget.onSuccess(function(event_id, form_data) {
-                //we automatically close the widget on successful booking, you can continue your flow here
-                GReminders.BookingWidget.close();
-                alert('Success! ' + event_id + ' Customer Form Data: ' + JSON.stringify(form_data));
-            });
-            GReminders.BookingWidget.onError(function(message) {
-                //if we encounter a booking error you can trigger a different error or retry
-                GReminders.BookingWidget.close();
-                alert('Error! ' + message);
-            });
-
-            // or trigger the widget using this: 
-            // GReminders.BookingWidget.open();
-        };
-    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <meta name="description" content="Kindness + Science. The best of both worlds">
     <style>
         /* Reset & standardize default styles */
         @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
@@ -208,7 +159,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-qp6fln_END -->
+    </style><!-- HEAD_svelte-xyj5mp_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
