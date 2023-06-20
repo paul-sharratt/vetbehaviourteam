@@ -199,7 +199,7 @@
         }
     </style><!-- HEAD_svelte-ucmgnd_END -->
     <style>
-        .section-container.svelte-8nrzr7.svelte-8nrzr7 {
+        .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
             padding-bottom: 1rem;
             position: fixed;
@@ -208,13 +208,13 @@
             max-width: none !important
         }
 
-        .logo.svelte-8nrzr7.svelte-8nrzr7 {
+        .logo.svelte-3u7in3.svelte-3u7in3 {
             font-size: 1.5rem;
             font-weight: 600;
             line-height: 1.2
         }
 
-        .desktop-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
             display: none;
             align-items: center;
             justify-content: space-between;
@@ -222,7 +222,7 @@
             gap: 2rem
         }
 
-        .desktop-nav.svelte-8nrzr7 a.link.svelte-8nrzr7 {
+        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3 {
             text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
             color: white;
             border-color: transparent;
@@ -230,17 +230,17 @@
             font-size: 0.95rem
         }
 
-        .desktop-nav.svelte-8nrzr7 a.link.svelte-8nrzr7:hover {
+        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3:hover {
             border-color: initial
         }
 
         @media(min-width: 900px) {
-            .desktop-nav.svelte-8nrzr7.svelte-8nrzr7 {
+            .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
                 display: flex
             }
         }
 
-        .mobile-nav.svelte-8nrzr7.svelte-8nrzr7 {
+        .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -248,7 +248,7 @@
             font-weight: 500
         }
 
-        .mobile-nav.svelte-8nrzr7 .logo.svelte-8nrzr7 {
+        .mobile-nav.svelte-3u7in3 .logo.svelte-3u7in3 {
             text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
             color: white;
             border-color: transparent;
@@ -257,12 +257,12 @@
         }
 
         @media(min-width: 900px) {
-            .mobile-nav.svelte-8nrzr7.svelte-8nrzr7 {
+            .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
                 display: none
             }
         }
 
-        #popup.svelte-8nrzr7.svelte-8nrzr7 {
+        #popup.svelte-3u7in3.svelte-3u7in3 {
             font-size: 1.25rem;
             display: grid;
             gap: 1rem;
@@ -274,16 +274,17 @@
             inset: 0.5rem;
             bottom: initial;
             padding: 2rem;
-            z-index: 1;
+            z-index: 10000;
             max-height: calc(100vh - 20px);
             overflow-y: auto
         }
 
-        #open.svelte-8nrzr7.svelte-8nrzr7 {
+        #open.svelte-3u7in3.svelte-3u7in3 {
             background-color: #ffffff99
         }
 
-        #close.svelte-8nrzr7.svelte-8nrzr7 {
+        #close.svelte-3u7in3.svelte-3u7in3 {
+            z-index: 10001;
             position: fixed;
             right: 2rem;
             top: 1rem;
@@ -298,7 +299,7 @@
             --iteration-time: 30s
         }
 
-        @-webkit-keyframes svelte-dte8ql-scroll {
+        @-webkit-keyframes svelte-1h1b9hw-scroll {
             0% {
                 transform: translateX(0)
             }
@@ -308,7 +309,7 @@
             }
         }
 
-        @keyframes svelte-dte8ql-scroll {
+        @keyframes svelte-1h1b9hw-scroll {
             0% {
                 transform: translateX(0)
             }
@@ -318,7 +319,7 @@
             }
         }
 
-        .carousel__wrapper.svelte-dte8ql {
+        .carousel__wrapper.svelte-1h1b9hw {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -327,7 +328,7 @@
             margin: 0 auto
         }
 
-        .carousel.svelte-dte8ql {
+        .carousel.svelte-1h1b9hw {
             overflow: hidden;
             width: 100%;
             height: 400px;
@@ -337,9 +338,10 @@
             align-items: center
         }
 
-        .carousel__slide.svelte-dte8ql {
-            -webkit-animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
-            animation: svelte-dte8ql-scroll var(--iteration-time) linear infinite;
+        .carousel__slide.svelte-1h1b9hw {
+            z-index: 1;
+            -webkit-animation: svelte-1h1b9hw-scroll var(--iteration-time) linear infinite;
+            animation: svelte-1h1b9hw-scroll var(--iteration-time) linear infinite;
             display: flex;
             flex-direction: column;
             flex: 0 0 auto;
@@ -348,7 +350,7 @@
             box-sizing: border-box
         }
 
-        .carousel__image.svelte-dte8ql {
+        .carousel__image.svelte-1h1b9hw {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center center;
@@ -356,7 +358,7 @@
             margin: 15px 20px
         }
 
-        .carousel__text.svelte-dte8ql {
+        .carousel__text.svelte-1h1b9hw {
             background: #00000044;
             text-align: center;
             padding: 5px 10px;
@@ -365,15 +367,15 @@
             align-self: center
         }
 
-        .carousel__slide.svelte-dte8ql {
+        .carousel__slide.svelte-1h1b9hw {
             position: relative
         }
 
-        .carousel.svelte-dte8ql {
+        .carousel.svelte-1h1b9hw {
             counter-reset: slideNo
         }
 
-        header.svelte-dte8ql {
+        header.svelte-1h1b9hw {
             color: white;
             background-size: cover;
             background-position: center center;
@@ -384,7 +386,7 @@
             background-size: 400% 400%
         }
 
-        @-webkit-keyframes svelte-dte8ql-MoveUpDown {
+        @-webkit-keyframes svelte-1h1b9hw-MoveUpDown {
 
             0%,
             100% {
@@ -396,7 +398,7 @@
             }
         }
 
-        @keyframes svelte-dte8ql-MoveUpDown {
+        @keyframes svelte-1h1b9hw-MoveUpDown {
 
             0%,
             100% {
@@ -408,7 +410,7 @@
             }
         }
 
-        @-webkit-keyframes svelte-dte8ql-gradient {
+        @-webkit-keyframes svelte-1h1b9hw-gradient {
             0% {
                 background-position: 0% 50%
             }
@@ -422,7 +424,7 @@
             }
         }
 
-        @keyframes svelte-dte8ql-gradient {
+        @keyframes svelte-1h1b9hw-gradient {
             0% {
                 background-position: 0% 50%
             }
@@ -436,12 +438,12 @@
             }
         }
 
-        .section-container.svelte-dte8ql {
+        .section-container.svelte-1h1b9hw {
             width: 100%;
             padding: 15px
         }
 
-        .section-container-2.svelte-dte8ql {
+        .section-container-2.svelte-1h1b9hw {
             width: 100%;
             padding-top: 1rem;
             padding-bottom: 1rem;
@@ -457,7 +459,7 @@
 
         @media(min-width: 800px) {}
 
-        .headline.svelte-dte8ql {
+        .headline.svelte-1h1b9hw {
             font-size: clamp(1rem, 10vw, 2rem);
             max-width: 800px;
             padding: 2rem;
@@ -465,7 +467,7 @@
             padding-bottom: 0
         }
 
-        .headline.svelte-dte8ql p {
+        .headline.svelte-1h1b9hw p {
             margin-bottom: 20px
         }
 
@@ -712,23 +714,23 @@
 
     <div class="section" id="section-2cdbbc37-3e97-4241-920e-919c13440e08">
         <div class="component">
-            <header class="section-container svelte-8nrzr7">
-                <nav class="desktop-nav menu-links svelte-8nrzr7"><a class="link  svelte-8nrzr7" href="/">VBT</a>
+            <header class="section-container svelte-3u7in3">
+                <nav class="desktop-nav menu-links svelte-3u7in3"><a class="link  svelte-3u7in3" href="/">VBT</a>
                     <div style="flex:1;"></div>
-                    <a class="link  svelte-8nrzr7" href="/about-us">About us</a>
-                    <a class="link  svelte-8nrzr7" href="/what-we-do">What we do</a>
-                    <a class="link  svelte-8nrzr7" href="/pricing">Pricing</a>
-                    <a class="link  svelte-8nrzr7" href="/book">Book online</a>
-                    <a class="link  svelte-8nrzr7" href="/testimonials">Testimonials</a>
-                    <a class="link  svelte-8nrzr7" href="/behaviour-resources">Behaviour resources</a>
-                    <a class="link  svelte-8nrzr7" href="/blog">Blog</a>
-                    <a class="link  svelte-8nrzr7" href="/faq">FAQ</a>
-                    <a class="link  svelte-8nrzr7" href="/contact">Contact</a>
+                    <a class="link  svelte-3u7in3" href="/about-us">About us</a>
+                    <a class="link  svelte-3u7in3" href="/what-we-do">What we do</a>
+                    <a class="link  svelte-3u7in3" href="/pricing">Pricing</a>
+                    <a class="link  svelte-3u7in3" href="/book">Book online</a>
+                    <a class="link  svelte-3u7in3" href="/testimonials">Testimonials</a>
+                    <a class="link  svelte-3u7in3" href="/behaviour-resources">Behaviour resources</a>
+                    <a class="link  svelte-3u7in3" href="/blog">Blog</a>
+                    <a class="link  svelte-3u7in3" href="/faq">FAQ</a>
+                    <a class="link  svelte-3u7in3" href="/contact">Contact</a>
                 </nav>
 
-                <div class="mobile-nav svelte-8nrzr7"><a href="/" class="logo svelte-8nrzr7">VBT
+                <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
                     </a>
-                    <button id="open" aria-label="Open mobile navigation" class="svelte-8nrzr7"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
+                    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
                             <g id="iconifySvelte0">
                                 <g id="iconifySvelte1">
                                     <g id="iconifySvelte2" fill="currentColor">
@@ -745,93 +747,93 @@
     </div>
     <div class="section" id="section-5c93ef43-77d0-4086-9036-e0a347c3c623">
         <div class="component">
-            <header aria-label="" class="svelte-dte8ql">
-                <div class="section-container svelte-dte8ql"></div>
-                <section class="carousel svelte-dte8ql">
+            <header aria-label="" class="svelte-1h1b9hw">
+                <div class="section-container svelte-1h1b9hw"></div>
+                <section class="carousel svelte-1h1b9hw">
                     <div style="height:100%;" class="container-fluid px-0">
                         <div style="height:100%;" class="row">
                             <div style="height:100%;" class="col-12">
-                                <div style="height:100%;" class="carousel__wrapper svelte-dte8ql">
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Lip Licking</div>
+                                <div style="height:100%;" class="carousel__wrapper svelte-1h1b9hw">
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Lip Licking</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Paw Lift</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Paw Lift</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hypervigilant</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hypervigilant</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Bare Teeth</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Bare Teeth</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Barking</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Barking</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Destructive</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Destructive</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hiding</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hiding</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Jumping and Mouthing</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Jumping and Mouthing</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hyperactive</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hyperactive</div>
                                     </div>
 
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Lip Licking</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566991905sm_lip_licking.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Lip Licking</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Paw Lift</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686567010143sm_paw_lift.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Paw Lift</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hypervigilant</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566957729sm_hypervigilent.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hypervigilant</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Bare Teeth</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566941056sm_bare_teeth.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Bare Teeth</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Barking</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566919521sm_barking.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Barking</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Destructive</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566904773sm_destructive.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Destructive</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hiding</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566887155sm_hiding.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hiding</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Jumping and Mouthing</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566869813sm_jumping_mouthing.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Jumping and Mouthing</div>
                                     </div>
-                                    <div class="carousel__slide svelte-dte8ql">
-                                        <div class="carousel__image svelte-dte8ql" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
-                                        <div class="carousel__text svelte-dte8ql">Hyperactive</div>
+                                    <div class="carousel__slide svelte-1h1b9hw">
+                                        <div class="carousel__image svelte-1h1b9hw" style="background-image: url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686566814183sm_hyperactive.png');"></div>
+                                        <div class="carousel__text svelte-1h1b9hw">Hyperactive</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                <div class="section-container-2 svelte-dte8ql">
-                    <h1 class="headline svelte-dte8ql"><!-- HTML_TAG_START -->
+                <div class="section-container-2 svelte-1h1b9hw">
+                    <h1 class="headline svelte-1h1b9hw"><!-- HTML_TAG_START -->
                         <p>Our Behaviour Resources</p><!-- HTML_TAG_END -->
                     </h1>
                 </div>

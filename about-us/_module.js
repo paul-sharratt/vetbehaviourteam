@@ -3152,9 +3152,9 @@ function create_if_block$1(ctx) {
 			attr(a8, "href", "/contact");
 			attr(button, "aria-label", "Close Navigation");
 			attr(div, "id", "close");
-			attr(div, "class", "svelte-8nrzr7");
+			attr(div, "class", "svelte-3u7in3");
 			attr(nav, "id", "popup");
-			attr(nav, "class", "svelte-8nrzr7");
+			attr(nav, "class", "svelte-3u7in3");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3415,35 +3415,35 @@ function create_fragment$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a0, "class", "link  svelte-8nrzr7");
+			attr(a0, "class", "link  svelte-3u7in3");
 			attr(a0, "href", "/");
 			set_style(div0, "flex", "1");
-			attr(a1, "class", "link  svelte-8nrzr7");
+			attr(a1, "class", "link  svelte-3u7in3");
 			attr(a1, "href", "/about-us");
-			attr(a2, "class", "link  svelte-8nrzr7");
+			attr(a2, "class", "link  svelte-3u7in3");
 			attr(a2, "href", "/what-we-do");
-			attr(a3, "class", "link  svelte-8nrzr7");
+			attr(a3, "class", "link  svelte-3u7in3");
 			attr(a3, "href", "/pricing");
-			attr(a4, "class", "link  svelte-8nrzr7");
+			attr(a4, "class", "link  svelte-3u7in3");
 			attr(a4, "href", "/book");
-			attr(a5, "class", "link  svelte-8nrzr7");
+			attr(a5, "class", "link  svelte-3u7in3");
 			attr(a5, "href", "/testimonials");
-			attr(a6, "class", "link  svelte-8nrzr7");
+			attr(a6, "class", "link  svelte-3u7in3");
 			attr(a6, "href", "/behaviour-resources");
-			attr(a7, "class", "link  svelte-8nrzr7");
+			attr(a7, "class", "link  svelte-3u7in3");
 			attr(a7, "href", "/blog");
-			attr(a8, "class", "link  svelte-8nrzr7");
+			attr(a8, "class", "link  svelte-3u7in3");
 			attr(a8, "href", "/faq");
-			attr(a9, "class", "link  svelte-8nrzr7");
+			attr(a9, "class", "link  svelte-3u7in3");
 			attr(a9, "href", "/contact");
-			attr(nav, "class", "desktop-nav menu-links svelte-8nrzr7");
+			attr(nav, "class", "desktop-nav menu-links svelte-3u7in3");
 			attr(a10, "href", "/");
-			attr(a10, "class", "logo svelte-8nrzr7");
+			attr(a10, "class", "logo svelte-3u7in3");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Open mobile navigation");
-			attr(button, "class", "svelte-8nrzr7");
-			attr(div1, "class", "mobile-nav svelte-8nrzr7");
-			attr(header, "class", "section-container svelte-8nrzr7");
+			attr(button, "class", "svelte-3u7in3");
+			attr(div1, "class", "mobile-nav svelte-3u7in3");
+			attr(header, "class", "section-container svelte-3u7in3");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
 			attr(div3, "id", "section-f2017979-f28c-45b3-ba7b-e9886e545603");
