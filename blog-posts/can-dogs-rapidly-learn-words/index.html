@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-txlvn2_START -->
+    <title>Vet Behaviour Team</title><!-- HEAD_svelte-1v9zlgt_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -23,6 +23,33 @@
             window.vbt_utm_campaign = searchParams2.get('utm_campaign') || '',
             window.vbt_utm_content = searchParams2.get('utm_content') || '',
             window.vbt_utm_term = searchParams2.get('utm_term') || ''
+    </script>
+    <script type="text/javascript">
+        adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
+        adroll_pix_id = "2JHXU5OCDRGIDAB44D3WKO";
+        adroll_version = "2.0";
+
+        (function(w, d, e, o, a) {
+            w.__adroll_loaded = true;
+            w.adroll = w.adroll || [];
+            w.adroll.f = ['setProperties', 'identify', 'track'];
+            var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id +
+                "/roundtrip.js";
+            for (a = 0; a < w.adroll.f.length; a++) {
+                w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
+                    return function() {
+                        w.adroll.push([n, arguments])
+                    }
+                })(w.adroll.f[a])
+            }
+
+            e = d.createElement('script');
+            o = d.getElementsByTagName('script')[0];
+            e.async = 1;
+            e.src = roundtripUrl;
+            o.parentNode.insertBefore(e, o);
+        })(window, document);
+        adroll.track("pageView");
     </script>
     <link rel="icon" type="image/png" sizes="32x32" href="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png">
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -215,7 +242,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-txlvn2_END -->
+    </style><!-- HEAD_svelte-1v9zlgt_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
