@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-92n0u9_START -->
+    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-18bee7d_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -74,7 +74,6 @@
                     });
 
                 } catch (err) {}
-                document.body.classList.remove("modal-open");
 
             });
             GReminders.BookingWidget.onError(function(message) {
@@ -86,12 +85,10 @@
                     });
                     gtag('event', 'book_fail');
                 } catch (err) {}
-                document.body.classList.remove("modal-open");
             });
 
             // or trigger the widget using this: 
             GReminders.BookingWidget.open();
-            document.body.classList.add("modal-open");
             try {
                 __adroll.record_user({
                     "adroll_segments": "9c97232c"
@@ -255,13 +252,7 @@
             top: 0;
             left: 0;
         }
-
-        body.modal-open {
-            height: 100vh;
-            overflow-y: hidden;
-            position: fixed;
-        }
-    </style><!-- HEAD_svelte-92n0u9_END -->
+    </style><!-- HEAD_svelte-18bee7d_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
