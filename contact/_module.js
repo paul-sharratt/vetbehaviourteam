@@ -3768,7 +3768,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (152:6) {#each social as { label, link }}
+// (156:6) {#each social as { label, link }}
 function create_each_block_1(ctx) {
 	let div;
 	let span;
@@ -3837,7 +3837,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (169:6) {:else}
+// (173:6) {:else}
 function create_else_block$1(ctx) {
 	let label;
 	let span;
@@ -3913,7 +3913,7 @@ function create_else_block$1(ctx) {
 	};
 }
 
-// (164:6) {#if input.type === "textarea"}
+// (168:6) {#if input.type === "textarea"}
 function create_if_block_2(ctx) {
 	let label;
 	let span;
@@ -3983,7 +3983,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (163:4) {#each inputs as input, i}
+// (167:4) {#each inputs as input, i}
 function create_each_block(ctx) {
 	let if_block_anchor;
 
@@ -4028,7 +4028,7 @@ function create_each_block(ctx) {
 	};
 }
 
-// (178:2) {#if showSuccess}
+// (182:2) {#if showSuccess}
 function create_if_block_1$1(ctx) {
 	let div;
 	let t;
@@ -4059,7 +4059,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (181:2) {#if showFail}
+// (185:2) {#if showFail}
 function create_if_block$2(ctx) {
 	let div;
 	let t;
@@ -4371,6 +4371,8 @@ function instance$4($$self, $$props, $$invalidate) {
 		const formData = new FormData(e.target);
 
 		const data = new URLSearchParams();
+		var email = '';
+		var name = '';
 
 		for (let field of formData) {
 			const [key, value] = field;
@@ -4378,9 +4380,11 @@ function instance$4($$self, $$props, $$invalidate) {
 
 			switch (key) {
 				case 'Name':
+					name = value;
 					data.append('name', value);
 					break;
 				case 'Email':
+					email = value;
 					data.append('email', value);
 					break;
 				case 'Mobile number':
@@ -4408,13 +4412,8 @@ function instance$4($$self, $$props, $$invalidate) {
 		}
 
 		try {
-			console.log("submitting event", formData, formData['Email']);
-
-			window.dataLayer.push({
-				'event': 'contact_submit',
-				'email': formData['Email'],
-				'name': formData['Name']
-			});
+			console.log("submitting event", email, name);
+			gtag('event', 'contact_submit', { email, name });
 		} catch(e) {
 			console.error(e);
 		}
