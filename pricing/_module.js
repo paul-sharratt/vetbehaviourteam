@@ -1013,8 +1013,11 @@ function create_fragment(ctx) {
 	let link0;
 	let link0_href_value;
 	let link1;
+	let title_value;
+	let meta2;
 	let style;
 	let t1;
+	document.title = title_value = /*title*/ ctx[1];
 
 	return {
 		c() {
@@ -1025,12 +1028,13 @@ function create_fragment(ctx) {
 			t0 = text("window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-8Q3XW1L1NY');\n  var urlObj2 = new URL(window.location.href);\n  var searchParams2 = urlObj2.searchParams;\n  window.vbt_utm_source = searchParams2.get('utm_source') || '',     \n  window.vbt_utm_medium= searchParams2.get('utm_medium') || '',     \n  window.vbt_utm_campaign= searchParams2.get('utm_campaign') || '', \n  window.vbt_utm_content = searchParams2.get('utm_content') || '',   \n  window.vbt_utm_term = searchParams2.get('utm_term') || '' \n\n \n\n");
 			link0 = element("link");
 			link1 = element("link");
+			meta2 = element("meta");
 			style = element("style");
 			t1 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-pubuz9', document.head);
+			const head_nodes = head_selector('svelte-z7mkz4', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
@@ -1049,6 +1053,7 @@ function create_fragment(ctx) {
 			});
 
 			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
+			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
 			t1 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
@@ -1068,6 +1073,8 @@ function create_fragment(ctx) {
 			attr(link0, "href", link0_href_value = /*favicon*/ ctx[0].url);
 			attr(link1, "rel", "preconnect");
 			attr(link1, "href", "https://fonts.bunny.net");
+			attr(meta2, "name", "description");
+			attr(meta2, "content", /*description*/ ctx[2]);
 		},
 		m(target, anchor) {
 			append_hydration(document.head, meta0);
@@ -1077,12 +1084,21 @@ function create_fragment(ctx) {
 			append_hydration(script1, t0);
 			append_hydration(document.head, link0);
 			append_hydration(document.head, link1);
+			append_hydration(document.head, meta2);
 			append_hydration(document.head, style);
 			append_hydration(style, t1);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link0_href_value !== (link0_href_value = /*favicon*/ ctx[0].url)) {
 				attr(link0, "href", link0_href_value);
+			}
+
+			if (dirty & /*title*/ 2 && title_value !== (title_value = /*title*/ ctx[1])) {
+				document.title = title_value;
+			}
+
+			if (dirty & /*description*/ 4) {
+				attr(meta2, "content", /*description*/ ctx[2]);
 			}
 		},
 		i: noop,
@@ -1094,6 +1110,7 @@ function create_fragment(ctx) {
 			detach(script1);
 			detach(link0);
 			detach(link1);
+			detach(meta2);
 			detach(style);
 		}
 	};
@@ -1101,18 +1118,22 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('description' in $$props) $$invalidate(2, description = $$props.description);
 	};
 
-	return [favicon];
+	return [favicon, title, description];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0 });
+		init(this, options, instance, create_fragment, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
@@ -3170,7 +3191,7 @@ function create_if_block$1(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler_1*/ ctx[5]);
+				dispose = listen(button, "click", /*click_handler_1*/ ctx[7]);
 				mounted = true;
 			}
 		},
@@ -3475,7 +3496,7 @@ function create_fragment$2(ctx) {
 			current = true;
 
 			if (!mounted) {
-				dispose = listen(button, "click", /*click_handler*/ ctx[4]);
+				dispose = listen(button, "click", /*click_handler*/ ctx[6]);
 				mounted = true;
 			}
 		},
@@ -3526,6 +3547,8 @@ function create_fragment$2(ctx) {
 
 function instance$2($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 	let { logo } = $$props;
 	let { site_nav } = $$props;
 	let mobileNavOpen = false;
@@ -3535,17 +3558,35 @@ function instance$2($$self, $$props, $$invalidate) {
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
-		if ('logo' in $$props) $$invalidate(2, logo = $$props.logo);
-		if ('site_nav' in $$props) $$invalidate(3, site_nav = $$props.site_nav);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(3, description = $$props.description);
+		if ('logo' in $$props) $$invalidate(4, logo = $$props.logo);
+		if ('site_nav' in $$props) $$invalidate(5, site_nav = $$props.site_nav);
 	};
 
-	return [mobileNavOpen, favicon, logo, site_nav, click_handler, click_handler_1];
+	return [
+		mobileNavOpen,
+		favicon,
+		title,
+		description,
+		logo,
+		site_nav,
+		click_handler,
+		click_handler_1
+	];
 }
 
 class Component$2 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$2, create_fragment$2, safe_not_equal, { favicon: 1, logo: 2, site_nav: 3 });
+
+		init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+			favicon: 1,
+			title: 2,
+			description: 3,
+			logo: 4,
+			site_nav: 5
+		});
 	}
 }
 
@@ -3647,6 +3688,8 @@ function create_fragment$3(ctx) {
 
 function instance$3($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 	let { background } = $$props;
 	let { headline } = $$props;
 	let { logo } = $$props;
@@ -3654,13 +3697,15 @@ function instance$3($$self, $$props, $$invalidate) {
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+		if ('description' in $$props) $$invalidate(4, description = $$props.description);
 		if ('background' in $$props) $$invalidate(0, background = $$props.background);
 		if ('headline' in $$props) $$invalidate(1, headline = $$props.headline);
-		if ('logo' in $$props) $$invalidate(3, logo = $$props.logo);
-		if ('site_nav' in $$props) $$invalidate(4, site_nav = $$props.site_nav);
+		if ('logo' in $$props) $$invalidate(5, logo = $$props.logo);
+		if ('site_nav' in $$props) $$invalidate(6, site_nav = $$props.site_nav);
 	};
 
-	return [background, headline, favicon, logo, site_nav];
+	return [background, headline, favicon, title, description, logo, site_nav];
 }
 
 class Component$3 extends SvelteComponent {
@@ -3669,10 +3714,12 @@ class Component$3 extends SvelteComponent {
 
 		init(this, options, instance$3, create_fragment$3, safe_not_equal, {
 			favicon: 2,
+			title: 3,
+			description: 4,
 			background: 0,
 			headline: 1,
-			logo: 3,
-			site_nav: 4
+			logo: 5,
+			site_nav: 6
 		});
 	}
 }
@@ -3681,31 +3728,31 @@ class Component$3 extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[4] = list[i];
-	child_ctx[6] = i;
+	child_ctx[6] = list[i];
+	child_ctx[8] = i;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].item;
-	child_ctx[8] = list[i].icon;
-	child_ctx[10] = i;
+	child_ctx[9] = list[i].item;
+	child_ctx[10] = list[i].icon;
+	child_ctx[12] = i;
 	return child_ctx;
 }
 
-// (109:10) {#each tier.features as { item, icon }
+// (111:10) {#each tier.features as { item, icon }
 function create_each_block_1(ctx) {
 	let li;
 	let span0;
 	let icon;
 	let t0;
 	let span1;
-	let t1_value = /*item*/ ctx[7] + "";
+	let t1_value = /*item*/ ctx[9] + "";
 	let t1;
 	let t2;
 	let current;
-	icon = new Component$1({ props: { icon: /*icon*/ ctx[8] } });
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[10] } });
 
 	return {
 		c() {
@@ -3750,9 +3797,9 @@ function create_each_block_1(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*tiers*/ 4) icon_changes.icon = /*icon*/ ctx[8];
+			if (dirty & /*tiers*/ 4) icon_changes.icon = /*icon*/ ctx[10];
 			icon.$set(icon_changes);
-			if ((!current || dirty & /*tiers*/ 4) && t1_value !== (t1_value = /*item*/ ctx[7] + "")) set_data(t1, t1_value);
+			if ((!current || dirty & /*tiers*/ 4) && t1_value !== (t1_value = /*item*/ ctx[9] + "")) set_data(t1, t1_value);
 		},
 		i(local) {
 			if (current) return;
@@ -3770,10 +3817,10 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (118:8) {#if tier.link.label}
+// (120:8) {#if tier.link.label}
 function create_if_block$2(ctx) {
 	let a;
-	let t_value = /*tier*/ ctx[4].link.label + "";
+	let t_value = /*tier*/ ctx[6].link.label + "";
 	let t;
 	let a_href_value;
 
@@ -3791,7 +3838,7 @@ function create_if_block$2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*tier*/ ctx[4].link.url);
+			attr(a, "href", a_href_value = /*tier*/ ctx[6].link.url);
 			attr(a, "class", "button svelte-2w0b9m");
 		},
 		m(target, anchor) {
@@ -3799,9 +3846,9 @@ function create_if_block$2(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*tiers*/ 4 && t_value !== (t_value = /*tier*/ ctx[4].link.label + "")) set_data(t, t_value);
+			if (dirty & /*tiers*/ 4 && t_value !== (t_value = /*tier*/ ctx[6].link.label + "")) set_data(t, t_value);
 
-			if (dirty & /*tiers*/ 4 && a_href_value !== (a_href_value = /*tier*/ ctx[4].link.url)) {
+			if (dirty & /*tiers*/ 4 && a_href_value !== (a_href_value = /*tier*/ ctx[6].link.url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -3811,25 +3858,25 @@ function create_if_block$2(ctx) {
 	};
 }
 
-// (97:4) {#each tiers as tier, tier_index}
+// (99:4) {#each tiers as tier, tier_index}
 function create_each_block(ctx) {
 	let div1;
 	let header;
 	let h3;
-	let t0_value = /*tier*/ ctx[4].title + "";
+	let t0_value = /*tier*/ ctx[6].title + "";
 	let t0;
 	let t1;
 	let div0;
 	let span0;
-	let t2_value = /*tier*/ ctx[4].price.numerator + "";
+	let t2_value = /*tier*/ ctx[6].price.numerator + "";
 	let t2;
 	let t3;
 	let span1;
-	let t4_value = /*tier*/ ctx[4].price.denominator + "";
+	let t4_value = /*tier*/ ctx[6].price.denominator + "";
 	let t4;
 	let t5;
 	let span2;
-	let raw_value = /*tier*/ ctx[4].description.html + "";
+	let raw_value = /*tier*/ ctx[6].description.html + "";
 	let t6;
 	let hr;
 	let t7;
@@ -3837,7 +3884,7 @@ function create_each_block(ctx) {
 	let t8;
 	let t9;
 	let current;
-	let each_value_1 = /*tier*/ ctx[4].features;
+	let each_value_1 = /*tier*/ ctx[6].features;
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -3848,7 +3895,7 @@ function create_each_block(ctx) {
 		each_blocks[i] = null;
 	});
 
-	let if_block = /*tier*/ ctx[4].link.label && create_if_block$2(ctx);
+	let if_block = /*tier*/ ctx[6].link.label && create_if_block$2(ctx);
 
 	return {
 		c() {
@@ -3966,12 +4013,12 @@ function create_each_block(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if ((!current || dirty & /*tiers*/ 4) && t0_value !== (t0_value = /*tier*/ ctx[4].title + "")) set_data(t0, t0_value);
-			if ((!current || dirty & /*tiers*/ 4) && t2_value !== (t2_value = /*tier*/ ctx[4].price.numerator + "")) set_data(t2, t2_value);
-			if ((!current || dirty & /*tiers*/ 4) && t4_value !== (t4_value = /*tier*/ ctx[4].price.denominator + "")) set_data(t4, t4_value);
-			if ((!current || dirty & /*tiers*/ 4) && raw_value !== (raw_value = /*tier*/ ctx[4].description.html + "")) span2.innerHTML = raw_value;
+			if ((!current || dirty & /*tiers*/ 4) && t0_value !== (t0_value = /*tier*/ ctx[6].title + "")) set_data(t0, t0_value);
+			if ((!current || dirty & /*tiers*/ 4) && t2_value !== (t2_value = /*tier*/ ctx[6].price.numerator + "")) set_data(t2, t2_value);
+			if ((!current || dirty & /*tiers*/ 4) && t4_value !== (t4_value = /*tier*/ ctx[6].price.denominator + "")) set_data(t4, t4_value);
+			if ((!current || dirty & /*tiers*/ 4) && raw_value !== (raw_value = /*tier*/ ctx[6].description.html + "")) span2.innerHTML = raw_value;
 			if (dirty & /*tiers*/ 4) {
-				each_value_1 = /*tier*/ ctx[4].features;
+				each_value_1 = /*tier*/ ctx[6].features;
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -3997,7 +4044,7 @@ function create_each_block(ctx) {
 				check_outros();
 			}
 
-			if (/*tier*/ ctx[4].link.label) {
+			if (/*tier*/ ctx[6].link.label) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 				} else {
@@ -4195,18 +4242,22 @@ function create_fragment$4(ctx) {
 
 function instance$4($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 	let { heading } = $$props;
 	let { subheading } = $$props;
 	let { tiers } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('description' in $$props) $$invalidate(5, description = $$props.description);
 		if ('heading' in $$props) $$invalidate(0, heading = $$props.heading);
 		if ('subheading' in $$props) $$invalidate(1, subheading = $$props.subheading);
 		if ('tiers' in $$props) $$invalidate(2, tiers = $$props.tiers);
 	};
 
-	return [heading, subheading, tiers, favicon];
+	return [heading, subheading, tiers, favicon, title, description];
 }
 
 class Component$4 extends SvelteComponent {
@@ -4215,6 +4266,8 @@ class Component$4 extends SvelteComponent {
 
 		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
 			favicon: 3,
+			title: 4,
+			description: 5,
 			heading: 0,
 			subheading: 1,
 			tiers: 2
@@ -4226,22 +4279,22 @@ class Component$4 extends SvelteComponent {
 
 function get_each_context$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i].title;
-	child_ctx[4] = list[i].links;
+	child_ctx[2] = list[i].title;
+	child_ctx[5] = list[i].links;
 	return child_ctx;
 }
 
 function get_each_context_1$1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[7] = list[i].link;
+	child_ctx[8] = list[i].link;
 	return child_ctx;
 }
 
-// (64:12) {#each links as { link }}
+// (66:12) {#each links as { link }}
 function create_each_block_1$1(ctx) {
 	let li;
 	let a;
-	let t0_value = /*link*/ ctx[7].label + "";
+	let t0_value = /*link*/ ctx[8].label + "";
 	let t0;
 	let a_href_value;
 	let t1;
@@ -4267,7 +4320,7 @@ function create_each_block_1$1(ctx) {
 		},
 		h() {
 			attr(a, "class", "link svelte-u1zmy0");
-			attr(a, "href", a_href_value = /*link*/ ctx[7].url);
+			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -4276,9 +4329,9 @@ function create_each_block_1$1(ctx) {
 			append_hydration(li, t1);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*link*/ ctx[7].label + "")) set_data(t0, t0_value);
+			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*link*/ ctx[8].label + "")) set_data(t0, t0_value);
 
-			if (dirty & /*menus*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[7].url)) {
+			if (dirty & /*menus*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -4288,16 +4341,16 @@ function create_each_block_1$1(ctx) {
 	};
 }
 
-// (60:6) {#each menus as { title, links }}
+// (62:6) {#each menus as { title, links }}
 function create_each_block$1(ctx) {
 	let nav;
 	let h3;
-	let t0_value = /*title*/ ctx[3] + "";
+	let t0_value = /*title*/ ctx[2] + "";
 	let t0;
 	let t1;
 	let ul;
 	let t2;
-	let each_value_1 = /*links*/ ctx[4];
+	let each_value_1 = /*links*/ ctx[5];
 	let each_blocks = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -4359,10 +4412,10 @@ function create_each_block$1(ctx) {
 			append_hydration(nav, t2);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*title*/ ctx[3] + "")) set_data(t0, t0_value);
+			if (dirty & /*menus*/ 2 && t0_value !== (t0_value = /*title*/ ctx[2] + "")) set_data(t0, t0_value);
 
 			if (dirty & /*menus*/ 2) {
-				each_value_1 = /*links*/ ctx[4];
+				each_value_1 = /*links*/ ctx[5];
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -4511,22 +4564,33 @@ function create_fragment$5(ctx) {
 
 function instance$5($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 	let { content } = $$props;
 	let { menus } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
+		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(4, description = $$props.description);
 		if ('content' in $$props) $$invalidate(0, content = $$props.content);
 		if ('menus' in $$props) $$invalidate(1, menus = $$props.menus);
 	};
 
-	return [content, menus, favicon];
+	return [content, menus, title, favicon, description];
 }
 
 class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$5, create_fragment$5, safe_not_equal, { favicon: 2, content: 0, menus: 1 });
+
+		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
+			favicon: 3,
+			title: 2,
+			description: 4,
+			content: 0,
+			menus: 1
+		});
 	}
 }
 
@@ -4534,18 +4598,22 @@ class Component$5 extends SvelteComponent {
 
 function instance$6($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(1, title = $$props.title);
+		if ('description' in $$props) $$invalidate(2, description = $$props.description);
 	};
 
-	return [favicon];
+	return [favicon, title, description];
 }
 
 class Component$6 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$6, null, safe_not_equal, { favicon: 0 });
+		init(this, options, instance$6, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
@@ -4572,7 +4640,9 @@ function create_fragment$6(ctx) {
 					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
-				}
+				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation."
 			}
 		});
 
@@ -4584,6 +4654,8 @@ function create_fragment$6(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				logo: {
 					"image": {
 						"alt": "",
@@ -4620,6 +4692,8 @@ function create_fragment$6(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				background: {
 					"alt": "",
 					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686749422842pexels-countrykcom-1195975wide.jpg",
@@ -4687,6 +4761,8 @@ function create_fragment$6(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				heading: "Pricing",
 				subheading: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				tiers: [
@@ -4748,6 +4824,8 @@ function create_fragment$6(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
 				content: {
 					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
 					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
@@ -4763,7 +4841,9 @@ function create_fragment$6(ctx) {
 					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
-				}
+				},
+				title: "Pricing",
+				description: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation."
 			}
 		});
 
