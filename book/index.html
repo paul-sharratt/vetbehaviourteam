@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-uv065z_START -->
+    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-3gkuqh_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -30,7 +30,7 @@
     <script src="https://app.greminders.com/widgets/booking.js"></script>
     <script type="text/javascript">
         window.onload = function() {
-
+            console.log("Version 122");
             GReminders.BookingWidget.initialize(
                 //create an event type and put the link below: https://app.greminders.com/event-types
                 //or use with Routing Forms: https://app.greminders.com/routing-forms
@@ -61,30 +61,19 @@
             );
             GReminders.BookingWidget.onSuccess(function(event_id, form_data) {
                 //we automatically close the widget on successful booking, you can continue your flow here
-                GReminders.BookingWidget.close();
                 try {
-                    document.getElementById("close-button").classList.remove("show")
-
-                    console.log('form_data', form_data)
                     __adroll.record_user({
                         "adroll_segments": "71dc0721"
                     });
-                    window.dataLayer.push({
-                        'event': 'book_success',
-
-                    });
-                    gtag('event', 'book_success', {
-                        'email': form_data['email']
-                    });
-
+                    gtag('event', 'book_success');
+                    console.log('form_data', form_data);
                 } catch (err) {}
 
             });
             GReminders.BookingWidget.onError(function(message) {
-                document.getElementById("close-button").classList.remove("show")
 
                 //if we encounter a booking error you can trigger a different error or retry
-                GReminders.BookingWidget.close();
+                alert("There was an issue, your booking was not successful.");
                 try {
                     __adroll.record_user({
                         "adroll_segments": "1cd638ae"
@@ -286,7 +275,7 @@
             overflow: scroll;
             border-radius: 4px;
         }
-    </style><!-- HEAD_svelte-uv065z_END -->
+    </style><!-- HEAD_svelte-3gkuqh_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
