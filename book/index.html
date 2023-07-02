@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-dhmh92_START -->
+    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-lsgswv_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -61,6 +61,8 @@
                 //we automatically close the widget on successful booking, you can continue your flow here
                 GReminders.BookingWidget.close();
                 try {
+                    document.getElementById("close-button").classList.remove("show")
+
                     console.log('form_data', form_data)
                     __adroll.record_user({
                         "adroll_segments": "71dc0721"
@@ -77,6 +79,8 @@
 
             });
             GReminders.BookingWidget.onError(function(message) {
+                document.getElementById("close-button").classList.remove("show")
+
                 //if we encounter a booking error you can trigger a different error or retry
                 GReminders.BookingWidget.close();
                 try {
@@ -90,8 +94,12 @@
             // or trigger the widget using this: 
             setTimeout(() => {
                 GReminders.BookingWidget.open();
-            }, 1000)
+                document.getElementById("close-button").classList.add("show")
 
+            }, 1000)
+            setTimeout(() => {
+                document.getElementById("close-button").classList.add("show")
+            }, 2000)
             try {
                 __adroll.record_user({
                     "adroll_segments": "9c97232c"
@@ -241,21 +249,15 @@
         }
 
         .greminders__booking-widget-overlay {
-            width: 100vw;
-            height: 100vh;
+            width: calc(100vw - 0px);
+            height: calc(100vh - 0px);
             position: fixed;
             top: 0;
-            left: 0;
+            right: 0;
         }
 
-        .greminders__booking-widget-iframe {
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-    </style><!-- HEAD_svelte-dhmh92_END -->
+        .greminders__booking-widget-iframe {}
+    </style><!-- HEAD_svelte-lsgswv_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
@@ -534,7 +536,7 @@
     </div>
     <div class="section" id="section-fb010646-c1b0-434d-b200-79565669f448">
         <div class="component">
-            <div class="buttons" style="margin: 10px 0;width:100%;display:flex;justify-content:center;"><button class="button">BOOK NOW</button>
+            <div class="buttons" style="margin: 10px 0;width:100%;display:flex;justify-content:center;"><button class="button" id="schedule_button">BOOK NOW</button>
             </div>
         </div>
     </div>
