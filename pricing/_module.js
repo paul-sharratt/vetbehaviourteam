@@ -4569,9 +4569,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				}
 			}
 		});
@@ -4580,9 +4580,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				logo: {
 					"image": {
@@ -4616,9 +4616,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				background: {
 					"alt": "",
@@ -4683,9 +4683,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				heading: "Pricing",
 				subheading: "Experience comprehensive and personalised care for your pet. Our commitment to your pet's well-being and mental health goes beyond a single consultation.",
@@ -4744,9 +4744,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				content: {
 					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
@@ -4760,9 +4760,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				}
 			}
 		});

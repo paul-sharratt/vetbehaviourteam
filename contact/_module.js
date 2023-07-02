@@ -3768,7 +3768,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (151:6) {#each social as { label, link }}
+// (152:6) {#each social as { label, link }}
 function create_each_block_1(ctx) {
 	let div;
 	let span;
@@ -3837,7 +3837,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (168:6) {:else}
+// (169:6) {:else}
 function create_else_block$1(ctx) {
 	let label;
 	let span;
@@ -3913,7 +3913,7 @@ function create_else_block$1(ctx) {
 	};
 }
 
-// (163:6) {#if input.type === "textarea"}
+// (164:6) {#if input.type === "textarea"}
 function create_if_block_2(ctx) {
 	let label;
 	let span;
@@ -3983,7 +3983,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (162:4) {#each inputs as input, i}
+// (163:4) {#each inputs as input, i}
 function create_each_block(ctx) {
 	let if_block_anchor;
 
@@ -4028,7 +4028,7 @@ function create_each_block(ctx) {
 	};
 }
 
-// (177:2) {#if showSuccess}
+// (178:2) {#if showSuccess}
 function create_if_block_1$1(ctx) {
 	let div;
 	let t;
@@ -4059,7 +4059,7 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (180:2) {#if showFail}
+// (181:2) {#if showFail}
 function create_if_block$2(ctx) {
 	let div;
 	let t;
@@ -4408,6 +4408,8 @@ function instance$4($$self, $$props, $$invalidate) {
 		}
 
 		try {
+			console.log("submitting event", formData, formData['Email']);
+
 			window.dataLayer.push({
 				'event': 'contact_submit',
 				'email': formData['Email'],
@@ -4820,9 +4822,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct"
@@ -4833,9 +4835,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct",
@@ -4871,9 +4873,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct",
@@ -4938,9 +4940,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct",
@@ -4985,9 +4987,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct",
@@ -5003,9 +5005,9 @@ function create_fragment$6(ctx) {
 			props: {
 				favicon: {
 					"alt": "",
-					"src": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"url": "https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/prisaka/assets/logoipsum-277.svg",
-					"size": 3
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
 				},
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct"
