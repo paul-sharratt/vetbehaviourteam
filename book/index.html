@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-1vz0gc4_START -->
+    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-92n0u9_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -61,15 +61,20 @@
                 //we automatically close the widget on successful booking, you can continue your flow here
                 GReminders.BookingWidget.close();
                 try {
-                    console.log('form_data'.form_data)
+                    console.log('form_data', form_data)
                     __adroll.record_user({
                         "adroll_segments": "71dc0721"
                     });
                     window.dataLayer.push({
                         'event': 'book_success',
+
+                    });
+                    gtag('event', 'book_success', {
                         'email': form_data['email']
                     });
+
                 } catch (err) {}
+                document.body.classList.remove("modal-open");
 
             });
             GReminders.BookingWidget.onError(function(message) {
@@ -79,18 +84,19 @@
                     __adroll.record_user({
                         "adroll_segments": "1cd638ae"
                     });
+                    gtag('event', 'book_fail');
                 } catch (err) {}
-                window.dataLayer.push({
-                    'event': 'book_fail',
-                });
+                document.body.classList.remove("modal-open");
             });
 
             // or trigger the widget using this: 
             GReminders.BookingWidget.open();
+            document.body.classList.add("modal-open");
             try {
                 __adroll.record_user({
                     "adroll_segments": "9c97232c"
                 });
+                gtag('event', 'book_open');
             } catch (err) {}
         };
     </script>
@@ -249,7 +255,13 @@
             top: 0;
             left: 0;
         }
-    </style><!-- HEAD_svelte-1vz0gc4_END -->
+
+        body.modal-open {
+            height: 100vh;
+            overflow-y: hidden;
+            position: fixed;
+        }
+    </style><!-- HEAD_svelte-92n0u9_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
