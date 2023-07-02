@@ -3829,7 +3829,7 @@ function create_each_block_1(ctx) {
 }
 
 // (173:6) {:else}
-function create_else_block$1(ctx) {
+function create_else_block_1(ctx) {
 	let label;
 	let span;
 	let t0_value = /*input*/ ctx[10].label + "";
@@ -3980,7 +3980,7 @@ function create_each_block(ctx) {
 
 	function select_block_type(ctx, dirty) {
 		if (/*input*/ ctx[10].type === "textarea") return create_if_block_2;
-		return create_else_block$1;
+		return create_else_block_1;
 	}
 
 	let current_block_type = select_block_type(ctx);
@@ -4019,8 +4019,8 @@ function create_each_block(ctx) {
 	};
 }
 
-// (182:2) {#if showSuccess}
-function create_if_block_1$1(ctx) {
+// (182:4) {:else}
+function create_else_block$1(ctx) {
 	let div;
 	let t;
 
@@ -4050,7 +4050,39 @@ function create_if_block_1$1(ctx) {
 	};
 }
 
-// (185:2) {#if showFail}
+// (180:4) {#if !showSuccess}
+function create_if_block_1$1(ctx) {
+	let button;
+	let t;
+
+	return {
+		c() {
+			button = element("button");
+			t = text("Submit");
+			this.h();
+		},
+		l(nodes) {
+			button = claim_element(nodes, "BUTTON", { class: true, type: true });
+			var button_nodes = children(button);
+			t = claim_text(button_nodes, "Submit");
+			button_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(button, "class", "button svelte-1twigpw");
+			attr(button, "type", "submit");
+		},
+		m(target, anchor) {
+			insert_hydration(target, button, anchor);
+			append_hydration(button, t);
+		},
+		d(detaching) {
+			if (detaching) detach(button);
+		}
+	};
+}
+
+// (185:4) {#if showFail}
 function create_if_block$2(ctx) {
 	let div;
 	let t;
@@ -4096,10 +4128,7 @@ function create_fragment$4(ctx) {
 	let t3;
 	let form;
 	let t4;
-	let button;
 	let t5;
-	let t6;
-	let t7;
 	let mounted;
 	let dispose;
 	let each_value_1 = /*social*/ ctx[2];
@@ -4116,7 +4145,13 @@ function create_fragment$4(ctx) {
 		each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
 	}
 
-	let if_block0 = /*showSuccess*/ ctx[4] && create_if_block_1$1();
+	function select_block_type_1(ctx, dirty) {
+		if (!/*showSuccess*/ ctx[4]) return create_if_block_1$1;
+		return create_else_block$1;
+	}
+
+	let current_block_type = select_block_type_1(ctx);
+	let if_block0 = current_block_type(ctx);
 	let if_block1 = /*showFail*/ ctx[5] && create_if_block$2();
 
 	return {
@@ -4144,11 +4179,8 @@ function create_fragment$4(ctx) {
 			}
 
 			t4 = space();
-			button = element("button");
-			t5 = text("Submit");
-			t6 = space();
-			if (if_block0) if_block0.c();
-			t7 = space();
+			if_block0.c();
+			t5 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
@@ -4188,15 +4220,10 @@ function create_fragment$4(ctx) {
 			}
 
 			t4 = claim_space(form_nodes);
-			button = claim_element(form_nodes, "BUTTON", { class: true, type: true });
-			var button_nodes = children(button);
-			t5 = claim_text(button_nodes, "Submit");
-			button_nodes.forEach(detach);
+			if_block0.l(form_nodes);
+			t5 = claim_space(form_nodes);
+			if (if_block1) if_block1.l(form_nodes);
 			form_nodes.forEach(detach);
-			t6 = claim_space(section_nodes);
-			if (if_block0) if_block0.l(section_nodes);
-			t7 = claim_space(section_nodes);
-			if (if_block1) if_block1.l(section_nodes);
 			section_nodes.forEach(detach);
 			div3_nodes.forEach(detach);
 			div4_nodes.forEach(detach);
@@ -4207,8 +4234,6 @@ function create_fragment$4(ctx) {
 			attr(div0, "class", "description");
 			attr(div1, "class", "social-links svelte-1twigpw");
 			attr(div2, "class", "body svelte-1twigpw");
-			attr(button, "class", "button svelte-1twigpw");
-			attr(button, "type", "submit");
 			attr(form, "method", "POST");
 			attr(form, "action", "https://us-central1-tour-nament.cloudfunctions.net/sendMail");
 			attr(form, "class", "svelte-1twigpw");
@@ -4246,12 +4271,9 @@ function create_fragment$4(ctx) {
 			}
 
 			append_hydration(form, t4);
-			append_hydration(form, button);
-			append_hydration(button, t5);
-			append_hydration(section, t6);
-			if (if_block0) if_block0.m(section, null);
-			append_hydration(section, t7);
-			if (if_block1) if_block1.m(section, null);
+			if_block0.m(form, null);
+			append_hydration(form, t5);
+			if (if_block1) if_block1.m(form, null);
 
 			if (!mounted) {
 				dispose = listen(form, "submit", prevent_default(/*handleSubmit*/ ctx[6]));
@@ -4307,22 +4329,21 @@ function create_fragment$4(ctx) {
 				each_blocks.length = each_value.length;
 			}
 
-			if (/*showSuccess*/ ctx[4]) {
-				if (if_block0) ; else {
-					if_block0 = create_if_block_1$1();
-					if_block0.c();
-					if_block0.m(section, t7);
-				}
-			} else if (if_block0) {
+			if (current_block_type !== (current_block_type = select_block_type_1(ctx))) {
 				if_block0.d(1);
-				if_block0 = null;
+				if_block0 = current_block_type(ctx);
+
+				if (if_block0) {
+					if_block0.c();
+					if_block0.m(form, t5);
+				}
 			}
 
 			if (/*showFail*/ ctx[5]) {
 				if (if_block1) ; else {
 					if_block1 = create_if_block$2();
 					if_block1.c();
-					if_block1.m(section, null);
+					if_block1.m(form, null);
 				}
 			} else if (if_block1) {
 				if_block1.d(1);
@@ -4335,7 +4356,7 @@ function create_fragment$4(ctx) {
 			if (detaching) detach(div4);
 			destroy_each(each_blocks_1, detaching);
 			destroy_each(each_blocks, detaching);
-			if (if_block0) if_block0.d();
+			if_block0.d();
 			if (if_block1) if_block1.d();
 			mounted = false;
 			dispose();
