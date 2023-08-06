@@ -4911,6 +4911,20 @@ function create_fragment$7(ctx) {
 							"markdown": "The Vet Behaviour Team have been treating my 18 month old Kelpie x Cattle dog boys: Joker and Thief for a few months now and the difference in their behavior is amazing! Both pups were raised in shelters so they were extremely fearfully aggressive towards people and other dogs. \n \nSince treatment began, both boys have become less scared of people and other dogs, settle more quickly if they do get excited and respond better to training and cues. Their treatment requires my husband and I to be consistent with their calming exercises and the boys now enjoy their relaxation time so much that they lie down at my feet and get sleepy.\n \nBoth Heather and Amanda are caring, diligent and friendly. They are always available, are always checking up on you and your pet and making sure the treatment plan is working and manageable. I look forward to working with them to get my boys happy and healthy."
 						},
 						"title": "'Joker' and 'Thief'"
+					},
+					{
+						"name": "Atikah",
+						"image": {
+							"alt": "",
+							"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg",
+							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg",
+							"size": 411
+						},
+						"quote": {
+							"html": "<p>Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way. </p>",
+							"markdown": "Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way. "
+						},
+						"title": "'Akio'"
 					}
 				]
 			}
