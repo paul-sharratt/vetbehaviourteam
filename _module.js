@@ -1019,13 +1019,15 @@ function create_fragment(ctx) {
 	let t0;
 	let script2;
 	let t1;
+	let script3;
+	let t2;
 	let link0;
 	let link0_href_value;
 	let link1;
 	let title_value;
 	let meta2;
 	let style;
-	let t2;
+	let t3;
 	document.title = title_value = /*title*/ ctx[1];
 
 	return {
@@ -1036,16 +1038,18 @@ function create_fragment(ctx) {
 			script1 = element("script");
 			t0 = text("window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-8Q3XW1L1NY');\n  var urlObj2 = new URL(window.location.href);\n  var searchParams2 = urlObj2.searchParams;\n  window.vbt_utm_source = searchParams2.get('utm_source') || '',     \n  window.vbt_utm_medium= searchParams2.get('utm_medium') || '',     \n  window.vbt_utm_campaign= searchParams2.get('utm_campaign') || '', \n  window.vbt_utm_content = searchParams2.get('utm_content') || '',   \n  window.vbt_utm_term = searchParams2.get('utm_term') || '' \n\n \n\n");
 			script2 = element("script");
-			t1 = text("adroll_adv_id = \"PDMI3WJZQVHGZCV3SMFR2J\";\n    adroll_pix_id = \"2JHXU5OCDRGIDAB44D3WKO\";\n    adroll_version = \"2.0\";\n\n    (function(w, d, e, o, a) {\n        w.__adroll_loaded = true;\n        w.adroll = w.adroll || [];\n        w.adroll.f = [ 'setProperties', 'identify', 'track' ];\n        var roundtripUrl = \"https://s.adroll.com/j/\" + adroll_adv_id\n                + \"/roundtrip.js\";\n        for (a = 0; a < w.adroll.f.length; a++) {\n            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {\n                return function() {\n                    w.adroll.push([ n, arguments ])\n                }\n            })(w.adroll.f[a])\n        }\n\n        e = d.createElement('script');\n        o = d.getElementsByTagName('script')[0];\n        e.async = 1;\n        e.src = roundtripUrl;\n        o.parentNode.insertBefore(e, o);\n    })(window, document);\n    adroll.track(\"pageView\");\n");
+			t1 = text("!function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n  n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];\n  s.parentNode.insertBefore(t,s)}(window, document,'script',\n  'https://connect.facebook.net/en_US/fbevents.js');\n  fbq('init', '346939557913046');\n  fbq('track', 'PageView');\n");
+			script3 = element("script");
+			t2 = text("adroll_adv_id = \"PDMI3WJZQVHGZCV3SMFR2J\";\n    adroll_pix_id = \"2JHXU5OCDRGIDAB44D3WKO\";\n    adroll_version = \"2.0\";\n\n    (function(w, d, e, o, a) {\n        w.__adroll_loaded = true;\n        w.adroll = w.adroll || [];\n        w.adroll.f = [ 'setProperties', 'identify', 'track' ];\n        var roundtripUrl = \"https://s.adroll.com/j/\" + adroll_adv_id\n                + \"/roundtrip.js\";\n        for (a = 0; a < w.adroll.f.length; a++) {\n            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {\n                return function() {\n                    w.adroll.push([ n, arguments ])\n                }\n            })(w.adroll.f[a])\n        }\n\n        e = d.createElement('script');\n        o = d.getElementsByTagName('script')[0];\n        e.async = 1;\n        e.src = roundtripUrl;\n        o.parentNode.insertBefore(e, o);\n    })(window, document);\n    adroll.track(\"pageView\");\n");
 			link0 = element("link");
 			link1 = element("link");
 			meta2 = element("meta");
 			style = element("style");
-			t2 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t3 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-b8r7eb', document.head);
+			const head_nodes = head_selector('svelte-1y9pbzc', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
@@ -1055,10 +1059,14 @@ function create_fragment(ctx) {
 			var script1_nodes = children(script1);
 			t0 = claim_text(script1_nodes, "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'G-8Q3XW1L1NY');\n  var urlObj2 = new URL(window.location.href);\n  var searchParams2 = urlObj2.searchParams;\n  window.vbt_utm_source = searchParams2.get('utm_source') || '',     \n  window.vbt_utm_medium= searchParams2.get('utm_medium') || '',     \n  window.vbt_utm_campaign= searchParams2.get('utm_campaign') || '', \n  window.vbt_utm_content = searchParams2.get('utm_content') || '',   \n  window.vbt_utm_term = searchParams2.get('utm_term') || '' \n\n \n\n");
 			script1_nodes.forEach(detach);
-			script2 = claim_element(head_nodes, "SCRIPT", { type: true });
+			script2 = claim_element(head_nodes, "SCRIPT", {});
 			var script2_nodes = children(script2);
-			t1 = claim_text(script2_nodes, "adroll_adv_id = \"PDMI3WJZQVHGZCV3SMFR2J\";\n    adroll_pix_id = \"2JHXU5OCDRGIDAB44D3WKO\";\n    adroll_version = \"2.0\";\n\n    (function(w, d, e, o, a) {\n        w.__adroll_loaded = true;\n        w.adroll = w.adroll || [];\n        w.adroll.f = [ 'setProperties', 'identify', 'track' ];\n        var roundtripUrl = \"https://s.adroll.com/j/\" + adroll_adv_id\n                + \"/roundtrip.js\";\n        for (a = 0; a < w.adroll.f.length; a++) {\n            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {\n                return function() {\n                    w.adroll.push([ n, arguments ])\n                }\n            })(w.adroll.f[a])\n        }\n\n        e = d.createElement('script');\n        o = d.getElementsByTagName('script')[0];\n        e.async = 1;\n        e.src = roundtripUrl;\n        o.parentNode.insertBefore(e, o);\n    })(window, document);\n    adroll.track(\"pageView\");\n");
+			t1 = claim_text(script2_nodes, "!function(f,b,e,v,n,t,s)\n  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?\n  n.callMethod.apply(n,arguments):n.queue.push(arguments)};\n  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\n  n.queue=[];t=b.createElement(e);t.async=!0;\n  t.src=v;s=b.getElementsByTagName(e)[0];\n  s.parentNode.insertBefore(t,s)}(window, document,'script',\n  'https://connect.facebook.net/en_US/fbevents.js');\n  fbq('init', '346939557913046');\n  fbq('track', 'PageView');\n");
 			script2_nodes.forEach(detach);
+			script3 = claim_element(head_nodes, "SCRIPT", { type: true });
+			var script3_nodes = children(script3);
+			t2 = claim_text(script3_nodes, "adroll_adv_id = \"PDMI3WJZQVHGZCV3SMFR2J\";\n    adroll_pix_id = \"2JHXU5OCDRGIDAB44D3WKO\";\n    adroll_version = \"2.0\";\n\n    (function(w, d, e, o, a) {\n        w.__adroll_loaded = true;\n        w.adroll = w.adroll || [];\n        w.adroll.f = [ 'setProperties', 'identify', 'track' ];\n        var roundtripUrl = \"https://s.adroll.com/j/\" + adroll_adv_id\n                + \"/roundtrip.js\";\n        for (a = 0; a < w.adroll.f.length; a++) {\n            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {\n                return function() {\n                    w.adroll.push([ n, arguments ])\n                }\n            })(w.adroll.f[a])\n        }\n\n        e = d.createElement('script');\n        o = d.getElementsByTagName('script')[0];\n        e.async = 1;\n        e.src = roundtripUrl;\n        o.parentNode.insertBefore(e, o);\n    })(window, document);\n    adroll.track(\"pageView\");\n");
+			script3_nodes.forEach(detach);
 
 			link0 = claim_element(head_nodes, "LINK", {
 				rel: true,
@@ -1071,7 +1079,7 @@ function create_fragment(ctx) {
 			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t2 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
+			t3 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1082,7 +1090,7 @@ function create_fragment(ctx) {
 			attr(meta1, "charset", "UTF-8");
 			script0.async = true;
 			if (!src_url_equal(script0.src, script0_src_value = "https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY")) attr(script0, "src", script0_src_value);
-			attr(script2, "type", "text/javascript");
+			attr(script3, "type", "text/javascript");
 			attr(link0, "rel", "icon");
 			attr(link0, "type", "image/png");
 			attr(link0, "sizes", "32x32");
@@ -1100,11 +1108,13 @@ function create_fragment(ctx) {
 			append_hydration(script1, t0);
 			append_hydration(document.head, script2);
 			append_hydration(script2, t1);
+			append_hydration(document.head, script3);
+			append_hydration(script3, t2);
 			append_hydration(document.head, link0);
 			append_hydration(document.head, link1);
 			append_hydration(document.head, meta2);
 			append_hydration(document.head, style);
-			append_hydration(style, t2);
+			append_hydration(style, t3);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link0_href_value !== (link0_href_value = /*favicon*/ ctx[0].url)) {
@@ -1127,6 +1137,7 @@ function create_fragment(ctx) {
 			detach(script0);
 			detach(script1);
 			detach(script2);
+			detach(script3);
 			detach(link0);
 			detach(link1);
 			detach(meta2);
@@ -4753,7 +4764,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (156:6) {#each social as { label, link }}
+// (163:6) {#each social as { label, link }}
 function create_each_block_1(ctx) {
 	let div;
 	let span;
@@ -4822,7 +4833,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (173:6) {:else}
+// (186:6) {:else}
 function create_else_block_1(ctx) {
 	let label;
 	let span;
@@ -4898,7 +4909,7 @@ function create_else_block_1(ctx) {
 	};
 }
 
-// (168:6) {#if input.type === "textarea"}
+// (181:6) {#if input.type === "textarea"}
 function create_if_block_2(ctx) {
 	let label;
 	let span;
@@ -4968,7 +4979,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (167:4) {#each inputs as input, i}
+// (180:4) {#each inputs as input, i}
 function create_each_block$3(ctx) {
 	let if_block_anchor;
 
@@ -5013,7 +5024,7 @@ function create_each_block$3(ctx) {
 	};
 }
 
-// (182:4) {:else}
+// (195:4) {:else}
 function create_else_block$1(ctx) {
 	let div;
 	let t;
@@ -5044,7 +5055,7 @@ function create_else_block$1(ctx) {
 	};
 }
 
-// (180:4) {#if !showSuccess}
+// (193:4) {#if !showSuccess}
 function create_if_block_1$3(ctx) {
 	let button;
 	let t;
@@ -5076,7 +5087,7 @@ function create_if_block_1$3(ctx) {
 	};
 }
 
-// (185:4) {#if showFail}
+// (198:4) {#if showFail}
 function create_if_block$5(ctx) {
 	let div;
 	let t;
@@ -5121,8 +5132,14 @@ function create_fragment$8(ctx) {
 	let div1;
 	let t3;
 	let form;
+	let label;
+	let span;
 	let t4;
 	let t5;
+	let input;
+	let t6;
+	let t7;
+	let t8;
 	let mounted;
 	let dispose;
 	let each_value_1 = /*social*/ ctx[2];
@@ -5167,14 +5184,20 @@ function create_fragment$8(ctx) {
 
 			t3 = space();
 			form = element("form");
+			label = element("label");
+			span = element("span");
+			t4 = text("Invalid");
+			t5 = space();
+			input = element("input");
+			t6 = space();
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].c();
 			}
 
-			t4 = space();
+			t7 = space();
 			if_block0.c();
-			t5 = space();
+			t8 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
@@ -5208,14 +5231,31 @@ function create_fragment$8(ctx) {
 			t3 = claim_space(section_nodes);
 			form = claim_element(section_nodes, "FORM", { method: true, action: true, class: true });
 			var form_nodes = children(form);
+			label = claim_element(form_nodes, "LABEL", { style: true, class: true });
+			var label_nodes = children(label);
+			span = claim_element(label_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t4 = claim_text(span_nodes, "Invalid");
+			span_nodes.forEach(detach);
+			t5 = claim_space(label_nodes);
+
+			input = claim_element(label_nodes, "INPUT", {
+				name: true,
+				type: true,
+				placeholder: true,
+				class: true
+			});
+
+			label_nodes.forEach(detach);
+			t6 = claim_space(form_nodes);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				each_blocks[i].l(form_nodes);
 			}
 
-			t4 = claim_space(form_nodes);
+			t7 = claim_space(form_nodes);
 			if_block0.l(form_nodes);
-			t5 = claim_space(form_nodes);
+			t8 = claim_space(form_nodes);
 			if (if_block1) if_block1.l(form_nodes);
 			form_nodes.forEach(detach);
 			section_nodes.forEach(detach);
@@ -5228,6 +5268,15 @@ function create_fragment$8(ctx) {
 			attr(div0, "class", "description");
 			attr(div1, "class", "social-links svelte-1twigpw");
 			attr(div2, "class", "body svelte-1twigpw");
+			attr(span, "class", "svelte-1twigpw");
+			attr(input, "name", "important");
+			attr(input, "type", "text");
+			attr(input, "placeholder", "Invalid");
+			attr(input, "class", "svelte-1twigpw");
+			set_style(label, "position", "absolute");
+			set_style(label, "pointer-events", "none");
+			set_style(label, "opacity", "0");
+			attr(label, "class", "svelte-1twigpw");
 			attr(form, "method", "POST");
 			attr(form, "action", "https://us-central1-tour-nament.cloudfunctions.net/sendMail");
 			attr(form, "class", "svelte-1twigpw");
@@ -5257,6 +5306,12 @@ function create_fragment$8(ctx) {
 
 			append_hydration(section, t3);
 			append_hydration(section, form);
+			append_hydration(form, label);
+			append_hydration(label, span);
+			append_hydration(span, t4);
+			append_hydration(label, t5);
+			append_hydration(label, input);
+			append_hydration(form, t6);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
 				if (each_blocks[i]) {
@@ -5264,9 +5319,9 @@ function create_fragment$8(ctx) {
 				}
 			}
 
-			append_hydration(form, t4);
+			append_hydration(form, t7);
 			if_block0.m(form, null);
-			append_hydration(form, t5);
+			append_hydration(form, t8);
 			if (if_block1) if_block1.m(form, null);
 
 			if (!mounted) {
@@ -5312,7 +5367,7 @@ function create_fragment$8(ctx) {
 					} else {
 						each_blocks[i] = create_each_block$3(child_ctx);
 						each_blocks[i].c();
-						each_blocks[i].m(form, t4);
+						each_blocks[i].m(form, t7);
 					}
 				}
 
@@ -5329,7 +5384,7 @@ function create_fragment$8(ctx) {
 
 				if (if_block0) {
 					if_block0.c();
-					if_block0.m(form, t5);
+					if_block0.m(form, t8);
 				}
 			}
 
@@ -5379,12 +5434,16 @@ function instance$8($$self, $$props, $$invalidate) {
 		const data = new URLSearchParams();
 		var email = '';
 		var name = '';
+		var block = false;
 
 		for (let field of formData) {
 			const [key, value] = field;
 			console.log(key, value);
 
 			switch (key) {
+				case 'important':
+					if (value) block = true;
+					break;
 				case 'Name':
 					name = value;
 					data.append('name', value);
@@ -5402,6 +5461,8 @@ function instance$8($$self, $$props, $$invalidate) {
 			}
 		}
 
+		if (block) return;
+
 		// check the form's method and send the fetch accordingly
 		if (e.target.method.toLowerCase() == 'get') fetch(`${ACTION_URL}?${data}`); else {
 			fetch(ACTION_URL, { method: 'POST', body: data }).then(() => {
@@ -5409,6 +5470,12 @@ function instance$8($$self, $$props, $$invalidate) {
 			}).catch(() => {
 				$$invalidate(5, showFail = true);
 			});
+		}
+
+		try {
+			fbq('track', 'Contact');
+		} catch(e) {
+			
 		}
 
 		try {

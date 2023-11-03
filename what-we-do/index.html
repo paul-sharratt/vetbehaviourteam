@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - What We Do</title><!-- HEAD_svelte-6wd487_START -->
+    <title>Vet Behaviour Team - What We Do</title><!-- HEAD_svelte-1jqhbng_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -23,6 +23,28 @@
             window.vbt_utm_campaign = searchParams2.get('utm_campaign') || '',
             window.vbt_utm_content = searchParams2.get('utm_content') || '',
             window.vbt_utm_term = searchParams2.get('utm_term') || ''
+    </script>
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '346939557913046');
+        fbq('track', 'PageView');
     </script>
     <script type="text/javascript">
         adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
@@ -193,7 +215,7 @@
             margin-bottom: 1.5rem;
             border-left: 5px solid var(--color-accent);
         }
-    </style><!-- HEAD_svelte-6wd487_END -->
+    </style><!-- HEAD_svelte-1jqhbng_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
