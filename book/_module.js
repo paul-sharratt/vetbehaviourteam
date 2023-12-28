@@ -1043,13 +1043,13 @@ function create_fragment(ctx) {
 			meta2 = element("meta");
 			script4 = element("script");
 			script5 = element("script");
-			t3 = text("window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
+			t3 = text("window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n      try {\n        fbq('track', 'Purchase');\n      } catch(e) {}\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
 			style = element("style");
 			t4 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }\n.greminders__booking-widget-overlay {\n    width: 100vw;\n    height: 100vh;\n    background: #00000066;\n    position: fixed;\n    top: 0;\n    right: 0;\n}\n.greminders__booking-widget-iframe {\n    width: calc(100vw - 20px);\n    max-width: 500px;\n    height: calc(100vh - 20px);\n    max-height: 750px;\n} \n.greminders__booking-widget-popup {\n    width: calc(100vw - 0px);\n    height: calc(100vh - 0px);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.greminders__booking-widget-close {\n    top: 0;\n    right: 40px;\n    position: fixed;\n    font-size: 80px;\n    color: white;\n  cursor: pointer;\n}\n.greminders__booking-widget-overlay .greminders__booking-widget-popup .greminders__booking-widget-iframe {\n    border: none;\n    width: 100%;\n    height: 100%;\n    overflow: scroll;\n    border-radius: 4px;\n}");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-14mcsdm', document.head);
+			const head_nodes = head_selector('svelte-17nsln3', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
@@ -1082,7 +1082,7 @@ function create_fragment(ctx) {
 			script4_nodes.forEach(detach);
 			script5 = claim_element(head_nodes, "SCRIPT", { type: true });
 			var script5_nodes = children(script5);
-			t3 = claim_text(script5_nodes, "window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
+			t3 = claim_text(script5_nodes, "window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n      try {\n        fbq('track', 'Purchase');\n      } catch(e) {}\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
 			script5_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
@@ -1517,6 +1517,34 @@ function calculateSize(size, ratio, precision) {
     isNumber = !isNumber;
   }
 }
+function splitSVGDefs(content, tag = "defs") {
+  let defs = "";
+  const index = content.indexOf("<" + tag);
+  while (index >= 0) {
+    const start = content.indexOf(">", index);
+    const end = content.indexOf("</" + tag);
+    if (start === -1 || end === -1) {
+      break;
+    }
+    const endEnd = content.indexOf(">", end);
+    if (endEnd === -1) {
+      break;
+    }
+    defs += content.slice(start + 1, end).trim();
+    content = content.slice(0, index).trim() + content.slice(endEnd + 1);
+  }
+  return {
+    defs,
+    content
+  };
+}
+function mergeDefsAndContent(defs, content) {
+  return defs ? "<defs>" + defs + "</defs>" + content : content;
+}
+function wrapSVGContent(body, start, end) {
+  const split = splitSVGDefs(body);
+  return mergeDefsAndContent(split.defs, start + split.content + end);
+}
 const isUnsetKeyword = (value) => value === "unset" || value === "undefined" || value === "none";
 function iconToSVG(icon, customisations) {
   const fullIcon = {
@@ -1583,7 +1611,7 @@ function iconToSVG(icon, customisations) {
       }
     }
     if (transformations.length) {
-      body = '<g transform="' + transformations.join(" ") + '">' + body + "</g>";
+      body = wrapSVGContent(body, '<g transform="' + transformations.join(" ") + '">', "</g>");
     }
   });
   const customisationsWidth = fullCustomisations.width;
@@ -1607,9 +1635,11 @@ function iconToSVG(icon, customisations) {
   };
   setAttr("width", width);
   setAttr("height", height);
-  attributes.viewBox = box.left.toString() + " " + box.top.toString() + " " + boxWidth.toString() + " " + boxHeight.toString();
+  const viewBox = [box.left, box.top, boxWidth, boxHeight];
+  attributes.viewBox = viewBox.join(" ");
   return {
     attributes,
+    viewBox,
     body
   };
 }
@@ -2208,6 +2238,7 @@ const browserCacheCountKey = browserCachePrefix + "-count";
 const browserCacheVersionKey = browserCachePrefix + "-version";
 const browserStorageHour = 36e5;
 const browserStorageCacheExpiration = 168;
+const browserStorageLimit = 50;
 function getStoredItem(func, key) {
   try {
     return func.getItem(key);
@@ -2352,7 +2383,7 @@ function storeInBrowserStorage(storage2, data) {
       set.delete(index = Array.from(set).shift());
     } else {
       index = getBrowserStorageItemsCount(func);
-      if (!setBrowserStorageItemsCount(func, index + 1)) {
+      if (index >= browserStorageLimit || !setBrowserStorageItemsCount(func, index + 1)) {
         return;
       }
     }
@@ -2845,7 +2876,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (113:1) {:else}
+// (115:1) {:else}
 function create_else_block(ctx) {
 	let span;
 	let span_levels = [/*data*/ ctx[0].attributes];
@@ -2880,7 +2911,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (109:1) {#if data.svg}
+// (111:1) {#if data.svg}
 function create_if_block_1(ctx) {
 	let svg;
 	let raw_value = /*data*/ ctx[0].body + "";

@@ -1496,6 +1496,34 @@ function calculateSize(size, ratio, precision) {
     isNumber = !isNumber;
   }
 }
+function splitSVGDefs(content, tag = "defs") {
+  let defs = "";
+  const index = content.indexOf("<" + tag);
+  while (index >= 0) {
+    const start = content.indexOf(">", index);
+    const end = content.indexOf("</" + tag);
+    if (start === -1 || end === -1) {
+      break;
+    }
+    const endEnd = content.indexOf(">", end);
+    if (endEnd === -1) {
+      break;
+    }
+    defs += content.slice(start + 1, end).trim();
+    content = content.slice(0, index).trim() + content.slice(endEnd + 1);
+  }
+  return {
+    defs,
+    content
+  };
+}
+function mergeDefsAndContent(defs, content) {
+  return defs ? "<defs>" + defs + "</defs>" + content : content;
+}
+function wrapSVGContent(body, start, end) {
+  const split = splitSVGDefs(body);
+  return mergeDefsAndContent(split.defs, start + split.content + end);
+}
 const isUnsetKeyword = (value) => value === "unset" || value === "undefined" || value === "none";
 function iconToSVG(icon, customisations) {
   const fullIcon = {
@@ -1562,7 +1590,7 @@ function iconToSVG(icon, customisations) {
       }
     }
     if (transformations.length) {
-      body = '<g transform="' + transformations.join(" ") + '">' + body + "</g>";
+      body = wrapSVGContent(body, '<g transform="' + transformations.join(" ") + '">', "</g>");
     }
   });
   const customisationsWidth = fullCustomisations.width;
@@ -1586,9 +1614,11 @@ function iconToSVG(icon, customisations) {
   };
   setAttr("width", width);
   setAttr("height", height);
-  attributes.viewBox = box.left.toString() + " " + box.top.toString() + " " + boxWidth.toString() + " " + boxHeight.toString();
+  const viewBox = [box.left, box.top, boxWidth, boxHeight];
+  attributes.viewBox = viewBox.join(" ");
   return {
     attributes,
+    viewBox,
     body
   };
 }
@@ -2187,6 +2217,7 @@ const browserCacheCountKey = browserCachePrefix + "-count";
 const browserCacheVersionKey = browserCachePrefix + "-version";
 const browserStorageHour = 36e5;
 const browserStorageCacheExpiration = 168;
+const browserStorageLimit = 50;
 function getStoredItem(func, key) {
   try {
     return func.getItem(key);
@@ -2331,7 +2362,7 @@ function storeInBrowserStorage(storage2, data) {
       set.delete(index = Array.from(set).shift());
     } else {
       index = getBrowserStorageItemsCount(func);
-      if (!setBrowserStorageItemsCount(func, index + 1)) {
+      if (index >= browserStorageLimit || !setBrowserStorageItemsCount(func, index + 1)) {
         return;
       }
     }
@@ -2824,7 +2855,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (113:1) {:else}
+// (115:1) {:else}
 function create_else_block(ctx) {
 	let span;
 	let span_levels = [/*data*/ ctx[0].attributes];
@@ -2859,7 +2890,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (109:1) {#if data.svg}
+// (111:1) {#if data.svg}
 function create_if_block_1(ctx) {
 	let svg;
 	let raw_value = /*data*/ ctx[0].body + "";
@@ -4409,8 +4440,8 @@ function create_fragment$7(ctx) {
 				title: "Vet Behaviour Team - Blog",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p><a href=\"/blog-posts/debunking-medication-for-your-pet\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Debunking Medication For Your Pet</div>\n<div style=\"text-align:center;\">6th August 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div>\n<div style=\"text-align:center;\">19th June 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div>\n<div style=\"text-align:center;\">28th May 2023</div>\n<p></a></p>",
-					"markdown": "\n<a href=\"/blog-posts/debunking-medication-for-your-pet\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Debunking Medication For Your Pet</div><div style=\"text-align:center;\">6th August 2023</div></a>\n\n<a href=\"/blog-posts/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div><div style=\"text-align:center;\">19th June 2023</div></a>\n\n<a href=\"/blog-posts/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div><div style=\"text-align:center;\">28th May 2023</div></a>"
+					"html": "<p><a href=\"/blog-posts/co-operative-care\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/vet%20visit.jpg1703755500223\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Co-operative care</div>\n<div style=\"text-align:center;\">23rd December 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/separation-anxiety\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/cat%20door.png1703755684437\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Separation anxiety</div>\n<div style=\"text-align:center;\">20th October 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/dominance-theory\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >'Dominance' Theory</div>\n<div style=\"text-align:center;\">30th August 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/debunking-medication-for-your-pet\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Debunking Medication For Your Pet</div>\n<div style=\"text-align:center;\">6th August 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div>\n<div style=\"text-align:center;\">19th June 2023</div>\n<p></a></p>\n<p><a href=\"/blog-posts/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" /></p>\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div>\n<div style=\"text-align:center;\">28th May 2023</div>\n<p></a></p>",
+					"markdown": "\n<a href=\"/blog-posts/co-operative-care\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/vet%20visit.jpg1703755500223\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Co-operative care</div><div style=\"text-align:center;\">23rd December 2023</div></a>\n\n<a href=\"/blog-posts/separation-anxiety\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/cat%20door.png1703755684437\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Separation anxiety</div><div style=\"text-align:center;\">20th October 2023</div></a>\n\n\n<a href=\"/blog-posts/dominance-theory\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >'Dominance' Theory</div><div style=\"text-align:center;\">30th August 2023</div></a>\n\n\n<a href=\"/blog-posts/debunking-medication-for-your-pet\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Debunking Medication For Your Pet</div><div style=\"text-align:center;\">6th August 2023</div></a>\n\n<a href=\"/blog-posts/dogs-perceive-their-owners-preferences\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/11427572037643800839.jpg1687169618858\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs perceive their owners preferences?</div><div style=\"text-align:center;\">19th June 2023</div></a>\n\n<a href=\"/blog-posts/can-dogs-rapidly-learn-words\"><img style=\"margin-bottom:10px;\" src=\"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/candogsrapid.jpg1687170292630\" />\n<div style=\"text-align:center;display:block;font-weight:bold;margin-top:0;\" >Can dogs rapidly learn words?</div><div style=\"text-align:center;\">28th May 2023</div></a>"
 				}
 			}
 		});

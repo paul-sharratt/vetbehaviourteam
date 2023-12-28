@@ -3,7 +3,7 @@
 
 <head>
     <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-14mcsdm_START -->
+    <title>Vet Behaviour Team - Book Now</title><!-- HEAD_svelte-17nsln3_START -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
@@ -120,6 +120,9 @@
                     } catch (err) {
                         console.error(err);
                     }
+                    try {
+                        fbq('track', 'Purchase');
+                    } catch (e) {}
                     try {
                         gtag('event', 'book_success', {
                             email: form_data['email']
@@ -333,7 +336,7 @@
             overflow: scroll;
             border-radius: 4px;
         }
-    </style><!-- HEAD_svelte-14mcsdm_END -->
+    </style><!-- HEAD_svelte-17nsln3_END -->
     <style>
         .section-container.svelte-3u7in3.svelte-3u7in3 {
             padding-top: 1rem;
