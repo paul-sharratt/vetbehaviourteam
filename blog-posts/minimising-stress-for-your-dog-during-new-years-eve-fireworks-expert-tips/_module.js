@@ -3511,7 +3511,7 @@ function create_fragment$2(ctx) {
 			attr(header, "class", "section-container svelte-3u7in3");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-0749ae74-5555-4042-9b17-107e5786c760");
+			attr(div3, "id", "section-3eaa1f3e-b716-4b1a-9f40-19a1550969b9");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3720,7 +3720,7 @@ function create_fragment$3(ctx) {
 			attr(header, "class", "svelte-80b3bt");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-9b19044b-3d2e-49f3-9a87-dcc828ffc1d7");
+			attr(div3, "id", "section-79989ef1-9dea-45f6-8bc1-43ab66d504e1");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3851,7 +3851,7 @@ function create_fragment$4(ctx) {
 			attr(header, "class", "section-container svelte-so1len");
 			attr(div0, "class", "component");
 			attr(div1, "class", "section");
-			attr(div1, "id", "section-9dc33f7c-1e1a-4df4-af8c-f06c20719d7b");
+			attr(div1, "id", "section-30771021-6e74-4591-8145-1c4cda8a7e7e");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -3957,7 +3957,7 @@ function create_fragment$5(ctx) {
 			attr(div1, "class", "section");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-3bc6068f-2812-4f2d-990c-a35d8d99af36");
+			attr(div3, "id", "section-63239d53-7563-4ff6-9127-b8377cbfe2cc");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -4054,7 +4054,7 @@ function create_fragment$6(ctx) {
 			attr(aside, "class", "section-container svelte-1fq63ia");
 			attr(div0, "class", "component");
 			attr(div1, "class", "section");
-			attr(div1, "id", "section-b579ef16-2ac9-4a90-b483-f8c63b611cef");
+			attr(div1, "id", "section-67a986b8-7588-4daf-a8aa-66d59d92abfb");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -4344,7 +4344,7 @@ function create_fragment$7(ctx) {
 			attr(footer, "class", "svelte-u1zmy0");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
-			attr(div4, "id", "section-bacfbf89-04b0-4470-a438-bea8da99df72");
+			attr(div4, "id", "section-6eb7fa01-da39-42a9-b2be-8ff0c7593ba6");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div4, anchor);
@@ -4583,11 +4583,11 @@ function create_fragment$8(ctx) {
 				},
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
-				superhead: "30th August 2023",
-				heading: "",
+				superhead: "29th December 2023",
+				heading: "Fear of Fireworks - What can you do for your pet? Expert tips to minimise anxiety",
 				image: {
 					"alt": "",
-					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621"
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/fireworks.jpg1703849041611"
 				}
 			}
 		});
@@ -4603,8 +4603,8 @@ function create_fragment$8(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<h1>\"Dominance'' Theory</h1><p>First let’s start with a simple statement of fact:&nbsp;</p><p><em>Dominance theory has no place in the human-animal relationship.&nbsp;</em></p><p>You can’t dip your toe into dog training without coming across expressions like “alpha dog”, “pack leader” or “dominance”. Most people that have searched for dog training videos online, looked for help with a problem behaviour or consumed popular media will have heard these terms used with confidence and assurance by trainers around the world. The theory of dominance in dog training is pervasive and incredibly damaging to both the animals involved and the people training them.&nbsp;</p><p>So where did it come from?</p><p>In 1947 a scientist, Rudolph Schenkel, studied captive wolf packs and published a paper describing a dominance relationship between the wolves. This was then taken and applied to domestic dogs. There are a number of flaws in this: firstly dogs are not wolves, and secondly animals in captivity do not act naturally. Further studies into wild wolf behaviour have shown that instead of forming strict linear hierarchies maintained through violence, wolves live in cooperative family groups. These newer studies were published in the 1990’s, and yet dominance theory is still incredibly prevalent today.&nbsp;</p><p>What is the truth?</p><p>Advocates of dominance theory will have you believing that your dog is sitting on the bed to dominate you. Maybe they’ll tell you that your dog walks through doors first to show you that they are the boss. They might tell you that your dog is lunging on the lead because it is trying to dominate all the other dogs in the world.&nbsp;</p><p>The truth is dogs are opportunists, their behaviour is driven solely by the desire to make themselves feel happy. Your dog is probably sitting on the bed because it is warm and comfortable. Doorways are an abstract concept, your dog probably just wants to get to whatever is on the other side because it is exciting. Dogs lunge at other dogs on the lead to make them go away, this behaviour is not led by dominance, but rather fear and anxiety about the unknown dog approaching them and a desire to make them go away.&nbsp;</p><p>Dominance training often results in the use of physical force and punishment techniques to compel the dog to behave. By using these harsh methods, dog owners risk destroying the relationship they have with their pet, and losing any trust they have developed. Instead of using force to resolve problem behaviours, owners should look at the motivation behind the behaviour and work from there.</p><p><br></p>",
-					"markdown": "# \"Dominance'' Theory\n\nFirst let’s start with a simple statement of fact:\n\n*Dominance theory has no place in the human-animal relationship. *\n\nYou can’t dip your toe into dog training without coming across expressions like “alpha dog”, “pack leader” or “dominance”. Most people that have searched for dog training videos online, looked for help with a problem behaviour or consumed popular media will have heard these terms used with confidence and assurance by trainers around the world. The theory of dominance in dog training is pervasive and incredibly damaging to both the animals involved and the people training them.\n\nSo where did it come from?\n\nIn 1947 a scientist, Rudolph Schenkel, studied captive wolf packs and published a paper describing a dominance relationship between the wolves. This was then taken and applied to domestic dogs. There are a number of flaws in this: firstly dogs are not wolves, and secondly animals in captivity do not act naturally. Further studies into wild wolf behaviour have shown that instead of forming strict linear hierarchies maintained through violence, wolves live in cooperative family groups. These newer studies were published in the 1990’s, and yet dominance theory is still incredibly prevalent today.\n\nWhat is the truth?\n\nAdvocates of dominance theory will have you believing that your dog is sitting on the bed to dominate you. Maybe they’ll tell you that your dog walks through doors first to show you that they are the boss. They might tell you that your dog is lunging on the lead because it is trying to dominate all the other dogs in the world.\n\nThe truth is dogs are opportunists, their behaviour is driven solely by the desire to make themselves feel happy. Your dog is probably sitting on the bed because it is warm and comfortable. Doorways are an abstract concept, your dog probably just wants to get to whatever is on the other side because it is exciting. Dogs lunge at other dogs on the lead to make them go away, this behaviour is not led by dominance, but rather fear and anxiety about the unknown dog approaching them and a desire to make them go away.\n\nDominance training often results in the use of physical force and punishment techniques to compel the dog to behave. By using these harsh methods, dog owners risk destroying the relationship they have with their pet, and losing any trust they have developed. Instead of using force to resolve problem behaviours, owners should look at the motivation behind the behaviour and work from there.\n\n<br>\n\n"
+					"html": "<p>As the excitement of New Year's Eve approaches, it's crucial to remember that while fireworks may be a dazzling spectacle for us, they often induce anxiety in our four-legged friends. Dogs, in particular, are known to react strongly to the loud sounds and vivid lights that accompany this annual celebration. To safeguard your pet's well-being during this potentially distressing time, here are some professional recommendations on how to help reduce their anxiety:</p>\n<p><strong>1. Establish a Safe Retreat:</strong> For dogs that are fearful of fireworks, allow them access to a secure sanctuary where they can seek refuge, importantly of their own choosing! Options include a crate (if they have been crate trained), a quiet and familiar corner, the central area of the house, or a sheltered space beneath furniture. Ensure that this sanctuary is outfitted with their cherished possessions, such as blankets or toys, to provide comfort. Don't force them into these areas if they aren't interested! </p>\n<p><strong>2. Light Levels:</strong> For some, the abrupt bursts of light from fireworks can exacerbate distress. To mitigate this, close all curtains and blinds, minimizing the intrusion of light flashes. This creates a dimmer, more calming environment for your pet.</p>\n<p><strong>3. Soundscape:</strong> Others are more sensitive to auditory stimuli. Consider playing soft, calming music as an auditory backdrop. Classical compositions, notably those by Bach, have demonstrated a soothing influence on both humans and dogs alike. Alternatively, some dogs find solace in audiobooks or white noise. Every pet is different - so experiment to see what they like best!</p>\n<p><strong>4. Distraction with Toys and Treats:</strong> Stock up in advance with their preferred treats and toys (bring out the big gun treats!). If they show interest, engage them in interactive games and activities to divert their focus. Puzzle toys, treat-dispensing devices and their favourite high value treats can be especially beneficial in maintaining their engagement. If they lose their appetite and aren't interested in their favourite treats this can often be a red flag they are extremely distressed. </p>\n<p><strong>5. Comfort and Reassurance:</strong> Contrary to a common belief, offering comfort to a frightened pet does not \"reinforce their fear.\" In fact, your presence and affection can provide much-needed solace during this stressful time. If your dog seeks comfort, embrace and reassure them. For many pets being carried, hugs, cuddles and access to you can make a significant difference to their fear.</p>\n<p><strong>6. Ensuring Proper Identification:</strong> The startling noises of fireworks can prompt pets to panic and 'flee', potentially leading to their escape. In preparation for the worst, make sure your pet is microchipped and wears an ID tag or collar displaying your current contact information to facilitate a prompt reunion (just in case)!</p>\n<p><strong>7. Consultation with a Veterinary Professional:</strong> If your pet is extremely distressed (symptoms may include: hiding, shaking, barking, drooling, trembling, lip licking, pacing, destruction and loss of appetite) it is important to seek guidance from a veterinary professional as your pet is essentially experiencing a panic attack. Veterinarians can recommend suitable medications or supplements to alleviate your pet's anxiety. </p>\n<p>Although firework phobia is a medical condition, less than half of owners of dogs that display distress seek help from their veterinarian. These conditions are terrifying to experience for our pets, and often become worse each year so planning ahead with your vet can make a world of difference to your pet's welfare as you ring in the New Year! </p>",
+					"markdown": "As the excitement of New Year's Eve approaches, it's crucial to remember that while fireworks may be a dazzling spectacle for us, they often induce anxiety in our four-legged friends. Dogs, in particular, are known to react strongly to the loud sounds and vivid lights that accompany this annual celebration. To safeguard your pet's well-being during this potentially distressing time, here are some professional recommendations on how to help reduce their anxiety:\n\n**1\\. Establish a Safe Retreat:** For dogs that are fearful of fireworks, allow them access to a secure sanctuary where they can seek refuge, importantly of their own choosing! Options include a crate (if they have been crate trained), a quiet and familiar corner, the central area of the house, or a sheltered space beneath furniture. Ensure that this sanctuary is outfitted with their cherished possessions, such as blankets or toys, to provide comfort. Don't force them into these areas if they aren't interested! \n\n**2\\. Light Levels:** For some, the abrupt bursts of light from fireworks can exacerbate distress. To mitigate this, close all curtains and blinds, minimizing the intrusion of light flashes. This creates a dimmer, more calming environment for your pet.\n\n**3\\. Soundscape:** Others are more sensitive to auditory stimuli. Consider playing soft, calming music as an auditory backdrop. Classical compositions, notably those by Bach, have demonstrated a soothing influence on both humans and dogs alike. Alternatively, some dogs find solace in audiobooks or white noise. Every pet is different - so experiment to see what they like best!\n\n**4\\. Distraction with Toys and Treats:** Stock up in advance with their preferred treats and toys (bring out the big gun treats!). If they show interest, engage them in interactive games and activities to divert their focus. Puzzle toys, treat-dispensing devices and their favourite high value treats can be especially beneficial in maintaining their engagement. If they lose their appetite and aren't interested in their favourite treats this can often be a red flag they are extremely distressed. \n\n**5\\. Comfort and Reassurance:** Contrary to a common belief, offering comfort to a frightened pet does not \"reinforce their fear.\" In fact, your presence and affection can provide much-needed solace during this stressful time. If your dog seeks comfort, embrace and reassure them. For many pets being carried, hugs, cuddles and access to you can make a significant difference to their fear.\n\n**6\\. Ensuring Proper Identification:** The startling noises of fireworks can prompt pets to panic and 'flee', potentially leading to their escape. In preparation for the worst, make sure your pet is microchipped and wears an ID tag or collar displaying your current contact information to facilitate a prompt reunion (just in case)!\n\n**7\\. Consultation with a Veterinary Professional:** If your pet is extremely distressed (symptoms may include: hiding, shaking, barking, drooling, trembling, lip licking, pacing, destruction and loss of appetite) it is important to seek guidance from a veterinary professional as your pet is essentially experiencing a panic attack. Veterinarians can recommend suitable medications or supplements to alleviate your pet's anxiety. \n\nAlthough firework phobia is a medical condition, less than half of owners of dogs that display distress seek help from their veterinarian. These conditions are terrifying to experience for our pets, and often become worse each year so planning ahead with your vet can make a world of difference to your pet's welfare as you ring in the New Year! \n\n"
 				}
 			}
 		});
