@@ -1021,12 +1021,8 @@ function create_fragment(ctx) {
 	let link1;
 	let title_value;
 	let meta2;
-	let script5;
-	let script5_src_value;
-	let script6;
-	let t4;
 	let style;
-	let t5;
+	let t4;
 	document.title = title_value = /*title*/ ctx[1];
 
 	return {
@@ -1045,15 +1041,12 @@ function create_fragment(ctx) {
 			link0 = element("link");
 			link1 = element("link");
 			meta2 = element("meta");
-			script5 = element("script");
-			script6 = element("script");
-			t4 = text("window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n      try {\n        fbq('track', 'Purchase');\n      } catch(e) {}\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
 			style = element("style");
-			t5 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }\n.greminders__booking-widget-overlay {\n    width: 100vw;\n    height: 100vh;\n    background: #00000066;\n    position: fixed;\n    top: 0;\n    right: 0;\n}\n.greminders__booking-widget-iframe {\n    width: calc(100vw - 20px);\n    max-width: 500px;\n    height: calc(100vh - 20px);\n    max-height: 750px;\n} \n.greminders__booking-widget-popup {\n    width: calc(100vw - 0px);\n    height: calc(100vh - 0px);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.greminders__booking-widget-close {\n    top: 0;\n    right: 40px;\n    position: fixed;\n    font-size: 80px;\n    color: white;\n  cursor: pointer;\n}\n.greminders__booking-widget-overlay .greminders__booking-widget-popup .greminders__booking-widget-iframe {\n    border: none;\n    width: 100%;\n    height: 100%;\n    overflow: scroll;\n    border-radius: 4px;\n}");
+			t4 = text("/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			this.h();
 		},
 		l(nodes) {
-			const head_nodes = head_selector('svelte-1j7rskv', document.head);
+			const head_nodes = head_selector('svelte-gos21y', document.head);
 			meta0 = claim_element(head_nodes, "META", { name: true, content: true });
 			meta1 = claim_element(head_nodes, "META", { charset: true });
 			script0 = claim_element(head_nodes, "SCRIPT", { src: true });
@@ -1085,16 +1078,9 @@ function create_fragment(ctx) {
 
 			link1 = claim_element(head_nodes, "LINK", { rel: true, href: true });
 			meta2 = claim_element(head_nodes, "META", { name: true, content: true });
-			script5 = claim_element(head_nodes, "SCRIPT", { src: true });
-			var script5_nodes = children(script5);
-			script5_nodes.forEach(detach);
-			script6 = claim_element(head_nodes, "SCRIPT", { type: true });
-			var script6_nodes = children(script6);
-			t4 = claim_text(script6_nodes, "window.onload = function() {\n  console.log(\"Version 122\");\n    GReminders.BookingWidget.initialize(\n        //create an event type and put the link below: https://app.greminders.com/event-types\n        //or use with Routing Forms: https://app.greminders.com/routing-forms\n        'https://app.greminders.com/c/vetbehaviour-team/initialbehaviour',\n        \n        //here are all the options\n        {\n            anchorEl: document.getElementById('schedule_button'),  //you can omit this line completely if you like and just use: GReminders.BookingWidget.open(); in your code \n        \n            fields: {\n                first_name: '',            // you can prepopulate the fields here if you already have this information\n                last_name: '',\n                phone: '',\n                email: '',\n                auto_submit: false,       \n                remember_me: true,\n                utm_source: window.vbt_utm_source || '',     \n                utm_medium: window.vbt_utm_medium || '',     \n                utm_campaign: window.vbt_utm_campaign || '', \n                utm_content: window.vbt_utm_content || '',   \n                utm_term: window.vbt_utm_term || '' \n\n            },            \n            styles: {\n                zIndex: 100        \n            }            \n        }\n    );\n\n    // or trigger the widget using this: \n  setTimeout(() => {\n    GReminders.BookingWidget.onSuccess(function(event_id, form_data) {\n        //we automatically close the widget on successful booking, you can continue your flow here\n        try {\n            __adroll.record_user({\"adroll_segments\": \"71dc0721\"});\n        } catch(err) {\n          console.error(err);\n        }\n      try {\n        fbq('track', 'Purchase');\n      } catch(e) {}\n       try {\n           gtag('event', 'book_success',{\n             email: form_data['email']\n           });\n          console.log('form_data',form_data);\n        } catch(err) {\n          console.error(err);\n        }\n\n    });\n    GReminders.BookingWidget.onError(function(message) {\n\n      //if we encounter a booking error you can trigger a different error or retry\n      alert(\"There was an issue, your booking was not successful.\");\n      try {\n            __adroll.record_user({\"adroll_segments\": \"1cd638ae\"});\n            gtag('event', 'book_fail');\n        } catch(err) {}\n    });\n\nGReminders.BookingWidget.open();\n  },1000)\n\n    try {\n        __adroll.record_user({\"adroll_segments\": \"9c97232c\"});\n    gtag('event', 'book_open');\n    } catch(err) {}\n};\n");
-			script6_nodes.forEach(detach);
 			style = claim_element(head_nodes, "STYLE", {});
 			var style_nodes = children(style);
-			t5 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }\n.greminders__booking-widget-overlay {\n    width: 100vw;\n    height: 100vh;\n    background: #00000066;\n    position: fixed;\n    top: 0;\n    right: 0;\n}\n.greminders__booking-widget-iframe {\n    width: calc(100vw - 20px);\n    max-width: 500px;\n    height: calc(100vh - 20px);\n    max-height: 750px;\n} \n.greminders__booking-widget-popup {\n    width: calc(100vw - 0px);\n    height: calc(100vh - 0px);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n.greminders__booking-widget-close {\n    top: 0;\n    right: 40px;\n    position: fixed;\n    font-size: 80px;\n    color: white;\n  cursor: pointer;\n}\n.greminders__booking-widget-overlay .greminders__booking-widget-popup .greminders__booking-widget-iframe {\n    border: none;\n    width: 100%;\n    height: 100%;\n    overflow: scroll;\n    border-radius: 4px;\n}");
+			t4 = claim_text(style_nodes, "/* Reset & standardize default styles */\n@import url(\"https://unpkg.com/@primo-app/primo@1.3.64/reset.css\") layer;\n\n/* Design tokens (apply to components) */\n:root {\n  /* Custom theme options */\n  --color-accent: #004700;\n\n  /* Base values */\n  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);\n  --border-radius: 0;\n  --border-color: #e0e1e1;\n}\n\n/* Root element (use instead of `body`) */\n#page {\n  font-family: system-ui, sans-serif;\n  color: #111;\n  line-height: 1.5;\n  font-size: 1.125rem;\n  background: white;\n}\n\n/* Elements */\n.section-container {\n  max-width: 1200px;\n  margin: 0 auto;\n  padding: 5rem 2rem;\n}\n\na.link {\n  line-height: 1.3;\n\n  border-bottom: 2px solid var(--color-accent);\n  transform: translateY(-2px); /* move link back into place */\n  transition: var(--transition, 0.1s border);\n}\n\na.link:hover {\n    border-color: transparent;\n  }\n\n.heading {\n  font-size: 2.5rem;\n  line-height: 1.15;\n\n}\n\n.button {\n  color: white;\n  background: var(--color-accent, rebeccapurple);\n  border-radius: 0;\n  padding: 18px 24px;\n  transition: var(--transition, 0.1s box-shadow);\n  border: 0;\n}\n\n/* reset */\n\n.button:hover {\n    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);\n  }\n\n.button.inverted {\n    background: transparent;\n    color: var(--color-accent, rebeccapurple);\n  }\n\n/* Content Section */\n.content {\n  max-width: 900px;\n  margin: 0 auto;\n  padding: 3rem 2rem;\n}\n.content p {\n    margin-bottom: 1rem;\n    line-height: 1.5;\n  }\n.content img {\n    width: 100%;\n    margin: 2rem 0;\n    box-shadow: var(--box-shadow);\n    border-radius: var(--border-radius);\n  }\n.content a.link {\n    line-height: 1.3;\n    font-weight: 500;\n    border-bottom: 2px solid var(--color-accent);\n    transform: translateY(-2px); /* move link back into place */\n    transition: var(--transition, 0.1s border);\n  }\n.content a.link:hover {\n      border-color: transparent;\n    }\n.content h1 {\n    font-size: 3rem;\n    font-weight: 500;\n    line-height: 1.1;\n    margin-bottom: 1.5rem;\n  }\n.content h2 {\n    font-size: 2.5rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content h3 {\n    font-size: 2rem;\n    font-weight: 500;\n    margin-bottom: 1rem;\n  }\n.content ul {\n    list-style: disc;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content ol {\n    list-style: decimal;\n    padding: 0.5rem 0;\n    padding-left: 1.25rem;\n  }\n.content blockquote {\n    padding: 2rem;\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    border-left: 5px solid var(--color-accent);\n  }");
 			style_nodes.forEach(detach);
 			head_nodes.forEach(detach);
 			this.h();
@@ -1114,8 +1100,6 @@ function create_fragment(ctx) {
 			attr(link1, "href", "https://fonts.bunny.net");
 			attr(meta2, "name", "description");
 			attr(meta2, "content", /*description*/ ctx[2]);
-			if (!src_url_equal(script5.src, script5_src_value = "https://app.greminders.com/widgets/booking.js")) attr(script5, "src", script5_src_value);
-			attr(script6, "type", "text/javascript");
 		},
 		m(target, anchor) {
 			append_hydration(document.head, meta0);
@@ -1132,11 +1116,8 @@ function create_fragment(ctx) {
 			append_hydration(document.head, link0);
 			append_hydration(document.head, link1);
 			append_hydration(document.head, meta2);
-			append_hydration(document.head, script5);
-			append_hydration(document.head, script6);
-			append_hydration(script6, t4);
 			append_hydration(document.head, style);
-			append_hydration(style, t5);
+			append_hydration(style, t4);
 		},
 		p(ctx, [dirty]) {
 			if (dirty & /*favicon*/ 1 && link0_href_value !== (link0_href_value = /*favicon*/ ctx[0].url)) {
@@ -1164,8 +1145,6 @@ function create_fragment(ctx) {
 			detach(link0);
 			detach(link1);
 			detach(meta2);
-			detach(script5);
-			detach(script6);
 			detach(style);
 		}
 	};
@@ -3532,7 +3511,7 @@ function create_fragment$2(ctx) {
 			attr(header, "class", "section-container svelte-3u7in3");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-2c0bbb25-6827-43ff-8ba0-36d6a09dc7a5");
+			attr(div3, "id", "section-49ef5750-61a9-4a8a-bfb5-5badd1a5a12a");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3732,16 +3711,16 @@ function create_fragment$3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "section-container svelte-2afauk");
-			attr(h1, "class", "headline svelte-2afauk");
-			attr(div1, "class", "section-container svelte-2afauk");
+			attr(div0, "class", "section-container svelte-80b3bt");
+			attr(h1, "class", "headline svelte-80b3bt");
+			attr(div1, "class", "section-container svelte-80b3bt");
 			set_style(header, "background-image", "url('" + /*background*/ ctx[0].url + "')");
 			attr(header, "role", "img");
 			attr(header, "aria-label", header_aria_label_value = /*background*/ ctx[0].alt);
-			attr(header, "class", "svelte-2afauk");
+			attr(header, "class", "svelte-80b3bt");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-7036637c-d148-4599-8293-a01096c244b3");
+			attr(div3, "id", "section-7117e11c-14fe-4dc7-a394-acf1966ece6d");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3813,61 +3792,95 @@ class Component$3 extends SvelteComponent {
 /* generated by Svelte v3.58.0 */
 
 function create_fragment$4(ctx) {
-	let div2;
 	let div1;
-	let section;
 	let div0;
-	let raw_value = /*content*/ ctx[0].html + "";
-	let section_style_value;
+	let header;
+	let span;
+	let t0;
+	let t1;
+	let h1;
+	let t2;
+	let t3;
+	let img;
+	let img_src_value;
+	let img_alt_value;
 
 	return {
 		c() {
-			div2 = element("div");
 			div1 = element("div");
-			section = element("section");
 			div0 = element("div");
+			header = element("header");
+			span = element("span");
+			t0 = text(/*superhead*/ ctx[0]);
+			t1 = space();
+			h1 = element("h1");
+			t2 = text(/*heading*/ ctx[1]);
+			t3 = space();
+			img = element("img");
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
-			var div2_nodes = children(div2);
-			div1 = claim_element(div2_nodes, "DIV", { class: true });
+			div1 = claim_element(nodes, "DIV", { class: true, id: true });
 			var div1_nodes = children(div1);
-			section = claim_element(div1_nodes, "SECTION", { class: true, style: true });
-			var section_nodes = children(section);
-			div0 = claim_element(section_nodes, "DIV", { class: true });
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
+			header = claim_element(div0_nodes, "HEADER", { class: true });
+			var header_nodes = children(header);
+			span = claim_element(header_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t0 = claim_text(span_nodes, /*superhead*/ ctx[0]);
+			span_nodes.forEach(detach);
+			t1 = claim_space(header_nodes);
+			h1 = claim_element(header_nodes, "H1", { class: true });
+			var h1_nodes = children(h1);
+			t2 = claim_text(h1_nodes, /*heading*/ ctx[1]);
+			h1_nodes.forEach(detach);
+			t3 = claim_space(header_nodes);
+			img = claim_element(header_nodes, "IMG", { src: true, alt: true, class: true });
+			header_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
-			section_nodes.forEach(detach);
 			div1_nodes.forEach(detach);
-			div2_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "content2 svelte-cexu5p");
-			attr(section, "class", "section-container");
-			attr(section, "style", section_style_value = `background-color: ${/*background*/ ctx[1]};`);
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-b80fbb8c-9b99-469d-aa2a-2564d4794bec");
+			attr(span, "class", "superhead svelte-so1len");
+			attr(h1, "class", "heading svelte-so1len");
+			if (!src_url_equal(img.src, img_src_value = /*image*/ ctx[2].url)) attr(img, "src", img_src_value);
+			attr(img, "alt", img_alt_value = /*image*/ ctx[2].alt);
+			attr(img, "class", "svelte-so1len");
+			attr(header, "class", "section-container svelte-so1len");
+			attr(div0, "class", "component");
+			attr(div1, "class", "section");
+			attr(div1, "id", "section-53eb2efa-202c-4b23-b1aa-acbad86052ac");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
-			append_hydration(div2, div1);
-			append_hydration(div1, section);
-			append_hydration(section, div0);
-			div0.innerHTML = raw_value;
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, div0);
+			append_hydration(div0, header);
+			append_hydration(header, span);
+			append_hydration(span, t0);
+			append_hydration(header, t1);
+			append_hydration(header, h1);
+			append_hydration(h1, t2);
+			append_hydration(header, t3);
+			append_hydration(header, img);
 		},
 		p(ctx, [dirty]) {
-			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;
-			if (dirty & /*background*/ 2 && section_style_value !== (section_style_value = `background-color: ${/*background*/ ctx[1]};`)) {
-				attr(section, "style", section_style_value);
+			if (dirty & /*superhead*/ 1) set_data(t0, /*superhead*/ ctx[0]);
+			if (dirty & /*heading*/ 2) set_data(t2, /*heading*/ ctx[1]);
+
+			if (dirty & /*image*/ 4 && !src_url_equal(img.src, img_src_value = /*image*/ ctx[2].url)) {
+				attr(img, "src", img_src_value);
+			}
+
+			if (dirty & /*image*/ 4 && img_alt_value !== (img_alt_value = /*image*/ ctx[2].alt)) {
+				attr(img, "alt", img_alt_value);
 			}
 		},
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(div2);
+			if (detaching) detach(div1);
 		}
 	};
 }
@@ -3876,18 +3889,20 @@ function instance$4($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
-	let { content } = $$props;
-	let { background } = $$props;
+	let { superhead } = $$props;
+	let { heading } = $$props;
+	let { image } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(3, title = $$props.title);
-		if ('description' in $$props) $$invalidate(4, description = $$props.description);
-		if ('content' in $$props) $$invalidate(0, content = $$props.content);
-		if ('background' in $$props) $$invalidate(1, background = $$props.background);
+		if ('favicon' in $$props) $$invalidate(3, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(4, title = $$props.title);
+		if ('description' in $$props) $$invalidate(5, description = $$props.description);
+		if ('superhead' in $$props) $$invalidate(0, superhead = $$props.superhead);
+		if ('heading' in $$props) $$invalidate(1, heading = $$props.heading);
+		if ('image' in $$props) $$invalidate(2, image = $$props.image);
 	};
 
-	return [content, background, favicon, title, description];
+	return [superhead, heading, image, favicon, title, description];
 }
 
 class Component$4 extends SvelteComponent {
@@ -3895,11 +3910,12 @@ class Component$4 extends SvelteComponent {
 		super();
 
 		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
-			favicon: 2,
-			title: 3,
-			description: 4,
-			content: 0,
-			background: 1
+			favicon: 3,
+			title: 4,
+			description: 5,
+			superhead: 0,
+			heading: 1,
+			image: 2
 		});
 	}
 }
@@ -3907,61 +3923,55 @@ class Component$4 extends SvelteComponent {
 /* generated by Svelte v3.58.0 */
 
 function create_fragment$5(ctx) {
+	let div3;
 	let div2;
 	let div1;
 	let div0;
-	let button;
-	let t;
+	let raw_value = /*content*/ ctx[0].html + "";
 
 	return {
 		c() {
+			div3 = element("div");
 			div2 = element("div");
 			div1 = element("div");
 			div0 = element("div");
-			button = element("button");
-			t = text("BOOK NOW");
 			this.h();
 		},
 		l(nodes) {
-			div2 = claim_element(nodes, "DIV", { class: true, id: true });
+			div3 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div3_nodes = children(div3);
+			div2 = claim_element(div3_nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
-			div0 = claim_element(div1_nodes, "DIV", { class: true, style: true });
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
-			button = claim_element(div0_nodes, "BUTTON", { class: true, id: true });
-			var button_nodes = children(button);
-			t = claim_text(button_nodes, "BOOK NOW");
-			button_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
 			div1_nodes.forEach(detach);
 			div2_nodes.forEach(detach);
+			div3_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(button, "class", "button");
-			attr(button, "id", "schedule_button");
-			attr(div0, "class", "buttons");
-			set_style(div0, "margin", "10px 0");
-			set_style(div0, "width", "100%");
-			set_style(div0, "display", "flex");
-			set_style(div0, "justify-content", "center");
-			attr(div1, "class", "component");
-			attr(div2, "class", "section");
-			attr(div2, "id", "section-fb010646-c1b0-434d-b200-79565669f448");
+			attr(div0, "class", "section-container content svelte-1yexq97");
+			attr(div1, "class", "section");
+			attr(div2, "class", "component");
+			attr(div3, "class", "section");
+			attr(div3, "id", "section-8a41bd39-508a-4711-9894-252a929fe138");
 		},
 		m(target, anchor) {
-			insert_hydration(target, div2, anchor);
+			insert_hydration(target, div3, anchor);
+			append_hydration(div3, div2);
 			append_hydration(div2, div1);
 			append_hydration(div1, div0);
-			append_hydration(div0, button);
-			append_hydration(button, t);
+			div0.innerHTML = raw_value;
 		},
-		p: noop,
+		p(ctx, [dirty]) {
+			if (dirty & /*content*/ 1 && raw_value !== (raw_value = /*content*/ ctx[0].html + "")) div0.innerHTML = raw_value;		},
 		i: noop,
 		o: noop,
 		d(detaching) {
-			if (detaching) detach(div2);
+			if (detaching) detach(div3);
 		}
 	};
 }
@@ -3970,20 +3980,132 @@ function instance$5($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
+	let { content } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('favicon' in $$props) $$invalidate(0, favicon = $$props.favicon);
-		if ('title' in $$props) $$invalidate(1, title = $$props.title);
-		if ('description' in $$props) $$invalidate(2, description = $$props.description);
+		if ('favicon' in $$props) $$invalidate(1, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(2, title = $$props.title);
+		if ('description' in $$props) $$invalidate(3, description = $$props.description);
+		if ('content' in $$props) $$invalidate(0, content = $$props.content);
 	};
 
-	return [favicon, title, description];
+	return [content, favicon, title, description];
 }
 
 class Component$5 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$5, create_fragment$5, safe_not_equal, { favicon: 0, title: 1, description: 2 });
+
+		init(this, options, instance$5, create_fragment$5, safe_not_equal, {
+			favicon: 1,
+			title: 2,
+			description: 3,
+			content: 0
+		});
+	}
+}
+
+/* generated by Svelte v3.58.0 */
+
+function create_fragment$6(ctx) {
+	let div1;
+	let div0;
+	let aside;
+	let h3;
+	let raw_value = /*quote*/ ctx[0].html + "";
+	let t0;
+	let span;
+	let t1;
+
+	return {
+		c() {
+			div1 = element("div");
+			div0 = element("div");
+			aside = element("aside");
+			h3 = element("h3");
+			t0 = space();
+			span = element("span");
+			t1 = text(/*attribution*/ ctx[1]);
+			this.h();
+		},
+		l(nodes) {
+			div1 = claim_element(nodes, "DIV", { class: true, id: true });
+			var div1_nodes = children(div1);
+			div0 = claim_element(div1_nodes, "DIV", { class: true });
+			var div0_nodes = children(div0);
+			aside = claim_element(div0_nodes, "ASIDE", { class: true });
+			var aside_nodes = children(aside);
+			h3 = claim_element(aside_nodes, "H3", { class: true });
+			var h3_nodes = children(h3);
+			h3_nodes.forEach(detach);
+			t0 = claim_space(aside_nodes);
+			span = claim_element(aside_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t1 = claim_text(span_nodes, /*attribution*/ ctx[1]);
+			span_nodes.forEach(detach);
+			aside_nodes.forEach(detach);
+			div0_nodes.forEach(detach);
+			div1_nodes.forEach(detach);
+			this.h();
+		},
+		h() {
+			attr(h3, "class", "heading");
+			attr(span, "class", "attribution");
+			attr(aside, "class", "section-container svelte-1fq63ia");
+			attr(div0, "class", "component");
+			attr(div1, "class", "section");
+			attr(div1, "id", "section-d65972ae-2e7e-4ea1-a5a6-7ee4a09f6f2d");
+		},
+		m(target, anchor) {
+			insert_hydration(target, div1, anchor);
+			append_hydration(div1, div0);
+			append_hydration(div0, aside);
+			append_hydration(aside, h3);
+			h3.innerHTML = raw_value;
+			append_hydration(aside, t0);
+			append_hydration(aside, span);
+			append_hydration(span, t1);
+		},
+		p(ctx, [dirty]) {
+			if (dirty & /*quote*/ 1 && raw_value !== (raw_value = /*quote*/ ctx[0].html + "")) h3.innerHTML = raw_value;			if (dirty & /*attribution*/ 2) set_data(t1, /*attribution*/ ctx[1]);
+		},
+		i: noop,
+		o: noop,
+		d(detaching) {
+			if (detaching) detach(div1);
+		}
+	};
+}
+
+function instance$6($$self, $$props, $$invalidate) {
+	let { favicon } = $$props;
+	let { title } = $$props;
+	let { description } = $$props;
+	let { quote } = $$props;
+	let { attribution } = $$props;
+
+	$$self.$$set = $$props => {
+		if ('favicon' in $$props) $$invalidate(2, favicon = $$props.favicon);
+		if ('title' in $$props) $$invalidate(3, title = $$props.title);
+		if ('description' in $$props) $$invalidate(4, description = $$props.description);
+		if ('quote' in $$props) $$invalidate(0, quote = $$props.quote);
+		if ('attribution' in $$props) $$invalidate(1, attribution = $$props.attribution);
+	};
+
+	return [quote, attribution, favicon, title, description];
+}
+
+class Component$6 extends SvelteComponent {
+	constructor(options) {
+		super();
+
+		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+			favicon: 2,
+			title: 3,
+			description: 4,
+			quote: 0,
+			attribution: 1
+		});
 	}
 }
 
@@ -4156,7 +4278,7 @@ function create_each_block(ctx) {
 	};
 }
 
-function create_fragment$6(ctx) {
+function create_fragment$7(ctx) {
 	let div4;
 	let div3;
 	let footer;
@@ -4222,7 +4344,7 @@ function create_fragment$6(ctx) {
 			attr(footer, "class", "svelte-u1zmy0");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
-			attr(div4, "id", "section-7d16b655-7acb-4142-8f49-48f91279e351");
+			attr(div4, "id", "section-f1387760-aa6f-4ad9-9f08-70e53548a4a5");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div4, anchor);
@@ -4274,7 +4396,7 @@ function create_fragment$6(ctx) {
 	};
 }
 
-function instance$6($$self, $$props, $$invalidate) {
+function instance$7($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
@@ -4292,11 +4414,11 @@ function instance$6($$self, $$props, $$invalidate) {
 	return [content, menus, title, favicon, description];
 }
 
-class Component$6 extends SvelteComponent {
+class Component$7 extends SvelteComponent {
 	constructor(options) {
 		super();
 
-		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+		init(this, options, instance$7, create_fragment$7, safe_not_equal, {
 			favicon: 3,
 			title: 2,
 			description: 4,
@@ -4308,7 +4430,7 @@ class Component$6 extends SvelteComponent {
 
 /* generated by Svelte v3.58.0 */
 
-function instance$7($$self, $$props, $$invalidate) {
+function instance$8($$self, $$props, $$invalidate) {
 	let { favicon } = $$props;
 	let { title } = $$props;
 	let { description } = $$props;
@@ -4322,16 +4444,16 @@ function instance$7($$self, $$props, $$invalidate) {
 	return [favicon, title, description];
 }
 
-class Component$7 extends SvelteComponent {
+class Component$8 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance$7, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
+		init(this, options, instance$8, null, safe_not_equal, { favicon: 0, title: 1, description: 2 });
 	}
 }
 
 /* generated by Svelte v3.58.0 */
 
-function create_fragment$7(ctx) {
+function create_fragment$8(ctx) {
 	let component_0;
 	let t0;
 	let component_1;
@@ -4345,6 +4467,8 @@ function create_fragment$7(ctx) {
 	let component_5;
 	let t5;
 	let component_6;
+	let t6;
+	let component_7;
 	let current;
 
 	component_0 = new Component({
@@ -4355,8 +4479,8 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today"
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds"
 			}
 		});
 
@@ -4368,8 +4492,8 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today",
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
 				logo: {
 					"image": {
 						"alt": "",
@@ -4406,13 +4530,13 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today",
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
 				background: {
 					"alt": "",
-					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686913534004pexels-ray-bilcliff-1509237.jpg",
-					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686913534004pexels-ray-bilcliff-1509237.jpg",
-					"size": 400
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686911944981pexels-cats-coming-1395320.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686911944981pexels-cats-coming-1395320.jpg",
+					"size": 460
 				},
 				headline: "Vet Behaviour Team",
 				logo: {
@@ -4426,40 +4550,24 @@ function create_fragment$7(ctx) {
 				},
 				site_nav: [
 					{
-						"link": { "url": "/about-us", "label": "About us" }
-					},
-					{
 						"link": {
-							"url": "/what-we-do",
-							"label": "What we do"
-						}
-					},
-					{
-						"link": { "url": "/pricing", "label": "Pricing" }
-					},
-					{
-						"link": { "url": "/book", "label": "Book online" }
-					},
-					{
-						"link": {
-							"url": "/testimonials",
-							"label": "Testimonials"
+							"url": "/about",
+							"label": "About",
+							"active": false
 						}
 					},
 					{
 						"link": {
-							"url": "/behaviour-resources",
-							"label": "Behaviour resources"
+							"url": "/mission",
+							"label": "Mission",
+							"active": false
 						}
+					},
+					{
+						"link": { "url": "/team", "label": "Team" }
 					},
 					{
 						"link": { "url": "/blog", "label": "Blog" }
-					},
-					{
-						"link": { "url": "/faq", "label": "FAQ" }
-					},
-					{
-						"link": { "url": "/contact", "label": "Contact" }
 					}
 				]
 			}
@@ -4473,13 +4581,16 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today",
-				content: {
-					"html": "<p><p>Please contact us for bookings:\n<p> - for two or more pets\n<p> - cases of inter-dog aggression so we can review your case and needs</p>\n<p>-  if you need help sooner as we may be able to accommodate.</p>\n<p><p></p>\n<p>Before your consult you must complete the relevant questionnaire below:</p>\n<p><a href=\"https://storage.googleapis.com/no-file-web.appspot.com/VBT-Canine-Behaviour-Questionnaire-.docx\" download>Download the Canine Questionnaire</a></p>\n<p><a href=\"https://storage.googleapis.com/no-file-web.appspot.com/VBTFelineBehaviourQuestionnaire.docx\" download>Download the Feline Questionnaire</a></p>",
-					"markdown": "<p>Please contact us for bookings:\n<p> - for two or more pets\n<p> - cases of inter-dog aggression so we can review your case and needs\n<p>-  if you need help sooner as we may be able to accommodate.</p>\n<p>\n<p>Before your consult you must complete the relevant questionnaire below:</p>\n\n<a href=\"https://storage.googleapis.com/no-file-web.appspot.com/VBT-Canine-Behaviour-Questionnaire-.docx\" download>Download the Canine Questionnaire</a>\n\n<a href=\"https://storage.googleapis.com/no-file-web.appspot.com/VBTFelineBehaviourQuestionnaire.docx\" download>Download the Feline Questionnaire</a>\n\n\n\n"
-				},
-				background: ""
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				superhead: "9th January 2024",
+				heading: "What is Environmental Enrichment?",
+				image: {
+					"alt": "",
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1704778888774pexels-blue-bird-7210258.jpg",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1704778888774pexels-blue-bird-7210258.jpg",
+					"size": 490
+				}
 			}
 		});
 
@@ -4491,8 +4602,12 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today"
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				content: {
+					"html": "<p>Environmental enrichment is a topic that is widely studied in captive animals and can be easily applied to our companion animals as well. Environmental enrichment aims to enhance an animal’s life by increasing the number of positive interactions they have with the space around them. This boosts their mental and physical health, and reduces boredom and frustration.</p>\n<p>The idea of environmental enrichment is to allow an animal to perform natural behaviours in a safe and productive way. They develop problem solving skills, gain resilience and have those wonderful memories of success that boost their motivation to try again next time. </p>\n<p>Enrichment can be either active or passive, meaning that the animal can interact with the enrichment to access the benefits, or can feel the rewards purely by being around the item. It is important to know that when your pet is engaging in active enrichment, they may wander off and have a nap after about 10 minutes of work. This is normal and means your enrichment is working well to exercise their mind and relax them. </p>\n<p>The benefits of environmental enrichment for our anxious animals is even greater. By experiencing little novelties in the safety of their own home, these animals learn to adapt to change. They are better able to handle new situations and adjust faster to new surroundings.</p>\n<p>The following series of articles will provide you with a list that is by no means exhaustive but can give you a starting block from which you can build the perfect space for your pet to thrive. </p>",
+					"markdown": "Environmental enrichment is a topic that is widely studied in captive animals and can be easily applied to our companion animals as well. Environmental enrichment aims to enhance an animal’s life by increasing the number of positive interactions they have with the space around them. This boosts their mental and physical health, and reduces boredom and frustration.\n\nThe idea of environmental enrichment is to allow an animal to perform natural behaviours in a safe and productive way. They develop problem solving skills, gain resilience and have those wonderful memories of success that boost their motivation to try again next time. \n\nEnrichment can be either active or passive, meaning that the animal can interact with the enrichment to access the benefits, or can feel the rewards purely by being around the item. It is important to know that when your pet is engaging in active enrichment, they may wander off and have a nap after about 10 minutes of work. This is normal and means your enrichment is working well to exercise their mind and relax them. \n\nThe benefits of environmental enrichment for our anxious animals is even greater. By experiencing little novelties in the safety of their own home, these animals learn to adapt to change. They are better able to handle new situations and adjust faster to new surroundings.\n\nThe following series of articles will provide you with a list that is by no means exhaustive but can give you a starting block from which you can build the perfect space for your pet to thrive. \n\n"
+				}
 			}
 		});
 
@@ -4504,13 +4619,13 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today",
-				content: {
-					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
-					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				quote: {
+					"html": "<p>Kindness + Science. The best of both worlds.</p>",
+					"markdown": "Kindness + Science. The best of both worlds.\n\n"
 				},
-				menus: []
+				attribution: ""
 			}
 		});
 
@@ -4522,8 +4637,26 @@ function create_fragment$7(ctx) {
 					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
 					"size": 1
 				},
-				title: "Vet Behaviour Team - Book Now",
-				description: "See our availability and book online today"
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds",
+				content: {
+					"html": "<p><em>Working Sydney Wide & Online</em></p>\n<p>Vet Behaviour Team <br>\n0432 881 174</p>\n<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>\n<p><a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a></p>\n<p><font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p>",
+					"markdown": "*Working Sydney Wide & Online*\n\nVet Behaviour Team <br>\n0432 881 174\n\nABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023\n\n<a href=\"https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf\" download style=\"font-weight:bold;font-size:14px;\">TERMS AND CONDITIONS</a>\n\n<font size=\"2\">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>\n\n"
+				},
+				menus: []
+			}
+		});
+
+	component_7 = new Component$8({
+			props: {
+				favicon: {
+					"alt": "",
+					"src": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png",
+					"size": 1
+				},
+				title: "Vet Behaviour Team",
+				description: "Kindness + Science. The best of both worlds"
 			}
 		});
 
@@ -4542,6 +4675,8 @@ function create_fragment$7(ctx) {
 			create_component(component_5.$$.fragment);
 			t5 = space();
 			create_component(component_6.$$.fragment);
+			t6 = space();
+			create_component(component_7.$$.fragment);
 		},
 		l(nodes) {
 			claim_component(component_0.$$.fragment, nodes);
@@ -4557,6 +4692,8 @@ function create_fragment$7(ctx) {
 			claim_component(component_5.$$.fragment, nodes);
 			t5 = claim_space(nodes);
 			claim_component(component_6.$$.fragment, nodes);
+			t6 = claim_space(nodes);
+			claim_component(component_7.$$.fragment, nodes);
 		},
 		m(target, anchor) {
 			mount_component(component_0, target, anchor);
@@ -4572,6 +4709,8 @@ function create_fragment$7(ctx) {
 			mount_component(component_5, target, anchor);
 			insert_hydration(target, t5, anchor);
 			mount_component(component_6, target, anchor);
+			insert_hydration(target, t6, anchor);
+			mount_component(component_7, target, anchor);
 			current = true;
 		},
 		p: noop,
@@ -4584,6 +4723,7 @@ function create_fragment$7(ctx) {
 			transition_in(component_4.$$.fragment, local);
 			transition_in(component_5.$$.fragment, local);
 			transition_in(component_6.$$.fragment, local);
+			transition_in(component_7.$$.fragment, local);
 			current = true;
 		},
 		o(local) {
@@ -4594,6 +4734,7 @@ function create_fragment$7(ctx) {
 			transition_out(component_4.$$.fragment, local);
 			transition_out(component_5.$$.fragment, local);
 			transition_out(component_6.$$.fragment, local);
+			transition_out(component_7.$$.fragment, local);
 			current = false;
 		},
 		d(detaching) {
@@ -4610,15 +4751,17 @@ function create_fragment$7(ctx) {
 			destroy_component(component_5, detaching);
 			if (detaching) detach(t5);
 			destroy_component(component_6, detaching);
+			if (detaching) detach(t6);
+			destroy_component(component_7, detaching);
 		}
 	};
 }
 
-class Component$8 extends SvelteComponent {
+class Component$9 extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, null, create_fragment$7, safe_not_equal, {});
+		init(this, options, null, create_fragment$8, safe_not_equal, {});
 	}
 }
 
-export default Component$8;
+export default Component$9;
