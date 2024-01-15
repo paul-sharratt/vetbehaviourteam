@@ -3511,7 +3511,7 @@ function create_fragment$2(ctx) {
 			attr(header, "class", "section-container svelte-3u7in3");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-f5a1d30a-0b89-4d5a-bc89-79722e28ddc8");
+			attr(div3, "id", "section-55b31eb4-848b-4d27-9ea2-4ebee0b98509");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3720,7 +3720,7 @@ function create_fragment$3(ctx) {
 			attr(header, "class", "svelte-80b3bt");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-39b78530-d797-4611-9451-5938f76485a9");
+			attr(div3, "id", "section-ee2b3e14-b34b-4b84-b425-59c9e2d777cb");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -3851,7 +3851,7 @@ function create_fragment$4(ctx) {
 			attr(header, "class", "section-container svelte-so1len");
 			attr(div0, "class", "component");
 			attr(div1, "class", "section");
-			attr(div1, "id", "section-dc194d83-22dd-4627-b245-aa5435cbf15d");
+			attr(div1, "id", "section-ae14f215-5454-43f2-b6ac-bc4c71ab7a3f");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -3957,7 +3957,7 @@ function create_fragment$5(ctx) {
 			attr(div1, "class", "section");
 			attr(div2, "class", "component");
 			attr(div3, "class", "section");
-			attr(div3, "id", "section-9e60e210-1df1-444b-85c1-cb582e191ce5");
+			attr(div3, "id", "section-6cea043c-7c6c-4d9c-a376-1e9ad974f9a6");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div3, anchor);
@@ -4054,7 +4054,7 @@ function create_fragment$6(ctx) {
 			attr(aside, "class", "section-container svelte-1fq63ia");
 			attr(div0, "class", "component");
 			attr(div1, "class", "section");
-			attr(div1, "id", "section-d2af6635-1621-4021-a510-65257f386845");
+			attr(div1, "id", "section-2f5df7f6-8d4a-4caa-9bfd-10de75d0943e");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -4344,7 +4344,7 @@ function create_fragment$7(ctx) {
 			attr(footer, "class", "svelte-u1zmy0");
 			attr(div3, "class", "component");
 			attr(div4, "class", "section");
-			attr(div4, "id", "section-dab431f0-da56-4ac3-a299-6a824e85c68c");
+			attr(div4, "id", "section-9af06f03-03a9-40f8-8e9f-1b2a25836796");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div4, anchor);
@@ -4605,8 +4605,8 @@ function create_fragment$8(ctx) {
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
 				content: {
-					"html": "<p>Food is a strong motivator for most of our canine friends. Using puzzle feeders allows our pets to play with their food, work through steps and feel that wonderful sense of satisfaction at having achieved their goal. \nThere are a huge number of sophisticated food puzzles available for purchase through most pet stores. Brands like Nina Ottosson, Kong and Paws For Life have a wide variety of options to choose from. Food puzzles can also be created at home with a little bit of imagination and a small number of everyday items. </p>\n<p>Nosework, or scent work, is a fun training activity that uses your dog's incredible sense of smell. It is based on the training methods used in search and rescue, and detection work, where dogs are trained to locate specific smells. It is a great way to provide mental stimulation for your dog, and build their confidence.\nUnlike many other functions, the ability to sniff and interact with the environment remains even when a dog is stressed or anxious. In fact, sniffing can be very beneficial for an anxious dog as it allows them to take in information about their environment in a controlled way. Training scent detection can provide a way to shift an anxious dog’s focus away from their triggers and towards an enjoyable activity. </p>\n<p>Agility and obstacle course training can be great physical and mental stimulation for dogs. The combination of running, jumping and turning uses your dog’s body in a different way from a standard walk and helps build strength and fitness. While learning to navigate different surfaces, confined spaces and obstacles require focus and problem solving abilities. \nWorking on agility helps to create strong communication between you and your dog, which is a great way to build your relationship. It can also be practised both inside and outside, so is suitable for those dogs that don’t love their walks. </p>",
-					"markdown": "\nFood is a strong motivator for most of our canine friends. Using puzzle feeders allows our pets to play with their food, work through steps and feel that wonderful sense of satisfaction at having achieved their goal. \nThere are a huge number of sophisticated food puzzles available for purchase through most pet stores. Brands like Nina Ottosson, Kong and Paws For Life have a wide variety of options to choose from. Food puzzles can also be created at home with a little bit of imagination and a small number of everyday items. \n\n\nNosework, or scent work, is a fun training activity that uses your dog's incredible sense of smell. It is based on the training methods used in search and rescue, and detection work, where dogs are trained to locate specific smells. It is a great way to provide mental stimulation for your dog, and build their confidence.\nUnlike many other functions, the ability to sniff and interact with the environment remains even when a dog is stressed or anxious. In fact, sniffing can be very beneficial for an anxious dog as it allows them to take in information about their environment in a controlled way. Training scent detection can provide a way to shift an anxious dog’s focus away from their triggers and towards an enjoyable activity. \n\nAgility and obstacle course training can be great physical and mental stimulation for dogs. The combination of running, jumping and turning uses your dog’s body in a different way from a standard walk and helps build strength and fitness. While learning to navigate different surfaces, confined spaces and obstacles require focus and problem solving abilities. \nWorking on agility helps to create strong communication between you and your dog, which is a great way to build your relationship. It can also be practised both inside and outside, so is suitable for those dogs that don’t love their walks. \n"
+					"html": "<p>Description</p>",
+					"markdown": "Description\n\n"
 				}
 			}
 		});
