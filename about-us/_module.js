@@ -4811,8 +4811,8 @@ function create_fragment$6(ctx) {
 				teasers: [
 					{
 						"body": {
-							"html": "<p>Dr Amanda and Dr Heather met at the RSPCA NSW working together to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.</p><p>So we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.</p>",
-							"markdown": "Dr Amanda and Dr Heather met at the RSPCA NSW working together to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.\n\nSo we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.\n\n"
+							"html": "<p>Dr Amanda and Dr Heather met at the RSPCA NSW working together as behaviour vets to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.</p>\n<p>So we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.</p>",
+							"markdown": "Dr Amanda and Dr Heather met at the RSPCA NSW working together as behaviour vets to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.\n\nSo we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.\n\n"
 						},
 						"link": { "url": "", "label": "", "active": false },
 						"image": {
@@ -4875,7 +4875,7 @@ function create_fragment$6(ctx) {
 							"size": 48
 						},
 						"title": "Behaviour Veterinarian",
-						"description": "I graduated from the University of Sydney in 2007 with first class honours and became interested in behavioural medicine after my Cavalier King Charles Spaniel developed severe separation anxiety. I gained my memberships in 2012 and in 2014 founded the Vet Behaviour Team with Dr Amanda. We have been working together to help families and patients ever since. I enjoy baking and juggle keeping my tw small humans and many houseplants  alive!"
+						"description": "I graduated from the University of Sydney in 2007 with first class honours and became interested in behavioural medicine after my Cavalier King Charles Spaniel developed severe separation anxiety. I gained my behaviour vet memberships in 2012 and in 2014 founded the Vet Behaviour Team with Dr Amanda. We have been working together to help families and patients ever since. I enjoy baking and juggle keeping my tw small humans and many houseplants  alive!"
 					},
 					{
 						"file": "Amet in dolor",

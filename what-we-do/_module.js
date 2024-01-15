@@ -5325,8 +5325,8 @@ function create_fragment$b(ctx) {
 				title: "Vet Behaviour Team - What We Do",
 				description: "Find out more about Vet Behaviour Team's process from start to finish",
 				content: {
-					"html": "<h2 id=\"8weekspostconsult\">8 weeks post consult</h2>\n<p>Follow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation via telehealth to review progress and refine the treatment plan.</p>",
-					"markdown": "## 8 weeks post consult\n\nFollow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation via telehealth to review progress and refine the treatment plan.\n\n"
+					"html": "<h2 id=\"8weekspostconsult\">8 weeks post consult</h2>\n<p>Follow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation with our behaviour vets via telehealth to review progress and refine the treatment plan.</p>",
+					"markdown": "## 8 weeks post consult\n\nFollow up consultations are often necessary to support you and your pet through the process. We recommend an 8 week recheck consultation with our behaviour vets via telehealth to review progress and refine the treatment plan.\n\n"
 				},
 				background: "Eiusmod eiusmod tempor"
 			}

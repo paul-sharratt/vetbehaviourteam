@@ -5067,7 +5067,7 @@ function create_fragment$6(ctx) {
 				title: "Vet Behaviour Team - Contact us",
 				description: "Complete the form to get a call back, or call us direct",
 				heading: "Contact Us",
-				subheading: "We'd love to hear from you.",
+				subheading: "We'd love to hear from you. ",
 				social: [
 					{
 						"link": { "url": "/", "label": "" },
