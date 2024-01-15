@@ -5048,26 +5048,26 @@ function create_fragment$7(ctx) {
 					{
 						"title": "How do I pay?",
 						"description": {
-							"html": "<p>You will be invoiced directly after the consultation with details on how to pay via direct bank transfer. If you would like to pay via credit card, please touch base with us for options.</p>",
-							"markdown": "You will be invoiced directly after the consultation with details on how to pay via direct bank transfer. If you would like to pay via credit card, please touch base with us for options."
+							"html": "<p>You will be invoiced directly after the consultation with details on how to pay via direct bank transfer or credit card</p>",
+							"markdown": "You will be invoiced directly after the consultation with details on how to pay via direct bank transfer or credit card"
 						}
 					},
 					{
-						"title": "Can you prescribe medication?\n\nAs veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs.",
+						"title": "Can you prescribe medication?",
 						"description": {
 							"html": "<p>As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs.</p>",
 							"markdown": "As veterinarians we can absolutely prescribe medication for your pet if it is indicated. At VBT we place a special emphasis on ensuring clients feel comfortable with any medications that are used, and we tailor those medications to your pet and what suits your family's needs."
 						}
 					},
 					{
-						"title": "Do I need a referral?\n\nNo, you can book a consultation with us without a veterinary referral. We will request your pet's veterinary history be sent through to us so we have the full clinical picture whilst making our assessment.",
+						"title": "Do I need a referral?",
 						"description": {
 							"html": "<p>No, you can book a consultation with us without a veterinary referral. We will request your pet's veterinary history be sent through to us so we have the full clinical picture whilst making our assessment.</p>",
 							"markdown": "No, you can book a consultation with us without a veterinary referral. We will request your pet's veterinary history be sent through to us so we have the full clinical picture whilst making our assessment."
 						}
 					},
 					{
-						"title": "Do you use punishment or balanced training?\n\nNo, we believe in using only scientifically backed and ethical methods of treatment, so that means no choke/prong collars, no yelling or throwing things at your pet and no periods of enforced isolation.",
+						"title": "Do you use punishment or balanced training?",
 						"description": {
 							"html": "<p>No, we believe in using only scientifically backed and ethical methods of treatment, so that means no choke/prong collars, no yelling or throwing things at your pet and no periods of enforced isolation.</p>",
 							"markdown": "No, we believe in using only scientifically backed and ethical methods of treatment, so that means no choke/prong collars, no yelling or throwing things at your pet and no periods of enforced isolation."
