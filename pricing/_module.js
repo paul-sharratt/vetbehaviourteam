@@ -4873,8 +4873,8 @@ function create_fragment$6(ctx) {
 							}
 						],
 						"description": {
-							"html": "<p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p>\n<p><b> There is a non-refundable but transferable deposit of $100.00 to secure your booking.</b></p>",
-							"markdown": "During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.\n\n\n<b> There is a non-refundable but transferable deposit of $100.00 to secure your booking.</b>\n\n"
+							"html": "<p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p>\n<p><b> There is a non-refundable deposit of $100.00 to secure your booking.</b></p>",
+							"markdown": "During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We believe in empowering you with knowledge, so you can make informed decisions for your pet.\n\n\n<b> There is a non-refundable deposit of $100.00 to secure your booking.</b>\n\n"
 						}
 					}
 				]
