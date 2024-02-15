@@ -578,6 +578,144 @@
             color: var(--color, #222)
         }
 
+        .section-container.svelte-nec1em.svelte-nec1em {
+            max-width: 1400px
+        }
+
+        .heading.svelte-nec1em.svelte-nec1em {
+            text-align: center;
+            margin-bottom: 3rem
+        }
+
+        ul.cards.svelte-nec1em.svelte-nec1em {
+            display: grid;
+            place-items: center;
+            gap: 1rem
+        }
+
+        ul.cards.svelte-nec1em li.svelte-nec1em {
+            max-width: 400px;
+            padding: 1rem 2rem
+        }
+
+        ul.cards.svelte-nec1em li figure.svelte-nec1em {
+            padding: 0 2rem
+        }
+
+        ul.cards.svelte-nec1em li figure img.svelte-nec1em {
+            margin-bottom: 2rem;
+            width: 100%
+        }
+
+        ul.cards.svelte-nec1em li .info .details.svelte-nec1em {
+            display: grid;
+            text-align: center;
+            margin-bottom: 1rem
+        }
+
+        ul.cards.svelte-nec1em li .info .details span.name.svelte-nec1em {
+            font-weight: 600;
+            margin-bottom: 0.25rem
+        }
+
+        ul.cards.svelte-nec1em li .info .details span.title.svelte-nec1em {
+            font-size: 1rem
+        }
+
+        ul.cards.svelte-nec1em li .info .social.svelte-nec1em {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-accent, rebeccapurple)
+        }
+
+        ul.cards.svelte-nec1em li .info .social a.svelte-nec1em {
+            transition: var(--transition, 0.1s transform)
+        }
+
+        ul.cards.svelte-nec1em li .info .social a.svelte-nec1em:hover {
+            transform: scale(1.1)
+        }
+
+        @media(min-width: 600px) {
+            ul.cards.svelte-nec1em.svelte-nec1em {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(min-width: 1000px) {
+            ul.cards.svelte-nec1em.svelte-nec1em {
+                grid-template-columns: 1fr 1fr 1fr
+            }
+        }
+
+        .items.svelte-dg30bs.svelte-dg30bs {
+            display: grid;
+            gap: 6rem
+        }
+
+        @media(min-width: 800px) {
+            .items.svelte-dg30bs.svelte-dg30bs {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .item.svelte-dg30bs.svelte-dg30bs {
+            display: grid;
+            place-content: start
+        }
+
+        .item.svelte-dg30bs img.svelte-dg30bs {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius)
+        }
+
+        .item.svelte-dg30bs .body.svelte-dg30bs {
+            display: grid;
+            place-items: flex-start;
+            line-height: 1.5
+        }
+
+        .item.svelte-dg30bs .body .title.svelte-dg30bs {
+            font-size: 1.75rem;
+            margin-bottom: .5rem
+        }
+
+        .items.svelte-dg30bs.svelte-dg30bs {
+            display: grid;
+            gap: 6rem
+        }
+
+        @media(min-width: 800px) {
+            .items.svelte-dg30bs.svelte-dg30bs {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        .item.svelte-dg30bs.svelte-dg30bs {
+            display: grid;
+            place-content: start
+        }
+
+        .item.svelte-dg30bs img.svelte-dg30bs {
+            width: 100%;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius)
+        }
+
+        .item.svelte-dg30bs .body.svelte-dg30bs {
+            display: grid;
+            place-items: flex-start;
+            line-height: 1.5
+        }
+
+        .item.svelte-dg30bs .body .title.svelte-dg30bs {
+            font-size: 1.75rem;
+            margin-bottom: .5rem
+        }
+
         .section-container.svelte-1twigpw.svelte-1twigpw {
             display: grid;
             gap: 3rem
@@ -751,11 +889,7 @@
 
                 <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
                     </a>
-                    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START -->
-                            <rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95" />
-                            <rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95" />
-                            <rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95" /><!-- HTML_TAG_END -->
-                        </svg></button>
+                    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3"></button>
                 </div>
             </header>
         </div>
@@ -827,8 +961,104 @@
             <header class="section-container svelte-tz3ntf">
                 <div class="heading svelte-tz3ntf">Kindness + Science</div>
                 <span class="subheading svelte-tz3ntf">The best of both worlds</span>
-                <div class="buttons svelte-tz3ntf"><a class="button svelte-tz3ntf" href="/what-we-do">What we do</a><a class="button svelte-tz3ntf" href="/book">Book online</a></div>
+                <div class="buttons svelte-tz3ntf"><a class="button svelte-tz3ntf" href="/contact">Contact us</a><a class="button svelte-tz3ntf" href="/book">Book online</a></div>
             </header>
+        </div>
+    </div>
+    <div class="section" id="section-c4c6858b-1788-4390-8bc3-8e21e67a0915">
+        <div class="component">
+            <section class="section-container svelte-nec1em">
+                <h2 class="heading svelte-nec1em">Testimonials</h2>
+                <ul class="cards svelte-nec1em">
+                    <li class="svelte-nec1em">
+                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg" class="svelte-nec1em">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">Daisy with Liz</span>
+                                <span class="title svelte-nec1em">The changes in Daisy’s behaviour have been nothing short of a miracle since contacting VBT. We adopted Daisy from a shelter when she was only 3 months old. We had no idea that puppies can be born with anxiety; we just thought she needed more training. Her separation and generalised anxiety were making it impossible to live with. It was taking over our lives and hers! We tried every training technique but they just weren’t working. Since Daisy started seeing VBT 6 months ago, she relaxes and plays with her toys when left home alone 🙂 She no longer destroys property, paces, shakes, whines, barks or defecates. We finally have the freedom to have visitors over or even a dinner party without causing Daisy or ourselves distress! She is now a happy dog who enriches our lives. We can leave the house without guilt, knowing that she is ok. It is wonderful that she is now enjoying life. Thanks VBT, you have transformed our lives 🙂</span>
+                            </div>
+                            <div class="social svelte-nec1em">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-nec1em">
+                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686828304692Joker-and-Thief-Munari-225x300.jpg" class="svelte-nec1em">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">'Joker' and 'Thief' with Megan</span>
+                                <span class="title svelte-nec1em">The Vet Behaviour Team have been treating my 18 month old Kelpie x Cattle dog boys: Joker and Thief for a few months now and the difference in their behavior is amazing! Both pups were raised in shelters so they were extremely fearfully aggressive towards people and other dogs. Since treatment began, both boys have become less scared of people and other dogs, settle more quickly if they do get excited and respond better to training and cues. Their treatment requires my husband and I to be consistent with their calming exercises and the boys now enjoy their relaxation time so much that they lie down at my feet and get sleepy. Both Heather and Amanda are caring, diligent and friendly. They are always available, are always checking up on you and your pet and making sure the treatment plan is working and manageable. I look forward to working with them to get my boys happy and healthy.</span>
+                            </div>
+                            <div class="social svelte-nec1em">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="svelte-nec1em">
+                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg" class="svelte-nec1em">
+                        </figure>
+                        <div class="info">
+                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">'Akio' with Atikah</span>
+                                <span class="title svelte-nec1em">Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way.</span>
+                            </div>
+                            <div class="social svelte-nec1em"><a href="/" aria-label="quis" class="svelte-nec1em">
+                                </a><a href="/" aria-label="occaecat" class="svelte-nec1em">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-9526b4a6-1fc9-43c8-bbc5-a90afe73bfef">
+        <div class="component">
+            <section class="section-container svelte-dg30bs">
+                <div class="items svelte-dg30bs">
+                    <div class="item svelte-dg30bs">
+                        <div class="body svelte-dg30bs">
+                            <h2 class="title heading svelte-dg30bs">Will medication turn my dog into a 'zombie'?</h2>
+                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/debunking-medication-for-your-pet"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992" />
+                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Debunking Medication For Your Pet</div>
+                                    <div style="text-align:center;">6th August 2023</div>
+                                </a><!-- HTML_TAG_END --></div>
+                        </div>
+                    </div>
+                    <div class="item svelte-dg30bs">
+                        <div class="body svelte-dg30bs">
+                            <h2 class="title heading svelte-dg30bs">I miss you! Separation Anxiety in our pets</h2>
+                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/separation-anxiety"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/cat%20door.png1703755684437" />
+                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Separation anxiety</div>
+                                    <div style="text-align:center;">20th October 2023</div>
+                                </a><!-- HTML_TAG_END --></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="section" id="section-1358d663-981f-4127-891a-4d021db4442b">
+        <div class="component">
+            <section class="section-container svelte-dg30bs">
+                <div class="items svelte-dg30bs">
+                    <div class="item svelte-dg30bs">
+                        <div class="body svelte-dg30bs">
+                            <h2 class="title heading svelte-dg30bs">Fireworks and noise phobia in dogs</h2>
+                            <div class="description"><!-- HTML_TAG_START --><a href="/blog-posts/minimising-stress-for-your-dog-during-new-years-eve-fireworks-expert-tips"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/fireworks.jpg1703849041611" />
+                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Minimising Stress for Your Dog During New Year's Eve Fireworks: Expert Tips</div>
+                                    <div style="text-align:center;">29th December 2023</div>
+                                </a><!-- HTML_TAG_END --></div>
+                        </div>
+                    </div>
+                    <div class="item svelte-dg30bs">
+                        <div class="body svelte-dg30bs">
+                            <h2 class="title heading svelte-dg30bs">The 'Alpha' Myth - Dominance in Dogs</h2>
+                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/dominance-theory"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621" />
+                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">'Dominance' Theory</div>
+                                    <div style="text-align:center;">30th August 2023</div>
+                                </a><!-- HTML_TAG_END --></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <div class="section" id="section-9b2f1f5e-5073-4610-8259-cae416280c74">

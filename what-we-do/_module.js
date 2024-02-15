@@ -5250,7 +5250,7 @@ function create_fragment$b(ctx) {
 							"alt": "",
 							"url": "https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-karolina-grabowska-5993415crop.jpg1686744404682"
 						},
-						"title": "Comprehensive and personalised care for your pet.",
+						"title": "Comprehensive, personalised care for your pet.",
 						"description": {
 							"html": "<p>Our commitment to your pet's well-being and mental health goes beyond a single consultation.</p>",
 							"markdown": "Our commitment to your pet's well-being and mental health goes beyond a single consultation."
@@ -5271,8 +5271,8 @@ function create_fragment$b(ctx) {
 				title: "Vet Behaviour Team - What We Do",
 				description: "Find out more about Vet Behaviour Team's process from start to finish",
 				content: {
-					"html": "<h2>Prior to the consult</h2><p>Please fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian.</p>",
-					"markdown": "## Prior to the consult\n\nPlease fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian.\n\n"
+					"html": "<h2 id=\"priortotheconsult\">Prior to the consult</h2>\n<p>Please fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian. The pre-consult questionnaire helps you get the most out of your time with our vets during your consultation.</p>",
+					"markdown": "## Prior to the consult\n\nPlease fill out the appropriate behaviour questionnaire and request for your pet's medical history to be sent through from your GP veterinarian. The pre-consult questionnaire helps you get the most out of your time with our vets during your consultation.\n\n"
 				},
 				background: "#afc5c5"
 			}
@@ -5289,8 +5289,8 @@ function create_fragment$b(ctx) {
 				title: "Vet Behaviour Team - What We Do",
 				description: "Find out more about Vet Behaviour Team's process from start to finish",
 				content: {
-					"html": "<h2>During the consult</h2><p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. The initial consultation is a 2 hour house call consult.</p><p>Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management plan for you and your pet based on your goals. In some cases, this may include medication. This plan will be sent to you post consult and a summary to your GP veterinarian and trainer. We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p>",
-					"markdown": "## During the consult\n\nDuring the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour. The initial consultation is a 2 hour house call consult.\n\nOur expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management plan for you and your pet based on your goals. In some cases, this may include medication. This plan will be sent to you post consult and a summary to your GP veterinarian and trainer. We believe in empowering you with knowledge, so you can make informed decisions for your pet.\n\n"
+					"html": "<h2 id=\"whattoexpectduringtheconsultation\">What to expect during the consultation</h2>\n<p>During the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour through their behavioural history and analysis of their body language. The initial consultation is a 2 hour house call consult. </p>\n<p>Our expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management and behavioural modification training plan for you and your pet based on your goals. </p>\n<p>In some cases, this may include medication. This plan will be sent to you post consultation and a summary to your GP veterinarian and trainer (if you have one). We believe in empowering you with knowledge, so you can make informed decisions for your pet.</p>",
+					"markdown": "## What to expect during the consultation\n\nDuring the initial consultation, we take the time to understand your unique situation and develop a deep understanding of your pet's behaviour through their behavioural history and analysis of their body language. The initial consultation is a 2 hour house call consult. \n\nOur expert team will explain the underlying causes of your pet's behaviour and provide clear explanations of our recommended treatment options. We will create an individualised management and behavioural modification training plan for you and your pet based on your goals. \n\nIn some cases, this may include medication. This plan will be sent to you post consultation and a summary to your GP veterinarian and trainer (if you have one). We believe in empowering you with knowledge, so you can make informed decisions for your pet.\n\n"
 				},
 				background: "Eiusmod eiusmod tempor"
 			}

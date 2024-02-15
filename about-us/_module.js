@@ -4851,7 +4851,7 @@ function create_fragment$6(ctx) {
 				},
 				title: "Vet Behaviour Team",
 				description: "Kindness + Science. The best of both worlds",
-				heading: "Our People",
+				heading: "Our Team",
 				people: [
 					{
 						"file": "",
