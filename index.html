@@ -1,1204 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>Vet Behaviour Team</title><!-- HEAD_svelte-y0rua3_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<head>
-    <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-1h09qaa_START -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  gtag('config', 'G-8Q3XW1L1NY');
+  var urlObj2 = new URL(window.location.href);
+  var searchParams2 = urlObj2.searchParams;
+  window.vbt_utm_source = searchParams2.get('utm_source') || '',     
+  window.vbt_utm_medium= searchParams2.get('utm_medium') || '',     
+  window.vbt_utm_campaign= searchParams2.get('utm_campaign') || '', 
+  window.vbt_utm_content = searchParams2.get('utm_content') || '',   
+  window.vbt_utm_term = searchParams2.get('utm_term') || '' 
 
-        function gtag() {
-            dataLayer.push(arguments);
+ 
+
+</script><script>!function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '346939557913046');
+  fbq('track', 'PageView');
+</script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '330040326616650'); fbq('track', 'PageView');</script><noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=330040326616650&ev=PageView&noscript=1"></noscript><script type="text/javascript">adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
+    adroll_pix_id = "2JHXU5OCDRGIDAB44D3WKO";
+    adroll_version = "2.0";
+
+    (function(w, d, e, o, a) {
+        w.__adroll_loaded = true;
+        w.adroll = w.adroll || [];
+        w.adroll.f = [ 'setProperties', 'identify', 'track' ];
+        var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id
+                + "/roundtrip.js";
+        for (a = 0; a < w.adroll.f.length; a++) {
+            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
+                return function() {
+                    w.adroll.push([ n, arguments ])
+                }
+            })(w.adroll.f[a])
         }
-        gtag('js', new Date());
 
-        gtag('config', 'G-8Q3XW1L1NY');
-        var urlObj2 = new URL(window.location.href);
-        var searchParams2 = urlObj2.searchParams;
-        window.vbt_utm_source = searchParams2.get('utm_source') || '',
-            window.vbt_utm_medium = searchParams2.get('utm_medium') || '',
-            window.vbt_utm_campaign = searchParams2.get('utm_campaign') || '',
-            window.vbt_utm_content = searchParams2.get('utm_content') || '',
-            window.vbt_utm_term = searchParams2.get('utm_term') || ''
+        e = d.createElement('script');
+        o = d.getElementsByTagName('script')[0];
+        e.async = 1;
+        e.src = roundtripUrl;
+        o.parentNode.insertBefore(e, o);
+    })(window, document);
+    adroll.track("pageView");
+</script><link rel="icon" type="image/png" sizes="32x32" href="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png"><link rel="preconnect" href="https://fonts.bunny.net"><meta name="description" content="Kindness + Science. The best of both worlds"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+:root {
+  --color-accent: #004700;
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 0;
+  --border-color: #e0e1e1;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #111;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+
+  border-bottom: 2px solid var(--color-accent);
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.15;
+
+}
+
+.button {
+  color: white;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 0;
+  padding: 18px 24px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.content p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+.content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content a.link {
+    line-height: 1.3;
+    font-weight: 500;
+    border-bottom: 2px solid var(--color-accent);
+    transform: translateY(-2px); /* move link back into place */
+    transition: var(--transition, 0.1s border);
+  }
+.content a.link:hover {
+      border-color: transparent;
+    }
+.content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content blockquote {
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--color-accent);
+  }
+</style><!-- HEAD_svelte-y0rua3_END -->
+      <style>.section-container.svelte-3u7in3.svelte-3u7in3{padding-top:1rem;padding-bottom:1rem;position:fixed;width:100%;top:0;max-width:none !important}.logo.svelte-3u7in3.svelte-3u7in3{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-3u7in3.svelte-3u7in3{display:none;align-items:center;justify-content:space-between;width:100%;gap:2rem}.desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3{text-shadow:0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;color:white;border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3:hover{border-color:initial}@media(min-width: 900px){.desktop-nav.svelte-3u7in3.svelte-3u7in3{display:flex}}.mobile-nav.svelte-3u7in3.svelte-3u7in3{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}.mobile-nav.svelte-3u7in3 .logo.svelte-3u7in3{text-shadow:0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;color:white;border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}@media(min-width: 900px){.mobile-nav.svelte-3u7in3.svelte-3u7in3{display:none}}#popup.svelte-3u7in3.svelte-3u7in3{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:10000;max-height:calc(100vh - 20px);overflow-y:auto}#open.svelte-3u7in3.svelte-3u7in3{background-color:#ffffff99}#close.svelte-3u7in3.svelte-3u7in3{z-index:10001;position:fixed;right:2rem;top:1rem;background-color:#ffffff40}
+header.svelte-2afauk{color:white;background-size:cover;background-position:45% center;display:grid;gap:20rem}.section-container.svelte-2afauk{width:100%;display:flex;justify-content:space-between;align-items:center;padding-top:1rem;padding-bottom:1rem}@media(min-width: 800px){}@media(min-width: 800px){}.headline.svelte-2afauk{font-size:clamp(2rem, 10vw, 3.5rem);max-width:800px;padding:10px 20px;line-height:1.1;text-shadow:0px 0px 8px #000}
+.teasers.svelte-1acae4j.svelte-1acae4j{display:grid;gap:6rem}.teaser.svelte-1acae4j.svelte-1acae4j{display:grid;gap:3rem}.teaser.svelte-1acae4j img.svelte-1acae4j{border-radius:var(--border-radius)}.teaser.svelte-1acae4j .body.svelte-1acae4j{display:grid;place-items:flex-start;gap:1.5rem;padding:0;line-height:1.5}.teaser.svelte-1acae4j .body .title.svelte-1acae4j{font-size:2.25rem;font-weight:500;line-height:1.25}@media(min-width: 800px){.teaser.svelte-1acae4j.svelte-1acae4j{grid-template-columns:1fr 1fr;place-items:center
+
+    /* switch direction for even items */
+}.teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j{grid-row:1;grid-column:2}.teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j{grid-row:1;grid-column:1}}.description.svelte-1acae4j p{margin-top:10px}.description.svelte-1acae4j ul{list-style-type:circle;margin-left:20px;margin-top:20px}@media(min-width: 1200px){section.svelte-1acae4j.svelte-1acae4j{gap:6rem}.teaser.svelte-1acae4j.svelte-1acae4j{gap:6rem}}
+.content2.svelte-cexu5p img{width:100%;margin:2rem 0;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}.content2.svelte-cexu5p p{padding:0.25rem 0;line-height:1.5}.content2.svelte-cexu5p a{border-bottom:2px solid}.content2.svelte-cexu5p h1{font-size:3rem;font-weight:600;margin-bottom:1rem}.content2.svelte-cexu5p h2{font-size:2.25rem;font-weight:600;margin-bottom:1rem}.content2.svelte-cexu5p h3{font-size:1.75rem;font-weight:600;margin-bottom:0.5rem}.content2.svelte-cexu5p ul{list-style:disc;padding:0.5rem 0;padding-left:1.25rem}.content2.svelte-cexu5p ol{list-style:decimal;padding:0.5rem 0;padding-left:1.25rem}.content2.svelte-cexu5p blockquote{padding:2rem;box-shadow:var(--box-shadow);border-radius:var(--border-radius)}
+.teasers.svelte-1acae4j.svelte-1acae4j{display:grid;gap:6rem}.teaser.svelte-1acae4j.svelte-1acae4j{display:grid;gap:3rem}.teaser.svelte-1acae4j img.svelte-1acae4j{border-radius:var(--border-radius)}.teaser.svelte-1acae4j .body.svelte-1acae4j{display:grid;place-items:flex-start;gap:1.5rem;padding:0;line-height:1.5}.teaser.svelte-1acae4j .body .title.svelte-1acae4j{font-size:2.25rem;font-weight:500;line-height:1.25}@media(min-width: 800px){.teaser.svelte-1acae4j.svelte-1acae4j{grid-template-columns:1fr 1fr;place-items:center
+
+    /* switch direction for even items */
+}.teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j{grid-row:1;grid-column:2}.teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j{grid-row:1;grid-column:1}}.description.svelte-1acae4j p{margin-top:10px}.description.svelte-1acae4j ul{list-style-type:circle;margin-left:20px;margin-top:20px}@media(min-width: 1200px){section.svelte-1acae4j.svelte-1acae4j{gap:6rem}.teaser.svelte-1acae4j.svelte-1acae4j{gap:6rem}}
+.section-container.svelte-tz3ntf.svelte-tz3ntf{background-color:#afc5c5;display:grid;gap:1.5rem;place-items:center;text-align:center}.heading.svelte-tz3ntf.svelte-tz3ntf{font-size:4rem;font-family:system-ui, sans-serif}@media(min-width: 700px){.heading.svelte-tz3ntf.svelte-tz3ntf{font-size:4rem
+}}.subheading.svelte-tz3ntf.svelte-tz3ntf{font-size:1.25rem}.buttons.svelte-tz3ntf.svelte-tz3ntf{margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:1rem}.buttons.svelte-tz3ntf .button.svelte-tz3ntf:not(:only-child):last-child{background:inherit;border:2px solid var(--color-accent, rebeccapurple);color:var(--color, #222)}
+.section-container.svelte-nec1em.svelte-nec1em{max-width:1400px}.heading.svelte-nec1em.svelte-nec1em{text-align:center;margin-bottom:3rem}ul.cards.svelte-nec1em.svelte-nec1em{display:grid;place-items:center;gap:1rem}ul.cards.svelte-nec1em li.svelte-nec1em{max-width:400px;padding:1rem 2rem}ul.cards.svelte-nec1em li figure.svelte-nec1em{padding:0 2rem}ul.cards.svelte-nec1em li figure img.svelte-nec1em{margin-bottom:2rem;width:100%}ul.cards.svelte-nec1em li .info .details.svelte-nec1em{display:grid;text-align:center;margin-bottom:1rem}ul.cards.svelte-nec1em li .info .details span.name.svelte-nec1em{font-weight:600;margin-bottom:0.25rem}ul.cards.svelte-nec1em li .info .details span.title.svelte-nec1em{font-size:1rem}ul.cards.svelte-nec1em li .info .social.svelte-nec1em{display:flex;justify-content:center;gap:1.5rem;font-size:1.5rem;color:var(--color-accent, rebeccapurple)}ul.cards.svelte-nec1em li .info .social a.svelte-nec1em{transition:var(--transition, 0.1s transform)}ul.cards.svelte-nec1em li .info .social a.svelte-nec1em:hover{transform:scale(1.1)}@media(min-width: 600px){ul.cards.svelte-nec1em.svelte-nec1em{grid-template-columns:1fr 1fr
+}}@media(min-width: 1000px){ul.cards.svelte-nec1em.svelte-nec1em{grid-template-columns:1fr 1fr 1fr
+}}
+.items.svelte-dg30bs.svelte-dg30bs{display:grid;gap:6rem}@media(min-width: 800px){.items.svelte-dg30bs.svelte-dg30bs{grid-template-columns:1fr 1fr
+}}.item.svelte-dg30bs.svelte-dg30bs{display:grid;place-content:start}.item.svelte-dg30bs img.svelte-dg30bs{width:100%;margin-bottom:1.5rem;border-radius:var(--border-radius)}.item.svelte-dg30bs .body.svelte-dg30bs{display:grid;place-items:flex-start;line-height:1.5}.item.svelte-dg30bs .body .title.svelte-dg30bs{font-size:1.75rem;margin-bottom:.5rem}
+.items.svelte-dg30bs.svelte-dg30bs{display:grid;gap:6rem}@media(min-width: 800px){.items.svelte-dg30bs.svelte-dg30bs{grid-template-columns:1fr 1fr
+}}.item.svelte-dg30bs.svelte-dg30bs{display:grid;place-content:start}.item.svelte-dg30bs img.svelte-dg30bs{width:100%;margin-bottom:1.5rem;border-radius:var(--border-radius)}.item.svelte-dg30bs .body.svelte-dg30bs{display:grid;place-items:flex-start;line-height:1.5}.item.svelte-dg30bs .body .title.svelte-dg30bs{font-size:1.75rem;margin-bottom:.5rem}
+.section-container.svelte-1twigpw.svelte-1twigpw{display:grid;gap:3rem}@media(min-width: 800px){.section-container.svelte-1twigpw.svelte-1twigpw{grid-template-columns:2fr 3fr;gap:20rem
+}}.body.svelte-1twigpw.svelte-1twigpw{display:grid;place-content:flex-start;gap:1rem;padding:0}.body.svelte-1twigpw .social-links.svelte-1twigpw{display:grid;gap:1.5rem}.body.svelte-1twigpw .social-links .item.svelte-1twigpw{display:grid;line-height:1.6}.body.svelte-1twigpw .social-links .item .label.svelte-1twigpw{font-weight:600}.body.svelte-1twigpw .social-links .item a.svelte-1twigpw{display:flex;align-items:center;gap:0.75rem}form.svelte-1twigpw.svelte-1twigpw{display:grid;gap:1rem}form.svelte-1twigpw label.svelte-1twigpw{display:grid;gap:0.25rem}form.svelte-1twigpw label span.svelte-1twigpw{font-size:0.75rem;font-weight:500}form.svelte-1twigpw label input.svelte-1twigpw,form.svelte-1twigpw label textarea.svelte-1twigpw{padding:0.5rem;outline-color:transparent;transition:var(--transition, 0.1s outline-color);border:1.5px solid var(--border-color, #eee);border-radius:2px;font-size:0.9rem;font-weight:300}form.svelte-1twigpw label input.svelte-1twigpw:focus,form.svelte-1twigpw label textarea.svelte-1twigpw:focus{outline-color:var(--color-accent, rebeccapurple)}form.svelte-1twigpw .button.svelte-1twigpw{margin-top:1rem;place-self:start}
+.items.svelte-dg30bs.svelte-dg30bs{display:grid;gap:6rem}@media(min-width: 800px){.items.svelte-dg30bs.svelte-dg30bs{grid-template-columns:1fr 1fr
+}}.item.svelte-dg30bs.svelte-dg30bs{display:grid;place-content:start}.item.svelte-dg30bs img.svelte-dg30bs{width:100%;margin-bottom:1.5rem;border-radius:var(--border-radius)}.item.svelte-dg30bs .body.svelte-dg30bs{display:grid;place-items:flex-start;line-height:1.5}.item.svelte-dg30bs .body .title.svelte-dg30bs{font-size:1.75rem;margin-bottom:.5rem}
+footer.svelte-u1zmy0.svelte-u1zmy0{background:#2b312b;color:white}.section-container.svelte-u1zmy0.svelte-u1zmy0{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4rem}.content.svelte-u1zmy0.svelte-u1zmy0{margin:initial;padding:0;line-height:1.1}.nav-items.svelte-u1zmy0.svelte-u1zmy0{display:flex;flex-wrap:wrap;gap:4rem}.nav-items.svelte-u1zmy0 ul.svelte-u1zmy0{display:grid;gap:0.5rem}.nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0{border-bottom:2px solid white}.nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0:hover{border-color:transparent}.nav-items.svelte-u1zmy0 h3.svelte-u1zmy0{font-weight:500;font-size:1.5rem;margin-bottom:1rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-1affa972"><header class="section-container svelte-3u7in3"><nav class="desktop-nav menu-links svelte-3u7in3"><a class="link  svelte-3u7in3" href="/">VBT</a>
+  <div style="flex:1;"></div>
+  <a class="link  svelte-3u7in3" href="/about-us">About us</a>
+  <a class="link  svelte-3u7in3" href="/what-we-do">What we do</a>
+  <a class="link  svelte-3u7in3" href="/pricing">Pricing</a>
+  <a class="link  svelte-3u7in3" href="/book">Book online</a>
+  <a class="link  svelte-3u7in3" href="/testimonials">Testimonials</a>
+  <a class="link  svelte-3u7in3" href="/behaviour-resources">Behaviour resources</a>
+  <a class="link  svelte-3u7in3" href="/blog">Blog</a>
+  <a class="link  svelte-3u7in3" href="/faq">FAQ</a>
+  <a class="link  svelte-3u7in3" href="/contact">Contact</a></nav> 
+ 
+  <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
+    </a>
+    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95"/><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-d549dad3"><header style="background-image:url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg')" role="img" aria-label="" class="svelte-2afauk"><div class="section-container svelte-2afauk"></div>
+  <div class="section-container svelte-2afauk"><h1 class="headline svelte-2afauk">Vet Behaviour Team</h1></div></header></div> 
+<div class="section" id="section-0120ee1c"><section class="section-container svelte-1acae4j"><div class="teasers svelte-1acae4j"><div class="teaser svelte-1acae4j"><div class="body svelte-1acae4j"><h2 class="title svelte-1acae4j">Behaviour Vet Consultations</h2>
+          <div class="description svelte-1acae4j"><!-- HTML_TAG_START --><p>Behavioural problems can cause frustration, stress and damage the bond between you and your pet. It can be extremely difficult living this way. We're here to listen, understand what is happening and help you navigate through the challenges. </p>
+<p>With our team of passionate professionals, we combine the latest evidence-based scientific knowledge with kindness to support you and your pet living happy, harmonious lives.</p><!-- HTML_TAG_END --></div>
+          <a class="link svelte-1acae4j" href="/what-we-do">Read more
+            </a></div>
+        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739823014pexels-blue-bird-7210698small.jpg" alt="" class="svelte-1acae4j">
+      </div></div></section></div> 
+<div class="section" id="section-0e39a8fb"><section class="section-container" style="background-color: #afc5c5;"><div class="content2 svelte-cexu5p"><!-- HTML_TAG_START --><h2>Who we are? </h2><p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.</p><p>In the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. We prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.</p><p>We have been providing behaviour vet consultations in Sydney since 2014.</p><p><a target="_blank" rel="noopener noreferrer nofollow" class="link link" href="/about-us">About Us</a></p><!-- HTML_TAG_END --></div></section></div> 
+<div class="section" id="section-a4022420"><section class="section-container svelte-1acae4j"><div class="teasers svelte-1acae4j"><div class="teaser svelte-1acae4j"><div class="body svelte-1acae4j"><h2 class="title svelte-1acae4j">What we do</h2>
+          <div class="description svelte-1acae4j"><!-- HTML_TAG_START --><p>As behaviour vets, we diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.</p><p>Behaviour vets are qualified professionals in veterinary psychiatry, so we diagnose and treat these mental health issues. We are able to prescribe medication when required.</p><p>We only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.</p><!-- HTML_TAG_END --></div>
+          </div>
+        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686740257506pexels-alex-andrews-821736crop.jpg" alt="" class="svelte-1acae4j">
+      </div></div></section></div> 
+<div class="section" id="section-8e36e315"><header class="section-container svelte-tz3ntf"><div class="heading svelte-tz3ntf">Kindness + Science</div>
+  <span class="subheading svelte-tz3ntf">The best of both worlds</span>
+  <div class="buttons svelte-tz3ntf"><a class="button svelte-tz3ntf" href="/contact">Contact us</a><a class="button svelte-tz3ntf" href="/book">Book online</a></div></header></div> 
+<div class="section" id="section-c4c6858b"><section class="section-container svelte-nec1em"><h2 class="heading svelte-nec1em">Testimonials</h2>
+  <ul class="cards svelte-nec1em"><li class="svelte-nec1em"><figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg" class="svelte-nec1em">
+        </figure>
+      <div class="info"><div class="details svelte-nec1em"><span class="name svelte-nec1em">Daisy with Liz</span>
+          <span class="title svelte-nec1em">The changes in Daisy’s behaviour have been nothing short of a miracle since contacting VBT. We adopted Daisy from a shelter when she was only 3 months old. We had no idea that puppies can be born with anxiety; we just thought she needed more training. Her separation and generalised anxiety were making it impossible to live with. It was taking over our lives and hers! We tried every training technique but they just weren’t working. Since Daisy started seeing VBT 6 months ago, she relaxes and plays with her toys when left home alone 🙂 She no longer destroys property, paces, shakes, whines, barks or defecates. We finally have the freedom to have visitors over or even a dinner party without causing Daisy or ourselves distress!  She is now a happy dog who enriches our lives. We can leave the house without guilt, knowing that she is ok. It is wonderful that she is now enjoying life.  Thanks VBT, you have transformed our lives 🙂</span></div>
+        <div class="social svelte-nec1em">
+        </div></div>
+    </li><li class="svelte-nec1em"><figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686828304692Joker-and-Thief-Munari-225x300.jpg" class="svelte-nec1em">
+        </figure>
+      <div class="info"><div class="details svelte-nec1em"><span class="name svelte-nec1em">'Joker' and 'Thief' with Megan</span>
+          <span class="title svelte-nec1em">The Vet Behaviour Team have been treating my 18 month old Kelpie x Cattle dog boys: Joker and Thief for a few months now and the difference in their behavior is amazing! Both pups were raised in shelters so they were extremely fearfully aggressive towards people and other dogs.  Since treatment began, both boys have become less scared of people and other dogs, settle more quickly if they do get excited and respond better to training and cues. Their treatment requires my husband and I to be consistent with their calming exercises and the boys now enjoy their relaxation time so much that they lie down at my feet and get sleepy.  Both Heather and Amanda are caring, diligent and friendly. They are always available, are always checking up on you and your pet and making sure the treatment plan is working and manageable. I look forward to working with them to get my boys happy and healthy.</span></div>
+        <div class="social svelte-nec1em">
+        </div></div>
+    </li><li class="svelte-nec1em"><figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg" class="svelte-nec1em">
+        </figure>
+      <div class="info"><div class="details svelte-nec1em"><span class="name svelte-nec1em">'Akio' with Atikah</span>
+          <span class="title svelte-nec1em">Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way.</span></div>
+        <div class="social svelte-nec1em"><a href="/" aria-label="quis" class="svelte-nec1em"> 
+            </a><a href="/" aria-label="occaecat" class="svelte-nec1em"> 
+            </a>
+        </div></div>
+    </li></ul></section></div> 
+<div class="section" id="section-9526b4a6"><section class="section-container svelte-dg30bs"><div class="items svelte-dg30bs"><div class="item svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">Will medication turn my dog into a 'zombie'?</h2>
+          <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/debunking-medication-for-your-pet"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992" /> <div style="text-align:center;display:block;font-weight:bold;margin-top:0;" >Debunking Medication For Your Pet</div><div style="text-align:center;">6th August 2023</div></a><!-- HTML_TAG_END --></div></div>
+      </div><div class="item svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">I miss you! Separation Anxiety in our pets</h2>
+          <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/separation-anxiety"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/cat%20door.png1703755684437" /> <div style="text-align:center;display:block;font-weight:bold;margin-top:0;" >Separation anxiety</div><div style="text-align:center;">20th October 2023</div></a><!-- HTML_TAG_END --></div></div>
+      </div></div></section></div> 
+<div class="section" id="section-1358d663"><section class="section-container svelte-dg30bs"><div class="items svelte-dg30bs"><div class="item svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">Fireworks and noise phobia in dogs</h2>
+          <div class="description"><!-- HTML_TAG_START --><a href="/blog-posts/minimising-stress-for-your-dog-during-new-years-eve-fireworks-expert-tips"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/fireworks.jpg1703849041611" /> <div style="text-align:center;display:block;font-weight:bold;margin-top:0;" >Minimising Stress for Your Dog During New Year's Eve Fireworks: Expert Tips</div><div style="text-align:center;">29th December 2023</div></a><!-- HTML_TAG_END --></div></div>
+      </div><div class="item svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs">The 'Alpha' Myth - Dominance in Dogs</h2>
+          <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/dominance-theory"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621" /> <div style="text-align:center;display:block;font-weight:bold;margin-top:0;" >'Dominance' Theory</div><div style="text-align:center;">30th August 2023</div></a><!-- HTML_TAG_END --></div></div>
+      </div></div></section></div> 
+<div class="section" id="section-9b2f1f5e"><section class="section-container svelte-1twigpw"><div class="body svelte-1twigpw"><h2 class="heading">Contact Us</h2>
+    <div class="description"><!-- HTML_TAG_START -->We'd love to hear from you.<!-- HTML_TAG_END --></div>
+    <div class="social-links svelte-1twigpw"><div class="item svelte-1twigpw"><span class="label svelte-1twigpw"></span>
+          <a href="/" class="svelte-1twigpw"></a>
+        </div><div class="item svelte-1twigpw"><span class="label svelte-1twigpw">Phone</span>
+          <a href="/" class="svelte-1twigpw">0432881174</a>
+        </div></div></div>
+  <form method="POST" action="https://us-central1-tour-nament.cloudfunctions.net/sendMail" class="svelte-1twigpw"><label style="position:absolute;pointer-events:none;opacity:0;" class="svelte-1twigpw"><span class="svelte-1twigpw">Invalid</span>
+        <input name="important" type="text" placeholder="Invalid" class="svelte-1twigpw"></label>
+    
+    <label class="svelte-1twigpw"><span class="svelte-1twigpw">Name</span>
+          <input name="Name" type="text" placeholder="Name" class="svelte-1twigpw">
+        </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Email</span>
+          <input name="Email" type="email" placeholder="something@gmail.com" class="svelte-1twigpw">
+        </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Mobile number</span>
+          <input name="Mobile number" type="phone" placeholder="" class="svelte-1twigpw">
+        </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Message</span>
+          <textarea name="Message" placeholder="Tell us about the current problem with your pet" class="svelte-1twigpw"></textarea>
+        </label>
+    <button class="button svelte-1twigpw" type="submit">Submit</button>
+    </form></section></div> 
+<div class="section" id="section-383b2de5"><section class="section-container svelte-dg30bs"><div class="items svelte-dg30bs"><div class="item svelte-dg30bs"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/progress%20flag.webp1693394223297" alt="" class="svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs"></h2>
+          <div class="description"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div></div>
+      </div><div class="item svelte-dg30bs"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/FF-Certified-Professional-Logo-300x134.webp1693394365020" alt="" class="svelte-dg30bs">
+        <div class="body svelte-dg30bs"><h2 class="title heading svelte-dg30bs"></h2>
+          <div class="description"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div></div>
+      </div></div></section></div> 
+<div class="section" id="section-73bbfdb1"><footer class="svelte-u1zmy0"><div class="section-container svelte-u1zmy0"><div class="content svelte-u1zmy0"><!-- HTML_TAG_START --><p><em>Working Sydney Wide & Online</em></p>
+<p>Vet Behaviour Team <br>
+0432 881 174</p>
+<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>
+<p><a href="https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf" download style="font-weight:bold;font-size:14px;">TERMS AND CONDITIONS</a></p>
+<p><font size="2">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p><!-- HTML_TAG_END --></div>
+    <div class="nav-items svelte-u1zmy0"></div></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/44874b55-350f-41b8-a190-28f9fd4df08a.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-c4c6858b'),
+              hydrate: true,
+              props: {"heading":"Testimonials","people":[{"name":"Daisy with Liz","image":{"alt":"","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg","size":null},"title":"The changes in Daisy’s behaviour have been nothing short of a miracle since contacting VBT. We adopted Daisy from a shelter when she was only 3 months old. We had no idea that puppies can be born with anxiety; we just thought she needed more training. Her separation and generalised anxiety were making it impossible to live with. It was taking over our lives and hers! We tried every training technique but they just weren’t working. Since Daisy started seeing VBT 6 months ago, she relaxes and plays with her toys when left home alone 🙂 She no longer destroys property, paces, shakes, whines, barks or defecates. We finally have the freedom to have visitors over or even a dinner party without causing Daisy or ourselves distress!  She is now a happy dog who enriches our lives. We can leave the house without guilt, knowing that she is ok. It is wonderful that she is now enjoying life.  Thanks VBT, you have transformed our lives 🙂","social_links":[]},{"name":"'Joker' and 'Thief' with Megan","image":{"alt":"","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686828304692Joker-and-Thief-Munari-225x300.jpg","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686828304692Joker-and-Thief-Munari-225x300.jpg","size":null},"title":"The Vet Behaviour Team have been treating my 18 month old Kelpie x Cattle dog boys: Joker and Thief for a few months now and the difference in their behavior is amazing! Both pups were raised in shelters so they were extremely fearfully aggressive towards people and other dogs.  Since treatment began, both boys have become less scared of people and other dogs, settle more quickly if they do get excited and respond better to training and cues. Their treatment requires my husband and I to be consistent with their calming exercises and the boys now enjoy their relaxation time so much that they lie down at my feet and get sleepy.  Both Heather and Amanda are caring, diligent and friendly. They are always available, are always checking up on you and your pet and making sure the treatment plan is working and manageable. I look forward to working with them to get my boys happy and healthy.","social_links":[]},{"name":"'Akio' with Atikah","image":{"alt":"","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg","size":null},"title":"Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way.","social_links":[{"icon":"Laboris magna et","link":{"url":"/","label":"quis"}},{"icon":"Magna officia commodo","link":{"url":"/","label":"occaecat"}}]}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/6657e949-4ce8-4ee8-bd77-2425c84c9a7d.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-9b2f1f5e'),
+              hydrate: true,
+              props: {"heading":"Contact Us","subheading":"We'd love to hear from you.","social":[{"link":{"url":"/","label":""},"label":""},{"link":{"url":"/","label":"0432881174"},"label":"Phone"}],"inputs":[{"type":"text","label":"Name","placeholder":"Name"},{"type":"email","label":"Email","placeholder":"something@gmail.com"},{"type":"phone","label":"Mobile number","placeholder":""},{"type":"textarea","label":"Message","placeholder":"Tell us about the current problem with your pet"}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/cd6dc36c-3e09-44f5-96c0-9de84b69fa24.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-1affa972'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","src":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","url":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","size":3},"title":"Vet Behaviour Team"},"site_nav":[{"link":{"url":"","label":"Home","active":false}},{"link":{"url":"/","label":"About"}},{"link":{"url":"https://primosites.vercel.app/primo-library","label":"Contact"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
     </script>
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '346939557913046');
-        fbq('track', 'PageView');
-    </script>
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '330040326616650');
-        fbq('track', 'PageView');
-    </script><noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=330040326616650&ev=PageView&noscript=1"></noscript>
-    <script type="text/javascript">
-        adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
-        adroll_pix_id = "2JHXU5OCDRGIDAB44D3WKO";
-        adroll_version = "2.0";
-
-        (function(w, d, e, o, a) {
-            w.__adroll_loaded = true;
-            w.adroll = w.adroll || [];
-            w.adroll.f = ['setProperties', 'identify', 'track'];
-            var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id +
-                "/roundtrip.js";
-            for (a = 0; a < w.adroll.f.length; a++) {
-                w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
-                    return function() {
-                        w.adroll.push([n, arguments])
-                    }
-                })(w.adroll.f[a])
-            }
-
-            e = d.createElement('script');
-            o = d.getElementsByTagName('script')[0];
-            e.async = 1;
-            e.src = roundtripUrl;
-            o.parentNode.insertBefore(e, o);
-        })(window, document);
-        adroll.track("pageView");
-    </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <meta name="description" content="Kindness + Science. The best of both worlds">
-    <style>
-        /* Reset & standardize default styles */
-        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
-
-        /* Design tokens (apply to components) */
-        :root {
-            /* Custom theme options */
-            --color-accent: #004700;
-
-            /* Base values */
-            --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
-            --border-radius: 0;
-            --border-color: #e0e1e1;
-        }
-
-        /* Root element (use instead of `body`) */
-        #page {
-            font-family: system-ui, sans-serif;
-            color: #111;
-            line-height: 1.5;
-            font-size: 1.125rem;
-            background: white;
-        }
-
-        /* Elements */
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        a.link {
-            line-height: 1.3;
-
-            border-bottom: 2px solid var(--color-accent);
-            transform: translateY(-2px);
-            /* move link back into place */
-            transition: var(--transition, 0.1s border);
-        }
-
-        a.link:hover {
-            border-color: transparent;
-        }
-
-        .heading {
-            font-size: 2.5rem;
-            line-height: 1.15;
-
-        }
-
-        .button {
-            color: white;
-            background: var(--color-accent, rebeccapurple);
-            border-radius: 0;
-            padding: 18px 24px;
-            transition: var(--transition, 0.1s box-shadow);
-            border: 0;
-        }
-
-        /* reset */
-
-        .button:hover {
-            box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
-        }
-
-        .button.inverted {
-            background: transparent;
-            color: var(--color-accent, rebeccapurple);
-        }
-
-        /* Content Section */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .content p {
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .content img {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-
-        .content a.link {
-            line-height: 1.3;
-            font-weight: 500;
-            border-bottom: 2px solid var(--color-accent);
-            transform: translateY(-2px);
-            /* move link back into place */
-            transition: var(--transition, 0.1s border);
-        }
-
-        .content a.link:hover {
-            border-color: transparent;
-        }
-
-        .content h1 {
-            font-size: 3rem;
-            font-weight: 500;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .content h2 {
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .content h3 {
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .content ul {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content ol {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content blockquote {
-            padding: 2rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--color-accent);
-        }
-    </style><!-- HEAD_svelte-1h09qaa_END -->
-    <style>
-        .section-container.svelte-3u7in3.svelte-3u7in3 {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            max-width: none !important
-        }
-
-        .logo.svelte-3u7in3.svelte-3u7in3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2
-        }
-
-        .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            gap: 2rem
-        }
-
-        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
-            color: white;
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3:hover {
-            border-color: initial
-        }
-
-        @media(min-width: 900px) {
-            .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
-                display: flex
-            }
-        }
-
-        .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500
-        }
-
-        .mobile-nav.svelte-3u7in3 .logo.svelte-3u7in3 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
-            color: white;
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        @media(min-width: 900px) {
-            .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
-                display: none
-            }
-        }
-
-        #popup.svelte-3u7in3.svelte-3u7in3 {
-            font-size: 1.25rem;
-            display: grid;
-            gap: 1rem;
-            position: absolute;
-            text-align: center;
-            background-color: var(--background-color, white);
-            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
-            border-radius: var(--border-radius);
-            inset: 0.5rem;
-            bottom: initial;
-            padding: 2rem;
-            z-index: 10000;
-            max-height: calc(100vh - 20px);
-            overflow-y: auto
-        }
-
-        #open.svelte-3u7in3.svelte-3u7in3 {
-            background-color: #ffffff99
-        }
-
-        #close.svelte-3u7in3.svelte-3u7in3 {
-            z-index: 10001;
-            position: fixed;
-            right: 2rem;
-            top: 1rem;
-            background-color: #ffffff40
-        }
-
-        header.svelte-2afauk {
-            color: white;
-            background-size: cover;
-            background-position: 45% center;
-            display: grid;
-            gap: 20rem
-        }
-
-        .section-container.svelte-2afauk {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1rem;
-            padding-bottom: 1rem
-        }
-
-        @media(min-width: 800px) {}
-
-        @media(min-width: 800px) {}
-
-        .headline.svelte-2afauk {
-            font-size: clamp(2rem, 10vw, 3.5rem);
-            max-width: 800px;
-            padding: 10px 20px;
-            line-height: 1.1;
-            text-shadow: 0px 0px 8px #000
-        }
-
-        .teasers.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 6rem
-        }
-
-        .teaser.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 3rem
-        }
-
-        .teaser.svelte-1acae4j img.svelte-1acae4j {
-            border-radius: var(--border-radius)
-        }
-
-        .teaser.svelte-1acae4j .body.svelte-1acae4j {
-            display: grid;
-            place-items: flex-start;
-            gap: 1.5rem;
-            padding: 0;
-            line-height: 1.5
-        }
-
-        .teaser.svelte-1acae4j .body .title.svelte-1acae4j {
-            font-size: 2.25rem;
-            font-weight: 500;
-            line-height: 1.25
-        }
-
-        @media(min-width: 800px) {
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                grid-template-columns: 1fr 1fr;
-                place-items: center
-                    /* switch direction for even items */
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 2
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 1
-            }
-        }
-
-        .description.svelte-1acae4j p {
-            margin-top: 10px
-        }
-
-        .description.svelte-1acae4j ul {
-            list-style-type: circle;
-            margin-left: 20px;
-            margin-top: 20px
-        }
-
-        @media(min-width: 1200px) {
-            section.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-        }
-
-        .content2.svelte-cexu5p img {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius)
-        }
-
-        .content2.svelte-cexu5p p {
-            padding: 0.25rem 0;
-            line-height: 1.5
-        }
-
-        .content2.svelte-cexu5p a {
-            border-bottom: 2px solid
-        }
-
-        .content2.svelte-cexu5p h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            margin-bottom: 1rem
-        }
-
-        .content2.svelte-cexu5p h2 {
-            font-size: 2.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem
-        }
-
-        .content2.svelte-cexu5p h3 {
-            font-size: 1.75rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem
-        }
-
-        .content2.svelte-cexu5p ul {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem
-        }
-
-        .content2.svelte-cexu5p ol {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem
-        }
-
-        .content2.svelte-cexu5p blockquote {
-            padding: 2rem;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius)
-        }
-
-        .teasers.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 6rem
-        }
-
-        .teaser.svelte-1acae4j.svelte-1acae4j {
-            display: grid;
-            gap: 3rem
-        }
-
-        .teaser.svelte-1acae4j img.svelte-1acae4j {
-            border-radius: var(--border-radius)
-        }
-
-        .teaser.svelte-1acae4j .body.svelte-1acae4j {
-            display: grid;
-            place-items: flex-start;
-            gap: 1.5rem;
-            padding: 0;
-            line-height: 1.5
-        }
-
-        .teaser.svelte-1acae4j .body .title.svelte-1acae4j {
-            font-size: 2.25rem;
-            font-weight: 500;
-            line-height: 1.25
-        }
-
-        @media(min-width: 800px) {
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                grid-template-columns: 1fr 1fr;
-                place-items: center
-                    /* switch direction for even items */
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) .body.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 2
-            }
-
-            .teaser.svelte-1acae4j:nth-child(even) img.svelte-1acae4j {
-                grid-row: 1;
-                grid-column: 1
-            }
-        }
-
-        .description.svelte-1acae4j p {
-            margin-top: 10px
-        }
-
-        .description.svelte-1acae4j ul {
-            list-style-type: circle;
-            margin-left: 20px;
-            margin-top: 20px
-        }
-
-        @media(min-width: 1200px) {
-            section.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-
-            .teaser.svelte-1acae4j.svelte-1acae4j {
-                gap: 6rem
-            }
-        }
-
-        .section-container.svelte-tz3ntf.svelte-tz3ntf {
-            background-color: #afc5c5;
-            display: grid;
-            gap: 1.5rem;
-            place-items: center;
-            text-align: center
-        }
-
-        .heading.svelte-tz3ntf.svelte-tz3ntf {
-            font-size: 4rem;
-            font-family: system-ui, sans-serif
-        }
-
-        @media(min-width: 700px) {
-            .heading.svelte-tz3ntf.svelte-tz3ntf {
-                font-size: 4rem
-            }
-        }
-
-        .subheading.svelte-tz3ntf.svelte-tz3ntf {
-            font-size: 1.25rem
-        }
-
-        .buttons.svelte-tz3ntf.svelte-tz3ntf {
-            margin-top: 0.5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem
-        }
-
-        .buttons.svelte-tz3ntf .button.svelte-tz3ntf:not(:only-child):last-child {
-            background: inherit;
-            border: 2px solid var(--color-accent, rebeccapurple);
-            color: var(--color, #222)
-        }
-
-        .section-container.svelte-nec1em.svelte-nec1em {
-            max-width: 1400px
-        }
-
-        .heading.svelte-nec1em.svelte-nec1em {
-            text-align: center;
-            margin-bottom: 3rem
-        }
-
-        ul.cards.svelte-nec1em.svelte-nec1em {
-            display: grid;
-            place-items: center;
-            gap: 1rem
-        }
-
-        ul.cards.svelte-nec1em li.svelte-nec1em {
-            max-width: 400px;
-            padding: 1rem 2rem
-        }
-
-        ul.cards.svelte-nec1em li figure.svelte-nec1em {
-            padding: 0 2rem
-        }
-
-        ul.cards.svelte-nec1em li figure img.svelte-nec1em {
-            margin-bottom: 2rem;
-            width: 100%
-        }
-
-        ul.cards.svelte-nec1em li .info .details.svelte-nec1em {
-            display: grid;
-            text-align: center;
-            margin-bottom: 1rem
-        }
-
-        ul.cards.svelte-nec1em li .info .details span.name.svelte-nec1em {
-            font-weight: 600;
-            margin-bottom: 0.25rem
-        }
-
-        ul.cards.svelte-nec1em li .info .details span.title.svelte-nec1em {
-            font-size: 1rem
-        }
-
-        ul.cards.svelte-nec1em li .info .social.svelte-nec1em {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--color-accent, rebeccapurple)
-        }
-
-        ul.cards.svelte-nec1em li .info .social a.svelte-nec1em {
-            transition: var(--transition, 0.1s transform)
-        }
-
-        ul.cards.svelte-nec1em li .info .social a.svelte-nec1em:hover {
-            transform: scale(1.1)
-        }
-
-        @media(min-width: 600px) {
-            ul.cards.svelte-nec1em.svelte-nec1em {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        @media(min-width: 1000px) {
-            ul.cards.svelte-nec1em.svelte-nec1em {
-                grid-template-columns: 1fr 1fr 1fr
-            }
-        }
-
-        .items.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            gap: 6rem
-        }
-
-        @media(min-width: 800px) {
-            .items.svelte-dg30bs.svelte-dg30bs {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        .item.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            place-content: start
-        }
-
-        .item.svelte-dg30bs img.svelte-dg30bs {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border-radius: var(--border-radius)
-        }
-
-        .item.svelte-dg30bs .body.svelte-dg30bs {
-            display: grid;
-            place-items: flex-start;
-            line-height: 1.5
-        }
-
-        .item.svelte-dg30bs .body .title.svelte-dg30bs {
-            font-size: 1.75rem;
-            margin-bottom: .5rem
-        }
-
-        .items.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            gap: 6rem
-        }
-
-        @media(min-width: 800px) {
-            .items.svelte-dg30bs.svelte-dg30bs {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        .item.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            place-content: start
-        }
-
-        .item.svelte-dg30bs img.svelte-dg30bs {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border-radius: var(--border-radius)
-        }
-
-        .item.svelte-dg30bs .body.svelte-dg30bs {
-            display: grid;
-            place-items: flex-start;
-            line-height: 1.5
-        }
-
-        .item.svelte-dg30bs .body .title.svelte-dg30bs {
-            font-size: 1.75rem;
-            margin-bottom: .5rem
-        }
-
-        .section-container.svelte-1twigpw.svelte-1twigpw {
-            display: grid;
-            gap: 3rem
-        }
-
-        @media(min-width: 800px) {
-            .section-container.svelte-1twigpw.svelte-1twigpw {
-                grid-template-columns: 2fr 3fr;
-                gap: 20rem
-            }
-        }
-
-        .body.svelte-1twigpw.svelte-1twigpw {
-            display: grid;
-            place-content: flex-start;
-            gap: 1rem;
-            padding: 0
-        }
-
-        .body.svelte-1twigpw .social-links.svelte-1twigpw {
-            display: grid;
-            gap: 1.5rem
-        }
-
-        .body.svelte-1twigpw .social-links .item.svelte-1twigpw {
-            display: grid;
-            line-height: 1.6
-        }
-
-        .body.svelte-1twigpw .social-links .item .label.svelte-1twigpw {
-            font-weight: 600
-        }
-
-        .body.svelte-1twigpw .social-links .item a.svelte-1twigpw {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem
-        }
-
-        form.svelte-1twigpw.svelte-1twigpw {
-            display: grid;
-            gap: 1rem
-        }
-
-        form.svelte-1twigpw label.svelte-1twigpw {
-            display: grid;
-            gap: 0.25rem
-        }
-
-        form.svelte-1twigpw label span.svelte-1twigpw {
-            font-size: 0.75rem;
-            font-weight: 500
-        }
-
-        form.svelte-1twigpw label input.svelte-1twigpw,
-        form.svelte-1twigpw label textarea.svelte-1twigpw {
-            padding: 0.5rem;
-            outline-color: transparent;
-            transition: var(--transition, 0.1s outline-color);
-            border: 1.5px solid var(--border-color, #eee);
-            border-radius: 2px;
-            font-size: 0.9rem;
-            font-weight: 300
-        }
-
-        form.svelte-1twigpw label input.svelte-1twigpw:focus,
-        form.svelte-1twigpw label textarea.svelte-1twigpw:focus {
-            outline-color: var(--color-accent, rebeccapurple)
-        }
-
-        form.svelte-1twigpw .button.svelte-1twigpw {
-            margin-top: 1rem;
-            place-self: start
-        }
-
-        .items.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            gap: 6rem
-        }
-
-        @media(min-width: 800px) {
-            .items.svelte-dg30bs.svelte-dg30bs {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        .item.svelte-dg30bs.svelte-dg30bs {
-            display: grid;
-            place-content: start
-        }
-
-        .item.svelte-dg30bs img.svelte-dg30bs {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            border-radius: var(--border-radius)
-        }
-
-        .item.svelte-dg30bs .body.svelte-dg30bs {
-            display: grid;
-            place-items: flex-start;
-            line-height: 1.5
-        }
-
-        .item.svelte-dg30bs .body .title.svelte-dg30bs {
-            font-size: 1.75rem;
-            margin-bottom: .5rem
-        }
-
-        footer.svelte-u1zmy0.svelte-u1zmy0 {
-            background: #2b312b;
-            color: white
-        }
-
-        .section-container.svelte-u1zmy0.svelte-u1zmy0 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 4rem
-        }
-
-        .content.svelte-u1zmy0.svelte-u1zmy0 {
-            margin: initial;
-            padding: 0;
-            line-height: 1.1
-        }
-
-        .nav-items.svelte-u1zmy0.svelte-u1zmy0 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4rem
-        }
-
-        .nav-items.svelte-u1zmy0 ul.svelte-u1zmy0 {
-            display: grid;
-            gap: 0.5rem
-        }
-
-        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0 {
-            border-bottom: 2px solid white
-        }
-
-        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0:hover {
-            border-color: transparent
-        }
-
-        .nav-items.svelte-u1zmy0 h3.svelte-u1zmy0 {
-            font-weight: 500;
-            font-size: 1.5rem;
-            margin-bottom: 1rem
-        }
-    </style>
-</head>
-
-<body id="page">
-
-    <div class="section" id="section-1affa972-b2e1-476b-b014-927628cfd2ba">
-        <div class="component">
-            <header class="section-container svelte-3u7in3">
-                <nav class="desktop-nav menu-links svelte-3u7in3"><a class="link  svelte-3u7in3" href="/">VBT</a>
-                    <div style="flex:1;"></div>
-                    <a class="link  svelte-3u7in3" href="/about-us">About us</a>
-                    <a class="link  svelte-3u7in3" href="/what-we-do">What we do</a>
-                    <a class="link  svelte-3u7in3" href="/pricing">Pricing</a>
-                    <a class="link  svelte-3u7in3" href="/book">Book online</a>
-                    <a class="link  svelte-3u7in3" href="/testimonials">Testimonials</a>
-                    <a class="link  svelte-3u7in3" href="/behaviour-resources">Behaviour resources</a>
-                    <a class="link  svelte-3u7in3" href="/blog">Blog</a>
-                    <a class="link  svelte-3u7in3" href="/faq">FAQ</a>
-                    <a class="link  svelte-3u7in3" href="/contact">Contact</a>
-                </nav>
-
-                <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
-                    </a>
-                    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3">/*
-                        * [Package Error] &quot;@iconify/svelte@v4.0.2&quot; could not be built.
-                        *
-                        * [1/5] Verifying package is valid…
-                        * [2/5] Installing dependencies from npm…
-                        * [3/5] Building package using esinstall…
-                        * Running esinstall...
-                        * ENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;
-                        * ENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;
-                        *
-                        * How to fix:
-                        * - If you believe this to be an error in Skypack, file an issue here: https://github.com/skypackjs/skypack-cdn/issues
-                        * - If you believe this to be an issue in the package, share this URL with the package authors to help them debug &amp; fix.
-                        * - Use https://skypack.dev/ to find a web-friendly alternative to find another package.
-                        */
-
-                        console.warn(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. \n[1/5] Verifying package is valid…\n[2/5] Installing dependencies from npm…\n[3/5] Building package using esinstall…\nRunning esinstall...\nENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;\nENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;&quot;);
-                        throw new Error(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. &quot;);
-                        export default null;</button>
-                </div>
-            </header>
-        </div>
-    </div>
-    <div class="section" id="section-d549dad3-369c-46e2-a513-23d02074e21d">
-        <div class="component">
-            <header style="background-image:url('https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739560575pexels-mathieu-gervais-14666143%20crop.jpg')" role="img" aria-label="" class="svelte-2afauk">
-                <div class="section-container svelte-2afauk"></div>
-                <div class="section-container svelte-2afauk">
-                    <h1 class="headline svelte-2afauk">Vet Behaviour Team</h1>
-                </div>
-            </header>
-        </div>
-    </div>
-    <div class="section" id="section-0120ee1c-45de-45bf-9f60-5a0819ebefe9">
-        <div class="component">
-            <section class="section-container svelte-1acae4j">
-                <div class="teasers svelte-1acae4j">
-                    <div class="teaser svelte-1acae4j">
-                        <div class="body svelte-1acae4j">
-                            <h2 class="title svelte-1acae4j">Behaviour Vet Consultations</h2>
-                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
-                                <p>Behavioural problems can cause frustration, stress and damage the bond between you and your pet. It can be extremely difficult living this way. We're here to listen, understand what is happening and help you navigate through the challenges. </p>
-                                <p>With our team of passionate professionals, we combine the latest evidence-based scientific knowledge with kindness to support you and your pet living happy, harmonious lives.</p><!-- HTML_TAG_END -->
-                            </div>
-                            <a class="link svelte-1acae4j" href="/what-we-do">Read more
-                            </a>
-                        </div>
-                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686739823014pexels-blue-bird-7210698small.jpg" alt="" class="svelte-1acae4j">
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-0e39a8fb-0bde-4975-86ca-1a8d0d20244d">
-        <div class="component">
-            <section class="section-container" style="background-color: #afc5c5;">
-                <div class="content2 svelte-cexu5p"><!-- HTML_TAG_START -->
-                    <h2>Who we are? </h2>
-                    <p>The Vet Behaviour Team consists of Dr Heather Chee, Dr Amanda Cole and Dr Caitlin McQuarrie. We have over 25 years of combined experience in veterinary behaviour helping pets and their families.</p>
-                    <p>In the human sense, we are like your GP and psychiatrist rolled into one so we understand the intimate relationship between our pets' emotional state and physical condition. We help with issues such as anxiety disorders, reactivity, separation distress, aggression, excessive barking and elimination problems. We prioritise your pet's mental health and well-being, teaching them safe alternative behaviours and ensuring your pets are living their best lives.</p>
-                    <p>We have been providing behaviour vet consultations in Sydney since 2014.</p>
-                    <p><a target="_blank" rel="noopener noreferrer nofollow" class="link link" href="/about-us">About Us</a></p><!-- HTML_TAG_END -->
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-a4022420-12be-44a7-ad90-288ccceaaecf">
-        <div class="component">
-            <section class="section-container svelte-1acae4j">
-                <div class="teasers svelte-1acae4j">
-                    <div class="teaser svelte-1acae4j">
-                        <div class="body svelte-1acae4j">
-                            <h2 class="title svelte-1acae4j">What we do</h2>
-                            <div class="description svelte-1acae4j"><!-- HTML_TAG_START -->
-                                <p>As behaviour vets, we diagnose the root cause of a behaviour holistically. Many behaviours can be caused by physical problems eg pain, skin, hormonal and neurological disease. They can also be caused by emotional issues like stress, anxiety, fear and phobias.</p>
-                                <p>Behaviour vets are qualified professionals in veterinary psychiatry, so we diagnose and treat these mental health issues. We are able to prescribe medication when required.</p>
-                                <p>We only use evidence-based, fear-free methods in the rehabilitation (training) treatment of behavioural problems. We will never ask you to do anything which could damage the relationship you have with your pet.</p><!-- HTML_TAG_END -->
-                            </div>
-                        </div>
-                        <img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686740257506pexels-alex-andrews-821736crop.jpg" alt="" class="svelte-1acae4j">
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-8e36e315-518f-4aeb-b4c8-2b2a8d51a4f1">
-        <div class="component">
-            <header class="section-container svelte-tz3ntf">
-                <div class="heading svelte-tz3ntf">Kindness + Science</div>
-                <span class="subheading svelte-tz3ntf">The best of both worlds</span>
-                <div class="buttons svelte-tz3ntf"><a class="button svelte-tz3ntf" href="/contact">Contact us</a><a class="button svelte-tz3ntf" href="/book">Book online</a></div>
-            </header>
-        </div>
-    </div>
-    <div class="section" id="section-c4c6858b-1788-4390-8bc3-8e21e67a0915">
-        <div class="component">
-            <section class="section-container svelte-nec1em">
-                <h2 class="heading svelte-nec1em">Testimonials</h2>
-                <ul class="cards svelte-nec1em">
-                    <li class="svelte-nec1em">
-                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686743710041Daisy.jpg" class="svelte-nec1em">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">Daisy with Liz</span>
-                                <span class="title svelte-nec1em">The changes in Daisy’s behaviour have been nothing short of a miracle since contacting VBT. We adopted Daisy from a shelter when she was only 3 months old. We had no idea that puppies can be born with anxiety; we just thought she needed more training. Her separation and generalised anxiety were making it impossible to live with. It was taking over our lives and hers! We tried every training technique but they just weren’t working. Since Daisy started seeing VBT 6 months ago, she relaxes and plays with her toys when left home alone 🙂 She no longer destroys property, paces, shakes, whines, barks or defecates. We finally have the freedom to have visitors over or even a dinner party without causing Daisy or ourselves distress! She is now a happy dog who enriches our lives. We can leave the house without guilt, knowing that she is ok. It is wonderful that she is now enjoying life. Thanks VBT, you have transformed our lives 🙂</span>
-                            </div>
-                            <div class="social svelte-nec1em">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="svelte-nec1em">
-                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686828304692Joker-and-Thief-Munari-225x300.jpg" class="svelte-nec1em">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">'Joker' and 'Thief' with Megan</span>
-                                <span class="title svelte-nec1em">The Vet Behaviour Team have been treating my 18 month old Kelpie x Cattle dog boys: Joker and Thief for a few months now and the difference in their behavior is amazing! Both pups were raised in shelters so they were extremely fearfully aggressive towards people and other dogs. Since treatment began, both boys have become less scared of people and other dogs, settle more quickly if they do get excited and respond better to training and cues. Their treatment requires my husband and I to be consistent with their calming exercises and the boys now enjoy their relaxation time so much that they lie down at my feet and get sleepy. Both Heather and Amanda are caring, diligent and friendly. They are always available, are always checking up on you and your pet and making sure the treatment plan is working and manageable. I look forward to working with them to get my boys happy and healthy.</span>
-                            </div>
-                            <div class="social svelte-nec1em">
-                            </div>
-                        </div>
-                    </li>
-                    <li class="svelte-nec1em">
-                        <figure class="svelte-nec1em"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/169131821606054f4e708-50a4-4365-bc0f-a03e29a62cd5.jpg" class="svelte-nec1em">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-nec1em"><span class="name svelte-nec1em">'Akio' with Atikah</span>
-                                <span class="title svelte-nec1em">Dr Amanda and VBT have been a huge part of our dog’s journey to better walking behaviour and alone time (as well as our journey to better understanding our dog and his needs). Our miniature dachshund had severe separation anxiety and fear around walks/other dogs (he would lunge and bark relentlessly). Since our first meeting with Dr Amanda at the start of 2023, we have seen noticeable improvement in Akio. He can now be left alone for up to 5 hours without any discomfort and is much better equipped to handle walks/encounters with other dogs. Dr Amanda and VBT are communicative and will assist and support you every step of the way.</span>
-                            </div>
-                            <div class="social svelte-nec1em"><a href="/" aria-label="quis" class="svelte-nec1em">/*
-                                    * [Package Error] &quot;@iconify/svelte@v4.0.2&quot; could not be built.
-                                    *
-                                    * [1/5] Verifying package is valid…
-                                    * [2/5] Installing dependencies from npm…
-                                    * [3/5] Building package using esinstall…
-                                    * Running esinstall...
-                                    * ENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;
-                                    * ENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;
-                                    *
-                                    * How to fix:
-                                    * - If you believe this to be an error in Skypack, file an issue here: https://github.com/skypackjs/skypack-cdn/issues
-                                    * - If you believe this to be an issue in the package, share this URL with the package authors to help them debug &amp; fix.
-                                    * - Use https://skypack.dev/ to find a web-friendly alternative to find another package.
-                                    */
-
-                                    console.warn(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. \n[1/5] Verifying package is valid…\n[2/5] Installing dependencies from npm…\n[3/5] Building package using esinstall…\nRunning esinstall...\nENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;\nENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;&quot;);
-                                    throw new Error(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. &quot;);
-                                    export default null;
-                                </a><a href="/" aria-label="occaecat" class="svelte-nec1em">/*
-                                    * [Package Error] &quot;@iconify/svelte@v4.0.2&quot; could not be built.
-                                    *
-                                    * [1/5] Verifying package is valid…
-                                    * [2/5] Installing dependencies from npm…
-                                    * [3/5] Building package using esinstall…
-                                    * Running esinstall...
-                                    * ENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;
-                                    * ENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;
-                                    *
-                                    * How to fix:
-                                    * - If you believe this to be an error in Skypack, file an issue here: https://github.com/skypackjs/skypack-cdn/issues
-                                    * - If you believe this to be an issue in the package, share this URL with the package authors to help them debug &amp; fix.
-                                    * - Use https://skypack.dev/ to find a web-friendly alternative to find another package.
-                                    */
-
-                                    console.warn(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. \n[1/5] Verifying package is valid…\n[2/5] Installing dependencies from npm…\n[3/5] Building package using esinstall…\nRunning esinstall...\nENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;\nENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;&quot;);
-                                    throw new Error(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. &quot;);
-                                    export default null;
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-9526b4a6-1fc9-43c8-bbc5-a90afe73bfef">
-        <div class="component">
-            <section class="section-container svelte-dg30bs">
-                <div class="items svelte-dg30bs">
-                    <div class="item svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs">Will medication turn my dog into a 'zombie'?</h2>
-                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/debunking-medication-for-your-pet"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/pexels-pixabay-161688.jpg1691319152992" />
-                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Debunking Medication For Your Pet</div>
-                                    <div style="text-align:center;">6th August 2023</div>
-                                </a><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                    <div class="item svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs">I miss you! Separation Anxiety in our pets</h2>
-                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/separation-anxiety"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/cat%20door.png1703755684437" />
-                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Separation anxiety</div>
-                                    <div style="text-align:center;">20th October 2023</div>
-                                </a><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-1358d663-981f-4127-891a-4d021db4442b">
-        <div class="component">
-            <section class="section-container svelte-dg30bs">
-                <div class="items svelte-dg30bs">
-                    <div class="item svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs">Fireworks and noise phobia in dogs</h2>
-                            <div class="description"><!-- HTML_TAG_START --><a href="/blog-posts/minimising-stress-for-your-dog-during-new-years-eve-fireworks-expert-tips"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/fireworks.jpg1703849041611" />
-                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">Minimising Stress for Your Dog During New Year's Eve Fireworks: Expert Tips</div>
-                                    <div style="text-align:center;">29th December 2023</div>
-                                </a><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                    <div class="item svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs">The 'Alpha' Myth - Dominance in Dogs</h2>
-                            <div class="description"><!-- HTML_TAG_START --> <a href="/blog-posts/dominance-theory"><img style="margin-bottom:10px;" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/wolf%20pic.jpg1693394927621" />
-                                    <div style="text-align:center;display:block;font-weight:bold;margin-top:0;">'Dominance' Theory</div>
-                                    <div style="text-align:center;">30th August 2023</div>
-                                </a><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-9b2f1f5e-5073-4610-8259-cae416280c74">
-        <div class="component">
-            <section class="section-container svelte-1twigpw">
-                <div class="body svelte-1twigpw">
-                    <h2 class="heading">Contact Us</h2>
-                    <div class="description"><!-- HTML_TAG_START -->We'd love to hear from you.<!-- HTML_TAG_END --></div>
-                    <div class="social-links svelte-1twigpw">
-                        <div class="item svelte-1twigpw"><span class="label svelte-1twigpw"></span>
-                            <a href="/" class="svelte-1twigpw"></a>
-                        </div>
-                        <div class="item svelte-1twigpw"><span class="label svelte-1twigpw">Phone</span>
-                            <a href="/" class="svelte-1twigpw">0432881174</a>
-                        </div>
-                    </div>
-                </div>
-                <form method="POST" action="https://us-central1-tour-nament.cloudfunctions.net/sendMail" class="svelte-1twigpw"><label style="position:absolute;pointer-events:none;opacity:0;" class="svelte-1twigpw"><span class="svelte-1twigpw">Invalid</span>
-                        <input name="important" type="text" placeholder="Invalid" class="svelte-1twigpw"></label>
-
-                    <label class="svelte-1twigpw"><span class="svelte-1twigpw">Name</span>
-                        <input name="Name" type="text" placeholder="Name" class="svelte-1twigpw">
-                    </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Email</span>
-                        <input name="Email" type="email" placeholder="something@gmail.com" class="svelte-1twigpw">
-                    </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Mobile number</span>
-                        <input name="Mobile number" type="phone" placeholder="" class="svelte-1twigpw">
-                    </label><label class="svelte-1twigpw"><span class="svelte-1twigpw">Message</span>
-                        <textarea name="Message" placeholder="Tell us about the current problem with your pet" class="svelte-1twigpw"></textarea>
-                    </label>
-                    <button class="button svelte-1twigpw" type="submit">Submit</button>
-                </form>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-383b2de5-7baf-4534-bb6d-8a52c03358c9">
-        <div class="component">
-            <section class="section-container svelte-dg30bs">
-                <div class="items svelte-dg30bs">
-                    <div class="item svelte-dg30bs"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/progress%20flag.webp1693394223297" alt="" class="svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs"></h2>
-                            <div class="description"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                    <div class="item svelte-dg30bs"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/FF-Certified-Professional-Logo-300x134.webp1693394365020" alt="" class="svelte-dg30bs">
-                        <div class="body svelte-dg30bs">
-                            <h2 class="title heading svelte-dg30bs"></h2>
-                            <div class="description"><!-- HTML_TAG_START --><!-- HTML_TAG_END --></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-73bbfdb1-2d89-4d48-8268-99df5fc5433c">
-        <div class="component">
-            <footer class="svelte-u1zmy0">
-                <div class="section-container svelte-u1zmy0">
-                    <div class="content svelte-u1zmy0"><!-- HTML_TAG_START -->
-                        <p><em>Working Sydney Wide & Online</em></p>
-                        <p>Vet Behaviour Team <br>
-                            0432 881 174</p>
-                        <p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>
-                        <p><a href="https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf" download style="font-weight:bold;font-size:14px;">TERMS AND CONDITIONS</a></p>
-                        <p>
-                            <font size="2">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>
-                        </p><!-- HTML_TAG_END -->
-                    </div>
-                    <div class="nav-items svelte-u1zmy0"></div>
-                </div>
-            </footer>
-        </div>
-    </div>
-
-    <script type="module">
-        const path = window.location.pathname === '/' ? '' : window.location.pathname
-        const [{
-            default: App
-        }] = await Promise.all([
-            import(path + '/_module.js')
-        ]).catch(e => console.error(e))
-        new App({
-            target: document.querySelector('body'),
-            hydrate: true,
-        })
-    </script>
-</body>
-
-</html>
+    </body>
+  </html>
+  

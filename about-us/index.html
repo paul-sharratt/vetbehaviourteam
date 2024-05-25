@@ -1,682 +1,272 @@
-<!DOCTYPE html>
-<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta name="generator" content="Primo" />
+      <title>Vet Behaviour Team</title><!-- HEAD_svelte-y0rua3_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-<head>
-    <meta name="generator" content="Primo" />
-    <title>Vet Behaviour Team</title><!-- HEAD_svelte-1h09qaa_START -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8Q3XW1L1NY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  gtag('config', 'G-8Q3XW1L1NY');
+  var urlObj2 = new URL(window.location.href);
+  var searchParams2 = urlObj2.searchParams;
+  window.vbt_utm_source = searchParams2.get('utm_source') || '',     
+  window.vbt_utm_medium= searchParams2.get('utm_medium') || '',     
+  window.vbt_utm_campaign= searchParams2.get('utm_campaign') || '', 
+  window.vbt_utm_content = searchParams2.get('utm_content') || '',   
+  window.vbt_utm_term = searchParams2.get('utm_term') || '' 
 
-        function gtag() {
-            dataLayer.push(arguments);
+ 
+
+</script><script>!function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '346939557913046');
+  fbq('track', 'PageView');
+</script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '330040326616650'); fbq('track', 'PageView');</script><noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=330040326616650&ev=PageView&noscript=1"></noscript><script type="text/javascript">adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
+    adroll_pix_id = "2JHXU5OCDRGIDAB44D3WKO";
+    adroll_version = "2.0";
+
+    (function(w, d, e, o, a) {
+        w.__adroll_loaded = true;
+        w.adroll = w.adroll || [];
+        w.adroll.f = [ 'setProperties', 'identify', 'track' ];
+        var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id
+                + "/roundtrip.js";
+        for (a = 0; a < w.adroll.f.length; a++) {
+            w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
+                return function() {
+                    w.adroll.push([ n, arguments ])
+                }
+            })(w.adroll.f[a])
         }
-        gtag('js', new Date());
 
-        gtag('config', 'G-8Q3XW1L1NY');
-        var urlObj2 = new URL(window.location.href);
-        var searchParams2 = urlObj2.searchParams;
-        window.vbt_utm_source = searchParams2.get('utm_source') || '',
-            window.vbt_utm_medium = searchParams2.get('utm_medium') || '',
-            window.vbt_utm_campaign = searchParams2.get('utm_campaign') || '',
-            window.vbt_utm_content = searchParams2.get('utm_content') || '',
-            window.vbt_utm_term = searchParams2.get('utm_term') || ''
+        e = d.createElement('script');
+        o = d.getElementsByTagName('script')[0];
+        e.async = 1;
+        e.src = roundtripUrl;
+        o.parentNode.insertBefore(e, o);
+    })(window, document);
+    adroll.track("pageView");
+</script><link rel="icon" type="image/png" sizes="32x32" href="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png"><link rel="preconnect" href="https://fonts.bunny.net"><meta name="description" content="Kindness + Science. The best of both worlds"><style>/* Reset & standardize default styles */
+@import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
+
+:root {
+  --color-accent: #004700;
+  --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+  --border-radius: 0;
+  --border-color: #e0e1e1;
+}
+
+/* Root element (use instead of `body`) */
+#page {
+  font-family: system-ui, sans-serif;
+  color: #111;
+  line-height: 1.5;
+  font-size: 1.125rem;
+  background: white;
+}
+
+/* Elements */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+a.link {
+  line-height: 1.3;
+
+  border-bottom: 2px solid var(--color-accent);
+  transform: translateY(-2px); /* move link back into place */
+  transition: var(--transition, 0.1s border);
+}
+
+a.link:hover {
+    border-color: transparent;
+  }
+
+.heading {
+  font-size: 2.5rem;
+  line-height: 1.15;
+
+}
+
+.button {
+  color: white;
+  background: var(--color-accent, rebeccapurple);
+  border-radius: 0;
+  padding: 18px 24px;
+  transition: var(--transition, 0.1s box-shadow);
+  border: 0;
+}
+
+/* reset */
+
+.button:hover {
+    box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
+  }
+
+.button.inverted {
+    background: transparent;
+    color: var(--color-accent, rebeccapurple);
+  }
+
+/* Content Section */
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.content p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+.content img {
+    width: 100%;
+    margin: 2rem 0;
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+  }
+.content a.link {
+    line-height: 1.3;
+    font-weight: 500;
+    border-bottom: 2px solid var(--color-accent);
+    transform: translateY(-2px); /* move link back into place */
+    transition: var(--transition, 0.1s border);
+  }
+.content a.link:hover {
+      border-color: transparent;
+    }
+.content h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+.content h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+.content ul {
+    list-style: disc;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content ol {
+    list-style: decimal;
+    padding: 0.5rem 0;
+    padding-left: 1.25rem;
+  }
+.content blockquote {
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid var(--color-accent);
+  }
+</style><!-- HEAD_svelte-y0rua3_END -->
+      <style>.section-container.svelte-3u7in3.svelte-3u7in3{padding-top:1rem;padding-bottom:1rem;position:fixed;width:100%;top:0;max-width:none !important}.logo.svelte-3u7in3.svelte-3u7in3{font-size:1.5rem;font-weight:600;line-height:1.2}.desktop-nav.svelte-3u7in3.svelte-3u7in3{display:none;align-items:center;justify-content:space-between;width:100%;gap:2rem}.desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3{text-shadow:0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;color:white;border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}.desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3:hover{border-color:initial}@media(min-width: 900px){.desktop-nav.svelte-3u7in3.svelte-3u7in3{display:flex}}.mobile-nav.svelte-3u7in3.svelte-3u7in3{display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:500}.mobile-nav.svelte-3u7in3 .logo.svelte-3u7in3{text-shadow:0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;color:white;border-color:transparent;transition:border-color 0.1s;font-size:0.95rem}@media(min-width: 900px){.mobile-nav.svelte-3u7in3.svelte-3u7in3{display:none}}#popup.svelte-3u7in3.svelte-3u7in3{font-size:1.25rem;display:grid;gap:1rem;position:absolute;text-align:center;background-color:var(--background-color, white);box-shadow:var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));border-radius:var(--border-radius);inset:0.5rem;bottom:initial;padding:2rem;z-index:10000;max-height:calc(100vh - 20px);overflow-y:auto}#open.svelte-3u7in3.svelte-3u7in3{background-color:#ffffff99}#close.svelte-3u7in3.svelte-3u7in3{z-index:10001;position:fixed;right:2rem;top:1rem;background-color:#ffffff40}
+section.svelte-1er6exq.svelte-1er6exq{background:#2b312b;color:white}.teasers.svelte-1er6exq.svelte-1er6exq{display:grid;gap:6rem}.teaser.svelte-1er6exq.svelte-1er6exq{display:grid;gap:1rem}.teaser.svelte-1er6exq img.svelte-1er6exq{border-radius:var(--border-radius)}.teaser.svelte-1er6exq .content-section.svelte-1er6exq{display:grid;place-items:flex-start;padding:0}.teaser.svelte-1er6exq .content-section .heading.svelte-1er6exq{margin-bottom:1.25rem}.teaser.svelte-1er6exq .content-section .body.svelte-1er6exq{margin-bottom:2rem}.teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq{background-color:transparent;border:1.5px solid white}.teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq:hover{box-shadow:0 0 0 2px white}@media(min-width: 800px){.teaser.svelte-1er6exq.svelte-1er6exq{grid-template-columns:1fr 1fr;place-items:center;gap:4rem
+
+    /* switch direction for even items */
+}.teaser.svelte-1er6exq:nth-child(odd) img.svelte-1er6exq{grid-row:1;grid-column:2}.teaser.svelte-1er6exq:nth-child(even) img.svelte-1er6exq{grid-row:1;grid-column:1}}@media(min-width: 1200px){section.svelte-1er6exq.svelte-1er6exq{gap:6rem}.teaser.svelte-1er6exq.svelte-1er6exq{gap:10rem}.heading.svelte-1er6exq.svelte-1er6exq{margin-bottom:5rem}.body.svelte-1er6exq.svelte-1er6exq{margin-bottom:2.5rem}}
+.heading.svelte-1d6smsq.svelte-1d6smsq{text-align:center;margin-bottom:3rem}ul.cards.svelte-1d6smsq.svelte-1d6smsq{display:grid;place-items:center;gap:2rem}ul.cards.svelte-1d6smsq li.svelte-1d6smsq{max-width:400px;height:100%;padding:1.5rem;border:1px solid var(--border-color, #eee);border-radius:var(--border-radius)}ul.cards.svelte-1d6smsq li figure.svelte-1d6smsq{display:grid;place-items:center}ul.cards.svelte-1d6smsq li figure img.svelte-1d6smsq{padding:2rem;aspect-ratio:1 / 1;border-radius:50%;-o-object-fit:cover;object-fit:cover;width:100%}ul.cards.svelte-1d6smsq li .info .details.svelte-1d6smsq{display:grid;gap:.25rem;text-align:center;margin-bottom:1rem}ul.cards.svelte-1d6smsq li .info .details span.name.svelte-1d6smsq{font-weight:600}ul.cards.svelte-1d6smsq li .info .details span.title.svelte-1d6smsq{font-size:1rem;color:#444}ul.cards.svelte-1d6smsq li .info .social.svelte-1d6smsq{display:flex;text-align:center;justify-content:center;gap:1.25rem;font-size:0.75rem;color:var(--color-accent, rebeccapurple)}ul.cards.svelte-1d6smsq li .info .social a.svelte-1d6smsq{transition:var(--transition, 0.1s transform)}ul.cards.svelte-1d6smsq li .info .social a.svelte-1d6smsq:hover{transform:scale(1.1)}@media(min-width: 600px){ul.cards.svelte-1d6smsq.svelte-1d6smsq{grid-template-columns:1fr 1fr
+}}@media(min-width: 1000px){ul.cards.svelte-1d6smsq.svelte-1d6smsq{grid-template-columns:1fr 1fr 1fr
+}}
+footer.svelte-u1zmy0.svelte-u1zmy0{background:#2b312b;color:white}.section-container.svelte-u1zmy0.svelte-u1zmy0{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4rem}.content.svelte-u1zmy0.svelte-u1zmy0{margin:initial;padding:0;line-height:1.1}.nav-items.svelte-u1zmy0.svelte-u1zmy0{display:flex;flex-wrap:wrap;gap:4rem}.nav-items.svelte-u1zmy0 ul.svelte-u1zmy0{display:grid;gap:0.5rem}.nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0{border-bottom:2px solid white}.nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0:hover{border-color:transparent}.nav-items.svelte-u1zmy0 h3.svelte-u1zmy0{font-weight:500;font-size:1.5rem;margin-bottom:1rem}</style>
+    </head>
+    <body id="page">
+       
+<div class="section" id="section-f2017979"><header class="section-container svelte-3u7in3"><nav class="desktop-nav menu-links svelte-3u7in3"><a class="link  svelte-3u7in3" href="/">VBT</a>
+  <div style="flex:1;"></div>
+  <a class="link  svelte-3u7in3" href="/about-us">About us</a>
+  <a class="link  svelte-3u7in3" href="/what-we-do">What we do</a>
+  <a class="link  svelte-3u7in3" href="/pricing">Pricing</a>
+  <a class="link  svelte-3u7in3" href="/book">Book online</a>
+  <a class="link  svelte-3u7in3" href="/testimonials">Testimonials</a>
+  <a class="link  svelte-3u7in3" href="/behaviour-resources">Behaviour resources</a>
+  <a class="link  svelte-3u7in3" href="/blog">Blog</a>
+  <a class="link  svelte-3u7in3" href="/faq">FAQ</a>
+  <a class="link  svelte-3u7in3" href="/contact">Contact</a></nav> 
+ 
+  <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
+    </a>
+    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="30" height="30" viewBox="0 0 24 24" class="iconify iconify--eva"><!-- HTML_TAG_START --><rect width="18" height="2" x="3" y="11" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="16" fill="currentColor" rx=".95" ry=".95"/><rect width="18" height="2" x="3" y="6" fill="currentColor" rx=".95" ry=".95"/><!-- HTML_TAG_END --></svg></button>
+    </div></header></div> 
+<div class="section" id="section-fae65643"><section class="svelte-1er6exq"><div class="section-container svelte-1er6exq"><div class="teasers svelte-1er6exq"><div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686740155741pexels-christian-domingues-731022.jpg" alt="" class="svelte-1er6exq">
+          <div class="content-section svelte-1er6exq"><h2 class="heading svelte-1er6exq">Our Story</h2>
+            <div class="body svelte-1er6exq"><!-- HTML_TAG_START --><p>Dr Amanda and Dr Heather met at the RSPCA NSW working together as behaviour vets to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.</p>
+<p>So we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div><div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png" alt="" class="svelte-1er6exq">
+          <div class="content-section svelte-1er6exq"><h2 class="heading svelte-1er6exq"></h2>
+            <div class="body svelte-1er6exq"><!-- HTML_TAG_START --><p>We are pleased to have Dr Caitlin McQuarrie join us in 2023. We have all passed our Memberships in Veterinary Behavioural Medicine and completed the Postgraduate Sydney University course in Veterinary Behaviour.</p><p>Dr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists, been an examiner for the Veterinary Behaviour Memberships and served on the Australian Veterinary Palliative Care Advisory Council.</p><p>Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.</p><!-- HTML_TAG_END --></div>
+            </div>
+        </div></div></div></section></div> 
+<div class="section" id="section-8bce132f"><section class="section-container svelte-1d6smsq"><h2 class="heading svelte-1d6smsq">Our Team</h2>
+  <ul class="cards svelte-1d6smsq"><li class="svelte-1d6smsq"><figure class="svelte-1d6smsq"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703758447899Amanda%20Cole%20cropped2.jpg" class="svelte-1d6smsq">
+        </figure>
+      <div class="info"><div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Amanda</span>
+          <span class="title svelte-1d6smsq">Behaviour Veterinarian</span></div>
+        <div class="social svelte-1d6smsq">I have worked in the small animal practice in both Australia and the United Kingdom. I completed my Membership to the Australian College of Veterinary Scientists in Veterinary Behaviour in 2010, prior to heading the Veterinary Behaviour Component of RSPCA NSW which worked regionally to help animals within shelters lead happier and healthier lives. I  founded in partnership the Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible.
+        </div></div>
+    </li><li class="svelte-1d6smsq"><figure class="svelte-1d6smsq"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703757175336heather%20bird.png" class="svelte-1d6smsq">
+        </figure>
+      <div class="info"><div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Heather</span>
+          <span class="title svelte-1d6smsq">Behaviour Veterinarian</span></div>
+        <div class="social svelte-1d6smsq">I graduated from the University of Sydney in 2007 with first class honours and became interested in behavioural medicine after my Cavalier King Charles Spaniel developed severe separation anxiety. I gained my behaviour vet memberships in 2012 and in 2014 founded the Vet Behaviour Team with Dr Amanda. We have been working together to help families and patients ever since. I enjoy baking and juggle keeping my tw small humans and many houseplants  alive!
+        </div></div>
+    </li><li class="svelte-1d6smsq"><figure class="svelte-1d6smsq"><img alt="I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. Having devoted many hours to behavioural medicine conferences and webinars, I decided to complete the Centre for Veterinary Education course in behavioural medicine in 2022. I am currently studying for my membership examinations in June and July of 2023. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck." src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703756416569caitlin%20website.jpg" class="svelte-1d6smsq">
+        </figure>
+      <div class="info"><div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Caitlin</span>
+          <a class="title svelte-1d6smsq" download href="Amet in dolor">Behaviour Veterinarian</a></div>
+        <div class="social svelte-1d6smsq">I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. I decided to gain my membership and commit to behavioural consulting. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck.
+        </div></div>
+    </li></ul></section></div> 
+<div class="section" id="section-6aa72c92"><footer class="svelte-u1zmy0"><div class="section-container svelte-u1zmy0"><div class="content svelte-u1zmy0"><!-- HTML_TAG_START --><p><em>Working Sydney Wide & Online</em></p>
+<p>Vet Behaviour Team <br>
+0432 881 174</p>
+<p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>
+<p><a href="https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf" download style="font-weight:bold;font-size:14px;">TERMS AND CONDITIONS</a></p>
+<p><font size="2">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font></p><!-- HTML_TAG_END --></div>
+    <div class="nav-items svelte-u1zmy0"></div></div></footer></div> 
+
+      <script type="module">
+      import('/_symbols/cd6dc36c-3e09-44f5-96c0-9de84b69fa24.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-f2017979'),
+              hydrate: true,
+              props: {"logo":{"image":{"alt":"","src":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","url":"https://jbbjtodsvhsgjappwopg.supabase.co/storage/v1/object/public/sites/public-library/assets/logoipsum-261 (1).svg","size":3},"title":"Vet Behaviour Team"},"site_nav":[{"link":{"url":"","label":"Home","active":false}},{"link":{"url":"/","label":"About"}},{"link":{"url":"https://primosites.vercel.app/primo-library","label":"Contact"}}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/394e69c6-2985-4ac1-9973-ef4b8e82b8ec.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-8bce132f'),
+              hydrate: true,
+              props: {"heading":"Our Team","people":[{"file":"","name":"Dr Amanda","image":{"alt":"","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703758447899Amanda%20Cole%20cropped2.jpg","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703758447899Amanda%20Cole%20cropped2.jpg","size":5},"title":"Behaviour Veterinarian","description":"I have worked in the small animal practice in both Australia and the United Kingdom. I completed my Membership to the Australian College of Veterinary Scientists in Veterinary Behaviour in 2010, prior to heading the Veterinary Behaviour Component of RSPCA NSW which worked regionally to help animals within shelters lead happier and healthier lives. I  founded in partnership the Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible."},{"file":"","name":"Dr Heather","image":{"alt":"","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703757175336heather%20bird.png","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703757175336heather%20bird.png","size":48},"title":"Behaviour Veterinarian","description":"I graduated from the University of Sydney in 2007 with first class honours and became interested in behavioural medicine after my Cavalier King Charles Spaniel developed severe separation anxiety. I gained my behaviour vet memberships in 2012 and in 2014 founded the Vet Behaviour Team with Dr Amanda. We have been working together to help families and patients ever since. I enjoy baking and juggle keeping my tw small humans and many houseplants  alive!"},{"file":"Amet in dolor","name":"Dr Caitlin","image":{"alt":"I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. Having devoted many hours to behavioural medicine conferences and webinars, I decided to complete the Centre for Veterinary Education course in behavioural medicine in 2022. I am currently studying for my membership examinations in June and July of 2023. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck.","src":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703756416569caitlin%20website.jpg","url":"https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703756416569caitlin%20website.jpg","size":12},"title":"Behaviour Veterinarian","description":"I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. I decided to gain my membership and commit to behavioural consulting. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
     </script>
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '346939557913046');
-        fbq('track', 'PageView');
-    </script>
-    <script>
-        ! function(f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function() {
-                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '330040326616650');
-        fbq('track', 'PageView');
-    </script><noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=330040326616650&ev=PageView&noscript=1"></noscript>
-    <script type="text/javascript">
-        adroll_adv_id = "PDMI3WJZQVHGZCV3SMFR2J";
-        adroll_pix_id = "2JHXU5OCDRGIDAB44D3WKO";
-        adroll_version = "2.0";
-
-        (function(w, d, e, o, a) {
-            w.__adroll_loaded = true;
-            w.adroll = w.adroll || [];
-            w.adroll.f = ['setProperties', 'identify', 'track'];
-            var roundtripUrl = "https://s.adroll.com/j/" + adroll_adv_id +
-                "/roundtrip.js";
-            for (a = 0; a < w.adroll.f.length; a++) {
-                w.adroll[w.adroll.f[a]] = w.adroll[w.adroll.f[a]] || (function(n) {
-                    return function() {
-                        w.adroll.push([n, arguments])
-                    }
-                })(w.adroll.f[a])
-            }
-
-            e = d.createElement('script');
-            o = d.getElementsByTagName('script')[0];
-            e.async = 1;
-            e.src = roundtripUrl;
-            o.parentNode.insertBefore(e, o);
-        })(window, document);
-        adroll.track("pageView");
-    </script>
-    <link rel="icon" type="image/png" sizes="32x32" href="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1688236910000icons8-dog-heart-ios-16-glyph-32.png">
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <meta name="description" content="Kindness + Science. The best of both worlds">
-    <style>
-        /* Reset & standardize default styles */
-        @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
-
-        /* Design tokens (apply to components) */
-        :root {
-            /* Custom theme options */
-            --color-accent: #004700;
-
-            /* Base values */
-            --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
-            --border-radius: 0;
-            --border-color: #e0e1e1;
-        }
-
-        /* Root element (use instead of `body`) */
-        #page {
-            font-family: system-ui, sans-serif;
-            color: #111;
-            line-height: 1.5;
-            font-size: 1.125rem;
-            background: white;
-        }
-
-        /* Elements */
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-        }
-
-        a.link {
-            line-height: 1.3;
-
-            border-bottom: 2px solid var(--color-accent);
-            transform: translateY(-2px);
-            /* move link back into place */
-            transition: var(--transition, 0.1s border);
-        }
-
-        a.link:hover {
-            border-color: transparent;
-        }
-
-        .heading {
-            font-size: 2.5rem;
-            line-height: 1.15;
-
-        }
-
-        .button {
-            color: white;
-            background: var(--color-accent, rebeccapurple);
-            border-radius: 0;
-            padding: 18px 24px;
-            transition: var(--transition, 0.1s box-shadow);
-            border: 0;
-        }
-
-        /* reset */
-
-        .button:hover {
-            box-shadow: 0 0 0 2px var(--color-accent, rebeccapurple);
-        }
-
-        .button.inverted {
-            background: transparent;
-            color: var(--color-accent, rebeccapurple);
-        }
-
-        /* Content Section */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .content p {
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .content img {
-            width: 100%;
-            margin: 2rem 0;
-            box-shadow: var(--box-shadow);
-            border-radius: var(--border-radius);
-        }
-
-        .content a.link {
-            line-height: 1.3;
-            font-weight: 500;
-            border-bottom: 2px solid var(--color-accent);
-            transform: translateY(-2px);
-            /* move link back into place */
-            transition: var(--transition, 0.1s border);
-        }
-
-        .content a.link:hover {
-            border-color: transparent;
-        }
-
-        .content h1 {
-            font-size: 3rem;
-            font-weight: 500;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .content h2 {
-            font-size: 2.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .content h3 {
-            font-size: 2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .content ul {
-            list-style: disc;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content ol {
-            list-style: decimal;
-            padding: 0.5rem 0;
-            padding-left: 1.25rem;
-        }
-
-        .content blockquote {
-            padding: 2rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid var(--color-accent);
-        }
-    </style><!-- HEAD_svelte-1h09qaa_END -->
-    <style>
-        .section-container.svelte-3u7in3.svelte-3u7in3 {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            max-width: none !important
-        }
-
-        .logo.svelte-3u7in3.svelte-3u7in3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            line-height: 1.2
-        }
-
-        .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
-            display: none;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            gap: 2rem
-        }
-
-        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
-            color: white;
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        .desktop-nav.svelte-3u7in3 a.link.svelte-3u7in3:hover {
-            border-color: initial
-        }
-
-        @media(min-width: 900px) {
-            .desktop-nav.svelte-3u7in3.svelte-3u7in3 {
-                display: flex
-            }
-        }
-
-        .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            font-weight: 500
-        }
-
-        .mobile-nav.svelte-3u7in3 .logo.svelte-3u7in3 {
-            text-shadow: 0px 0px 6px black, 0px 0px 15px black, 0px 0px 20px black;
-            color: white;
-            border-color: transparent;
-            transition: border-color 0.1s;
-            font-size: 0.95rem
-        }
-
-        @media(min-width: 900px) {
-            .mobile-nav.svelte-3u7in3.svelte-3u7in3 {
-                display: none
-            }
-        }
-
-        #popup.svelte-3u7in3.svelte-3u7in3 {
-            font-size: 1.25rem;
-            display: grid;
-            gap: 1rem;
-            position: absolute;
-            text-align: center;
-            background-color: var(--background-color, white);
-            box-shadow: var(--box-shadow, 0px 4px 30px rgba(0, 0, 0, 0.1));
-            border-radius: var(--border-radius);
-            inset: 0.5rem;
-            bottom: initial;
-            padding: 2rem;
-            z-index: 10000;
-            max-height: calc(100vh - 20px);
-            overflow-y: auto
-        }
-
-        #open.svelte-3u7in3.svelte-3u7in3 {
-            background-color: #ffffff99
-        }
-
-        #close.svelte-3u7in3.svelte-3u7in3 {
-            z-index: 10001;
-            position: fixed;
-            right: 2rem;
-            top: 1rem;
-            background-color: #ffffff40
-        }
-
-        section.svelte-1er6exq.svelte-1er6exq {
-            background: #2b312b;
-            color: white
-        }
-
-        .teasers.svelte-1er6exq.svelte-1er6exq {
-            display: grid;
-            gap: 6rem
-        }
-
-        .teaser.svelte-1er6exq.svelte-1er6exq {
-            display: grid;
-            gap: 1rem
-        }
-
-        .teaser.svelte-1er6exq img.svelte-1er6exq {
-            border-radius: var(--border-radius)
-        }
-
-        .teaser.svelte-1er6exq .content-section.svelte-1er6exq {
-            display: grid;
-            place-items: flex-start;
-            padding: 0
-        }
-
-        .teaser.svelte-1er6exq .content-section .heading.svelte-1er6exq {
-            margin-bottom: 1.25rem
-        }
-
-        .teaser.svelte-1er6exq .content-section .body.svelte-1er6exq {
-            margin-bottom: 2rem
-        }
-
-        .teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq {
-            background-color: transparent;
-            border: 1.5px solid white
-        }
-
-        .teaser.svelte-1er6exq .content-section a.button.svelte-1er6exq:hover {
-            box-shadow: 0 0 0 2px white
-        }
-
-        @media(min-width: 800px) {
-            .teaser.svelte-1er6exq.svelte-1er6exq {
-                grid-template-columns: 1fr 1fr;
-                place-items: center;
-                gap: 4rem
-                    /* switch direction for even items */
-            }
-
-            .teaser.svelte-1er6exq:nth-child(odd) img.svelte-1er6exq {
-                grid-row: 1;
-                grid-column: 2
-            }
-
-            .teaser.svelte-1er6exq:nth-child(even) img.svelte-1er6exq {
-                grid-row: 1;
-                grid-column: 1
-            }
-        }
-
-        @media(min-width: 1200px) {
-            section.svelte-1er6exq.svelte-1er6exq {
-                gap: 6rem
-            }
-
-            .teaser.svelte-1er6exq.svelte-1er6exq {
-                gap: 10rem
-            }
-
-            .heading.svelte-1er6exq.svelte-1er6exq {
-                margin-bottom: 5rem
-            }
-
-            .body.svelte-1er6exq.svelte-1er6exq {
-                margin-bottom: 2.5rem
-            }
-        }
-
-        .heading.svelte-1d6smsq.svelte-1d6smsq {
-            text-align: center;
-            margin-bottom: 3rem
-        }
-
-        ul.cards.svelte-1d6smsq.svelte-1d6smsq {
-            display: grid;
-            place-items: center;
-            gap: 2rem
-        }
-
-        ul.cards.svelte-1d6smsq li.svelte-1d6smsq {
-            max-width: 400px;
-            height: 100%;
-            padding: 1.5rem;
-            border: 1px solid var(--border-color, #eee);
-            border-radius: var(--border-radius)
-        }
-
-        ul.cards.svelte-1d6smsq li figure.svelte-1d6smsq {
-            display: grid;
-            place-items: center
-        }
-
-        ul.cards.svelte-1d6smsq li figure img.svelte-1d6smsq {
-            padding: 2rem;
-            aspect-ratio: 1 / 1;
-            border-radius: 50%;
-            -o-object-fit: cover;
-            object-fit: cover;
-            width: 100%
-        }
-
-        ul.cards.svelte-1d6smsq li .info .details.svelte-1d6smsq {
-            display: grid;
-            gap: .25rem;
-            text-align: center;
-            margin-bottom: 1rem
-        }
-
-        ul.cards.svelte-1d6smsq li .info .details span.name.svelte-1d6smsq {
-            font-weight: 600
-        }
-
-        ul.cards.svelte-1d6smsq li .info .details span.title.svelte-1d6smsq {
-            font-size: 1rem;
-            color: #444
-        }
-
-        ul.cards.svelte-1d6smsq li .info .social.svelte-1d6smsq {
-            display: flex;
-            text-align: center;
-            justify-content: center;
-            gap: 1.25rem;
-            font-size: 0.75rem;
-            color: var(--color-accent, rebeccapurple)
-        }
-
-        ul.cards.svelte-1d6smsq li .info .social a.svelte-1d6smsq {
-            transition: var(--transition, 0.1s transform)
-        }
-
-        ul.cards.svelte-1d6smsq li .info .social a.svelte-1d6smsq:hover {
-            transform: scale(1.1)
-        }
-
-        @media(min-width: 600px) {
-            ul.cards.svelte-1d6smsq.svelte-1d6smsq {
-                grid-template-columns: 1fr 1fr
-            }
-        }
-
-        @media(min-width: 1000px) {
-            ul.cards.svelte-1d6smsq.svelte-1d6smsq {
-                grid-template-columns: 1fr 1fr 1fr
-            }
-        }
-
-        footer.svelte-u1zmy0.svelte-u1zmy0 {
-            background: #2b312b;
-            color: white
-        }
-
-        .section-container.svelte-u1zmy0.svelte-u1zmy0 {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 4rem
-        }
-
-        .content.svelte-u1zmy0.svelte-u1zmy0 {
-            margin: initial;
-            padding: 0;
-            line-height: 1.1
-        }
-
-        .nav-items.svelte-u1zmy0.svelte-u1zmy0 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4rem
-        }
-
-        .nav-items.svelte-u1zmy0 ul.svelte-u1zmy0 {
-            display: grid;
-            gap: 0.5rem
-        }
-
-        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0 {
-            border-bottom: 2px solid white
-        }
-
-        .nav-items.svelte-u1zmy0 ul .link.svelte-u1zmy0:hover {
-            border-color: transparent
-        }
-
-        .nav-items.svelte-u1zmy0 h3.svelte-u1zmy0 {
-            font-weight: 500;
-            font-size: 1.5rem;
-            margin-bottom: 1rem
-        }
-    </style>
-</head>
-
-<body id="page">
-
-    <div class="section" id="section-f2017979-f28c-45b3-ba7b-e9886e545603">
-        <div class="component">
-            <header class="section-container svelte-3u7in3">
-                <nav class="desktop-nav menu-links svelte-3u7in3"><a class="link  svelte-3u7in3" href="/">VBT</a>
-                    <div style="flex:1;"></div>
-                    <a class="link  svelte-3u7in3" href="/about-us">About us</a>
-                    <a class="link  svelte-3u7in3" href="/what-we-do">What we do</a>
-                    <a class="link  svelte-3u7in3" href="/pricing">Pricing</a>
-                    <a class="link  svelte-3u7in3" href="/book">Book online</a>
-                    <a class="link  svelte-3u7in3" href="/testimonials">Testimonials</a>
-                    <a class="link  svelte-3u7in3" href="/behaviour-resources">Behaviour resources</a>
-                    <a class="link  svelte-3u7in3" href="/blog">Blog</a>
-                    <a class="link  svelte-3u7in3" href="/faq">FAQ</a>
-                    <a class="link  svelte-3u7in3" href="/contact">Contact</a>
-                </nav>
-
-                <div class="mobile-nav svelte-3u7in3"><a href="/" class="logo svelte-3u7in3">VBT
-                    </a>
-                    <button id="open" aria-label="Open mobile navigation" class="svelte-3u7in3">/*
-                        * [Package Error] &quot;@iconify/svelte@v4.0.2&quot; could not be built.
-                        *
-                        * [1/5] Verifying package is valid…
-                        * [2/5] Installing dependencies from npm…
-                        * [3/5] Building package using esinstall…
-                        * Running esinstall...
-                        * ENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;
-                        * ENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;
-                        *
-                        * How to fix:
-                        * - If you believe this to be an error in Skypack, file an issue here: https://github.com/skypackjs/skypack-cdn/issues
-                        * - If you believe this to be an issue in the package, share this URL with the package authors to help them debug &amp; fix.
-                        * - Use https://skypack.dev/ to find a web-friendly alternative to find another package.
-                        */
-
-                        console.warn(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. \n[1/5] Verifying package is valid…\n[2/5] Installing dependencies from npm…\n[3/5] Building package using esinstall…\nRunning esinstall...\nENOENT: no such file or directory, open &#39;@iconify/svelte/lib/dist/functions.js&#39;\nENOENT: no such file or directory, open &#39;/tmp/cdn/_BTFodksBdDZ1BXxNOZpr/node_modules/@iconify/svelte/lib/dist/functions.js&#39;&quot;);
-                        throw new Error(&quot;[Package Error] \&quot;@iconify/svelte@v4.0.2\&quot; could not be built. &quot;);
-                        export default null;</button>
-                </div>
-            </header>
-        </div>
-    </div>
-    <div class="section" id="section-fae65643-2753-4f2a-8961-daf65b0c4fd3">
-        <div class="component">
-            <section class="svelte-1er6exq">
-                <div class="section-container svelte-1er6exq">
-                    <div class="teasers svelte-1er6exq">
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686740155741pexels-christian-domingues-731022.jpg" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq">Our Story</h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>Dr Amanda and Dr Heather met at the RSPCA NSW working together as behaviour vets to help shelter animals with behavioural issues. During this time we were made acutely aware of the crippling effect mental health disorders have on pets and their human families.</p>
-                                    <p>So we decided to form the Vet Behaviour Team in 2014 to help families and their pets remain united, happy and healthy for as long as possible.</p><!-- HTML_TAG_END -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teaser svelte-1er6exq"><img src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1686466425885FearFree_Corp_RGB_small.png" alt="" class="svelte-1er6exq">
-                            <div class="content-section svelte-1er6exq">
-                                <h2 class="heading svelte-1er6exq"></h2>
-                                <div class="body svelte-1er6exq"><!-- HTML_TAG_START -->
-                                    <p>We are pleased to have Dr Caitlin McQuarrie join us in 2023. We have all passed our Memberships in Veterinary Behavioural Medicine and completed the Postgraduate Sydney University course in Veterinary Behaviour.</p>
-                                    <p>Dr Heather Chee was Secretary/Treasurer of the Veterinary Behaviour Chapter of the Australian College of Veterinary Scientists, been an examiner for the Veterinary Behaviour Memberships and served on the Australian Veterinary Palliative Care Advisory Council.</p>
-                                    <p>Dr Amanda Cole has served as President Elect of the Australian Veterinary Behaviour Interest Group.</p><!-- HTML_TAG_END -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-8bce132f-e754-4bb4-a891-4355f50bb4d8">
-        <div class="component">
-            <section class="section-container svelte-1d6smsq">
-                <h2 class="heading svelte-1d6smsq">Our Team</h2>
-                <ul class="cards svelte-1d6smsq">
-                    <li class="svelte-1d6smsq">
-                        <figure class="svelte-1d6smsq"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703758447899Amanda%20Cole%20cropped2.jpg" class="svelte-1d6smsq">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Amanda</span>
-                                <span class="title svelte-1d6smsq">Behaviour Veterinarian</span>
-                            </div>
-                            <div class="social svelte-1d6smsq">I have worked in the small animal practice in both Australia and the United Kingdom. I completed my Membership to the Australian College of Veterinary Scientists in Veterinary Behaviour in 2010, prior to heading the Veterinary Behaviour Component of RSPCA NSW which worked regionally to help animals within shelters lead happier and healthier lives. I founded in partnership the Vet Behaviour Team consultants to help families and their pets remain united, happy and healthy for as long as possible.
-                            </div>
-                        </div>
-                    </li>
-                    <li class="svelte-1d6smsq">
-                        <figure class="svelte-1d6smsq"><img alt="" src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703757175336heather%20bird.png" class="svelte-1d6smsq">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Heather</span>
-                                <span class="title svelte-1d6smsq">Behaviour Veterinarian</span>
-                            </div>
-                            <div class="social svelte-1d6smsq">I graduated from the University of Sydney in 2007 with first class honours and became interested in behavioural medicine after my Cavalier King Charles Spaniel developed severe separation anxiety. I gained my behaviour vet memberships in 2012 and in 2014 founded the Vet Behaviour Team with Dr Amanda. We have been working together to help families and patients ever since. I enjoy baking and juggle keeping my tw small humans and many houseplants  alive!
-                            </div>
-                        </div>
-                    </li>
-                    <li class="svelte-1d6smsq">
-                        <figure class="svelte-1d6smsq"><img alt="I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. Having devoted many hours to behavioural medicine conferences and webinars, I decided to complete the Centre for Veterinary Education course in behavioural medicine in 2022. I am currently studying for my membership examinations in June and July of 2023. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck." src="https://cecahqcvnivcvvvhsdfd.supabase.co/storage/v1/object/public/images/5cfeba61-0502-41db-b62b-2bdd3a76f0b6/1703756416569caitlin%20website.jpg" class="svelte-1d6smsq">
-                        </figure>
-                        <div class="info">
-                            <div class="details svelte-1d6smsq"><span class="name svelte-1d6smsq">Dr Caitlin</span>
-                                <a class="title svelte-1d6smsq" download href="Amet in dolor">Behaviour Veterinarian</a>
-                            </div>
-                            <div class="social svelte-1d6smsq">I graduated from the University of Sydney in 2016, and became interested in behavioural medicine very quickly after entering general practice. I decided to gain my membership and commit to behavioural consulting. Outside of work I am a ballroom dancer and seamstress, and I am ruled by my three-legged rescue cat Puck.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </div>
-    <div class="section" id="section-6aa72c92-96cf-4a54-9d20-d7fc5de29649">
-        <div class="component">
-            <footer class="svelte-u1zmy0">
-                <div class="section-container svelte-u1zmy0">
-                    <div class="content svelte-u1zmy0"><!-- HTML_TAG_START -->
-                        <p><em>Working Sydney Wide & Online</em></p>
-                        <p>Vet Behaviour Team <br>
-                            0432 881 174</p>
-                        <p>ABN: 34603289176 copyright© Vet Behaviour Team PTY LTD 2023</p>
-                        <p><a href="https://storage.googleapis.com/tour-nament.appspot.com/media/Vet%20Behaviour%20Team%20Terms%20and%20Conditions.pdf" download style="font-weight:bold;font-size:14px;">TERMS AND CONDITIONS</a></p>
-                        <p>
-                            <font size="2">Vet Behaviour Team acknowledges the Traditional Custodians of country throughout Australia and their connections to land, sea and community. We pay our respect to their Elders past and present, and extend that respect to all Aboriginal and Torres Strait Islander peoples today.</font>
-                        </p><!-- HTML_TAG_END -->
-                    </div>
-                    <div class="nav-items svelte-u1zmy0"></div>
-                </div>
-            </footer>
-        </div>
-    </div>
-
-    <script type="module">
-        const path = window.location.pathname === '/' ? '' : window.location.pathname
-        const [{
-            default: App
-        }] = await Promise.all([
-            import(path + '/_module.js')
-        ]).catch(e => console.error(e))
-        new App({
-            target: document.querySelector('body'),
-            hydrate: true,
-        })
-    </script>
-</body>
-
-</html>
+    </body>
+  </html>
+  
