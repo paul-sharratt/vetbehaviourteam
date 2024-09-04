@@ -568,19 +568,23 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
 
-	setTimeout(
-		() => {
-			if (window.neetoCal) {
-				window.neetoCal.embed({
-					type: "elementClick",
-					id: "00296955-569c-4d3f-ac45-7580e0a3c61f",
-					organization: "vet-behaviour-team",
-					elementSelector: "#open-popup-button"
-				});
-			}
-		},
-		1000
-	);
+	window.neetoCal = window.neetoCal || {
+		embed() {
+			(neetoCal.q = neetoCal.q || []).push(arguments);
+		}
+	};
+
+	let script = document.createElement("script");
+	script.aync = true;
+	script.src = "https://vet-behaviour-team.neetocal.com/javascript/embed.js";
+	document.head.appendChild(script);
+
+	window.neetoCal.embed({
+		type: "elementClick",
+		id: "00296955-569c-4d3f-ac45-7580e0a3c61f",
+		organization: "vet-behaviour-team",
+		elementSelector: "#open-popup-button"
+	});
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(0, props = $$props.props);
