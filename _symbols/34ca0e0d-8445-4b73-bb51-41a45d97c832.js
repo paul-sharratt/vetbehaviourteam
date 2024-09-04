@@ -1,4 +1,4 @@
-// Greminder - Updated May 26, 2024
+// Greminder - Updated September 5, 2024
 function noop() { }
 function run(fn) {
     return fn();
@@ -544,7 +544,7 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(button, "class", "button");
-			attr(button, "id", "schedule_button");
+			attr(button, "id", "open-popup-button");
 			attr(div, "class", "buttons");
 			set_style(div, "margin", "10px 0");
 			set_style(div, "width", "100%");
@@ -567,6 +567,20 @@ function create_fragment(ctx) {
 
 function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
+
+	setTimeout(
+		() => {
+			if (window.neetoCal) {
+				window.neetoCal.embed({
+					type: "elementClick",
+					id: "00296955-569c-4d3f-ac45-7580e0a3c61f",
+					organization: "vet-behaviour-team",
+					elementSelector: "#open-popup-button"
+				});
+			}
+		},
+		1000
+	);
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(0, props = $$props.props);
