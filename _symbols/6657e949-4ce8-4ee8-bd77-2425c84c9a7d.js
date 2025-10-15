@@ -1,4 +1,4 @@
-// Contact Form - Updated October 28, 2024
+// Contact Form - Updated October 15, 2025
 function noop() { }
 function run(fn) {
     return fn();
@@ -550,7 +550,6 @@ class SvelteComponent {
     }
 }
 
-const matchIconName = /^[a-z0-9]+(-[a-z0-9]+)*$/;
 const stringToIcon = (value, validate, allowSimpleName, provider = "") => {
   const colonSeparated = value.split(":");
   if (value.slice(0, 1) === "@") {
@@ -597,7 +596,9 @@ const validateIconName = (icon, allowSimpleName) => {
   if (!icon) {
     return false;
   }
-  return !!((icon.provider === "" || icon.provider.match(matchIconName)) && (allowSimpleName && icon.prefix === "" || icon.prefix.match(matchIconName)) && icon.name.match(matchIconName));
+  return !!// Check prefix: cannot be empty, unless allowSimpleName is enabled
+  // Check name: cannot be empty
+  ((allowSimpleName && icon.prefix === "" || !!icon.prefix) && !!icon.name);
 };
 
 const defaultIconDimensions = Object.freeze(
@@ -672,7 +673,7 @@ function getIconsTree(data, names) {
     }
     return resolved[name];
   }
-  (names || Object.keys(icons).concat(Object.keys(aliases))).forEach(resolve);
+  (Object.keys(icons).concat(Object.keys(aliases))).forEach(resolve);
   return resolved;
 }
 
@@ -741,10 +742,15 @@ function quicklyValidateIconSet(obj) {
   const icons = data.icons;
   for (const name in icons) {
     const icon = icons[name];
-    if (!name.match(matchIconName) || typeof icon.body !== "string" || !checkOptionalProps(
-      icon,
-      defaultExtendedIconProps
-    )) {
+    if (
+      // Name cannot be empty
+      !name || // Must have body
+      typeof icon.body !== "string" || // Check other props
+      !checkOptionalProps(
+        icon,
+        defaultExtendedIconProps
+      )
+    ) {
       return null;
     }
   }
@@ -752,10 +758,15 @@ function quicklyValidateIconSet(obj) {
   for (const name in aliases) {
     const icon = aliases[name];
     const parent = icon.parent;
-    if (!name.match(matchIconName) || typeof parent !== "string" || !icons[parent] && !aliases[parent] || !checkOptionalProps(
-      icon,
-      defaultExtendedIconProps
-    )) {
+    if (
+      // Name cannot be empty
+      !name || // Parent must be set and point to existing icon
+      typeof parent !== "string" || !icons[parent] && !aliases[parent] || // Check other props
+      !checkOptionalProps(
+        icon,
+        defaultExtendedIconProps
+      )
+    ) {
       return null;
     }
   }
@@ -811,7 +822,12 @@ function addIcon(name, data) {
     return false;
   }
   const storage = getStorage(icon.provider, icon.prefix);
-  return addIconToStorage(storage, icon.name, data);
+  if (data) {
+    return addIconToStorage(storage, icon.name, data);
+  } else {
+    storage.missing.add(icon.name);
+    return true;
+  }
 }
 function addCollection(data, provider) {
   if (typeof data !== "object") {
@@ -825,7 +841,7 @@ function addCollection(data, provider) {
     if (quicklyValidateIconSet(data)) {
       data.prefix = "";
       parseIconSet(data, (name, icon) => {
-        if (icon && addIcon(name, icon)) {
+        if (addIcon(name, icon)) {
           added = true;
         }
       });
@@ -1053,136 +1069,6 @@ const fetchAPIModule = {
   send
 };
 
-const browserCacheVersion = "iconify2";
-const browserCachePrefix = "iconify";
-const browserCacheCountKey = browserCachePrefix + "-count";
-const browserCacheVersionKey = browserCachePrefix + "-version";
-const browserStorageHour = 36e5;
-const browserStorageCacheExpiration = 168;
-
-function getStoredItem(func, key) {
-  try {
-    return func.getItem(key);
-  } catch (err) {
-  }
-}
-function setStoredItem(func, key, value) {
-  try {
-    func.setItem(key, value);
-    return true;
-  } catch (err) {
-  }
-}
-function removeStoredItem(func, key) {
-  try {
-    func.removeItem(key);
-  } catch (err) {
-  }
-}
-
-function setBrowserStorageItemsCount(storage, value) {
-  return setStoredItem(storage, browserCacheCountKey, value.toString());
-}
-function getBrowserStorageItemsCount(storage) {
-  return parseInt(getStoredItem(storage, browserCacheCountKey)) || 0;
-}
-
-const browserStorageConfig = {
-  local: true,
-  session: true
-};
-const browserStorageEmptyItems = {
-  local: /* @__PURE__ */ new Set(),
-  session: /* @__PURE__ */ new Set()
-};
-let browserStorageStatus = false;
-function setBrowserStorageStatus(status) {
-  browserStorageStatus = status;
-}
-
-let _window = typeof window === "undefined" ? {} : window;
-function getBrowserStorage(key) {
-  const attr = key + "Storage";
-  try {
-    if (_window && _window[attr] && typeof _window[attr].length === "number") {
-      return _window[attr];
-    }
-  } catch (err) {
-  }
-  browserStorageConfig[key] = false;
-}
-
-function iterateBrowserStorage(key, callback) {
-  const func = getBrowserStorage(key);
-  if (!func) {
-    return;
-  }
-  const version = getStoredItem(func, browserCacheVersionKey);
-  if (version !== browserCacheVersion) {
-    if (version) {
-      const total2 = getBrowserStorageItemsCount(func);
-      for (let i = 0; i < total2; i++) {
-        removeStoredItem(func, browserCachePrefix + i.toString());
-      }
-    }
-    setStoredItem(func, browserCacheVersionKey, browserCacheVersion);
-    setBrowserStorageItemsCount(func, 0);
-    return;
-  }
-  const minTime = Math.floor(Date.now() / browserStorageHour) - browserStorageCacheExpiration;
-  const parseItem = (index) => {
-    const name = browserCachePrefix + index.toString();
-    const item = getStoredItem(func, name);
-    if (typeof item !== "string") {
-      return;
-    }
-    try {
-      const data = JSON.parse(item);
-      if (typeof data === "object" && typeof data.cached === "number" && data.cached > minTime && typeof data.provider === "string" && typeof data.data === "object" && typeof data.data.prefix === "string" && // Valid item: run callback
-      callback(data, index)) {
-        return true;
-      }
-    } catch (err) {
-    }
-    removeStoredItem(func, name);
-  };
-  let total = getBrowserStorageItemsCount(func);
-  for (let i = total - 1; i >= 0; i--) {
-    if (!parseItem(i)) {
-      if (i === total - 1) {
-        total--;
-        setBrowserStorageItemsCount(func, total);
-      } else {
-        browserStorageEmptyItems[key].add(i);
-      }
-    }
-  }
-}
-
-function initBrowserStorage() {
-  if (browserStorageStatus) {
-    return;
-  }
-  setBrowserStorageStatus(true);
-  for (const key in browserStorageConfig) {
-    iterateBrowserStorage(key, (item) => {
-      const iconSet = item.data;
-      const provider = item.provider;
-      const prefix = iconSet.prefix;
-      const storage = getStorage(
-        provider,
-        prefix
-      );
-      if (!addIconSet(storage, iconSet).length) {
-        return false;
-      }
-      const lastModified = iconSet.lastModified || -1;
-      storage.lastModifiedCached = storage.lastModifiedCached ? Math.min(storage.lastModifiedCached, lastModified) : lastModified;
-      return true;
-    });
-  }
-}
-
 ({
     ...defaultIconCustomisations,
     inline: false,
@@ -1221,8 +1107,6 @@ setAPIModule('', fetchAPIModule);
  * Browser stuff
  */
 if (typeof document !== 'undefined' && typeof window !== 'undefined') {
-    // Set cache and load existing cache
-    initBrowserStorage();
     const _window = window;
     // Load icons from global "IconifyPreload"
     if (_window.IconifyPreload !== void 0) {
